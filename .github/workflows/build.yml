@@ -1,0 +1,38 @@
+name: Build on release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers the workflow on version tags like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Extract version from tag
+      id: extract_version
+      run: echo "::set-output name=VERSION::${GITHUB_REF#refs/tags/v}"
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.x'  # .NET 6.x SDK supports .NET Standard 2.0
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build project
+      run: dotnet build crypto/src/BouncyCastle.Crypto.csproj --configuration Release --framework netstandard2.0 /p:Version=${{ steps.extract_version.outputs.VERSION }}
+
+    - name: Publish DLL
+      run: dotnet publish crypto/src/BouncyCastle.Crypto.csproj  -c Release -f netstandard2.0 -o ./publish /p:Version=${{ steps.extract_version.outputs.VERSION }}
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Mirror.BouncyCastle.Crypto-dll 
+        path: ./publish
