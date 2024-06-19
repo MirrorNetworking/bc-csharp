@@ -1,3 +1,6 @@
+## This is a fork of the Bouncy Castle Repo for [Mirror](https://github.com/MirrorNetworking/Mirror) with renamed namespace/assembly to avoid conflicts. Additional fixes may go here in the future.
+
+
 # The Bouncy Castle Cryptography Library For .NET
 [![NuGet](https://img.shields.io/nuget/dt/BouncyCastle.Cryptography.svg)](https://www.nuget.org/packages/BouncyCastle.Cryptography) [![NuGet](https://img.shields.io/nuget/vpre/BouncyCastle.Cryptography.svg)](https://www.nuget.org/packages/BouncyCastle.Cryptography)
 
