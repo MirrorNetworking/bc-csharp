@@ -1,14 +1,14 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * The Holder object.
 	 * <p>
 	 * For an v2 attribute certificate this is:
-	 * 
+	 *
 	 * <pre>
 	 *            Holder ::= SEQUENCE {
 	 *                  baseCertificateID   [0] IssuerSerial OPTIONAL,
@@ -24,7 +24,7 @@ namespace Org.BouncyCastle.Asn1.X509
 	 * </p>
 	 * <p>
 	 * For an v1 attribute certificate this is:
-	 * 
+	 *
 	 * <pre>
 	 *         subject CHOICE {
 	 *          baseCertificateID [0] EXPLICIT IssuerSerial,
@@ -58,7 +58,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
         /**
 		 * Constructor for a holder for an v1 attribute certificate.
-		 * 
+		 *
 		 * @param tagObj The ASN.1 tagged holder object.
 		 */
         public Holder(
@@ -81,7 +81,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Constructor for a holder for an v2 attribute certificate. *
-		 * 
+		 *
 		 * @param seq The ASN.1 sequence.
 		 */
 		private Holder(
@@ -122,7 +122,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		/**
 		 * Constructs a holder from a IssuerSerial.
 		 * @param baseCertificateID The IssuerSerial.
-		 * @param version The version of the attribute certificate. 
+		 * @param version The version of the attribute certificate.
 		 */
 		public Holder(
 			IssuerSerial	baseCertificateID,
@@ -134,7 +134,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Returns 1 for v2 attribute certificates or 0 for v1 attribute
-		 * certificates. 
+		 * certificates.
 		 * @return The version of the attribute certificate.
 		 */
 		public int Version
@@ -145,7 +145,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		/**
 		 * Constructs a holder with an entityName for v2 attribute certificates or
 		 * with a subjectName for v1 attribute certificates.
-		 * 
+		 *
 		 * @param entityName The entity or subject name.
 		 */
 		public Holder(
@@ -157,9 +157,9 @@ namespace Org.BouncyCastle.Asn1.X509
 		/**
 		 * Constructs a holder with an entityName for v2 attribute certificates or
 		 * with a subjectName for v1 attribute certificates.
-		 * 
+		 *
 		 * @param entityName The entity or subject name.
-		 * @param version The version of the attribute certificate. 
+		 * @param version The version of the attribute certificate.
 		 */
 		public Holder(
 			GeneralNames	entityName,
@@ -171,7 +171,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Constructs a holder from an object digest info.
-		 * 
+		 *
 		 * @param objectDigestInfo The object digest info object.
 		 */
 		public Holder(
@@ -189,7 +189,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		/**
 		 * Returns the entityName for an v2 attribute certificate or the subjectName
 		 * for an v1 attribute certificate.
-		 * 
+		 *
 		 * @return The entityname or subjectname.
 		 */
 		public GeneralNames EntityName

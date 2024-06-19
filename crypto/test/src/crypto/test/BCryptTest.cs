@@ -2,12 +2,12 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /*
      * bcrypt test vectors

@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.OpenSsl
+namespace Mirror.BouncyCastle.OpenSsl
 {
 	public interface IPasswordFinder
 	{

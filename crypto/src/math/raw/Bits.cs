@@ -3,7 +3,7 @@
 using System.Runtime.CompilerServices;
 #endif
 
-namespace Org.BouncyCastle.Math.Raw
+namespace Mirror.BouncyCastle.Math.Raw
 {
     internal static class Bits
     {

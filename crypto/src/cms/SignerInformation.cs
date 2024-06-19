@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Signers;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
 	* an expanded SignerInfo block from a CMS Signed message
@@ -104,7 +104,7 @@ namespace Org.BouncyCastle.Cms
             this.unsignedAttributeSet = info.UnauthenticatedAttributes;
             this.encryptionAlgorithm = info.DigestEncryptionAlgorithm;
 			this.signature = (byte[])info.EncryptedDigest.GetOctets().Clone();
-			
+
 			this.calculatedDigest = baseInfo.calculatedDigest;
             this.signedAttributeTable = baseInfo.signedAttributeTable;
             this.unsignedAttributeTable = baseInfo.unsignedAttributeTable;
@@ -328,7 +328,7 @@ namespace Org.BouncyCastle.Cms
 			{
 				digestName = CmsSignedHelper.GetDigestAlgName(digestAlgorithm.Algorithm);
 			}
-			
+
 			IDigest digest = CmsSignedHelper.GetDigestInstance(digestName);
 			ISigner sig;
 

@@ -1,12 +1,12 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     internal class FalconCodec
     {
         internal FalconCodec() {
-            
+
         }
 
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#):
         * ==========================(LICENSE BEGIN)============================

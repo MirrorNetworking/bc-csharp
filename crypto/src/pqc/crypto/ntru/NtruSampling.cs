@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     /// <summary>
     /// NTRU sampling.

@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Operators.Utilities;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Operators.Utilities;
 
-namespace Org.BouncyCastle.Cmp
+namespace Mirror.BouncyCastle.Cmp
 {
     public class CertificateConfirmationContent
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     /**
      * Haraka-512 v2, https://eprint.iacr.org/2016/098.pdf
@@ -451,8 +451,8 @@ namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
             uint q6 = q[6], r6 = Integers.RotateRight(q6, 8), s6 = q6 ^ r6;
             uint q7 = q[7], r7 = Integers.RotateRight(q7, 8), s7 = q7 ^ r7;
 
-            q[0] = r0       ^ s7 ^ Integers.RotateRight(s0, 16); 
-            q[1] = r1 ^ s0  ^ s7 ^ Integers.RotateRight(s1, 16); 
+            q[0] = r0       ^ s7 ^ Integers.RotateRight(s0, 16);
+            q[1] = r1 ^ s0  ^ s7 ^ Integers.RotateRight(s1, 16);
             q[2] = r2 ^ s1       ^ Integers.RotateRight(s2, 16);
             q[3] = r3 ^ s2  ^ s7 ^ Integers.RotateRight(s3, 16);
             q[4] = r4 ^ s3  ^ s7 ^ Integers.RotateRight(s4, 16);
@@ -712,8 +712,8 @@ namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
             ulong q6 = q[6], r6 = Longs.RotateRight(q6, 16), s6 = q6 ^ r6;
             ulong q7 = q[7], r7 = Longs.RotateRight(q7, 16), s7 = q7 ^ r7;
 
-            q[0] = r0       ^ s7 ^ Longs.RotateRight(s0, 32); 
-            q[1] = r1 ^ s0  ^ s7 ^ Longs.RotateRight(s1, 32); 
+            q[0] = r0       ^ s7 ^ Longs.RotateRight(s0, 32);
+            q[1] = r1 ^ s0  ^ s7 ^ Longs.RotateRight(s1, 32);
             q[2] = r2 ^ s1       ^ Longs.RotateRight(s2, 32);
             q[3] = r3 ^ s2  ^ s7 ^ Longs.RotateRight(s3, 32);
             q[4] = r4 ^ s3  ^ s7 ^ Longs.RotateRight(s4, 32);

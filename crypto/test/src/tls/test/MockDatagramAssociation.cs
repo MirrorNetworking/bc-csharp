@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     public class MockDatagramAssociation
     {

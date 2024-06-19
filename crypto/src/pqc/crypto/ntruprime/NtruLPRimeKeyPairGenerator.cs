@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
+namespace Mirror.BouncyCastle.Pqc.Crypto.NtruPrime
 {
     public class NtruLPRimeKeyPairGenerator
     {
@@ -35,12 +35,12 @@ namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
             NtruLPRimePrivateKeyParameters privKey = new NtruLPRimePrivateKeyParameters(_ntruPrimeParams.Parameters, sk);
             return new AsymmetricCipherKeyPair(pubKey, privKey);
         }
-        
+
         public void Init(KeyGenerationParameters param)
         {
             this.Initialize(param);
         }
-        
+
         public AsymmetricCipherKeyPair GenerateKeyPair()
         {
             return GenKeyPair();

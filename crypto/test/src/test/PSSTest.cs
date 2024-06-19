@@ -2,21 +2,21 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Signers;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class PssTest
@@ -217,7 +217,7 @@ namespace Org.BouncyCastle.Tests
 			byte[] normalResult = normalSig.GenerateSignature();
 
 			byte[] hash = DigestUtilities.CalculateDigest(digestOID.Id, sampleMessage);
-		
+
 			ISigner rawSig = SignerUtilities.GetSigner("RAWRSASSA-PSS");
 
 			// Need to init the params explicitly to avoid having a 'raw' variety of every PSS algorithm

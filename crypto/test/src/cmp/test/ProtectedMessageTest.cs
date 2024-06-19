@@ -3,23 +3,23 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Crmf;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Crmf;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cmp.Tests
+namespace Mirror.BouncyCastle.Cmp.Tests
 {
     [TestFixture]
     public class ProtectedMessageTest

@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Srp
+namespace Mirror.BouncyCastle.Crypto.Agreement.Srp
 {
 	public class Srp6Utilities
 	{
@@ -80,7 +80,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 		    return val;
 		}
 
-        /** 
+        /**
          * Computes the client evidence message (M1) according to the standard routine:
          * M1 = H( A | B | S )
          * @param digest The Digest used as the hashing function H
@@ -96,7 +96,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
             return M1;
         }
 
-        /** 
+        /**
          * Computes the server evidence message (M2) according to the standard routine:
          * M2 = H( A | M1 | S )
          * @param digest The Digest used as the hashing function H

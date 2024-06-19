@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crmf;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crmf;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cmp
+namespace Mirror.BouncyCastle.Cmp
 {
     public sealed class ProtectedPkiMessageBuilder
     {

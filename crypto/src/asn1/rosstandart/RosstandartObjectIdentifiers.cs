@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Asn1.Rosstandart
+namespace Mirror.BouncyCastle.Asn1.Rosstandart
 {
     // TODO[api] Make static
     public abstract class RosstandartObjectIdentifiers

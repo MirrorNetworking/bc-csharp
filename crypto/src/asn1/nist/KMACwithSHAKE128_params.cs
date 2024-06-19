@@ -1,14 +1,14 @@
-﻿using Org.BouncyCastle.Utilities;
+﻿using Mirror.BouncyCastle.Utilities;
 using System;
 
 
-namespace Org.BouncyCastle.Asn1.Nist
+namespace Mirror.BouncyCastle.Asn1.Nist
 {
     /// <summary>
     /// KMACwithSHAKE128-params ::= SEQUENCE {
     ///     kMACOutputLength     INTEGER DEFAULT 256, -- Output length in bits
     ///     customizationString  OCTET STRING DEFAULT ''H
-    /// } 
+    /// }
     /// </summary>
 public class KMacWithShake128Params : Asn1Encodable
 {

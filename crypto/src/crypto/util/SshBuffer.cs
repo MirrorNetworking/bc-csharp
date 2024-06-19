@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Text;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     internal class SshBuffer
     {

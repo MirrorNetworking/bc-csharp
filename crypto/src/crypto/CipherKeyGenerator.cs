@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     /**
 	 * The base class for symmetric, or secret, cipher key generators.

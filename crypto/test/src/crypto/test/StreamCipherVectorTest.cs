@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * a basic test that takes a stream cipher, key parameter, and an input

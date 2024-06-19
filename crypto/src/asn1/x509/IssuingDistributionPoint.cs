@@ -1,15 +1,15 @@
 using System;
 using System.Text;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * <pre>
-	 * IssuingDistributionPoint ::= SEQUENCE { 
-	 *   distributionPoint          [0] DistributionPointName OPTIONAL, 
-	 *   onlyContainsUserCerts      [1] BOOLEAN DEFAULT FALSE, 
-	 *   onlyContainsCACerts        [2] BOOLEAN DEFAULT FALSE, 
-	 *   onlySomeReasons            [3] ReasonFlags OPTIONAL, 
+	 * IssuingDistributionPoint ::= SEQUENCE {
+	 *   distributionPoint          [0] DistributionPointName OPTIONAL,
+	 *   onlyContainsUserCerts      [1] BOOLEAN DEFAULT FALSE,
+	 *   onlyContainsCACerts        [2] BOOLEAN DEFAULT FALSE,
+	 *   onlySomeReasons            [3] ReasonFlags OPTIONAL,
 	 *   indirectCRL                [4] BOOLEAN DEFAULT FALSE,
 	 *   onlyContainsAttributeCerts [5] BOOLEAN DEFAULT FALSE }
 	 * </pre>
@@ -42,12 +42,12 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Constructor from given details.
-		 * 
+		 *
 		 * @param distributionPoint
 		 *            May contain an URI as pointer to most current CRL.
 		 * @param onlyContainsUserCerts Covers revocation information for end certificates.
 		 * @param onlyContainsCACerts Covers revocation information for CA certificates.
-		 * 
+		 *
 		 * @param onlySomeReasons
 		 *            Which revocation reasons does this point cover.
 		 * @param indirectCRL

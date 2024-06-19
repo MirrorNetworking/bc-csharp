@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Srp
+namespace Mirror.BouncyCastle.Crypto.Agreement.Srp
 {
 	/**
 	 * Generates new SRP verifier for user

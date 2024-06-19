@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Misc
+namespace Mirror.BouncyCastle.Asn1.Misc
 {
     public class Cast5CbcParameters
         : Asn1Encodable

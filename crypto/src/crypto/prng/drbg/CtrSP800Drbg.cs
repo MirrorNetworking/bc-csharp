@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Prng.Drbg
+namespace Mirror.BouncyCastle.Crypto.Prng.Drbg
 {
 	/**
 	 * A SP800-90A CTR DRBG.
@@ -53,7 +53,7 @@ namespace Org.BouncyCastle.Crypto.Prng.Drbg
 	            throw new ArgumentException("Not enough entropy for security strength required");
 
             mEntropySource = entropySource;
-	        mEngine = engine;     
+	        mEngine = engine;
 
             mKeySizeInBits = keySizeInBits;
 	        mSecurityStrength = securityStrength;
@@ -75,7 +75,7 @@ namespace Org.BouncyCastle.Crypto.Prng.Drbg
 	        mV = new byte[blockSize];
 
 	        // mKey & mV are modified by this call
-	        CTR_DRBG_Update(seed, mKey, mV); 
+	        CTR_DRBG_Update(seed, mKey, mV);
 
             mReseedCounter = 1;
 	    }
@@ -188,7 +188,7 @@ namespace Org.BouncyCastle.Crypto.Prng.Drbg
                 longer[i] = (byte)carry;
                 carry >>= 8;
             }
-	    } 
+	    }
 
         private byte[] GetEntropy()
 	    {
@@ -298,8 +298,8 @@ namespace Org.BouncyCastle.Crypto.Prng.Drbg
 	        byte[] temp = new byte[mKeySizeInBits / 8 + outLen];
 	        byte[] bccOut = new byte[outLen];
 
-	        byte[] IV = new byte[outLen]; 
-	        
+	        byte[] IV = new byte[outLen];
+
 	        int i = 0;
 	        byte[] K = new byte[mKeySizeInBits / 8];
 	        Array.Copy(K_BITS, 0, K, 0, K.Length);
@@ -398,16 +398,16 @@ namespace Org.BouncyCastle.Crypto.Prng.Drbg
 #endif
 
         /*
-        * 1. chaining_value = 0^outlen    
+        * 1. chaining_value = 0^outlen
         *    . Comment: Set the first chaining value to outlen zeros.
         * 2. n = len (data)/outlen.
-        * 3. Starting with the leftmost bits of data, split the data into n blocks of outlen bits 
-        *    each, forming block(1) to block(n). 
+        * 3. Starting with the leftmost bits of data, split the data into n blocks of outlen bits
+        *    each, forming block(1) to block(n).
         * 4. For i = 1 to n do
         * 4.1 input_block = chaining_value ^ block(i) .
         * 4.2 chaining_value = Block_Encrypt (Key, input_block).
         * 5. output_block = chaining_value.
-        * 6. Return output_block. 
+        * 6. Return output_block.
         */
 #if NETCOREAPP2_1_OR_GREATER || NETSTANDARD2_1_OR_GREATER
         private void BCC(Span<byte> bccOut, ReadOnlySpan<byte> iV, ReadOnlySpan<byte> data)

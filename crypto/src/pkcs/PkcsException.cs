@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
 	/// <summary>Base exception for PKCS related issues.</summary>
 	[Serializable]

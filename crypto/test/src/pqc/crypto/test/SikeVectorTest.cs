@@ -3,14 +3,14 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Sike;
-using Org.BouncyCastle.Pqc.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Sike;
+using Mirror.BouncyCastle.Pqc.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class SikeVectorTest
@@ -120,8 +120,8 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             Assert.True(Arrays.AreEqual(dec_key, ss), name + " " + count + ": kem_dec ss" );
             Assert.True(Arrays.AreEqual(dec_key, secret), name + " " + count + ": kem_dec key" );
         }
-        
-        
+
+
         private static void RunTestVectorFile(string name)
         {
             var buf = new Dictionary<string, string>();

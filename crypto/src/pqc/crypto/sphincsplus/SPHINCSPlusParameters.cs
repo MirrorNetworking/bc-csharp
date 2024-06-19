@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     internal interface ISphincsPlusEngineProvider
     {
@@ -182,7 +182,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
 
         /**
          * Return the SPHINCS+ parameters that map to the passed in parameter ID.
-         * 
+         *
          * @param id the oid of interest.
          * @return the parameter set.
          */

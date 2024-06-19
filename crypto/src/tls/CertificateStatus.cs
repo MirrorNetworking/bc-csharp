@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Ocsp;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Ocsp;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public sealed class CertificateStatus
     {

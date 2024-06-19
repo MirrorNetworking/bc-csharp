@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public sealed class CertificateEntry
     {

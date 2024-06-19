@@ -2,15 +2,15 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Agreement;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Agreement;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	[TestFixture]
 	public class DHTest

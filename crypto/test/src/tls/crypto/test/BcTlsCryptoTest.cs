@@ -4,12 +4,12 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Tls.Crypto.Impl.BC;
-using Org.BouncyCastle.Tls.Tests;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Tls.Crypto.Impl.BC;
+using Mirror.BouncyCastle.Tls.Tests;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Tests
+namespace Mirror.BouncyCastle.Tls.Crypto.Tests
 {
     [TestFixture]
     public class BcTlsCryptoTest

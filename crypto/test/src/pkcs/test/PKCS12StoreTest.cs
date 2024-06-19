@@ -4,19 +4,19 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkcs.Tests
+namespace Mirror.BouncyCastle.Pkcs.Tests
 {
 	/**
 	* Exercise the various key stores, making sure we at least get back what we put in!

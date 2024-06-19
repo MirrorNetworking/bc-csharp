@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Security;
+﻿using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     public static class CryptoServicesRegistrar
     {

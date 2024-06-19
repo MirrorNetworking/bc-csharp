@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Bcpg.Sig;
+using Mirror.BouncyCastle.Bcpg.Sig;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
     /// <remarks>Generator for signature subpackets.</remarks>
     public class PgpSignatureSubpacketGenerator
@@ -191,7 +191,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 
         /// <summary>
         /// Sets revocation reason sub packet
-        /// </summary>	    
+        /// </summary>
         public void SetRevocationReason(bool isCritical, RevocationReasonTag reason, string description)
 		{
 			list.Add(new RevocationReason(isCritical, reason, description));
@@ -210,7 +210,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 
         /// <summary>
         /// Sets issuer key sub packet
-        /// </summary>	
+        /// </summary>
         public void SetIssuerKeyID(bool isCritical, long keyID)
 		{
 			list.Add(new IssuerKeyId(isCritical, keyID));

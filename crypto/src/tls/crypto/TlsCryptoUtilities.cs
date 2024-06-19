@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     public abstract class TlsCryptoUtilities
     {

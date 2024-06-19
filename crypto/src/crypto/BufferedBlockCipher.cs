@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	/**
 	* A wrapper class that allows block ciphers to be used to process data in

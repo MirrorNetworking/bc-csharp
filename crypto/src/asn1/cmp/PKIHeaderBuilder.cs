@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
 	public class PkiHeaderBuilder
 	{
@@ -81,7 +81,7 @@ namespace Org.BouncyCastle.Asn1.Cmp
 			transactionID = tid;
 			return this;
 		}
-		
+
 		public virtual PkiHeaderBuilder SetSenderNonce(byte[] nonce)
 		{
             return SetSenderNonce(nonce == null ? null : new DerOctetString(nonce));
@@ -109,17 +109,17 @@ namespace Org.BouncyCastle.Asn1.Cmp
 			freeText = text;
 			return this;
 		}
-		
+
 		public virtual PkiHeaderBuilder SetGeneralInfo(InfoTypeAndValue genInfo)
 		{
 			return SetGeneralInfo(MakeGeneralInfoSeq(genInfo));
 		}
-		
+
 		public virtual PkiHeaderBuilder SetGeneralInfo(InfoTypeAndValue[] genInfos)
 		{
 			return SetGeneralInfo(MakeGeneralInfoSeq(genInfos));
 		}
-		
+
 		public virtual PkiHeaderBuilder SetGeneralInfo(Asn1Sequence seqOfInfoTypeAndValue)
 		{
 			generalInfo = seqOfInfoTypeAndValue;

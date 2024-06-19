@@ -2,20 +2,20 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Encodings;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Signers;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Encodings;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /// <summary>Test based on FIPS 186-2, Appendix 5, an example of DSA, and FIPS 168-3 test vectors.</summary>
     [TestFixture]

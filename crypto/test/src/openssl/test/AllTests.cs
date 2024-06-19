@@ -3,10 +3,10 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.OpenSsl.Tests
+namespace Mirror.BouncyCastle.OpenSsl.Tests
 {
 	[TestFixture]
 	public class AllTests

@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto;
+﻿using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     public class HqcKemExtractor : IEncapsulatedSecretExtractor
     {
@@ -19,7 +19,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
             engine = param.Engine;
         }
 
-        
+
         public byte[] ExtractSecret(byte[] encapsulation)
         {
             byte[] session_key = new byte[engine.GetSessionKeySize()];
@@ -32,6 +32,6 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
         }
 
         public int EncapsulationLength => key.Parameters.NBytes + key.Parameters.N1n2Bytes + 64 + 16; // SHA-512 + salt
- 
+
     }
 }

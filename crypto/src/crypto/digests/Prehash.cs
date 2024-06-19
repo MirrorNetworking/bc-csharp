@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     public sealed class Prehash
         : IDigest

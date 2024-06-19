@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Prng;
+using Mirror.BouncyCastle.Crypto.Prng;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     internal sealed class BcTlsNonceGenerator
         : TlsNonceGenerator

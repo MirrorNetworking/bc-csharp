@@ -1,9 +1,9 @@
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms.Tests
 {
     [TestFixture]
     public class LmsKeyGenTests

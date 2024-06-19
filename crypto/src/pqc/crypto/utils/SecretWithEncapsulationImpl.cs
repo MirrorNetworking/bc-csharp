@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     public class SecretWithEncapsulationImpl
         : ISecretWithEncapsulation

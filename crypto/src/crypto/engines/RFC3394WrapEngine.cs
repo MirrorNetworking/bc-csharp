@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
     /// <summary>An implementation of the AES Key Wrap with Padding specification as described in RFC 3349.</summary>
     /// <remarks>

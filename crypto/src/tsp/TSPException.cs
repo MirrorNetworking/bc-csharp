@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
     [Serializable]
     public class TspException

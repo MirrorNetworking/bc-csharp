@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Bcpg.Sig;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Bcpg.Sig;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Generic signature packet.</remarks>
     public class SignaturePacket

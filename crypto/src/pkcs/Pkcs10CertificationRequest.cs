@@ -2,23 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
     /// <remarks>
     /// A class for verifying and creating Pkcs10 Certification requests.

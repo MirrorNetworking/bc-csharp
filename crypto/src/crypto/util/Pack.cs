@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 #endif
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     internal static class Pack
     {

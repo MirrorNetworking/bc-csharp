@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/// <summary>
 	/// Implementation of Daniel J. Bernstein's XSalsa20 stream cipher - Salsa20 with an extended nonce.
@@ -10,7 +10,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 	/// <remarks>
 	/// XSalsa20 requires a 256 bit key, and a 192 bit nonce.
 	/// </remarks>
-	public class XSalsa20Engine 
+	public class XSalsa20Engine
 		: Salsa20Engine
 	{
 		public override string AlgorithmName

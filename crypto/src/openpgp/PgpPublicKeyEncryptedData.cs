@@ -1,18 +1,18 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.Cryptlib;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.Crypto.Agreement;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.Cryptlib;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Crypto.Agreement;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.EdEC;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
     /// <remarks>A public key encrypted data object.</remarks>
     public class PgpPublicKeyEncryptedData
@@ -232,7 +232,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
             byte[] enc = secKeyData[0];
 
             int pLen = ((((enc[0] & 0xff) << 8) + (enc[1] & 0xff)) + 7) / 8;
-            if ((2 + pLen + 1) > enc.Length) 
+            if ((2 + pLen + 1) > enc.Length)
                 throw new PgpException("encoded length out of range");
 
             byte[] pEnc = new byte[pLen];

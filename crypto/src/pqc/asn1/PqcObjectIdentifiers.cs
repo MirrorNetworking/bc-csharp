@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
 
-namespace Org.BouncyCastle.Pqc.Asn1
+namespace Mirror.BouncyCastle.Pqc.Asn1
 {
     public static class PqcObjectIdentifiers
     {

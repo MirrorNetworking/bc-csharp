@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class ParametersWithID
         : ICipherParameters

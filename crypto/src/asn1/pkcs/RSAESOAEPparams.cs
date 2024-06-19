@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
 	public class RsaesOaepParameters
 		: Asn1Encodable
@@ -37,7 +37,7 @@ namespace Org.BouncyCastle.Asn1.Pkcs
 		 */
 		public RsaesOaepParameters()
 		    : this(DefaultHashAlgorithm, DefaultMaskGenFunction, DefaultPSourceAlgorithm)
-		{ 
+		{
 		}
 
 		public RsaesOaepParameters(

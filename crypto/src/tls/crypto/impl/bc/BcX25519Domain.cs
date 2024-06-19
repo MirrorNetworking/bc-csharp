@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     public class BcX25519Domain
         : TlsECDomain

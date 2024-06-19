@@ -5,15 +5,15 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     /**
     * basic test class for a block cipher, basically this just exercises the provider, and makes sure we
@@ -670,7 +670,7 @@ namespace Org.BouncyCastle.Tests
         {
             // TODO Put back in
 //			SecretKeyFactory skF = null;
-//	        
+//
 //			try
 //			{
 //				skF = SecretKeyFactory.getInstance("DESede");
@@ -679,7 +679,7 @@ namespace Org.BouncyCastle.Tests
 //			{
 //				Fail("unexpected exception.", e);
 //			}
-//	        
+//
 //			KeySpec ks = null;
 //			SecretKey secKey = null;
 //			byte[] bb = new byte[24];
@@ -687,7 +687,7 @@ namespace Org.BouncyCastle.Tests
 //			try
 //			{
 //				skF.getKeySpec(null, null);
-//	            
+//
 //				Fail("failed exception test - no exception thrown");
 //			}
 //			catch (InvalidKeySpecException e)
@@ -702,7 +702,7 @@ namespace Org.BouncyCastle.Tests
 //			{
 //				ks = (KeySpec)new DESedeKeySpec(bb);
 //				skF.getKeySpec(null, ks.getClass());
-//	            
+//
 //				Fail("failed exception test - no exception thrown");
 //			}
 //			catch (InvalidKeySpecException e)
@@ -725,7 +725,7 @@ namespace Org.BouncyCastle.Tests
 //			{
 //				Fail("failed exception test.", e);
 //			}
-            
+
             try
             {
                 CipherKeyGenerator kg = GeneratorUtilities.GetKeyGenerator("DESede");
@@ -759,7 +759,7 @@ namespace Org.BouncyCastle.Tests
 //				try
 //				{
 //					skF.translateKey(null);
-//	                
+//
 //					Fail("failed exception test - no exception thrown");
 //				}
 //				catch (InvalidKeyException)
@@ -775,7 +775,7 @@ namespace Org.BouncyCastle.Tests
 //			{
 //				Fail("unexpected exception.", e);
 //			}
-            
+
 //			try
 //			{
 //				byte[] rawDESKey = { (byte)128, (byte)131, (byte)133, (byte)134,
@@ -854,7 +854,7 @@ namespace Org.BouncyCastle.Tests
 //					// SecureRandom random) throws InvalidKeyException if the given
 //					// key is inappropriate for initializing this cipher
 //					cipher.Init(true, cipherKey);
-//	                
+//
 //					Fail("failed exception test - no InvalidKeyException thrown");
 //				}
 //				catch (InvalidKeyException)
@@ -928,7 +928,7 @@ namespace Org.BouncyCastle.Tests
 //			try
 //			{
 //				AlgorithmParameters algParams = AlgorithmParameters.getInstance("DES");
-//	            
+//
 //				algParams.init(new IvParameterSpec(new byte[8]));
 //
 //				// According specification engineGetEncoded() returns
@@ -938,7 +938,7 @@ namespace Org.BouncyCastle.Tests
 //				// this type
 //				// of parameters exists.
 //				byte[] iv = algParams.getEncoded();
-//	            
+//
 //				if (iv.Length!= 10)
 //				{
 //					Fail("parameters encoding wrong length - "  + iv.Length);
@@ -995,22 +995,22 @@ namespace Org.BouncyCastle.Tests
 //						{
 //							return null;
 //						}
-//	                    
+//
 //					};
-//	    
+//
 //					c.Init(true, k);
-//	    
+//
 //					Fail("failed exception test - no InvalidKeyException thrown for public key");
 //				}
 //				catch (InvalidKeyException e)
 //				{
 //					// okay
 //				}
-//	            
+//
 //				try
 //				{
 //					IBufferedCipher c = CipherUtilities.GetCipher("DES");
-//	    
+//
 //					Key k = new PrivateKey()
 //					{
 //
@@ -1028,11 +1028,11 @@ namespace Org.BouncyCastle.Tests
 //						{
 //							return null;
 //						}
-//	                    
+//
 //					};
-//	    
+//
 //					c.Init(false, k);
-//	    
+//
 //					Fail("failed exception test - no InvalidKeyException thrown for private key");
 //				}
 //				catch (InvalidKeyException e)

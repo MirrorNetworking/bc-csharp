@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	public class CrlEntry
 		: Asn1Encodable

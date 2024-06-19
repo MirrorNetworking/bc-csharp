@@ -2,14 +2,14 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class EncryptedPrivateKeyInfoTest

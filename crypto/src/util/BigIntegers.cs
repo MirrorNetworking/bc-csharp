@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     /**
      * BigInteger utilities.
@@ -133,7 +133,7 @@ namespace Org.BouncyCastle.Utilities
 
         /**
         * Return a random BigInteger not less than 'min' and not greater than 'max'
-        * 
+        *
         * @param min the least value that may be generated
         * @param max the greatest value that may be generated
         * @param random the source of randomness

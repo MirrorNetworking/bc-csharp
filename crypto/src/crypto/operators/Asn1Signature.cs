@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Asn1.GM;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.GM;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Crypto.Operators
+namespace Mirror.BouncyCastle.Crypto.Operators
 {
 	internal class X509Utilities
 	{
@@ -115,7 +115,7 @@ namespace Org.BouncyCastle.Crypto.Operators
 			noParams.Add(X9ObjectIdentifiers.ECDsaWithSha384);
 			noParams.Add(X9ObjectIdentifiers.ECDsaWithSha512);
 			noParams.Add(X9ObjectIdentifiers.IdDsaWithSha1);
-            noParams.Add(OiwObjectIdentifiers.DsaWithSha1); 
+            noParams.Add(OiwObjectIdentifiers.DsaWithSha1);
             noParams.Add(NistObjectIdentifiers.DsaWithSha224);
 			noParams.Add(NistObjectIdentifiers.DsaWithSha256);
 			noParams.Add(NistObjectIdentifiers.DsaWithSha384);
@@ -390,7 +390,7 @@ namespace Org.BouncyCastle.Crypto.Operators
 		}
 
         public IStreamCalculator<IVerifier> CreateCalculator()
-        {       
+        {
             ISigner verifier = SignerUtilities.InitSigner(X509Utilities.GetSignatureName(algID), false, publicKey, null);
 
             return new DefaultVerifierCalculator(verifier);

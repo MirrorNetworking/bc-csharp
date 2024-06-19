@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Generic signature object</remarks>
 	public class OnePassSignaturePacket

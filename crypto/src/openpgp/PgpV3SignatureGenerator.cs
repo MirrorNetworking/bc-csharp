@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <remarks>Generator for old style PGP V3 Signatures.</remarks>
 	public class PgpV3SignatureGenerator

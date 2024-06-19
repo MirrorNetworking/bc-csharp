@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/**
 	* NaccacheStern Engine. For details on this cipher, please see
@@ -28,8 +28,8 @@ namespace Org.BouncyCastle.Crypto.Engines
 		/**
 		* Initializes this algorithm. Must be called before all other Functions.
 		*
-		* @see org.bouncycastle.crypto.AsymmetricBlockCipher#init(bool,
-		*      org.bouncycastle.crypto.CipherParameters)
+		* @see Mirror.BouncyCastle.crypto.AsymmetricBlockCipher#init(bool,
+		*      Mirror.BouncyCastle.crypto.CipherParameters)
 		*/
 		public virtual void Init(bool forEncryption, ICipherParameters parameters)
 		{
@@ -70,7 +70,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		/**
 		* Returns the input block size of this algorithm.
 		*
-		* @see org.bouncycastle.crypto.AsymmetricBlockCipher#GetInputBlockSize()
+		* @see Mirror.BouncyCastle.crypto.AsymmetricBlockCipher#GetInputBlockSize()
 		*/
         public virtual int GetInputBlockSize()
 		{
@@ -90,7 +90,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		/**
 		* Returns the output block size of this algorithm.
 		*
-		* @see org.bouncycastle.crypto.AsymmetricBlockCipher#GetOutputBlockSize()
+		* @see Mirror.BouncyCastle.crypto.AsymmetricBlockCipher#GetOutputBlockSize()
 		*/
         public virtual int GetOutputBlockSize()
 		{
@@ -110,7 +110,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		/**
 		* Process a single Block using the Naccache-Stern algorithm.
 		*
-		* @see org.bouncycastle.crypto.AsymmetricBlockCipher#ProcessBlock(byte[],
+		* @see Mirror.BouncyCastle.crypto.AsymmetricBlockCipher#ProcessBlock(byte[],
 		*      int, int)
 		*/
         public virtual byte[] ProcessBlock(

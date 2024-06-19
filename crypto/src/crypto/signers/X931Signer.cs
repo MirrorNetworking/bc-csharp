@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Signers
+namespace Mirror.BouncyCastle.Crypto.Signers
 {
     /**
      * X9.31-1998 - signing using a hash.

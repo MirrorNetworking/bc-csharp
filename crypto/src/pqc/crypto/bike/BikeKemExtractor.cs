@@ -1,7 +1,7 @@
-﻿using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
+﻿using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Bike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Bike
 {
     public sealed class BikeKemExtractor
         : IEncapsulatedSecretExtractor

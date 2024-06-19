@@ -1,8 +1,8 @@
 using System.IO;
 
-using Org.BouncyCastle.Utilities.IO.Compression;
+using Mirror.BouncyCastle.Utilities.IO.Compression;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <remarks>Compressed data objects</remarks>
     public class PgpCompressedData

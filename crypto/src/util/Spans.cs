@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 #nullable enable
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     internal static class Spans
     {

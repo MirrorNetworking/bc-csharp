@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     internal class KyberEngine
     {
@@ -102,13 +102,13 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             byte[] pk, sk;
             m_indCpa.GenerateKeyPair(out pk, out sk);
             s = Arrays.CopyOfRange(sk, 0, IndCpaSecretKeyBytes);
-            
+
             hpk = new byte[32];
             Symmetric.Hash_h(hpk, pk, 0);
 
             nonce = new byte[SymBytes];
             m_random.NextBytes(nonce);
-            
+
             t = Arrays.CopyOfRange(pk, 0, IndCpaPublicKeyBytes - 32);
             rho = Arrays.CopyOfRange(pk, IndCpaPublicKeyBytes - 32, IndCpaPublicKeyBytes);
 
@@ -127,7 +127,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             Symmetric.Hash_h(buf, pk, SymBytes);
 
             Symmetric.Hash_g(kr, buf);
-            
+
             m_indCpa.Encrypt(cipherText, Arrays.CopyOfRange(buf, 0, SymBytes), pk, Arrays.CopyOfRange(kr, SymBytes, 2 * SymBytes));
 
             Array.Copy(kr, 0, sharedSecret, 0, sharedSecret.Length);
@@ -146,7 +146,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             m_indCpa.Encrypt(cmp, Arrays.CopyOf(buf, SymBytes), pk, Arrays.CopyOfRange(kr, SymBytes, kr.Length));
 
             bool fail = !Arrays.FixedTimeEquals(cipherText, cmp);
-            
+
             Symmetric.Hash_h(kr, cipherText, SymBytes);
 
 
@@ -166,7 +166,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
                 Array.Copy(r, 0, r, 0, len);
             }
         }
-        
+
         internal void RandomBytes(byte[] buf, int len)
         {
             m_random.NextBytes(buf,0,len);

@@ -3,13 +3,13 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     /**
      * basic test class for SM4

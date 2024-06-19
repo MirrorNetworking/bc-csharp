@@ -2,7 +2,7 @@ using System;
 
 using NUnit.Framework;
 
-namespace Org.BouncyCastle.Utilities.Net.Tests
+namespace Mirror.BouncyCastle.Utilities.Net.Tests
 {
 	[TestFixture]
 	public class IPTest

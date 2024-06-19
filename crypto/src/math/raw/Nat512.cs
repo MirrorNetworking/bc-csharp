@@ -6,7 +6,7 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-namespace Org.BouncyCastle.Math.Raw
+namespace Mirror.BouncyCastle.Math.Raw
 {
     internal static class Nat512
     {
@@ -26,7 +26,7 @@ namespace Org.BouncyCastle.Math.Raw
             Nat256.Mul(dx, dy, tt);
 
             c24 += neg ? Nat.AddTo(16, tt, 0, zz, 8) : (uint)Nat.SubFrom(16, tt, 0, zz, 8);
-            Nat.AddWordAt(32, c24, zz, 24); 
+            Nat.AddWordAt(32, c24, zz, 24);
         }
 
         public static void Square(uint[] x, uint[] zz)
@@ -45,7 +45,7 @@ namespace Org.BouncyCastle.Math.Raw
             Nat256.Square(dx, m);
 
             c24 += (uint)Nat.SubFrom(16, m, 0, zz, 8);
-            Nat.AddWordAt(32, c24, zz, 24); 
+            Nat.AddWordAt(32, c24, zz, 24);
         }
 
         public static void Xor(uint[] x, int xOff, uint[] y, int yOff, uint[] z, int zOff)
@@ -67,8 +67,8 @@ namespace Org.BouncyCastle.Math.Raw
         public static void Xor(ReadOnlySpan<uint> x, ReadOnlySpan<uint> y, Span<uint> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..16]);
                 var Y = MemoryMarshal.AsBytes(y[..16]);
@@ -88,8 +88,8 @@ namespace Org.BouncyCastle.Math.Raw
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..16]);
                 var Y = MemoryMarshal.AsBytes(y[..16]);
@@ -147,8 +147,8 @@ namespace Org.BouncyCastle.Math.Raw
         public static void XorTo(ReadOnlySpan<uint> x, Span<uint> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..16]);
                 var Z = MemoryMarshal.AsBytes(z[..16]);
@@ -167,8 +167,8 @@ namespace Org.BouncyCastle.Math.Raw
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..16]);
                 var Z = MemoryMarshal.AsBytes(z[..16]);
@@ -225,8 +225,8 @@ namespace Org.BouncyCastle.Math.Raw
         public static void Xor64(ReadOnlySpan<ulong> x, ReadOnlySpan<ulong> y, Span<ulong> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Y = MemoryMarshal.AsBytes(y[..8]);
@@ -246,8 +246,8 @@ namespace Org.BouncyCastle.Math.Raw
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Y = MemoryMarshal.AsBytes(y[..8]);
@@ -305,8 +305,8 @@ namespace Org.BouncyCastle.Math.Raw
         public static void XorTo64(ReadOnlySpan<ulong> x, Span<ulong> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Z = MemoryMarshal.AsBytes(z[..8]);
@@ -325,8 +325,8 @@ namespace Org.BouncyCastle.Math.Raw
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Z = MemoryMarshal.AsBytes(z[..8]);

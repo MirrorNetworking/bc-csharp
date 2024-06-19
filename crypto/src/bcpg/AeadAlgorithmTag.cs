@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     public enum AeadAlgorithmTag : byte
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>RFC 6066</summary>
     public abstract class IdentifierType

@@ -1,10 +1,10 @@
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     internal static class DHKeyGeneratorHelper
     {

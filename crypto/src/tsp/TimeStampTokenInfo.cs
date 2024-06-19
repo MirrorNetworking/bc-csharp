@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Tsp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
 	public class TimeStampTokenInfo
 	{

@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Tls.Crypto.Impl;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto.Impl;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Container class for generating signatures that carries the signature type, parameters, public key
     /// certificate and public key's associated signer object.</summary>

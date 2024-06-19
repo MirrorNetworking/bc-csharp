@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /// <summary>Parser for a DL encoded BIT STRING.</summary>
     internal class DLBitStringParser

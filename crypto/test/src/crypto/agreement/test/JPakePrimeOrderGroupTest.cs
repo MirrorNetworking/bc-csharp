@@ -2,11 +2,11 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Agreement.JPake;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Agreement.JPake;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Tests
+namespace Mirror.BouncyCastle.Crypto.Agreement.Tests
 {
     [TestFixture]
     public class JPakePrimeOrderGroupTest

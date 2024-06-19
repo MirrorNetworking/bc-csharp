@@ -4,13 +4,13 @@ using System.Diagnostics;
 using System.Numerics;
 #endif
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Bike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Bike
 {
     internal sealed class BikeEngine
     {

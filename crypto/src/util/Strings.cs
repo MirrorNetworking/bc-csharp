@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     /// <summary> General string utilities.</summary>
     public static class Strings

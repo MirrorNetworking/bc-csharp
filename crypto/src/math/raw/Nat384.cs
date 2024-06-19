@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Org.BouncyCastle.Math.Raw
+namespace Mirror.BouncyCastle.Math.Raw
 {
     internal static class Nat384
     {

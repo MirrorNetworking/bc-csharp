@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     /**
      * parameters for Key derivation functions for IEEE P1363a

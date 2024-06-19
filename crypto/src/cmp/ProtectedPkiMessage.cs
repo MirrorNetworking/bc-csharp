@@ -1,13 +1,13 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crmf;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crmf;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cmp
+namespace Mirror.BouncyCastle.Cmp
 {
     /// <summary>
     /// Wrapper for a PKIMessage with protection attached to it.
@@ -87,7 +87,7 @@ namespace Org.BouncyCastle.Cmp
         /// Verify a message with a public key based signature attached.
         /// </summary>
         /// <param name="verifierFactory">a factory of signature verifiers.</param>
-        /// <returns>true if the provider is able to create a verifier that validates the signature, false otherwise.</returns>      
+        /// <returns>true if the provider is able to create a verifier that validates the signature, false otherwise.</returns>
         public virtual bool Verify(IVerifierFactory verifierFactory) =>
             X509Utilities.VerifySignature(verifierFactory, CreateProtected(), m_pkiMessage.Protection);
 

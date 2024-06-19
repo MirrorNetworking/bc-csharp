@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
+namespace Mirror.BouncyCastle.Pqc.Crypto.NtruPrime
 {
     public sealed class SNtruPrimePrivateKeyParameters
         : SNtruPrimeKeyParameters
@@ -17,7 +17,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
         {
             return Arrays.Clone(privKey);
         }
-        
+
         public byte[] GetEncoded()
         {
             return GetPrivateKey();

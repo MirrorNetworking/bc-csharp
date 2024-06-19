@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
 	public class TimeStampedDataParser
 	{
@@ -10,7 +10,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 		private Asn1OctetStringParser content;
 		private Evidence temporalEvidence;
 		private Asn1SequenceParser parser;
-		
+
 		private TimeStampedDataParser(Asn1SequenceParser parser)
 		{
 			this.parser = parser;
@@ -47,7 +47,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 
 			return null;
 		}
-		
+
 		public virtual DerIA5String DataUri
 		{
 			get { return dataUri; }

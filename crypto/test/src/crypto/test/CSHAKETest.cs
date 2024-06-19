@@ -2,12 +2,12 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     [TestFixture]
     public class CShakeTest
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.Crypto.Tests
         public override void PerformTest()
         {
             CShakeDigest cshake = new CShakeDigest(128, new byte[0], Strings.ToByteArray("Email Signature"));
-           
+
             cshake.BlockUpdate(Hex.Decode("00010203"), 0, 4);
 
             byte[] res = new byte[32];
@@ -195,7 +195,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 
         private void checkSHAKE(int bitSize, CShakeDigest cshake, byte[] msg)
         {
-            
+
             ShakeDigest ref_ = new ShakeDigest(bitSize);
 
             ref_.BlockUpdate(msg, 0, msg.Length);

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class DefaultTlsHeartbeat
         : TlsHeartbeat

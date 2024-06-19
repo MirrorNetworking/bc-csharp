@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	public abstract class PkixAttrCertChecker
 	{

@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.TeleTrust
+namespace Mirror.BouncyCastle.Asn1.TeleTrust
 {
     // TODO[api] Make static
     public sealed class TeleTrusTObjectIdentifiers
@@ -26,7 +26,7 @@ namespace Org.BouncyCastle.Asn1.TeleTrust
 
 		public static readonly DerObjectIdentifier EccBrainpool = new DerObjectIdentifier(TeleTrusTAlgorithm + ".3.2.8");
 		public static readonly DerObjectIdentifier EllipticCurve = new DerObjectIdentifier(EccBrainpool + ".1");
-		public static readonly DerObjectIdentifier VersionOne = new DerObjectIdentifier(EllipticCurve + ".1");    
+		public static readonly DerObjectIdentifier VersionOne = new DerObjectIdentifier(EllipticCurve + ".1");
 
 		public static readonly DerObjectIdentifier BrainpoolP160R1 = new DerObjectIdentifier(VersionOne + ".1");
 		public static readonly DerObjectIdentifier BrainpoolP160T1 = new DerObjectIdentifier(VersionOne + ".2");

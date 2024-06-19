@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     internal class TlsTestServerProtocol
         : TlsServerProtocol

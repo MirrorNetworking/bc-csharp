@@ -1,22 +1,22 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
     /**
-	* HC-256 is a software-efficient stream cipher created by Hongjun Wu. It 
-	* generates keystream from a 256-bit secret key and a 256-bit initialization 
+	* HC-256 is a software-efficient stream cipher created by Hongjun Wu. It
+	* generates keystream from a 256-bit secret key and a 256-bit initialization
 	* vector.
 	* <p>
 	* http://www.ecrypt.eu.org/stream/p3ciphers/hc/hc256_p3.pdf
 	* </p><p>
 	* Its brother, HC-128, is a third phase candidate in the eStream contest.
-	* The algorithm is patent-free. No attacks are known as of today (April 2007). 
+	* The algorithm is patent-free. No attacks are known as of today (April 2007).
 	* See
-	* 
+	*
 	* http://www.ecrypt.eu.org/stream/hcp3.html
 	* </p>
 	*/

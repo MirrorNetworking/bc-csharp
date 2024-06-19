@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
     internal sealed class PgpKdfParameters
         //: IPgpAlgorithmParameters

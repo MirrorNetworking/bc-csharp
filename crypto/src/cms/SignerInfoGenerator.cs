@@ -1,9 +1,9 @@
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     public class SignerInfoGenerator
     {
@@ -72,7 +72,7 @@ namespace Org.BouncyCastle.Cms
         public SignerInfoGeneratorBuilder()
         {
         }
-    
+
 
         /**
          * If the passed in flag is true, the signer signature will be based on the data, not

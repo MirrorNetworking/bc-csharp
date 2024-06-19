@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/**
 	* HC-128 is a software-efficient stream cipher created by Hongjun Wu. It
@@ -168,7 +168,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		{
 			if (idx == 0)
 			{
-				Pack.UInt32_To_LE(Step(), buf);				
+				Pack.UInt32_To_LE(Step(), buf);
 			}
 			byte ret = buf[idx];
 			idx = (idx + 1) & 0x3;

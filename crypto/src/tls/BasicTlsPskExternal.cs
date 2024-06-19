@@ -1,16 +1,16 @@
 ﻿using System;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class BasicTlsPskExternal
         : TlsPskExternal
     {
         protected readonly byte[] m_identity;
         protected readonly TlsSecret m_key;
-        protected readonly int m_prfAlgorithm; 
+        protected readonly int m_prfAlgorithm;
 
         public BasicTlsPskExternal(byte[] identity, TlsSecret key)
             : this(identity, key, Tls.PrfAlgorithm.tls13_hkdf_sha256)

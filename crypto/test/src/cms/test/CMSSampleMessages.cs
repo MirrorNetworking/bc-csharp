@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	internal class CmsSampleMessages
 	{

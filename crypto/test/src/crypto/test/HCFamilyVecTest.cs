@@ -4,18 +4,18 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	/**
 	* HC-128 and HC-256 Tests. Based on the test vectors in the official reference
 	* papers, respectively:
-	* 
+	*
 	* http://www.ecrypt.eu.org/stream/p3ciphers/hc/hc128_p3.pdf
 	* http://www.ecrypt.eu.org/stream/p3ciphers/hc/hc256_p3.pdf
 	*/
@@ -44,7 +44,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 				return tmp;
 			}
 
-			private string peek; 
+			private string peek;
 	    }
 
 		public override string Name

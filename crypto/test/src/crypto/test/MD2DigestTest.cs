@@ -2,12 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * standard vector test for MD2
@@ -30,14 +30,14 @@ namespace Org.BouncyCastle.Crypto.Tests
         };
 
         static string[] digests =
-        { 
+        {
             "8350e5a3e24c153df2275c9f80692773",
             "32ec01ec4a6dac72c0ab96fb34c0b5d1",
             "da853b0d3f88d99b30283a69e6ded6bb",
             "ab4f496bfb2a530b219ff33031fe06b0",
             "4e8ddff3650292ab5a4108c3aa47940b",
             "da33def2a42df13975352846c30338cd",
-            "d5976f79d83d3a0dc9806c3c66f3efd8" 
+            "d5976f79d83d3a0dc9806c3c66f3efd8"
         };
 
         public MD2DigestTest()

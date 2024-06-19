@@ -4,7 +4,7 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 #endif
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     public static class Bytes
     {

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Security
+namespace Mirror.BouncyCastle.Security
 {
     public class JksStore
     {

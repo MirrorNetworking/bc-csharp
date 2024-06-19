@@ -4,23 +4,23 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Ess;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Ess;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tsp.Tests
+namespace Mirror.BouncyCastle.Tsp.Tests
 {
 	public class NewTspTest
 	{
@@ -115,7 +115,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 
 			// --- These are test case only values
-			reqGen.SetReqPolicy("2.5.29.56"); 
+			reqGen.SetReqPolicy("2.5.29.56");
 			reqGen.AddExtension(new DerObjectIdentifier("1.3.6.1.5.5.7.1.2"), true, new DerOctetString(new byte[20]));
 			// --- not for any real world purpose.
 
@@ -191,7 +191,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 				privateKey, cert, TspAlgorithms.MD5, "1.2.3");
 
 			tsTokenGen.SetCertificates(certs);
-	
+
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			TimeStampRequest request = reqGen.Generate(TspAlgorithms.Sha1, new byte[20]);
 
@@ -306,7 +306,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 			tsTokenGen.SetAccuracyMicros(3);
 
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
-			
+
 			TimeStampRequest request = reqGen.Generate(TspAlgorithms.Sha1, new byte[20], BigInteger.ValueOf(100));
 
 			TimeStampResponseGenerator tsRespGen = new TimeStampResponseGenerator(tsTokenGen, TspAlgorithms.Allowed);
@@ -316,7 +316,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 			tsResp = new TimeStampResponse(tsResp.GetEncoded());
 
 			TimeStampToken tsToken = tsResp.TimeStampToken;
-	
+
 			tsResp.Validate(request);
 
 			TimeStampTokenInfo tstInfo = tsToken.TimeStampInfo;
@@ -344,7 +344,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 			  privateKey, cert, TspAlgorithms.MD5, "1.2");
 
 			tsTokenGen.SetCertificates(certs);
-			
+
 
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			reqGen.SetCertReq(false);
@@ -388,7 +388,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 				 privateKey, cert, TspAlgorithms.Sha1, "1.2.3.4.5.6");
 
 			tsTokenGen.SetCertificates(certs);
-		
+
 
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			TimeStampRequest request = reqGen.Generate(TspAlgorithms.Sha1, new byte[20], BigInteger.ValueOf(100));
@@ -415,7 +415,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 				  privateKey, cert, TspAlgorithms.Sha1, "1.2");
 
 			tsTokenGen.SetCertificates(certs);
-			
+
 
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			reqGen.SetReqPolicy("1.1");
@@ -460,7 +460,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			TimeStampRequest request = reqGen.Generate(new DerObjectIdentifier("1.2.3.4.5"), new byte[20]);
 
-			TimeStampResponseGenerator tsRespGen = new TimeStampResponseGenerator(tsTokenGen, TspAlgorithms.Allowed);			
+			TimeStampResponseGenerator tsRespGen = new TimeStampResponseGenerator(tsTokenGen, TspAlgorithms.Allowed);
 
 			TimeStampResponse tsResp = null;
 
@@ -570,7 +570,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 				 privateKey, cert, TspAlgorithms.MD5, "1.2");
 
 			tsTokenGen.SetCertificates(certs);
-			
+
 
 			TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
 			TimeStampRequest request = reqGen.Generate(TspAlgorithms.Sha1, new byte[20], BigInteger.ValueOf(100));

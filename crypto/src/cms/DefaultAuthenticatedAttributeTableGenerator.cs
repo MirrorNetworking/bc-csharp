@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	/**
 	 * Default authenticated attributes generator.

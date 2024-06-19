@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Agreement.Srp;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Agreement.Srp;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     internal sealed class BcTlsSrp6Server
         : TlsSrp6Server

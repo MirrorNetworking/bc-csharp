@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
     * containing class for an CMS Enveloped Data object
@@ -82,7 +82,7 @@ namespace Org.BouncyCastle.Cms
         }
 
 		/**
-		 * return the ContentInfo 
+		 * return the ContentInfo
 		 */
 		public ContentInfo ContentInfo
 		{

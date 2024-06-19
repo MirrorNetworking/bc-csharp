@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Asn1.UA
+﻿namespace Mirror.BouncyCastle.Asn1.UA
 {
     /**
      * Ukrainian object identifiers
@@ -19,7 +19,7 @@
         public static readonly DerObjectIdentifier dstu4145le = UaOid.Branch("1.3.1.1");
         /** DSTU4145 Big Endian presentation.  OID: 1.2.804.2.1.1.1.1.3.1.1.1 */
         public static readonly DerObjectIdentifier dstu4145be = UaOid.Branch("1.3.1.1.1.1");
-    
+
         /** DSTU7564 256-bit digest presentation. */
         public static readonly DerObjectIdentifier dstu7564digest_256 = UaOid.Branch("1.2.2.1");
         /** DSTU7564 384-bit digest presentation. */

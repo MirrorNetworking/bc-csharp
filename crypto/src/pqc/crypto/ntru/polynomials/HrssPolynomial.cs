@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
+﻿using Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
 {
     internal class HrssPolynomial : Polynomial
     {

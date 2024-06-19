@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public sealed class Srp6GroupParameters
     {

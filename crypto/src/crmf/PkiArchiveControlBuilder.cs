@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class PkiArchiveControlBuilder
     {
@@ -37,22 +37,22 @@ namespace Org.BouncyCastle.Crmf
             m_envGen = new CmsEnvelopedDataGenerator();
         }
 
-        ///<summary>Add a recipient generator to this control.</summary>       
+        ///<summary>Add a recipient generator to this control.</summary>
         ///<param name="recipientGen"> recipient generator created for a specific recipient.</param>
-        ///<returns>this builder object.</returns>       
+        ///<returns>this builder object.</returns>
         public PkiArchiveControlBuilder AddRecipientGenerator(RecipientInfoGenerator recipientGen)
         {
             m_envGen.AddRecipientInfoGenerator(recipientGen);
             return this;
         }
-       
+
         /// <summary>Build the PKIArchiveControl using the passed in encryptor to encrypt its contents.</summary>
         /// <param name="contentEncryptor">a suitable content encryptor.</param>
         /// <returns>a PKIArchiveControl object.</returns>
         public PkiArchiveControl Build(ICipherBuilderWithKey contentEncryptor)
-        {                                            
+        {
             CmsEnvelopedData envContent = m_envGen.Generate(m_keyContent, contentEncryptor);
-            EnvelopedData envD = EnvelopedData.GetInstance(envContent.ContentInfo.Content);        
+            EnvelopedData envD = EnvelopedData.GetInstance(envContent.ContentInfo.Content);
             return new PkiArchiveControl(new PkiArchiveOptions(new EncryptedKey(envD)));
         }
 

@@ -2,21 +2,21 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class RsaTest
@@ -201,7 +201,7 @@ namespace Org.BouncyCastle.Tests
 
 //			c.init(Cipher.ENCRYPT_MODE, pubKey, rand);
 			c.Init(true, pubKey);// new ParametersWithRandom(pubKey, rand));
-			
+
 			c.ProcessBytes(input);
 
 			outBytes = c.DoFinal();
@@ -210,10 +210,10 @@ namespace Org.BouncyCastle.Tests
 			{
 				Fail("NoPadding test failed on encrypt expected " + Hex.ToHexString(output[0]) + " got " + Hex.ToHexString(outBytes));
 			}
-			
+
 //			c.init(Cipher.DECRYPT_MODE, privKey);
 			c.Init(false, privKey);
-			
+
 			outBytes = c.DoFinal(outBytes);
 
 			if (!AreEqual(outBytes, input))
@@ -292,7 +292,7 @@ namespace Org.BouncyCastle.Tests
 			{
 				Fail("PKCS1 test failed on decrypt expected " + Hex.ToHexString(input) + " got " + Hex.ToHexString(outBytes));
 			}
-			
+
 			//
 			// OAEP - SHA1
 			//
@@ -626,7 +626,7 @@ namespace Org.BouncyCastle.Tests
 			rawModeTest("MD5withRSA", PkcsObjectIdentifiers.MD5, priv2048Key, pub2048Key, random);
 			rawModeTest("RIPEMD128withRSA", TeleTrusTObjectIdentifiers.RipeMD128, priv2048Key, pub2048Key, random);
 		}
-		
+
 		private void rawModeTest(string sigName, DerObjectIdentifier digestOID,
 			AsymmetricKeyParameter privKey, AsymmetricKeyParameter pubKey, SecureRandom random)
 		{
@@ -637,15 +637,15 @@ namespace Org.BouncyCastle.Tests
 			normalSig.Init(true, privKey);
 			normalSig.BlockUpdate(sampleMessage, 0, sampleMessage.Length);
 			byte[] normalResult = normalSig.GenerateSignature();
-			
+
 			byte[] hash = DigestUtilities.CalculateDigest(digestOID.Id, sampleMessage);
 			byte[] digInfo = derEncode(digestOID, hash);
-			
+
 			ISigner rawSig = SignerUtilities.GetSigner("RSA");
 			rawSig.Init(true, privKey);
 			rawSig.BlockUpdate(digInfo, 0, digInfo.Length);
 			byte[] rawResult = rawSig.GenerateSignature();
-			
+
 			if (!Arrays.AreEqual(normalResult, rawResult))
 			{
 				Fail("raw mode signature differs from normal one");
@@ -667,7 +667,7 @@ namespace Org.BouncyCastle.Tests
 
 			return dInfo.GetEncoded(Asn1Encodable.Der);
 		}
-		
+
 		public override string Name
 		{
 			get { return "RSATest"; }

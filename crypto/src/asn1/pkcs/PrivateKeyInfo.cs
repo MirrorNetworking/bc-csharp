@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     /**
      *  RFC 5958

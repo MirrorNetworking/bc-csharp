@@ -2,26 +2,26 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Cmp.Tests;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Operators;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Cmp.Tests;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Operators;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Crmf.Tests
+namespace Mirror.BouncyCastle.Crmf.Tests
 {
     [TestFixture]
     public class CrmfTest : SimpleTest
@@ -38,7 +38,7 @@ namespace Org.BouncyCastle.Crmf.Tests
             TestBasicMessageWithArchiveControl();
             TestBasicMessageWithArchiveControlJVMGenerated();
         }
-        
+
         [Test]
         public void TestFromJVM()
         {
@@ -71,7 +71,7 @@ namespace Org.BouncyCastle.Crmf.Tests
             CertificateRequestMessageBuilder certReqBuild = new CertificateRequestMessageBuilder(BigInteger.One);
 
             certReqBuild.SetSubject(new X509Name("CN=Test"))
-                .SetPublicKey(SubjectPublicKeyInfoFactory.CreateSubjectPublicKeyInfo(rsaKeyPair.Public))                
+                .SetPublicKey(SubjectPublicKeyInfoFactory.CreateSubjectPublicKeyInfo(rsaKeyPair.Public))
                 .SetProofOfPossessionSignKeySigner(new Asn1SignatureFactory("SHA1WithRSA", rsaKeyPair.Private));
 
             CertificateRequestMessage certificateRequestMessage = certReqBuild.Build();
@@ -104,7 +104,7 @@ namespace Org.BouncyCastle.Crmf.Tests
             CertificateRequestMessageBuilder certificateRequestMessageBuilder = new CertificateRequestMessageBuilder(BigInteger.One);
             certificateRequestMessageBuilder.SetSubject(new X509Name("CN=Test"));
             certificateRequestMessageBuilder.SetPublicKey(publicKeyInfo);
-           
+
             certificateRequestMessageBuilder.AddControl(
                 new PkiArchiveControlBuilder(privateInfo, new GeneralName(new X509Name("CN=Test")))
                     .AddRecipientGenerator(new KeyTransRecipientInfoGenerator(cert, new Asn1KeyWrapper("RSA/None/OAEPwithSHA256andMGF1Padding", cert)))
@@ -140,7 +140,7 @@ namespace Org.BouncyCastle.Crmf.Tests
 
             CheckCertReqMsgWithArchiveControl(rsaKeyPair, msg);
             CheckCertReqMsgWithArchiveControl(rsaKeyPair, new CertificateRequestMessage(msg.GetEncoded()));
-        
+
             CheckCertReqMsgWithArchiveControl(rsaKeyPair,msg);
         }
 
@@ -162,9 +162,9 @@ namespace Org.BouncyCastle.Crmf.Tests
 
             IsTrue(encKeyWithId.HasIdentifier);
             IsTrue(!encKeyWithId.IsIdentifierUtf8String); // GeneralName at this point.
-            
+
             IsTrue("Name", X509Name.GetInstance(GeneralName.GetInstance(encKeyWithId.Identifier).Name).Equivalent(new X509Name("CN=Test")));
-          
+
             PrivateKeyInfo privateKeyInfo = PrivateKeyInfoFactory.CreatePrivateKeyInfo(kp.Private);
             IsTrue("Private Key", Arrays.AreEqual(privateKeyInfo.GetEncoded(), encKeyWithId.PrivateKey.GetEncoded()));
         }

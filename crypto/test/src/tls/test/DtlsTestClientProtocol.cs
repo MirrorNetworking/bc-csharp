@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     internal class DtlsTestClientProtocol
         : DtlsClientProtocol

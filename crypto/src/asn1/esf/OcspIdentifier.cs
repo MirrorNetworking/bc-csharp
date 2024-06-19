@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Ocsp;
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.Ocsp;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
     /// <remarks>
     /// RFC 3126: 4.2.2 Complete Revocation Refs Attribute Definition

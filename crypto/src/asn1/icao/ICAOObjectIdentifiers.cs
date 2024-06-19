@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Icao
+namespace Mirror.BouncyCastle.Asn1.Icao
 {
     // TODO[api] Make static
     public abstract class IcaoObjectIdentifiers

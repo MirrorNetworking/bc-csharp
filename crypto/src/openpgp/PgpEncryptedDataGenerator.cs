@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.Cryptlib;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Agreement;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.Cryptlib;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Agreement;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
     /// <remarks>Generator for encrypted objects.</remarks>
     public class PgpEncryptedDataGenerator

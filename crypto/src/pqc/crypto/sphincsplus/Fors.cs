@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     internal class Fors
     {
@@ -32,7 +32,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
                 adrs.SetTreeIndex(s + idx);
 
                 engine.PRF(pkSeed, skSeed, adrs, sk, 0);
-                
+
                 adrs.ChangeAdrsType(Adrs.FORS_TREE);
 
                 byte[] node = engine.F(pkSeed, adrs, sk);

@@ -1,15 +1,15 @@
 using System;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Utilities;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509.Extension;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
 	/**
 	 * The following extensions are listed in RFC 2459 as relevant to CRL Entries
@@ -202,7 +202,7 @@ namespace Org.BouncyCastle.X509
 									buf.Append("Certificate issuer: ").Append(
 										GeneralNames.GetInstance((Asn1Sequence)obj));
 								}
-								else 
+								else
 								{
 									buf.Append(oid.Id);
 									buf.Append(" value = ").Append(Asn1Dump.DumpAsString(obj));

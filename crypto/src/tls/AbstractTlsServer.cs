@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Base class for a TLS server.</summary>
     public abstract class AbstractTlsServer
@@ -459,7 +459,7 @@ namespace Org.BouncyCastle.Tls
                 {
                     /*
                      * TODO[tls13] RFC 8446 4.4.2.1. OCSP Status and SCT Extensions.
-                     * 
+                     *
                      * OCSP information is carried in an extension for a CertificateEntry.
                      */
                 }

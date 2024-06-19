@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /// <remarks>
     /// General class for generating a CMS enveloped-data message.
@@ -135,7 +135,7 @@ namespace Org.BouncyCastle.Cms
             try
             {
 				CipherKeyGenerator keyGen = GeneratorUtilities.GetKeyGenerator(encryptionOid);
-               
+
 				keyGen.Init(new KeyGenerationParameters(m_random, keyGen.DefaultStrength));
 
 				return Generate(content, encryptionOid, keyGen);

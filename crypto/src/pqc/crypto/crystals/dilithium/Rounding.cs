@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class Rounding
     {

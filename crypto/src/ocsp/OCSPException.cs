@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Ocsp
+namespace Mirror.BouncyCastle.Ocsp
 {
     [Serializable]
     public class OcspException

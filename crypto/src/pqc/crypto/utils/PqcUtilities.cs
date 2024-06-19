@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
-using Org.BouncyCastle.Pqc.Crypto.Bike;
-using Org.BouncyCastle.Pqc.Crypto.Cmce;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Falcon;
-using Org.BouncyCastle.Pqc.Crypto.Frodo;
-using Org.BouncyCastle.Pqc.Crypto.Hqc;
-using Org.BouncyCastle.Pqc.Crypto.Picnic;
-using Org.BouncyCastle.Pqc.Crypto.Saber;
-using Org.BouncyCastle.Pqc.Crypto.Sike;
-using Org.BouncyCastle.Pqc.Crypto.SphincsPlus;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Pqc.Crypto.Bike;
+using Mirror.BouncyCastle.Pqc.Crypto.Cmce;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Falcon;
+using Mirror.BouncyCastle.Pqc.Crypto.Frodo;
+using Mirror.BouncyCastle.Pqc.Crypto.Hqc;
+using Mirror.BouncyCastle.Pqc.Crypto.Picnic;
+using Mirror.BouncyCastle.Pqc.Crypto.Saber;
+using Mirror.BouncyCastle.Pqc.Crypto.Sike;
+using Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     internal class PqcUtilities
     {
@@ -130,7 +130,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             saberParams[BCObjectIdentifiers.ulightsaberkem90sr3] = SaberParameters.ulightsaberkem90sr3;
             saberParams[BCObjectIdentifiers.usaberkem90sr3] = SaberParameters.usaberkem90sr3;
             saberParams[BCObjectIdentifiers.ufiresaberkem90sr3] = SaberParameters.ufiresaberkem90sr3;
-            
+
             picnicOids[PicnicParameters.picnicl1fs] = BCObjectIdentifiers.picnicl1fs;
             picnicOids[PicnicParameters.picnicl1ur] = BCObjectIdentifiers.picnicl1ur;
             picnicOids[PicnicParameters.picnicl3fs] = BCObjectIdentifiers.picnicl3fs;
@@ -143,7 +143,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             picnicOids[PicnicParameters.picnicl1full] = BCObjectIdentifiers.picnicl1full;
             picnicOids[PicnicParameters.picnicl3full] = BCObjectIdentifiers.picnicl3full;
             picnicOids[PicnicParameters.picnicl5full] = BCObjectIdentifiers.picnicl5full;
-    
+
             picnicParams[BCObjectIdentifiers.picnicl1fs] = PicnicParameters.picnicl1fs;
             picnicParams[BCObjectIdentifiers.picnicl1ur] = PicnicParameters.picnicl1ur;
             picnicParams[BCObjectIdentifiers.picnicl3fs] = PicnicParameters.picnicl3fs;
@@ -180,21 +180,21 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             kyberOids[KyberParameters.kyber512] = BCObjectIdentifiers.kyber512;
             kyberOids[KyberParameters.kyber768] = BCObjectIdentifiers.kyber768;
             kyberOids[KyberParameters.kyber1024] = BCObjectIdentifiers.kyber1024;
-            
+
             kyberParams[BCObjectIdentifiers.kyber512] = KyberParameters.kyber512;
             kyberParams[BCObjectIdentifiers.kyber768] = KyberParameters.kyber768;
             kyberParams[BCObjectIdentifiers.kyber1024] = KyberParameters.kyber1024;
-            
+
             falconOids[FalconParameters.falcon_512] = BCObjectIdentifiers.falcon_512;
             falconOids[FalconParameters.falcon_1024] = BCObjectIdentifiers.falcon_1024;
-            
+
             falconParams[BCObjectIdentifiers.falcon_512] = FalconParameters.falcon_512;
             falconParams[BCObjectIdentifiers.falcon_1024] = FalconParameters.falcon_1024;
-            
+
             dilithiumOids[DilithiumParameters.Dilithium2] = BCObjectIdentifiers.dilithium2;
             dilithiumOids[DilithiumParameters.Dilithium3] = BCObjectIdentifiers.dilithium3;
             dilithiumOids[DilithiumParameters.Dilithium5] = BCObjectIdentifiers.dilithium5;
-            
+
             dilithiumParams[BCObjectIdentifiers.dilithium2] = DilithiumParameters.Dilithium2;
             dilithiumParams[BCObjectIdentifiers.dilithium3] = DilithiumParameters.Dilithium3;
             dilithiumParams[BCObjectIdentifiers.dilithium5] = DilithiumParameters.Dilithium5;
@@ -254,7 +254,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             sphincsPlusOids[SphincsPlusParameters.haraka_192s_simple] = BCObjectIdentifiers.sphincsPlus_haraka_192s_r3_simple;
             sphincsPlusOids[SphincsPlusParameters.haraka_256f_simple] = BCObjectIdentifiers.sphincsPlus_haraka_256f_r3_simple;
             sphincsPlusOids[SphincsPlusParameters.haraka_256s_simple] = BCObjectIdentifiers.sphincsPlus_haraka_256s_r3_simple;
-            
+
             sphincsPlusParams[BCObjectIdentifiers.sphincsPlus_haraka_128f_r3_simple] = SphincsPlusParameters.haraka_128f_simple;
             sphincsPlusParams[BCObjectIdentifiers.sphincsPlus_haraka_128s_r3_simple] = SphincsPlusParameters.haraka_128s_simple;
             sphincsPlusParams[BCObjectIdentifiers.sphincsPlus_haraka_192f_r3_simple] = SphincsPlusParameters.haraka_192f_simple;
@@ -338,7 +338,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
         internal static FalconParameters FalconParamsLookup(DerObjectIdentifier oid)
         {
             return CollectionUtilities.GetValueOrNull(falconParams, oid);
-        }       
+        }
 
         internal static DerObjectIdentifier FalconOidLookup(FalconParameters parameters)
         {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Base class for supporting a TLS key exchange factory implementation.</summary>
     public abstract class AbstractTlsKeyExchangeFactory

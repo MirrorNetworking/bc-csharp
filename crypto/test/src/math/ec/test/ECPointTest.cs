@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.EC;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.EC;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Tests
+namespace Mirror.BouncyCastle.Math.EC.Tests
 {
     /**
-     * Test class for {@link org.bouncycastle.math.ec.ECPoint ECPoint}. All
+     * Test class for {@link Mirror.BouncyCastle.math.ec.ECPoint ECPoint}. All
      * literature values are taken from "Guide to elliptic curve cryptography",
      * Darrel Hankerson, Alfred J. Menezes, Scott Vanstone, 2004, Springer-Verlag
      * New York, Inc.

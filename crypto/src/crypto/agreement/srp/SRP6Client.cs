@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Srp
+namespace Mirror.BouncyCastle.Crypto.Agreement.Srp
 {
 	/**
 	 * Implements the client side SRP-6a protocol. Note that this class is stateful, and therefore NOT threadsafe.
@@ -89,7 +89,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 
 	    protected virtual BigInteger SelectPrivateValue()
 	    {
-	    	return Srp6Utilities.GeneratePrivateValue(digest, N, g, random);    	
+	    	return Srp6Utilities.GeneratePrivateValue(digest, N, g, random);
 	    }
 
 	    private BigInteger CalculateS()
@@ -99,7 +99,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 	        BigInteger tmp = g.ModPow(x, N).Multiply(k).Mod(N);
 	        return B.Subtract(tmp).Mod(N).ModPow(exp, N);
 	    }
-    
+
         /**
 	     * Computes the client evidence message M1 using the previously received values.
 	     * To be called after calculating the secret S.
@@ -115,7 +115,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 					    "some data are missing from the previous operations (A,B,S)");
 		    }
 		    // compute the client evidence message 'M1'
-		    this.M1 = Srp6Utilities.CalculateM1(digest, N, pubA, B, S);  
+		    this.M1 = Srp6Utilities.CalculateM1(digest, N, pubA, B, S);
 		    return M1;
 	    }
 

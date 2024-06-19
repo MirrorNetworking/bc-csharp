@@ -3,14 +3,14 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Kisa;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.Kisa;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/// <summary>Basic test class for SEED</summary>
 	[TestFixture]

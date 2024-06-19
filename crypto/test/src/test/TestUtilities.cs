@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Extension;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/**
 	 * Test Utils
@@ -90,8 +90,8 @@ namespace Org.BouncyCastle.Tests
 		}
 
 		public static X509Crl CreateCrl(
-			X509Certificate			caCert, 
-			AsymmetricKeyParameter	caKey, 
+			X509Certificate			caCert,
+			AsymmetricKeyParameter	caKey,
 			BigInteger				serialNumber)
 		{
 			X509V2CrlGenerator	crlGen = new X509V2CrlGenerator();

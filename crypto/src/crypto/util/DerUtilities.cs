@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     internal class DerUtilities
     {

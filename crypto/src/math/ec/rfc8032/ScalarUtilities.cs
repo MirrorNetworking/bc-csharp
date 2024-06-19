@@ -4,9 +4,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 #endif
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     internal static class ScalarUtilities
     {

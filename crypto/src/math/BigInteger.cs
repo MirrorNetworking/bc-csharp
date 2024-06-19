@@ -11,11 +11,11 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math
+namespace Mirror.BouncyCastle.Math
 {
     [Serializable]
     public sealed class BigInteger
@@ -863,7 +863,7 @@ namespace Org.BouncyCastle.Math
                     :	Three.magnitude;
                 return;
             }
-             
+
             int nBytes = GetBytesLength(bitLength);
 
 #if NETCOREAPP2_1_OR_GREATER || NETSTANDARD2_1_OR_GREATER
@@ -2679,7 +2679,7 @@ namespace Org.BouncyCastle.Math
                 {
                     throw new ArithmeticException("Result too large");
                 }
-                return One.ShiftLeft((int)powOf2); 
+                return One.ShiftLeft((int)powOf2);
             }
 
             BigInteger y = One;

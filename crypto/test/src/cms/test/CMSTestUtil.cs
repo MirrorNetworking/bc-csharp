@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Extension;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	public class CmsTestUtil
 	{

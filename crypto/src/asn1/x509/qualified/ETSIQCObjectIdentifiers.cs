@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.Asn1.X509.Qualified
+namespace Mirror.BouncyCastle.Asn1.X509.Qualified
 {
 	public abstract class EtsiQCObjectIdentifiers
 	{

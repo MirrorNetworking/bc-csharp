@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Math.EC.Rfc7748;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Math.EC.Rfc7748;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public sealed class X25519PublicKeyParameters
         : AsymmetricKeyParameter

@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Pkcs;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
     /**
      * an X509Certificate structure.

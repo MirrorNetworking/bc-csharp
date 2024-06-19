@@ -2,7 +2,7 @@
 
 using NUnit.Framework;
 
-namespace Org.BouncyCastle.Utilities.UtilTests
+namespace Mirror.BouncyCastle.Utilities.UtilTests
 {
     [TestFixture]
     public class IntegersTest

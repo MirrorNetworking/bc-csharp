@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public sealed class ByteQueueInputStream
         : BaseInputStream

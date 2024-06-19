@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
     // TODO[api] Make internal
     public static class Hss
@@ -128,7 +128,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Lms
             lock (keyPair)
             {
                 RangeTestKeys(keyPair);
-                
+
                 var keys = keyPair.GetKeys();
                 var sig = keyPair.GetSig();
 

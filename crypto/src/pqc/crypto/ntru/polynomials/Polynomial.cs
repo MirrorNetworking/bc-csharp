@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
+﻿using Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
 {
     internal abstract class Polynomial
     {
@@ -73,7 +73,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
             return SqToBytes(len);
         }
 
-        // Unpack a Rq0 polynomial 
+        // Unpack a Rq0 polynomial
         public void RqSumZeroFromBytes(byte[] a)
         {
             int n = coeffs.Length;
@@ -179,7 +179,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials
         }
 
 
-        // Defined in: 
+        // Defined in:
         public void S3Mul(Polynomial a, Polynomial b)
         {
             RqMul(a, b);

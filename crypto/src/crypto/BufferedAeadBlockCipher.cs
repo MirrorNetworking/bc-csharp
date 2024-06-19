@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	/**
 	* The AEAD block ciphers already handle buffering internally, so this class

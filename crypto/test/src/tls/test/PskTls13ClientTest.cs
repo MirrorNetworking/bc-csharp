@@ -5,9 +5,9 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     [TestFixture]
     public class PskTls13ClientTest

@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class CertificateRequestMessage
     {

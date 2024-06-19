@@ -1,11 +1,11 @@
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO.Compression;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO.Compression;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
     * containing class for an CMS Compressed Data object
@@ -88,7 +88,7 @@ namespace Org.BouncyCastle.Cms
 		}
 
 		/**
-		 * return the ContentInfo 
+		 * return the ContentInfo
 		 */
 		public ContentInfo ContentInfo
 		{

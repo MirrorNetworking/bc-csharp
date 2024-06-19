@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
     public sealed class EncryptedPrivateKeyInfoFactory
     {

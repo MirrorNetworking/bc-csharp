@@ -3,21 +3,21 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Ess;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Ess;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tsp.Tests
+namespace Mirror.BouncyCastle.Tsp.Tests
 {
 	[TestFixture]
 	public class TspTest
@@ -31,13 +31,13 @@ namespace Org.BouncyCastle.Tsp.Tests
 			string signDN = "O=Bouncy Castle, C=AU";
 			AsymmetricCipherKeyPair signKP = TspTestUtil.MakeKeyPair();
 			X509Certificate signCert = TspTestUtil.MakeCACertificate(signKP, signDN, signKP, signDN);
-	
+
 
 			string origDN = "CN=Eric H. Echidna, E=eric@bouncycastle.org, O=Bouncy Castle, C=AU";
 			AsymmetricCipherKeyPair origKP = TspTestUtil.MakeKeyPair();
 			privateKey = origKP.Private;
 
-			
+
 
 			cert = TspTestUtil.MakeCertificate(origKP, origDN, signKP, signDN);
 
@@ -645,7 +645,7 @@ namespace Org.BouncyCastle.Tsp.Tests
 
 			Asn1.X509.IssuerSerial issSerNum = sCert.GetCerts()[0].IssuerSerial;
 
-			Assert.AreEqual(cert.SerialNumber, issSerNum.Serial.Value);	
+			Assert.AreEqual(cert.SerialNumber, issSerNum.Serial.Value);
 		}
 
         internal static SignerInfoGenerator MakeInfoGenerator(AsymmetricKeyParameter key, X509Certificate cert,

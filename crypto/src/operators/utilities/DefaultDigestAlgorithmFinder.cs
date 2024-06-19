@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
-using Org.BouncyCastle.Asn1.Bsi;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.Eac;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Asn1.GM;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Asn1.Bsi;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.Eac;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.GM;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Operators.Utilities
+namespace Mirror.BouncyCastle.Operators.Utilities
 {
     public class DefaultDigestAlgorithmFinder
         : IDigestAlgorithmFinder

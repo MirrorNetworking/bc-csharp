@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Modes
+namespace Mirror.BouncyCastle.Crypto.Modes
 {
     /**
     * implements a Output-FeedBack (OFB) mode on top of a simple cipher.

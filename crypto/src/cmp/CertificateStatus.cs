@@ -1,14 +1,14 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Operators.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Operators.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cmp
+namespace Mirror.BouncyCastle.Cmp
 {
     public class CertificateStatus
     {

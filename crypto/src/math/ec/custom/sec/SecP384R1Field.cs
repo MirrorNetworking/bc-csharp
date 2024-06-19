@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP384R1Field
     {

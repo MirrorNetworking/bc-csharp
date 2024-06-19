@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Cms;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     /// <summary>High level wrapper for the CertResponse CRMF structure.</summary>
     public class CertificateResponse

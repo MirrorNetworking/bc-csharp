@@ -1,25 +1,25 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Asn1;
-using Org.BouncyCastle.Pqc.Crypto.Bike;
-using Org.BouncyCastle.Pqc.Crypto.Cmce;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Falcon;
-using Org.BouncyCastle.Pqc.Crypto.Frodo;
-using Org.BouncyCastle.Pqc.Crypto.Hqc;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using Org.BouncyCastle.Pqc.Crypto.Picnic;
-using Org.BouncyCastle.Pqc.Crypto.Saber;
-using Org.BouncyCastle.Pqc.Crypto.Sike;
-using Org.BouncyCastle.Pqc.Crypto.SphincsPlus;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Asn1;
+using Mirror.BouncyCastle.Pqc.Crypto.Bike;
+using Mirror.BouncyCastle.Pqc.Crypto.Cmce;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Falcon;
+using Mirror.BouncyCastle.Pqc.Crypto.Frodo;
+using Mirror.BouncyCastle.Pqc.Crypto.Hqc;
+using Mirror.BouncyCastle.Pqc.Crypto.Lms;
+using Mirror.BouncyCastle.Pqc.Crypto.Picnic;
+using Mirror.BouncyCastle.Pqc.Crypto.Saber;
+using Mirror.BouncyCastle.Pqc.Crypto.Sike;
+using Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     /// <summary>
     /// A factory to produce Public Key Info Objects.
@@ -136,7 +136,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
                 return new SubjectPublicKeyInfo(algorithmIdentifier, dilithiumPublicKeyParameters.GetEncoded());
             }
             if (publicKey is BikePublicKeyParameters bikePublicKeyParameters)
-            { 
+            {
                 byte[] encoding = bikePublicKeyParameters.GetEncoded();
                 AlgorithmIdentifier algorithmIdentifier = new AlgorithmIdentifier(
                     PqcUtilities.BikeOidLookup(bikePublicKeyParameters.Parameters));

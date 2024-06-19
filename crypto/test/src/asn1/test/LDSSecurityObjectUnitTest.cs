@@ -2,14 +2,14 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Icao;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Icao;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     public class LDSSecurityObjectUnitTest
@@ -118,7 +118,7 @@ namespace Org.BouncyCastle.Asn1.Tests
 
 			CheckStatement(so, digestAlgorithmIdentifier, datagroupHash, null);
         }
-		
+
 		private void CheckConstruction(
 			LdsSecurityObject	so,
 			AlgorithmIdentifier	digestAlgorithmIdentifier,

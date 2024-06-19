@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Paddings;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Paddings;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Macs
+namespace Mirror.BouncyCastle.Crypto.Macs
 {
 	/**
 	* DES based CBC Block Cipher MAC according to ISO9797, algorithm 3 (ANSI X9.19 Retail MAC)

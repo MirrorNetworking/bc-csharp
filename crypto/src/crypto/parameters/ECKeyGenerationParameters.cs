@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class ECKeyGenerationParameters
 		: KeyGenerationParameters

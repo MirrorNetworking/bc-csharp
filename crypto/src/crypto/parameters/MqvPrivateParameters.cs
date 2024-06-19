@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 	public class MqvPrivateParameters
 		: ICipherParameters
@@ -11,7 +11,7 @@ namespace Org.BouncyCastle.Crypto.Parameters
 		private readonly ECPrivateKeyParameters staticPrivateKey;
 		private readonly ECPrivateKeyParameters ephemeralPrivateKey;
 		private readonly ECPublicKeyParameters ephemeralPublicKey;
-		
+
 		public MqvPrivateParameters(
 			ECPrivateKeyParameters	staticPrivateKey,
 			ECPrivateKeyParameters	ephemeralPrivateKey)

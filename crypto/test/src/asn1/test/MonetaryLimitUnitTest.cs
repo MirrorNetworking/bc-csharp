@@ -2,9 +2,9 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using Mirror.BouncyCastle.Asn1.IsisMtt.X509;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class MonetaryLimitUnitTest

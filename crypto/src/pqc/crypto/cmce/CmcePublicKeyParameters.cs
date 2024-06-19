@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Cmce
+namespace Mirror.BouncyCastle.Pqc.Crypto.Cmce
 {
     public sealed class CmcePublicKeyParameters
         : CmceKeyParameters

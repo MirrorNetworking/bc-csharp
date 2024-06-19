@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <summary>Thrown if the IV at the start of a data stream indicates the wrong key is being used.</summary>
     [Serializable]

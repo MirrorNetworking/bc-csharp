@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.CryptoPro
+namespace Mirror.BouncyCastle.Asn1.CryptoPro
 {
     public class Gost3410PublicKeyAlgParameters
         : Asn1Encodable

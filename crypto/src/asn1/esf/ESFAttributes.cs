@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Pkcs;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
 	// TODO[api] Make static
     public abstract class EsfAttributes

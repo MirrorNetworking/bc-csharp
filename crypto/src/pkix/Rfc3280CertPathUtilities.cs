@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	internal static class Rfc3280CertPathUtilities
 	{

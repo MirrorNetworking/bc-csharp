@@ -1,10 +1,10 @@
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
-    public class DilithiumSigner 
+    public class DilithiumSigner
         : IMessageSigner
     {
         private DilithiumPrivateKeyParameters privKey;

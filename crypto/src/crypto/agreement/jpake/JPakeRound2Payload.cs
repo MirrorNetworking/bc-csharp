@@ -1,18 +1,18 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Agreement.JPake
+namespace Mirror.BouncyCastle.Crypto.Agreement.JPake
 {
     /// <summary>
     /// The payload sent/received during the second round of a J-PAKE exchange.
-    /// 
+    ///
     /// Each JPAKEParticipant creates and sends an instance
     /// of this payload to the other JPAKEParticipant.
     /// The payload to send should be created via
     /// JPAKEParticipant#createRound2PayloadToSend()
-    /// 
+    ///
     /// Each JPAKEParticipant must also validate the payload
     /// received from the other JPAKEParticipant.
     /// The received payload should be validated via
@@ -32,7 +32,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
 
         /// <summary>
         /// The zero knowledge proof for x2 * s.
-        /// 
+        ///
         /// This is a two element array, containing {g^v, r} for x2 * s.
         /// </summary>
         private readonly BigInteger[] knowledgeProofForX2s;

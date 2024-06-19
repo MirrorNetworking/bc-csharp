@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * Class for containing a restriction object subtrees in NameConstraints. See
@@ -18,7 +18,7 @@ namespace Org.BouncyCastle.Asn1.X509
 	 *       }
 	 * </pre>
 	 *
-	 * @see org.bouncycastle.asn1.x509.NameConstraints
+	 * @see Mirror.BouncyCastle.asn1.x509.NameConstraints
 	 *
 	 */
 	public class GeneralSubtree

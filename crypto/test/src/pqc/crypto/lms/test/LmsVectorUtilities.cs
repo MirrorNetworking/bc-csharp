@@ -1,8 +1,8 @@
 using System.IO;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms.Tests
 {
     public class LmsVectorUtilities
     {

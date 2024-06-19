@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 
 	/// <summary>
@@ -14,7 +14,7 @@ namespace Org.BouncyCastle.Crypto.Parameters
 	/// </summary>
 	/// <remarks>
 	/// Parameterised Skein can be used for:
-	/// <ul> 
+	/// <ul>
 	/// <li>MAC generation, by providing a <see cref="SkeinParameters.Builder.SetKey(byte[])">key</see>.</li>
 	/// <li>Randomised hashing, by providing a <see cref="SkeinParameters.Builder.SetNonce(byte[])">nonce</see>.</li>
 	/// <li>A hash function for digital signatures, associating a
@@ -26,9 +26,9 @@ namespace Org.BouncyCastle.Crypto.Parameters
 	/// <see cref="SkeinParameters.Builder.SetPersonalisation(byte[])">arbitrary</see> personalisation string.</li>
 	/// </ul>
 	/// </remarks>
-	/// <seealso cref="Org.BouncyCastle.Crypto.Digests.SkeinEngine"/>
-	/// <seealso cref="Org.BouncyCastle.Crypto.Digests.SkeinDigest"/>
-	/// <seealso cref="Org.BouncyCastle.Crypto.Macs.SkeinMac"/>
+	/// <seealso cref="Mirror.BouncyCastle.Crypto.Digests.SkeinEngine"/>
+	/// <seealso cref="Mirror.BouncyCastle.Crypto.Digests.SkeinDigest"/>
+	/// <seealso cref="Mirror.BouncyCastle.Crypto.Macs.SkeinMac"/>
 	public class SkeinParameters
 		: ICipherParameters
 	{

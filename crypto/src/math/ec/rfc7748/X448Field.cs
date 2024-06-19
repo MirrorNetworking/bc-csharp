@@ -13,9 +13,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Rfc7748
+namespace Mirror.BouncyCastle.Math.EC.Rfc7748
 {
     [CLSCompliant(false)]
     public static class X448Field
@@ -222,8 +222,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
             {
                 uint ai = a[i], bi = b[i];
                 uint dummy = mask & (ai ^ bi);
-                a[i] = ai ^ dummy; 
-                b[i] = bi ^ dummy; 
+                a[i] = ai ^ dummy;
+                b[i] = bi ^ dummy;
             }
         }
 
@@ -1137,7 +1137,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
             uint u4_2 = u4 * 2;
             uint u5_2 = u5 * 2;
             uint u6_2 = u6 * 2;
-        
+
             uint s0 = x0 + u0;
             uint s1 = x1 + u1;
             uint s2 = x2 + u2;
@@ -1458,8 +1458,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
         public static void Sub(ReadOnlySpan<uint> x, ReadOnlySpan<uint> y, Span<uint> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var ControlCarry = Vector256.Create(7U, 0U, 1U, 2U, 3U, 4U, 5U, 6U);
                 var Mask28 = Vector256.Create(M28);

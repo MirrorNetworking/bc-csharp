@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP128R1Field
     {
@@ -155,7 +155,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             while (x != 0)
             {
                 ulong c, x4 = x;
-    
+
                 c = (ulong)z[0] + x4;
                 z[0] = (uint)c; c >>= 32;
                 if (c != 0)

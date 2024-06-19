@@ -1,21 +1,21 @@
-﻿using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
+﻿using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     public abstract class Symmetric
     {
         public int Stream128BlockBytes;
         public int Stream256BlockBytes;
-        
+
         Symmetric(int stream128, int stream256)
         {
             Stream128BlockBytes = stream128;
             Stream256BlockBytes = stream256;
         }
-        
+
         internal abstract void Stream128Init(byte[] seed, ushort nonce);
 
         internal abstract void Stream256Init(byte[] seed, ushort nonce);
@@ -23,7 +23,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
         internal abstract void Stream128SqueezeBlocks(byte[] output, int offset, int size);
 
         internal abstract void Stream256SqueezeBlocks(byte[] output, int offset, int size);
-        
+
         internal class AesSymmetric
             : Symmetric
         {
@@ -50,7 +50,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
                 byte[] expnonce = new byte[12];
                 expnonce[0] = (byte)nonce;
                 expnonce[1] = (byte)(nonce >> 8);
-                
+
                 ParametersWithIV kp = new ParametersWithIV(new KeyParameter(key, 0, 32), expnonce);
                 cipher.Init(true, kp);
             }

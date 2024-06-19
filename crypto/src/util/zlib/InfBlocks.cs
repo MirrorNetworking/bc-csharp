@@ -10,8 +10,8 @@ modification, are permitted provided that the following conditions are met:
   1. Redistributions of source code must retain the above copyright notice,
      this list of conditions and the following disclaimer.
 
-  2. Redistributions in binary form must reproduce the above copyright 
-     notice, this list of conditions and the following disclaimer in 
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
      the documentation and/or other materials provided with the distribution.
 
   3. The names of the authors may not be used to endorse or promote products
@@ -34,7 +34,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * and contributors of zlib.
  */
 
-namespace Org.BouncyCastle.Utilities.Zlib {
+namespace Mirror.BouncyCastle.Utilities.Zlib {
 
     internal sealed class InfBlocks{
         private const int MANY=1440;
@@ -73,30 +73,30 @@ namespace Org.BouncyCastle.Utilities.Zlib {
         private const int DONE=8;  // finished last block, done
         private const int BAD=9;   // ot a data error--stuck here
 
-        internal int mode;            // current inflate_block mode 
+        internal int mode;            // current inflate_block mode
 
-        internal int left;            // if STORED, bytes left to copy 
+        internal int left;            // if STORED, bytes left to copy
 
-        internal int table;           // table lengths (14 bits) 
-        internal int index;           // index into blens (or border) 
-        internal int[] blens;         // bit lengths of codes 
-        internal int[] bb=new int[1]; // bit length tree depth 
-        internal int[] tb=new int[1]; // bit length decoding tree 
+        internal int table;           // table lengths (14 bits)
+        internal int index;           // index into blens (or border)
+        internal int[] blens;         // bit lengths of codes
+        internal int[] bb=new int[1]; // bit length tree depth
+        internal int[] tb=new int[1]; // bit length decoding tree
 
-        internal InfCodes codes=new InfCodes();      // if CODES, current state 
+        internal InfCodes codes=new InfCodes();      // if CODES, current state
 
-        int last;            // true if this block is the last block 
+        int last;            // true if this block is the last block
 
-        // mode independent information 
-        internal int bitk;            // bits in bit buffer 
-        internal int bitb;            // bit buffer 
-        internal int[] hufts;         // single malloc for tree space 
-        internal byte[] window;       // sliding window 
-        internal int end;             // one byte after sliding window 
-        internal int read;            // window read pointer 
-        internal int write;           // window write pointer 
-        internal object checkfn;      // check function 
-        internal long check;          // check on output 
+        // mode independent information
+        internal int bitk;            // bits in bit buffer
+        internal int bitb;            // bit buffer
+        internal int[] hufts;         // single malloc for tree space
+        internal byte[] window;       // sliding window
+        internal int end;             // one byte after sliding window
+        internal int read;            // window read pointer
+        internal int write;           // window write pointer
+        internal object checkfn;      // check function
+        internal long check;          // check on output
 
         internal InfTree inftree=new InfTree();
 
@@ -148,7 +148,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                 r=Z_OK;
                             }
                             else{
-                                bitb=b; bitk=k; 
+                                bitb=b; bitk=k;
                                 z.avail_in=n;
                                 z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                 write=q;
@@ -162,7 +162,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                         last = t & 1;
 
                     switch (t >> 1){
-                        case 0: {                         // stored 
+                        case 0: {                         // stored
            b>>=(3);k-=(3);}
                             t = k & 7; {                    // go to byte boundary
 
@@ -196,7 +196,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                             z.msg = "invalid block type";
                             r = Z_DATA_ERROR;
 
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -209,7 +209,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                 r=Z_OK;
                             }
                             else{
-                                bitb=b; bitk=k; 
+                                bitb=b; bitk=k;
                                 z.avail_in=n;
                                 z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                 write=q;
@@ -225,7 +225,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                             z.msg = "invalid stored block lengths";
                             r = Z_DATA_ERROR;
 
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -236,7 +236,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                         break;
                     case STORED:
                         if (n == 0){
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -247,14 +247,14 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                 q=0; m=(int)(q<read?read-q-1:end-q);
                             }
                             if(m==0){
-                                write=q; 
+                                write=q;
                                 r=inflate_flush(z,r);
                                 q=write;m=(int)(q<read?read-q-1:end-q);
                                 if(q==end&&read!=0){
                                     q=0; m=(int)(q<read?read-q-1:end-q);
                                 }
                                 if(m==0){
-                                    bitb=b; bitk=k; 
+                                    bitb=b; bitk=k;
                                     z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                     write=q;
                                     return inflate_flush(z,r);
@@ -280,7 +280,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                 r=Z_OK;
                             }
                             else{
-                                bitb=b; bitk=k; 
+                                bitb=b; bitk=k;
                                 z.avail_in=n;
                                 z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                 write=q;
@@ -297,7 +297,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                             z.msg = "too many length or distance symbols";
                             r = Z_DATA_ERROR;
 
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -322,7 +322,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                     r=Z_OK;
                                 }
                                 else{
-                                    bitb=b; bitk=k; 
+                                    bitb=b; bitk=k;
                                     z.avail_in=n;
                                     z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                     write=q;
@@ -351,7 +351,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                 mode = BAD;
                             }
 
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -376,7 +376,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                     r=Z_OK;
                                 }
                                 else{
-                                    bitb=b; bitk=k; 
+                                    bitb=b; bitk=k;
                                     z.avail_in=n;
                                     z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                     write=q;
@@ -407,7 +407,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                         r=Z_OK;
                                     }
                                     else{
-                                        bitb=b; bitk=k; 
+                                        bitb=b; bitk=k;
                                         z.avail_in=n;
                                         z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                         write=q;
@@ -433,7 +433,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                                     z.msg = "invalid bit length repeat";
                                     r = Z_DATA_ERROR;
 
-                                    bitb=b; bitk=k; 
+                                    bitb=b; bitk=k;
                                     z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                                     write=q;
                                     return inflate_flush(z,r);
@@ -457,7 +457,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                         bd[0] = 6;         // must be <= 9 for lookahead assumptions
 
                         t = table;
-                        t = inftree.inflate_trees_dynamic(257 + (t & 0x1f), 
+                        t = inftree.inflate_trees_dynamic(257 + (t & 0x1f),
                             1 + ((t >> 5) & 0x1f),
                             blens, bl, bd, tl, td, hufts, z);
 
@@ -468,7 +468,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                             }
                             r = t;
 
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z,r);
@@ -498,11 +498,11 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                         mode = DRY;
                         goto case DRY;
                     case DRY:
-                        write=q; 
-                        r=inflate_flush(z, r); 
+                        write=q;
+                        r=inflate_flush(z, r);
                         q=write; m=(int)(q<read?read-q-1:end-q);
                         if (read != write){
-                            bitb=b; bitk=k; 
+                            bitb=b; bitk=k;
                             z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                             write=q;
                             return inflate_flush(z, r);
@@ -512,14 +512,14 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                     case DONE:
                         r = Z_STREAM_END;
 
-                        bitb=b; bitk=k; 
+                        bitb=b; bitk=k;
                         z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                         write=q;
                         return inflate_flush(z, r);
                     case BAD:
                         r = Z_DATA_ERROR;
 
-                        bitb=b; bitk=k; 
+                        bitb=b; bitk=k;
                         z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                         write=q;
                         return inflate_flush(z, r);
@@ -527,7 +527,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                     default:
                         r = Z_STREAM_ERROR;
 
-                        bitb=b; bitk=k; 
+                        bitb=b; bitk=k;
                         z.avail_in=n;z.total_in+=p-z.next_in_index;z.next_in_index=p;
                         write=q;
                         return inflate_flush(z, r);
@@ -548,7 +548,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
         }
 
         // Returns true if inflate is currently at the end of a block generated
-        // by Z_SYNC_FLUSH or Z_FULL_FLUSH. 
+        // by Z_SYNC_FLUSH or Z_FULL_FLUSH.
         internal int sync_point(){
             return mode == LENS ? 1 : 0;
         }

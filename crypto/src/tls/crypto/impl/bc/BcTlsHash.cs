@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     internal sealed class BcTlsHash
         : TlsHash

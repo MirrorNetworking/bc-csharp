@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     internal abstract class DerEncoding
         : IAsn1Encoding, IComparable<DerEncoding>

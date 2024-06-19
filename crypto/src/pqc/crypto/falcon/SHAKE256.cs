@@ -1,11 +1,11 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
-{   
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
+{
     class SHAKE256
     {
 
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#):
         * ==========================(LICENSE BEGIN)============================
@@ -33,7 +33,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
         *
         * ===========================(LICENSE END)=============================
         */
-        
+
         ulong[] A;
         byte[] dubf;
         ulong dptr;
@@ -478,7 +478,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
                 A[17] = ~A[17];
                 A[20] = ~A[20];
         }
-        
+
         internal void i_shake256_init()
         {
             this.dptr = 0;
@@ -564,6 +564,6 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             }
             this.dptr = dptr;
         }
-        
+
     }
 }

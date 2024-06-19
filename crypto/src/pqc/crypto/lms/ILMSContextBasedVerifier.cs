@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
     public interface ILmsContextBasedVerifier
     {

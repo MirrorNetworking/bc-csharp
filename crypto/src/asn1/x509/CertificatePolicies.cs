@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
     public class CertificatePolicies
         : Asn1Encodable
@@ -34,7 +34,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
         /**
          * Construct a CertificatePolicies object containing one PolicyInformation.
-         * 
+         *
          * @param name the name to be contained.
          */
         public CertificatePolicies(PolicyInformation name)

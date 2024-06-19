@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	public class BitStringConstantTester
 	{

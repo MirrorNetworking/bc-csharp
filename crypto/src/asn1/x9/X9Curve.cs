@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X9
+namespace Mirror.BouncyCastle.Asn1.X9
 {
     /**
      * ASN.1 def for Elliptic-Curve Curve structure. See
@@ -67,7 +67,7 @@ namespace Org.BouncyCastle.Asn1.X9
                 BigInteger B = new BigInteger(1, Asn1OctetString.GetInstance(seq[1]).GetOctets());
                 curve = new FpCurve(p, A, B, order, cofactor);
             }
-            else if (fieldIdentifier.Equals(X9ObjectIdentifiers.CharacteristicTwoField)) 
+            else if (fieldIdentifier.Equals(X9ObjectIdentifiers.CharacteristicTwoField))
             {
                 // Characteristic two field
                 DerSequence parameters = (DerSequence)fieldID.Parameters;
@@ -77,12 +77,12 @@ namespace Org.BouncyCastle.Asn1.X9
                 int k1 = 0;
                 int k2 = 0;
                 int k3 = 0;
-                if (representation.Equals(X9ObjectIdentifiers.TPBasis)) 
+                if (representation.Equals(X9ObjectIdentifiers.TPBasis))
                 {
                     // Trinomial basis representation
                     k1 = ((DerInteger)parameters[2]).IntValueExact;
                 }
-                else 
+                else
                 {
                     // Pentanomial basis representation
                     DerSequence pentanomial = (DerSequence) parameters[2];
@@ -130,11 +130,11 @@ namespace Org.BouncyCastle.Asn1.X9
             Asn1EncodableVector v = new Asn1EncodableVector(3);
 
             if (fieldIdentifier.Equals(X9ObjectIdentifiers.PrimeField)
-                || fieldIdentifier.Equals(X9ObjectIdentifiers.CharacteristicTwoField)) 
-            { 
+                || fieldIdentifier.Equals(X9ObjectIdentifiers.CharacteristicTwoField))
+            {
                 v.Add(new X9FieldElement(curve.A).ToAsn1Object());
                 v.Add(new X9FieldElement(curve.B).ToAsn1Object());
-            } 
+            }
 
             if (seed != null)
             {

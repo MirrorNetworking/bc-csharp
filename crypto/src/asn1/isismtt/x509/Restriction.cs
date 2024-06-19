@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* Some other restriction regarding the usage of this certificate.

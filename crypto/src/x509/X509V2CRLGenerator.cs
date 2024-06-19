@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security.Certificates;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
 	/**
 	* class to produce an X.509 Version 2 CRL.

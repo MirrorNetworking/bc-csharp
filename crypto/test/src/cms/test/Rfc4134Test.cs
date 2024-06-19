@@ -1,17 +1,17 @@
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
     [TestFixture]
 	public class Rfc4134Test
@@ -103,7 +103,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			VerifySignatures(parser);
 		}
-		
+
 		[Test]
 		public void Test4_7()
 		{
@@ -234,7 +234,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			Asn1.Cms.Attribute attr = attrTable[CmsAttributes.ContentHint];
 
 			Assert.AreEqual(1, attr.AttrValues.Count);
-		
+
 			Asn1EncodableVector v = new Asn1EncodableVector(
 				new DerUtf8String("Content Hints Description Buffer"),
 				CmsObjectIdentifiers.Data);

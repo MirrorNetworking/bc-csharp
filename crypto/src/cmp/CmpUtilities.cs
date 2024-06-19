@@ -1,8 +1,8 @@
-﻿using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Operators.Utilities;
+﻿using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Operators.Utilities;
 
-namespace Org.BouncyCastle.Cmp
+namespace Mirror.BouncyCastle.Cmp
 {
     internal static class CmpUtilities
     {

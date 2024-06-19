@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509.SigI
+namespace Mirror.BouncyCastle.Asn1.X509.SigI
 {
 	/**
 	* Contains personal data for the otherName field in the subjectAltNames
@@ -21,8 +21,8 @@ namespace Org.BouncyCastle.Asn1.X509.SigI
 	*       }
 	* </pre>
 	*
-	* @see org.bouncycastle.asn1.x509.sigi.NameOrPseudonym
-	* @see org.bouncycastle.asn1.x509.sigi.SigIObjectIdentifiers
+	* @see Mirror.BouncyCastle.asn1.x509.sigi.NameOrPseudonym
+	* @see Mirror.BouncyCastle.asn1.x509.sigi.SigIObjectIdentifiers
 	*/
 	public class PersonalData
 		: Asn1Encodable

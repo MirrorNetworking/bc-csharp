@@ -5,18 +5,18 @@ using System.Runtime.Versioning;
 using System.Security.Cryptography;
 using SystemX509 = System.Security.Cryptography.X509Certificates;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Security
+namespace Mirror.BouncyCastle.Security
 {
     /// <summary>
     /// A class containing methods to interface the BouncyCastle world to the .NET Crypto world.

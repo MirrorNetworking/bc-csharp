@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 /**
  * Base interface for mapping from an alphabet to a set of indexes
@@ -19,14 +19,14 @@ public interface IAlphabetMapper
     /// can be more than 1 byte)
     /// </summary>
     /// <returns>an index array.</returns>
-    /// <param name="input">characters to be mapped.</param>   
+    /// <param name="input">characters to be mapped.</param>
     byte[] ConvertToIndexes(char[] input);
 
     /// <summary>
     /// Return a char[] for this alphabet based on the indexes passed.
     /// </summary>
     /// <returns>an array of char corresponding to the index values.</returns>
-    /// <param name="input">input array of indexes.</param>   
+    /// <param name="input">input array of indexes.</param>
     char[] ConvertToChars(byte[] input);
 }
 }

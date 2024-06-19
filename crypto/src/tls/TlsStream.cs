@@ -5,9 +5,9 @@ using System.Threading;
 using System.Threading.Tasks;
 #endif
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     internal class TlsStream
         : Stream

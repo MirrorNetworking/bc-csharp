@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     internal sealed class BcTlsBlockCipherImpl
         : TlsBlockCipherImpl

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
 internal sealed class SidhCompressed
 {
@@ -94,7 +94,7 @@ internal sealed class SidhCompressed
     }
 
     internal void Elligator2(ulong[][] a24, uint[] r, uint rIndex, ulong[][] x, byte[] bit, uint bitOffset, uint COMPorDEC)
-    { // Generate an x-coordinate of a pouint on curve with (affine) coefficient a24 
+    { // Generate an x-coordinate of a pouint on curve with (affine) coefficient a24
         // Use the counter r
         uint i;
         ulong[] one_fp = new ulong[engine.param.NWORDS_FIELD],
@@ -793,7 +793,7 @@ internal sealed class SidhCompressed
 
     internal void FullIsogeny_A_dual(byte[] PrivateKeyA, ulong[][][][] As, ulong[][] a24, uint sike)
     {
-        // Input:  a private key PrivateKeyA in the range [0, 2^eA - 1]. 
+        // Input:  a private key PrivateKeyA in the range [0, 2^eA - 1].
         // Output: the public key PublicKeyA consisting of 3 elements in GF(p^2) which are encoded by removing leading 0 bytes.
         PointProj R = new PointProj(engine.param.NWORDS_FIELD);
         PointProj[] pts = new PointProj[engine.param.MAX_INT_POINTS_ALICE];
@@ -1213,7 +1213,7 @@ internal sealed class SidhCompressed
         uint[] rs = new uint[3];
         int[] D = new int[engine.param.DLEN_3];
         ulong[][] a24 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
-        
+
         ulong[][][][] As = SikeUtilities.InitArray(engine.param.MAX_Alice + 1, 5, 2, engine.param.NWORDS_FIELD);
         ulong[][][] f = SikeUtilities.InitArray(4, 2, engine.param.NWORDS_FIELD);
         ulong[] c0 = new ulong[engine.param.NWORDS_ORDER],
@@ -1482,7 +1482,7 @@ internal sealed class SidhCompressed
         xs[1] = new PointProj(engine.param.NWORDS_FIELD);
         xs[2] = new PointProj(engine.param.NWORDS_FIELD);
 
-        // Generate x-only entangled basis 
+        // Generate x-only entangled basis
         BuildEntangledXonly(A, xs, qnr, ind);
 
 //        System.out.Println();System.out.Println();
@@ -1516,7 +1516,7 @@ internal sealed class SidhCompressed
         engine.fpx.fpcopy(engine.param.Montgomery_one,0, (xs[0].Z)[0]);
         engine.fpx.fpcopy(engine.param.Montgomery_one,0, (xs[1].Z)[0]);
 
-        // Move them back to A = 6 
+        // Move them back to A = 6
         for(i = 0; i < engine.param.MAX_Bob; i++)
         {
             engine.isogeny.Eval3Isog(xs[0], Ds[engine.param.MAX_Bob-1-i]);
@@ -1528,7 +1528,7 @@ internal sealed class SidhCompressed
         engine.fpx.fpcopy(engine.param.Montgomery_one,0, A6[0]);
         engine.fpx.fpaddPRIME(A6[0], A6[0], t0);
         engine.fpx.fpaddPRIME(t0, t0, A6[0]);
-        engine.fpx.fpaddPRIME(A6[0], t0, A6[0]);    // A6 = 6 
+        engine.fpx.fpaddPRIME(A6[0], t0, A6[0]);    // A6 = 6
 
         engine.isogeny.CompleteMPoint(A6, xs[0], Rs[0]);
         RecoverY(A6, xs, Rs);
@@ -1603,7 +1603,7 @@ internal sealed class SidhCompressed
             {
                 engine.isogeny.Eval3Isog(pts[i], coeff);
             }
-            engine.isogeny.Eval3Isog(Q3, coeff);    // Kernel of dual 
+            engine.isogeny.Eval3Isog(Q3, coeff);    // Kernel of dual
             engine.fpx.fp2sub(Q3.X,Q3.Z,Ds[row-1][0]);
             engine.fpx.fp2add(Q3.X,Q3.Z,Ds[row-1][1]);
 
@@ -1613,7 +1613,7 @@ internal sealed class SidhCompressed
             npts -= 1;
         }
         engine.isogeny.Get3Isog(R, A24minus, A24plus, coeff);
-        engine.isogeny.Eval3Isog(Q3, coeff);    // Kernel of dual 
+        engine.isogeny.Eval3Isog(Q3, coeff);    // Kernel of dual
         engine.fpx.fp2sub(Q3.X, Q3.Z, Ds[engine.param.MAX_Bob-1][0]);
         engine.fpx.fp2add(Q3.X, Q3.Z, Ds[engine.param.MAX_Bob-1][1]);
 
@@ -1621,7 +1621,7 @@ internal sealed class SidhCompressed
         engine.fpx.fp2sub(A24plus, A24minus, A24plus);
         engine.fpx.fp2inv_mont_bingcd(A24plus);
         engine.fpx.fp2mul_mont(A24plus, A, A);
-        engine.fpx.fp2add(A, A, A);    // A = 2*(A24plus+A24mins)/(A24plus-A24minus) 
+        engine.fpx.fp2add(A, A, A);    // A = 2*(A24plus+A24mins)/(A24plus-A24minus)
     }
 
     internal void Dlogs2_dual(ulong[][][] f, int[] D, ulong[] d0, ulong[] c0, ulong[] d1, ulong[] c1)
@@ -1654,7 +1654,7 @@ internal sealed class SidhCompressed
         {
             ind = 0;
         }
-        // Get x0     
+        // Get x0
         engine.fpx.fp2mul_mont(A, t_ptr, ind * 2, R[0].X);    // x1 =  A*v
         engine.fpx.fp2neg(R[0].X);                        // R[0].X = -A*v
         engine.fpx.fp2add(R[0].X, A, t);
@@ -1671,11 +1671,11 @@ internal sealed class SidhCompressed
             engine.fpx.fpcopy(engine.param.table_r_qr[ind], 0, r[0]);
         }
 
-        // Get x1 
+        // Get x1
         engine.fpx.fp2add(R[0].X, A, R[1].X);
         engine.fpx.fp2neg(R[1].X);    // R[1].X = -R[0].X-A
 
-        // Get difference x2,z2 
+        // Get difference x2,z2
         engine.fpx.fp2sub(R[0].X, R[1].X, R[2].Z);
         engine.fpx.fp2sqr_mont(R[2].Z, R[2].Z);
 
@@ -1687,12 +1687,12 @@ internal sealed class SidhCompressed
 
     // Bob's PK decompression -- SIKE protocol
     internal void PKBDecompression_extended(byte[] SecretKeyA, uint SecretKeyAOffset, byte[] CompressedPKB, PointProj R, ulong[][] A, byte[] tphiBKA_t, uint tphiBKA_tOffset)
-    { 
+    {
         ulong mask = unchecked((ulong) -1L);
         uint qnr, ind;
         ulong[][] A24 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
             Adiv2 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
-        
+
         ulong[] tmp1 = new ulong[2*engine.param.NWORDS_ORDER],
                 tmp2 = new ulong[2*engine.param.NWORDS_ORDER],
                 inv = new ulong[engine.param.NWORDS_ORDER],
@@ -1869,7 +1869,7 @@ internal sealed class SidhCompressed
         qnr = (uint) (CompressedPKB[3*engine.param.ORDER_A_ENCODED_BYTES + engine.param.FP2_ENCODED_BYTES] & 0x1);
         ind = CompressedPKB[3*engine.param.ORDER_A_ENCODED_BYTES + engine.param.FP2_ENCODED_BYTES + 1];
 
-        // Rebuild the basis 
+        // Rebuild the basis
         BuildEntangledXonly_Decomp(A,Rs,qnr,ind);
         engine.fpx.fpcopy(engine.param.Montgomery_one, 0, Rs[0].Z[0]);
         engine.fpx.fpcopy(engine.param.Montgomery_one, 0, Rs[1].Z[0]);
@@ -1919,7 +1919,7 @@ internal sealed class SidhCompressed
     // Bob's PK compression -- SIDH protocol
     internal void Compress_PKB_dual(ulong[] d0, ulong[] c0, ulong[] d1, ulong[] c1, ulong[][] A, byte[] qnr, byte[] ind, byte[] CompressedPKB)
     {
-        
+
         ulong[] tmp = new ulong[2*engine.param.NWORDS_ORDER],
                inv = new ulong[engine.param.NWORDS_ORDER];
         if ((d1[0] & 1) == 1)
@@ -2098,7 +2098,7 @@ internal sealed class SidhCompressed
         uint[] pts_index = new uint[engine.param.MAX_INT_POINTS_ALICE];
         ulong[][] A24plus = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
             C24 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
-        
+
         PointProj R = new PointProj(engine.param.NWORDS_FIELD);
         PointProj[] pts = new PointProj[engine.param.MAX_INT_POINTS_ALICE];
         ulong[][] jinv = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
@@ -2119,7 +2119,7 @@ internal sealed class SidhCompressed
         engine.fpx.fp2copy(param_A, A);
         engine.fpx.fpaddPRIME(engine.param.Montgomery_one, engine.param.Montgomery_one, C24[0]);
         engine.fpx.fp2add(A, C24, A24plus);
-        engine.fpx.fpaddPRIME(C24[0], C24[0], C24[0]);    
+        engine.fpx.fpaddPRIME(C24[0], C24[0], C24[0]);
 
         if (engine.param.OALICE_BITS % 2 == 1)
         {
@@ -2680,7 +2680,7 @@ internal sealed class SidhCompressed
         }
     }
     ///
-    
+
     //Pairing
 
     private static uint t_points = 2;
@@ -2712,7 +2712,7 @@ internal sealed class SidhCompressed
 
         engine.fpx.fpcopy(engine.param.Montgomery_one, 0, one[0]);
 
-        for (uint j = 0; j < t_points; j++) 
+        for (uint j = 0; j < t_points; j++)
         {
             engine.fpx.fp2copy(one, f[j]);
             engine.fpx.fp2copy(one, f[j+t_points]);

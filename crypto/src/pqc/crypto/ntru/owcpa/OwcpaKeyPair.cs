@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru.Owcpa
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru.Owcpa
 {
     internal class OwcpaKeyPair
     {

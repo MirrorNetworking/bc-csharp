@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     [Serializable]
     public class Asn1ParsingException

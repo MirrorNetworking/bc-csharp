@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
     /**
      * PollRepContent ::= SEQUENCE OF SEQUENCE {

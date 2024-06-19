@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     using F = Rfc7748.X448Field;
 
@@ -1519,7 +1519,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032
 #else
             sbyte[] ws_p = new sbyte[447];
 #endif
-            // NOTE: WnafWidth225 because of the special structure of the order 
+            // NOTE: WnafWidth225 because of the special structure of the order
             Scalar448.GetOrderWnafVar(WnafWidth225, ws_p);
 
             int count = 1 << (WnafWidth225 - 2);

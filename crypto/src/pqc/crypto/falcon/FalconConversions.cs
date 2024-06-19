@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     class FalconConversions
     {

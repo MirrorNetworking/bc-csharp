@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     public class LoggingDatagramTransport
         : DatagramTransport

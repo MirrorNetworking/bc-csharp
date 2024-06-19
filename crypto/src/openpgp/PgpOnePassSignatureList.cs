@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <remarks>Holder for a list of PgpOnePassSignature objects.</remarks>
     public class PgpOnePassSignatureList

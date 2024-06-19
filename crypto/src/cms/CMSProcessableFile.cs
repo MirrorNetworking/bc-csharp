@@ -1,9 +1,9 @@
 using System.IO;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	/**
 	* a holding class for a file of data to be processed.

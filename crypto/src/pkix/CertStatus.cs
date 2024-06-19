@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
     public class CertStatus
     {

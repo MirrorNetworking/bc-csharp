@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Support interface for generating a secret based on the credentials sent by a TLS peer.</summary>
     public interface TlsCredentialedAgreement

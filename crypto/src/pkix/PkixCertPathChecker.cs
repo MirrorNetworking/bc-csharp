@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
     public abstract class PkixCertPathChecker
     {
@@ -18,7 +18,7 @@ namespace Org.BouncyCastle.Pkix
          * <code>PKIXCertPathChecker</code> <b>must</b> support reverse checking
          * and <b>may</b> support forward checking.
 		 * </p>
-         * 
+         *
          * @param forward
          *            the order that certificates are presented to the
          *            <code>check</code> method. If <code>true</code>,
@@ -38,7 +38,7 @@ namespace Org.BouncyCastle.Pkix
          * the ability of the <code>PKIXCertPathChecker</code> to perform its
          * checks when certificates are presented to the <code>check</code> method
          * in the forward direction (from target to most-trusted CA).
-         * 
+         *
          * @return <code>true</code> if forward checking is supported,
          *         <code>false</code> otherwise
          */
@@ -57,7 +57,7 @@ namespace Org.BouncyCastle.Pkix
          * All X.509 certificate extensions that a <code>PKIXCertPathChecker</code>
          * might possibly be able to process should be included in the set.
 		 * </p>
-         * 
+         *
          * @return an immutable <code>Set</code> of X.509 extension OIDs (in
          *         <code>String</code> format) supported by this
          *         <code>PKIXCertPathChecker</code>, or <code>null</code> if no
@@ -71,7 +71,7 @@ namespace Org.BouncyCastle.Pkix
          * specified collection of OID strings that represent the unresolved
          * critical extensions. The certificates are presented in the order
          * specified by the <code>init</code> method.
-         * 
+         *
          * @param cert
          *            the <code>Certificate</code> to be checked
          * @param unresolvedCritExts
@@ -86,7 +86,7 @@ namespace Org.BouncyCastle.Pkix
          * Returns a clone of this object. Calls the <code>Object.clone()</code>
          * method. All subclasses which maintain state must support and override
          * this method, if necessary.
-         * 
+         *
          * @return a copy of this <code>PKIXCertPathChecker</code>
          */
         public virtual object Clone()

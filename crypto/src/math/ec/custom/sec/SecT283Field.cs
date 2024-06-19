@@ -7,9 +7,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal static class SecT283Field
     {
@@ -227,10 +227,10 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
             ulong t = x4 >> 27;
             z[0]    = x0 ^ t ^ (t << 5) ^ (t << 7) ^ (t << 12);
-            z[1]    = x1; 
-            z[2]    = x2; 
-            z[3]    = x3; 
-            z[4]    = x4 & M27; 
+            z[1]    = x1;
+            z[2]    = x2;
+            z[3]    = x3;
+            z[4]    = x4 & M27;
         }
 
         public static void Reduce37(ulong[] z, int zOff)
@@ -386,8 +386,8 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         private static void ImplMultiply(ReadOnlySpan<ulong> x, ReadOnlySpan<ulong> y, Span<ulong> zz)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X01 = Vector128.Create(x[0], x[1]);
                 var X23 = Vector128.Create(x[2], x[3]);
@@ -447,7 +447,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             /*
              * Formula (17) from "Some New Results on Binary Polynomial Multiplication",
              * Murat Cenk and M. Anwar Hasan.
-             * 
+             *
              * The formula as given contained an error in the term t25, as noted below
              */
             ulong[] a = new ulong[5], b = new ulong[5];
@@ -503,7 +503,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong t1  = p[ 0] ^ p[ 1];
             ulong t2  = t1    ^ p[ 2];
             ulong t3  = t2    ^ p[10];
-        
+
             zz[1]     = t3;
 
             ulong t4  = p[ 3] ^ p[ 4];
@@ -547,7 +547,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong t29 = t28   ^ t23;
 
             zz[4]     = t29;
-        
+
             ulong t30 = t7    ^ t19;
             ulong t31 = t27   ^ t30;
             ulong t32 = p[21] ^ p[22];
@@ -572,7 +572,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             /*
              * Formula (17) from "Some New Results on Binary Polynomial Multiplication",
              * Murat Cenk and M. Anwar Hasan.
-             * 
+             *
              * The formula as given contained an error in the term t25, as noted below
              */
             ulong[] a = new ulong[5], b = new ulong[5];
@@ -628,7 +628,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong t1  = p[ 0] ^ p[ 1];
             ulong t2  = t1    ^ p[ 2];
             ulong t3  = t2    ^ p[10];
-        
+
             zz[1]     = t3;
 
             ulong t4  = p[ 3] ^ p[ 4];
@@ -672,7 +672,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong t29 = t28   ^ t23;
 
             zz[4]     = t29;
-        
+
             ulong t30 = t7    ^ t19;
             ulong t31 = t27   ^ t30;
             ulong t32 = p[21] ^ p[22];
@@ -747,7 +747,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             zz[8] = Interleave.Expand32to64((uint)x[4]);
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
             {
                 zz[7] = Bmi2.X64.ParallelBitDeposit(x[3] >> 32, 0x5555555555555555UL);
                 zz[6] = Bmi2.X64.ParallelBitDeposit(x[3]      , 0x5555555555555555UL);

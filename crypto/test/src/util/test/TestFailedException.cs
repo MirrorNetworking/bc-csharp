@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     public class TestFailedException
         : Exception

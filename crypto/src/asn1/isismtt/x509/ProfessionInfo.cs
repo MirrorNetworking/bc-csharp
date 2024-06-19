@@ -1,25 +1,25 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* Professions, specializations, disciplines, fields of activity, etc.
-	* 
+	*
 	* <pre>
-	*               ProfessionInfo ::= SEQUENCE 
+	*               ProfessionInfo ::= SEQUENCE
 	*               {
 	*                 namingAuthority [0] EXPLICIT NamingAuthority OPTIONAL,
 	*                 professionItems SEQUENCE OF DirectoryString (SIZE(1..128)),
 	*                 professionOids SEQUENCE OF OBJECT IDENTIFIER OPTIONAL,
 	*                 registrationNumber PrintableString(SIZE(1..128)) OPTIONAL,
-	*                 addProfessionInfo OCTET STRING OPTIONAL 
+	*                 addProfessionInfo OCTET STRING OPTIONAL
 	*               }
 	* </pre>
-	* 
-	* @see Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
+	*
+	* @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
 	*/
 	public class ProfessionInfo
 		: Asn1Encodable

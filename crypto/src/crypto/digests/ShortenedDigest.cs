@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
 	/**
 	* Wrapper class that reduces the output length of a particular digest to

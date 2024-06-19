@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Utilities.Collections
+namespace Mirror.BouncyCastle.Utilities.Collections
 {
     /// <summary>Interface for matching objects in an <see cref="IStore{T}"/>.</summary>
     /// <typeparam name="T">The contravariant type of selectable objects.</typeparam>

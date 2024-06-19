@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     public sealed class Haraka256Digest
         : HarakaBase

@@ -2,20 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Cms.Ecc;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Cms.Ecc;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
     * the RecipientInfo class for a recipient who has been sent a message
@@ -50,7 +50,7 @@ namespace Org.BouncyCastle.Cms
                     {
                         Asn1.Cms.RecipientKeyIdentifier rKeyID = karid.RKeyID;
 
-                        // Note: 'date' and 'other' fields of RecipientKeyIdentifier appear to be only informational 
+                        // Note: 'date' and 'other' fields of RecipientKeyIdentifier appear to be only informational
 
                         rid.SubjectKeyIdentifier = rKeyID.SubjectKeyIdentifier.GetEncoded(Asn1Encodable.Der);
                     }

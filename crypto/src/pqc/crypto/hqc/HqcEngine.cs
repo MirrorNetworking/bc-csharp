@@ -1,8 +1,8 @@
 ﻿using System;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     internal class HqcEngine
     {
@@ -33,7 +33,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
         private int N1N2_BYTE_64;
         private int N1N2_BYTE;
         private int N1_BYTE;
-        
+
         //private int GF_POLY_WT  = 5;
         //private int GF_POLY_M2 = 4;
         private int SALT_SIZE_BYTES = 16;
@@ -70,7 +70,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
             N1N2_BYTE_64 = Utils.GetByte64SizeFromBitSize(n1 * n2);
             N1N2_BYTE = Utils.GetByteSizeFromBitSize(n1 * n2);
             N1_BYTE = Utils.GetByteSizeFromBitSize(n1);
-            
+
             RED_MASK = ((1UL << (n % 64)) - 1);
 
             gfCalculator = new GF2PolynomialCalculator(N_BYTE_64, n, RED_MASK);
@@ -400,7 +400,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
                 output[i] |= val;
             }
         }
-        
+
         void GeneratePublicKeyH(long[] output, HqcKeccakRandomGenerator random)
         {
             byte[] randBytes = new byte[N_BYTE];
@@ -434,7 +434,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Hqc
             // Randomly generate secret keys x, y
             HqcKeccakRandomGenerator secretKeySeedExpander = new HqcKeccakRandomGenerator(256);
             secretKeySeedExpander.SeedExpanderInit(secretKeySeed, secretKeySeed.Length);
-            
+
             GenerateRandomFixedWeight(x, secretKeySeedExpander, w);
             GenerateRandomFixedWeight(y, secretKeySeedExpander, w);
 

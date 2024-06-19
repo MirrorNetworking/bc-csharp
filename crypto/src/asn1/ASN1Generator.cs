@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     public abstract class Asn1Generator
         : IDisposable
@@ -38,7 +38,7 @@ namespace Org.BouncyCastle.Asn1
         {
             if (disposing)
             {
-                if (m_outStream != null) 
+                if (m_outStream != null)
                 {
                     Finish();
                     m_outStream = null;

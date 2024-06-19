@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     public sealed class SphincsPlusPublicKeyParameters
         : SphincsPlusKeyParameters

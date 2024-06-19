@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     public sealed class KyberPublicKeyParameters
         : KyberKeyParameters
@@ -31,4 +31,3 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
         public byte[] GetT() => Arrays.Clone(m_t);
     }
 }
-    

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Operators
+namespace Mirror.BouncyCastle.Crypto.Operators
 {
     public sealed class DefaultDigestResult
         : IBlockResult

@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	public interface RecipientInfoGenerator
 	{

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /**
      * UniversalString object.

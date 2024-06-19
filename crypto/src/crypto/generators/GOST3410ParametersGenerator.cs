@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
 	/**
 	 * generate suitable parameters for GOST3410.

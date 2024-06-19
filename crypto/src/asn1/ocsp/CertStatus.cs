@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Ocsp
+namespace Mirror.BouncyCastle.Asn1.Ocsp
 {
     public class CertStatus
         : Asn1Encodable, IAsn1Choice

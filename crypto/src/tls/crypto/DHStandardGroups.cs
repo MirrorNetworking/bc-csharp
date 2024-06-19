@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     /// <summary>Standard Diffie-Hellman groups from various IETF specifications.</summary>
     public class DHStandardGroups

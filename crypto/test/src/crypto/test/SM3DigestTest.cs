@@ -2,10 +2,10 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	/**
 	 * standard vector test for SM3 digest from chinese specification

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Pkcs;
 
-namespace Org.BouncyCastle.Asn1.Crmf
+namespace Mirror.BouncyCastle.Asn1.Crmf
 {
     // TODO[api] Make static
     public abstract class CrmfObjectIdentifiers

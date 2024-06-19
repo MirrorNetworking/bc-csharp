@@ -2,9 +2,9 @@ using System.Globalization;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	/**
 	* X.690 test example

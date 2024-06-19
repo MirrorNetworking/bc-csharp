@@ -2,12 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Lms;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class HSSTest
@@ -107,7 +107,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             HssPrivateKeyParameters privKey = (HssPrivateKeyParameters)kp.Private;
 
             HssPublicKeyParameters pubKey = (HssPublicKeyParameters)kp.Public;
-            
+
             LmsParameters lmsParam = pubKey.LmsPublicKey.GetLmsParameters();
 
             Assert.AreEqual(LMSigParameters.lms_sha256_n32_h5, lmsParam.LMSigParameters);
@@ -142,7 +142,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
                     new LmsParameters(LMSigParameters.lms_sha256_n32_h5, LMOtsParameters.sha256_n32_w4),
                     new LmsParameters(LMSigParameters.lms_sha256_n32_h5, LMOtsParameters.sha256_n32_w4)
                 }, new SecureRandom()));
-            
+
             AsymmetricCipherKeyPair kp = kpGen.GenerateKeyPair();
 
             HssPrivateKeyParameters privKey = ((HssPrivateKeyParameters)kp.Private).ExtractKeyShard(2);

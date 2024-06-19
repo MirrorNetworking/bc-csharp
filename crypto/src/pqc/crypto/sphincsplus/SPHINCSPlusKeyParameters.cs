@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     public abstract class SphincsPlusKeyParameters
         : AsymmetricKeyParameter

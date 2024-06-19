@@ -1,7 +1,7 @@
-﻿using Org.BouncyCastle.Utilities;
+﻿using Mirror.BouncyCastle.Utilities;
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class Packing
     {
@@ -31,7 +31,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
         public static void PackSecretKey(byte[] t0_, byte[] s1_, byte[] s2_, PolyVecK t0, PolyVecL s1, PolyVecK s2, DilithiumEngine Engine)
         {
             int i;
-            
+
 
             for (i = 0; i < Engine.L; ++i)
             {
@@ -104,7 +104,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
         public static bool UnpackSignature(PolyVecL z, PolyVecK h, byte[] sig, DilithiumEngine engine)
         {
             int i, j, k;
-            
+
             int end = engine.CTilde;
             for (i = 0; i < engine.L; ++i)
             {

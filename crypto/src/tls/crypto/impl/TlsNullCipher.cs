@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl
 {
     /// <summary>The NULL cipher.</summary>
     public class TlsNullCipher

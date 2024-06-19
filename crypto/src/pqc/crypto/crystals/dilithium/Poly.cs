@@ -1,7 +1,7 @@
-﻿using Org.BouncyCastle.Crypto.Digests;
+﻿using Mirror.BouncyCastle.Crypto.Digests;
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class Poly
     {
@@ -26,7 +26,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             int i, ctr, off,
             buflen = PolyUniformNBlocks * Symmetric.Stream128BlockBytes;
             byte[] buf = new byte[buflen + 2];
-            
+
             Symmetric.Stream128Init(seed, nonce);
 
             Symmetric.Stream128SqueezeBlocks(buf, 0, buflen);

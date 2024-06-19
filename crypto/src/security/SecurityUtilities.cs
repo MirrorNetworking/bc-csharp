@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Security
+﻿namespace Mirror.BouncyCastle.Security
 {
     internal static class SecurityUtilities
     {

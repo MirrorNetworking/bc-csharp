@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     internal class HT
     {
@@ -121,7 +121,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
         private SIG_XMSS xmss_sign(byte[] M, byte[] skSeed, uint idx, byte[] pkSeed, Adrs paramAdrs)
         {
             byte[][] AUTH = new byte[engine.H_PRIME][];
-            
+
             Adrs adrs = new Adrs(paramAdrs);
 
             adrs.SetAdrsType(Adrs.TREE);

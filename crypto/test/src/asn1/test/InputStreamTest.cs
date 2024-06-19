@@ -3,10 +3,10 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class InputStreamTest
@@ -76,9 +76,9 @@ namespace Org.BouncyCastle.Asn1.Tests
 			}
 
             // TODO Test data has length issues too; needs to be reworked
-            //DoTestWithByteArray(classCast1, "unknown object encountered: Org.BouncyCastle.Asn1.DerApplicationSpecific");
-            DoTestWithByteArray(classCast2, "unknown object encountered: Org.BouncyCastle.Asn1.DLTaggedObjectParser");
-            DoTestWithByteArray(classCast3, "unknown object encountered in constructed OCTET STRING: Org.BouncyCastle.Asn1.DLTaggedObject");
+            //DoTestWithByteArray(classCast1, "unknown object encountered: Mirror.BouncyCastle.Asn1.DerApplicationSpecific");
+            DoTestWithByteArray(classCast2, "unknown object encountered: Mirror.BouncyCastle.Asn1.DLTaggedObjectParser");
+            DoTestWithByteArray(classCast3, "unknown object encountered in constructed OCTET STRING: Mirror.BouncyCastle.Asn1.DLTaggedObject");
 
             // TODO Error dependent on parser choices; needs to be reworked
             //DoTestWithByteArray(memoryError1, "corrupted stream - out of bounds length found: 2078365180 >= 39");

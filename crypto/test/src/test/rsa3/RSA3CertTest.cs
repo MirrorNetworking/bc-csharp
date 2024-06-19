@@ -3,13 +3,13 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.OpenSsl;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.OpenSsl;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests.Rsa3
+namespace Mirror.BouncyCastle.Tests.Rsa3
 {
 	/**
 	* Marius Schilder's Bleichenbacher's Forgery Attack Tests

@@ -1,20 +1,20 @@
 using System;
 using System.Runtime.Serialization;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/**
-	 * An exception indicating one of a variety of problems encountered when 
+	 * An exception indicating one of a variety of problems encountered when
 	 * validating a certification path. <br />
 	 * <br />
 	 * A <code>CertPathValidatorException</code> provides support for wrapping
-	 * exceptions. The {@link #getCause getCause} method returns the throwable, 
+	 * exceptions. The {@link #getCause getCause} method returns the throwable,
 	 * if any, that caused this exception to be thrown. <br />
 	 * <br />
 	 * A <code>CertPathValidatorException</code> may also include the index of
-	 * the certificate in the certification path that caused the 
+	 * the certificate in the certification path that caused the
 	 * exception to be thrown. Use the {@link #Index Index} property to retrieve
 	 * this information.<br />
 	 * <br />
@@ -55,7 +55,7 @@ namespace Org.BouncyCastle.Pkix
 		/// </summary>
 		/// <param name="message">the detail message (or <code>null</code> if none)</param>
 		/// <param name="innerException">the cause (or <code>null</code> if none)</param>
-		/// <param name="index">the index of the certificate in the certification path that</param>																																																																																   * 
+		/// <param name="index">the index of the certificate in the certification path that</param>																																																																																   *
 		public PkixCertPathValidatorException(string message, Exception innerException, int index)
 			: base(message, innerException)
 		{

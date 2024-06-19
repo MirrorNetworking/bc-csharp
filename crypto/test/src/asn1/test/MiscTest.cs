@@ -3,12 +3,12 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Misc;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Misc;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     [NonParallelizable] // Environment.SetEnvironmentVariable

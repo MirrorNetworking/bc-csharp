@@ -1,11 +1,11 @@
 ﻿using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032.Tests
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032.Tests
 {
     [TestFixture]
     public class Ed448Test

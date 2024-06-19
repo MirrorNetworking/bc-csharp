@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Extension;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Tests.Nist
+namespace Mirror.BouncyCastle.Tests.Nist
 {
     /**
      * NIST CertPath test data for RFC 3280

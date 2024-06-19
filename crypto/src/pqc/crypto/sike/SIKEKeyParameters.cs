@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
     [Obsolete("Will be removed")]
     public abstract class SikeKeyParameters

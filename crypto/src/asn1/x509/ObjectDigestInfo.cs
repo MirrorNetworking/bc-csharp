@@ -1,14 +1,14 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * ObjectDigestInfo ASN.1 structure used in v2 attribute certificates.
-	 * 
+	 *
 	 * <pre>
-	 *  
+	 *
 	 *    ObjectDigestInfo ::= SEQUENCE {
 	 *         digestedObjectType  ENUMERATED {
 	 *                 publicKey            (0),
@@ -20,9 +20,9 @@ namespace Org.BouncyCastle.Asn1.X509
 	 *         digestAlgorithm     AlgorithmIdentifier,
 	 *         objectDigest        BIT STRING
 	 *    }
-	 *   
+	 *
 	 * </pre>
-	 * 
+	 *
 	 */
 	public class ObjectDigestInfo
         : Asn1Encodable
@@ -76,7 +76,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 * If <code>digestedObjectType</code> is not {@link #publicKeyCert} or
 		 * {@link #publicKey} <code>otherObjectTypeID</code> must be given,
 		 * otherwise it is ignored.</p>
-		 * 
+		 *
 		 * @param digestedObjectType The digest object type.
 		 * @param otherObjectTypeID The object type ID for
 		 *            <code>otherObjectDigest</code>.
@@ -96,7 +96,7 @@ namespace Org.BouncyCastle.Asn1.X509
 				this.otherObjectTypeID = new DerObjectIdentifier(otherObjectTypeID);
 			}
 
-			this.digestAlgorithm = digestAlgorithm; 
+			this.digestAlgorithm = digestAlgorithm;
 
 			this.objectDigest = new DerBitString(objectDigest);
 		}
@@ -145,9 +145,9 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Produce an object suitable for an Asn1OutputStream.
-		 * 
+		 *
 		 * <pre>
-		 *  
+		 *
 		 *    ObjectDigestInfo ::= SEQUENCE {
 		 *         digestedObjectType  ENUMERATED {
 		 *                 publicKey            (0),
@@ -159,7 +159,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 *         digestAlgorithm     AlgorithmIdentifier,
 		 *         objectDigest        BIT STRING
 		 *    }
-		 *   
+		 *
 		 * </pre>
 		 */
         public override Asn1Object ToAsn1Object()

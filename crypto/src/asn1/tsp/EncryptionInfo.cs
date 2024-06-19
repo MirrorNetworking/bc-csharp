@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Asn1.Tsp
+namespace Mirror.BouncyCastle.Asn1.Tsp
 {
     /**
      * Implementation of the EncryptionInfo element defined in RFC 4998:

@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;netstandard2.0;net461</TargetFrameworks>
-    <RootNamespace>Org.BouncyCastle</RootNamespace>
+    <RootNamespace>Mirror.BouncyCastle</RootNamespace>
     <AssemblyOriginatorKeyFile>..\..\BouncyCastle.NET.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
 	<NoWarn>1591</NoWarn>
 
-    <AssemblyName>BouncyCastle.Cryptography</AssemblyName>
+    <AssemblyName>Mirror.BouncyCastle.Cryptography</AssemblyName>
     <AssemblyTitle>BouncyCastle.NET Cryptography ($(TargetFramework))</AssemblyTitle>
     <Authors>Legion of the Bouncy Castle Inc.</Authors>
     <Company>Legion of the Bouncy Castle Inc.</Company>

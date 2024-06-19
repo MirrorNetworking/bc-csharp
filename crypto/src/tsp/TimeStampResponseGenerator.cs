@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Tsp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
     /**
      * Generator for RFC 3161 Time Stamp Responses.
@@ -206,7 +206,7 @@ namespace Org.BouncyCastle.Tsp
                 throw new TspException("created badly formatted response!", e);
             }
         }
-       
+
 
 
         class FailInfo

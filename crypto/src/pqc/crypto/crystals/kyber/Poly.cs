@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     internal class Poly
     {
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             m_engine = mEngine;
             m_symmetric = mEngine.Symmetric;
         }
-        
+
         internal short[] Coeffs => m_coeffs;
 
         internal void GetNoiseEta1(byte[] seed, byte nonce)
@@ -182,7 +182,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
                 throw new ArgumentException("PolyCompressedBytes is neither 128 or 160!");
             }
         }
-        
+
         internal void ToBytes(byte[] r, int off)
         {
             CondSubQ();

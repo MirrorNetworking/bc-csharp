@@ -2,11 +2,11 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Asn1.X509.SigI;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Asn1.X509.SigI;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class PersonalDataUnitTest

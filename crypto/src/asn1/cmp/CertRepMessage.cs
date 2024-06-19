@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
 	public class CertRepMessage
 		: Asn1Encodable
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.Asn1.Cmp
 
         private readonly Asn1Sequence m_caPubs;
 		private readonly Asn1Sequence m_response;
-		
+
 		private CertRepMessage(Asn1Sequence seq)
 		{
 			int index = 0;

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     /**
      * Draft FIPS 180-2 implementation of SHA-384. <b>Note:</b> As this is
@@ -102,7 +102,7 @@ namespace Org.BouncyCastle.Crypto.Digests
             H7 = 0xdb0c2e0d64f98fa7;
             H8 = 0x47b5481dbefa4fa4;
         }
-		
+
 		public override IMemoable Copy()
 		{
 			return new Sha384Digest(this);

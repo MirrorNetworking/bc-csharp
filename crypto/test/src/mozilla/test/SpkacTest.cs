@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Mozilla.Tests
+namespace Mirror.BouncyCastle.Mozilla.Tests
 {
     [TestFixture]
     public class SpkacTest

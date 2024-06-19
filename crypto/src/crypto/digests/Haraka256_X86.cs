@@ -5,14 +5,14 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     using Aes = System.Runtime.Intrinsics.X86.Aes;
     using Sse2 = System.Runtime.Intrinsics.X86.Sse2;
 
     public static class Haraka256_X86
     {
-        public static bool IsSupported => Org.BouncyCastle.Runtime.Intrinsics.X86.Aes.IsEnabled;
+        public static bool IsSupported => Mirror.BouncyCastle.Runtime.Intrinsics.X86.Aes.IsEnabled;
 
         public static void Hash(ReadOnlySpan<byte> input, Span<byte> output)
         {
@@ -117,7 +117,7 @@ namespace Org.BouncyCastle.Crypto.Digests
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static Vector128<byte> Load128(ReadOnlySpan<byte> t)
         {
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
                 return MemoryMarshal.Read<Vector128<byte>>(t);
 
             return Vector128.Create(
@@ -129,7 +129,7 @@ namespace Org.BouncyCastle.Crypto.Digests
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void Store128(Vector128<byte> s, Span<byte> t)
         {
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 MemoryMarshal.Write(t, ref s);
                 return;

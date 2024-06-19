@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Crmf;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class CertificateReqMessagesBuilder
     {

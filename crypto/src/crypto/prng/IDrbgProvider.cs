@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Prng.Drbg;
+using Mirror.BouncyCastle.Crypto.Prng.Drbg;
 
-namespace Org.BouncyCastle.Crypto.Prng
+namespace Mirror.BouncyCastle.Crypto.Prng
 {
     internal interface IDrbgProvider
     {

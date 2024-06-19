@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal static class PicnicUtilities
     {

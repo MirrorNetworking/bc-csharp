@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* A declaration of majority.

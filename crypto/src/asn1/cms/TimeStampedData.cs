@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
 	public class TimeStampedData
 		: Asn1Encodable
@@ -38,7 +38,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 		private TimeStampedData(Asn1Sequence seq)
 		{
 			this.version = DerInteger.GetInstance(seq[0]);
-			
+
 			int index = 1;
 			if (seq[index] is DerIA5String ia5)
 			{

@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Base class for an RSA public key.</remarks>
 	public class RsaPublicBcpgKey

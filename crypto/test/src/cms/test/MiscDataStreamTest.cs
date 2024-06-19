@@ -5,13 +5,13 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	[TestFixture]
 	public class MiscDataStreamTest
@@ -180,7 +180,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			// generate compressed stream
 			MemoryStream cDataOut = new MemoryStream();
-		    
+
 			cOut = cGen.Open(cDataOut, CmsCompressedDataStreamGenerator.ZLib);
 
 			cOut.Write(testBytes, 0, testBytes.Length);

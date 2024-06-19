@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     public abstract class SimpleTest
         : ITest
@@ -112,9 +112,9 @@ namespace Org.BouncyCastle.Utilities.Test
 
         private static Assembly GetAssembly() => typeof(SimpleTest).Assembly;
 
-        private static string GetFullName(string name) => "Org.BouncyCastle.data." + name;
+        private static string GetFullName(string name) => "Mirror.BouncyCastle.data." + name;
 
-        private static string GetShortName(string fullName) => fullName.Substring("Org.BouncyCastle.data.".Length);
+        private static string GetShortName(string fullName) => fullName.Substring("Mirror.BouncyCastle.data.".Length);
 
 		public abstract void PerformTest();
 

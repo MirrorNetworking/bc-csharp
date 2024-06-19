@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Math.EC.Rfc8032;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.EC.Rfc8032;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc7748
+namespace Mirror.BouncyCastle.Math.EC.Rfc7748
 {
     using F = X25519Field;
 

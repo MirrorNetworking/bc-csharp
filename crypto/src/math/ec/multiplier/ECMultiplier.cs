@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     /**
     * Interface for classes encapsulating a point multiplication algorithm

@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Asn1.X500.Style;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Asn1.X500.Style;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
     public class PkixNameConstraintValidator
     {

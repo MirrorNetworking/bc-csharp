@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.CryptoPro
+namespace Mirror.BouncyCastle.Asn1.CryptoPro
 {
     public class Gost28147Parameters
         : Asn1Encodable

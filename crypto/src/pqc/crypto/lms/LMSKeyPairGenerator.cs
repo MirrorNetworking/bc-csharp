@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
     public sealed class LmsKeyPairGenerator
         : IAsymmetricCipherKeyPairGenerator

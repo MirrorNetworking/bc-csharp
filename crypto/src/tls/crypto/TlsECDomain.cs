@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     /// <summary>Domain interface to service factory for creating Elliptic-Curve (EC) based operators.</summary>
     public interface TlsECDomain

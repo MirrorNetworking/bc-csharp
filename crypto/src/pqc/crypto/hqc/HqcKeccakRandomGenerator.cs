@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     internal sealed class HqcKeccakRandomGenerator
     {

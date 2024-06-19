@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto.Agreement.Kdf;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto.Agreement.Kdf;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Agreement
+namespace Mirror.BouncyCastle.Crypto.Agreement
 {
     // TODO[api] sealed
     public class ECMqvWithKdfBasicAgreement

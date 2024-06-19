@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecT283FieldElement
         : AbstractF2mFieldElement

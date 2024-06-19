@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Ocsp;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Ocsp;
 
-namespace Org.BouncyCastle.Ocsp
+namespace Mirror.BouncyCastle.Ocsp
 {
 	public class OcspResp
 	{

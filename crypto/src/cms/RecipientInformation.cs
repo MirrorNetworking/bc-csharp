@@ -1,25 +1,25 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     public abstract class RecipientInformation
     {
 		internal RecipientID			rid = new RecipientID();
 		internal AlgorithmIdentifier	keyEncAlg;
 		internal CmsSecureReadable		secureReadable;
-		
+
 		private byte[] resultMac;
 
 		internal RecipientInformation(
@@ -49,7 +49,7 @@ namespace Org.BouncyCastle.Cms
 
 		/**
         * return the object identifier for the key encryption algorithm.
-        * 
+        *
 		* @return OID for key encryption algorithm.
         */
         public string KeyEncryptionAlgOid
@@ -60,7 +60,7 @@ namespace Org.BouncyCastle.Cms
 		/**
         * return the ASN.1 encoded key encryption algorithm parameters, or null if
         * there aren't any.
-        * 
+        *
 		* @return ASN.1 encoding of key encryption algorithm parameters.
         */
 		public Asn1Object KeyEncryptionAlgParams
@@ -76,7 +76,7 @@ namespace Org.BouncyCastle.Cms
 		internal CmsTypedStream GetContentFromSessionKey(
 			KeyParameter sKey)
 		{
-			CmsReadable readable = secureReadable.GetReadable(sKey); 
+			CmsReadable readable = secureReadable.GetReadable(sKey);
 
 			try
 			{

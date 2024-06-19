@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class RecipientIdentifier
         : Asn1Encodable, IAsn1Choice

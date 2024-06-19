@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     [Obsolete("Check for 'Asn1SetParser' instead")]
     public class BerSetParser

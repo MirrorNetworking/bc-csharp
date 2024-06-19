@@ -1,6 +1,6 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
-internal class P434 
+internal class P434
     : Internal
 {
     // Encoding of field elementsL, elements over Z_orderL, elements over GF(p^2) and elliptic curve points:
@@ -152,7 +152,7 @@ internal class P434
         0x0000001B, 0x0000001B, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001D,
         0x0000001E, 0x0000001F, 0x00000020, 0x00000021, 0x00000022, 0x00000022, 0x00000023,
     };
-    
+
     private static readonly uint[] s_ph3_path = new uint[47]
     {
         0x00000000, 0x00000000, 0x00000001, 0x00000002, 0x00000003, 0x00000003, 0x00000004, 0x00000004,
@@ -162,7 +162,7 @@ internal class P434
         0x00000013, 0x00000014, 0x00000015, 0x00000016, 0x00000017, 0x00000018, 0x00000019, 0x0000001A,
         0x0000001B, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001C, 0x0000001C,
     };
-    
+
     private static readonly ulong[] s_A_gen = new ulong[42]
     {
         0x6E18D3A63313A738, 0x1DCC496DD6DDE298, 0xA35F3F7DAFBE2B43, 0xC6B9A5CC670071EB,
@@ -177,7 +177,7 @@ internal class P434
         0x82AC55A556E5A22F, 0x437D8C2AC83FDC6B, 0x620A8DA602543EDE, 0xD19ABA8092A1E8C2,
         0xAFF1AA61981C95D3, 0x0001A7232B0C035E,
     };
-    
+
     private static readonly ulong[] s_B_gen = new ulong[35]
     {
         0xE172658571249BA8, 0x9D8F52CB15829DA0, 0xE3A7C7F9F0E3F832, 0x8B825DD0B9410D30,
@@ -190,7 +190,7 @@ internal class P434
         0x9F7367022EFDF650, 0xA8C21C687A91D6BC, 0xDDB909C497C4BFED, 0x66FD362A30232EBF,
         0x84AC5026408590E1, 0x5378004CB74DA4ED, 0x00008AA46B9E55B2,
     };
-    
+
     private static readonly ulong[] s_XQB3 = new ulong[14]
     {
         0x821E631A922B742C, 0xDA3EB61A6B066600, 0xBE9BF948971BD406, 0xAEF5D42FAF04075A,
@@ -198,7 +198,7 @@ internal class P434
         0x0D29EBA9AF11A6EB, 0xE0BC6DA29BB99844, 0xF583F3C8DA2FB5FA, 0xBBCB2EAAD861B7E8,
         0x2487A88C3E782D0A, 0x00011BA37E3442A5,
     };
-    
+
     private static readonly ulong[] s_A_basis_zero = new ulong[56]
     {
         0x6E18D3A633148F91, 0x1DCC496DD6DDE298, 0xA35F3F7DAFBE2B43, 0x3B18175B7C0071EB,
@@ -216,7 +216,7 @@ internal class P434
         0x000228BCA648BAFF, 0x7DEDAD20B53F2C9A, 0xE7DD8746364EACC1, 0x743BABC72A5096D4,
         0xDDA2FBF4E96A5174, 0xE05A5B3B71083AF0, 0x69AB2A817C72ADCC, 0x000216CFFC723E3C,
     };
-    
+
     private static readonly ulong[] s_B_basis_zero = new ulong[56]
     {
         0x214C34BB192F67A0, 0x0DD49D3D02115D30, 0x0700652C1A7B66ED, 0x1F856B48F4FF0024,
@@ -234,7 +234,7 @@ internal class P434
         0x0000000000000000, 0x51D889FE197209C1, 0x191BCD9DBE4FE0EF, 0x447818CF5E54DD8A,
         0x3F42710E8562A583, 0x647BDBB01C66DCB5, 0xF402D36C15EA12E1, 0x0000A1E1D287C14C,
     };
-    
+
     private static readonly ulong[] s_B_gen_3_tors = new ulong[112]
     {
         0xD697601DCA7CA4B5, 0xD16726DCBE0FD988, 0x8119DD7AF0E6C87C, 0xD1E1BDAB620C8DF9,
@@ -266,41 +266,41 @@ internal class P434
         0x000220892411AA66, 0xFF585E4DCB517F6A, 0xEFFCE64BA91FBE1C, 0xFAEB260583830D6E,
         0xEB68E9A0F32E8E96, 0x419A555BABEC214B, 0xBA7A5BFD1EA7D14F, 0x000220892411AA66,
     };
-    
+
     private static readonly ulong[] s_g_R_S_im = new ulong[7]
     {
         0x410F318D49162E42, 0x6D1F5B0D35833300, 0x5F4DFCA44B8DEA03, 0x908ADE1CD38203AD,
         0x100CD330A23B7494, 0xE0A2D716A265D0DA, 0x0001C5F4777BD5A5,
     };
-    
+
     private static readonly ulong[] s_g_phiR_phiS_re = new ulong[7]
     {
         0xE3F6DD5BAE3DA160, 0x893B9874EAD27B9A, 0x0AEB72FD8BCC2583, 0x02FFCCC8FAFA395E,
         0x2303AE01DD252409, 0xC6AD33482DFD53FA, 0x0000978AD00D3221,
     };
-    
+
     private static readonly ulong[] s_g_phiR_phiS_im = new ulong[7]
     {
         0xC728DE8E32AF6622, 0xF179EECB0D4F3D28, 0x37CA8F90B93772D7, 0xA349AE99A7B40196,
         0xD81D98E9D4891BF8, 0x4767F6BC20C22291, 0x00019AF8C13C99B8,
     };
-    
+
     private static readonly ulong[] s_Montgomery_RB1 = new ulong[4]
     {
         0xE63F0179FFC3EF1B, 0x47AF4CC2440BEB81, 0xEC3CD079857407E7, 0x00000000008BF47C,
     };
-    
+
     private static readonly ulong[] s_Montgomery_RB2 = new ulong[4]
     {
         0x7A9991106B9F6535, 0x7E06A4ACAEA6DA73, 0x3D4C8710FC0ECD0E, 0xAE3D0E8DC11F55F1,
     };
-    
+
     private static readonly ulong[] s_threeinv = new ulong[7]
     {
         0x5555555555557C0E, 0x5555555555555555, 0x5555555555555555, 0x3C30F5A8EB555555,
         0x9A84C9F93D7058B4, 0x410E5C007655D5E8, 0x0001C70EFCA40721,
     };
-    
+
     private static readonly ulong[] s_u_entang = new ulong[14]
     {
         0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000,
@@ -308,7 +308,7 @@ internal class P434
         0x0000000000000000, 0x0000000000000000, 0x721FE809F8000000, 0xB00349F6AB3F59A9,
         0xD264A8A8BEEE8219, 0x0001D9DD4F7A5DB5,
     };
-    
+
     private static readonly ulong[] s_u0_entang = new ulong[14]
     {
         0x000000000000742C, 0x0000000000000000, 0x0000000000000000, 0xB90FF404FC000000,
@@ -316,7 +316,7 @@ internal class P434
         0x0000000000000000, 0x0000000000000000, 0xB90FF404FC000000, 0xD801A4FB559FACD4,
         0xE93254545F77410C, 0x0000ECEEA7BD2EDA,
     };
-    
+
     private static readonly ulong[][] s_table_r_qr = new ulong[17][]
     {
         new ulong[7]
@@ -405,7 +405,7 @@ internal class P434
             0xCF9F1243D1816BF7, 0x3AAEE6F49126C2D6, 0x00021D999BB5337C,
         },
     };
-    
+
     private static readonly ulong[][] s_table_r_qnr = new ulong[17][]
     {
         new ulong[7]
@@ -494,7 +494,7 @@ internal class P434
             0xDF204854DCD50F6E, 0xB4475852F86E3C29, 0x00000B5153B7D208,
         },
     };
-    
+
     private static readonly ulong[][] s_table_v_qr = new ulong[34][]
     {
         new ulong[7]
@@ -668,7 +668,7 @@ internal class P434
             0x166F7D427E758FC3, 0x95C498C32ED2863F, 0x00018C4775225D1C,
         },
     };
-    
+
     private static readonly ulong[][] s_table_v_qnr = new ulong[34][]
     {
         new ulong[7]
@@ -842,7 +842,7 @@ internal class P434
             0xA05EDFF1E57DBBEF, 0x5C3678A72B135234, 0x0001BB5DA10EE9DF,
         },
     };
-    
+
     private static readonly ulong[][][] s_v_3_torsion = new ulong[20][][]
     {
         new ulong[2][]
@@ -1106,7 +1106,7 @@ internal class P434
             },
         },
     };
-    
+
     private static readonly ulong[] s_T_tate3 = new ulong[5740]
     {
         0x087CF42AB4DB902F, 0x2DC7847A25C2D0BB, 0x02EA717C1089170B, 0xD648387AF59D578F,
@@ -2545,7 +2545,7 @@ internal class P434
         0x0001AD446F6FFF06, 0xD697601DCA7CA4B5, 0xD16726DCBE0FD988, 0x8119DD7AF0E6C87C,
         0xD1E1BDAB620C8DF9, 0x27ABDBB336AF35D0, 0xC36900B91B5F4914, 0x0001E21CCC021AE9,
     };
-    
+
     private static readonly ulong[] s_T_tate2_firststep_P = new ulong[28]
     {
         0x16747C943533BF87, 0xB4497C90231C8CF6, 0x5ABB26BC14FB0710, 0x457A7E552E14B4D2,
@@ -2556,7 +2556,7 @@ internal class P434
         0x00004ECD639F7DE7, 0xDFA0E79BF5633D28, 0x05F9B46F9C06602E, 0x22B17FDA14F3A36A,
         0x44E15C64A71346D5, 0xAA9205DED17FC6DA, 0x59B8583E58373D72, 0x000077D7B7A0BE52,
     };
-    
+
     private static readonly ulong[] s_T_tate2_P = new ulong[4494]
     {
         0xEC805BF7BF3C44F4, 0x9544F219309FD605, 0x57266A162ABDBD16, 0x19BB58DC7DB2C684,
@@ -3684,7 +3684,7 @@ internal class P434
         0xE5FD2ABD4CB6A33E, 0x8A98D19511F78FF8, 0x2C5C5AFB9A978D78, 0x73C9F51BE2B16F40,
         0x671834E521007F4D, 0x0000451B04879668,
     };
-    
+
     private static readonly ulong[] s_T_tate2_firststep_Q = new ulong[28]
     {
         0x6448CB5BD9770D67, 0x3092CF8C8803D8B4, 0x2542331C81C2C2F8, 0x8066DFBFF024AA32,
@@ -3695,7 +3695,7 @@ internal class P434
         0x00010AEB3555065D, 0x508F3D07E0AE1491, 0x1C7EF18B886FDB38, 0xAA1001FC42642F0C,
         0xD5536205F2F93C34, 0xB647092B16484B6E, 0x899C89AEA084752F, 0x0000D0C508EA68B4,
     };
-    
+
     private static readonly ulong[] s_T_tate2_Q = new ulong[4494]
     {
         0x750FCD24D96F498D, 0xE74B7652658B6360, 0x54FB85D2945C71AD, 0xA530239B59D34B1A,
@@ -4823,7 +4823,7 @@ internal class P434
         0xE21377ADF1509405, 0x2C278C05C90D38F8, 0x9E033CFCCF292CB5, 0xEB1C3830C73809D3,
         0x64DE17327298FF7B, 0x0001E05DC4B6D8CC,
     };
-    
+
     private static readonly ulong[] s_ph2_T = new ulong[6041]
     {
         0x1456085945D0BBE6, 0xA23060443A427246, 0x6414C3E45A2D4823, 0x31199D4A05995ECD,
@@ -6338,7 +6338,7 @@ internal class P434
         0xFFFFFFFFFFFFFFFF, 0x44B18275E6FFFFFF, 0xA3C4B77CDBB901CF, 0x83CA0B82224DDF49,
         0x000147307F5A4469,
     };
-    
+
     private static readonly ulong[] s_ph3_T1 = new ulong[8372]
     {
         0x37ED7978F7323982, 0x04936C76D51F21F5, 0x16050C18A973EE88, 0x72F7BF23AB9375D3,
@@ -8435,7 +8435,7 @@ internal class P434
         0x0002072BDFEECFDF, 0x2E9A77227F6B4DC7, 0x26A6145E0CD52870, 0xE8E7255BCCFF6551,
         0xC04097B01E64680A, 0x56B98EE30BBE9A40, 0xF3BD5AE69AE90DEB, 0x0001ADE268AB0C0B,
     };
-    
+
     private static readonly ulong[] s_ph3_T2 = new ulong[8372]
     {
         0x37ED7978F7323982, 0x04936C76D51F21F5, 0x16050C18A973EE88, 0x72F7BF23AB9375D3,

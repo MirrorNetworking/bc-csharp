@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class DtlsServerProtocol
         : DtlsProtocol
@@ -317,7 +317,7 @@ namespace Org.BouncyCastle.Tls
                         /*
                          * RFC 5246 If no suitable certificate is available, the client MUST send a
                          * certificate message containing no certificates.
-                         * 
+                         *
                          * NOTE: In previous RFCs, this was SHOULD instead of MUST.
                          */
                         throw new TlsFatalAlert(AlertDescription.unexpected_message);
@@ -875,7 +875,7 @@ namespace Org.BouncyCastle.Tls
             server.NotifyOfferedCipherSuites(offeredCipherSuites);
 
             /*
-             * TODO[resumption] Check RFC 7627 5.4. for required behaviour 
+             * TODO[resumption] Check RFC 7627 5.4. for required behaviour
              */
 
             byte[] clientRenegExtData = TlsUtilities.GetExtensionData(clientHelloExtensions,

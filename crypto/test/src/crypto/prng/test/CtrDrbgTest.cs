@@ -2,14 +2,14 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Prng.Drbg;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Prng.Drbg;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Prng.Test
+namespace Mirror.BouncyCastle.Crypto.Prng.Test
 {
     /**
      * CTR DRBG Test

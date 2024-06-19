@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 public sealed class FpeParameters
     : ICipherParameters
@@ -15,7 +15,7 @@ public sealed class FpeParameters
 
     public FpeParameters(KeyParameter key, int radix, byte[] tweak): this(key, radix, tweak, false)
     {
-        
+
     }
 
     public FpeParameters(KeyParameter key, int radix, byte[] tweak, bool useInverse)

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Agreement
+namespace Mirror.BouncyCastle.Crypto.Agreement
 {
     public sealed class X448Agreement
         : IRawAgreement

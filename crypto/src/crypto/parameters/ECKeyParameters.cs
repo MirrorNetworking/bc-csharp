@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public abstract class ECKeyParameters
         : AsymmetricKeyParameter

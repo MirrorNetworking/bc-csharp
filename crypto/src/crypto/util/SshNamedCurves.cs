@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     public static class SshNamedCurves
     {

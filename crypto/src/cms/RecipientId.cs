@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     // TODO[api] sealed
     public class RecipientID

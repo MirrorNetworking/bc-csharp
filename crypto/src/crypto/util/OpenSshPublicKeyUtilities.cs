@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     public static class OpenSshPublicKeyUtilities
     {

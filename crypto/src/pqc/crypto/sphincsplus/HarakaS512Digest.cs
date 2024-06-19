@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     /**
     * Haraka-512 v2, https://eprint.iacr.org/2016/098.pdf

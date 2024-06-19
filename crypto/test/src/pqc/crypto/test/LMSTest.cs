@@ -2,15 +2,15 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using Org.BouncyCastle.Pqc.Crypto.Utilities;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Lms;
+using Mirror.BouncyCastle.Pqc.Crypto.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class LMSTest

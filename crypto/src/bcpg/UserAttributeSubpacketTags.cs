@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     /**
     * Basic PGP user attribute sub-packet tag types.

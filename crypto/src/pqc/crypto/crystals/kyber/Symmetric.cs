@@ -1,16 +1,16 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     public abstract class Symmetric
     {
         internal readonly int XofBlockBytes;
-        
+
         internal abstract void Hash_h(byte[] output, byte[] input, int outOffset);
 
         internal abstract void Hash_g(byte[] output, byte[] input);
@@ -36,7 +36,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             private Sha3Digest sha3Digest256;
             private ShakeDigest shakeDigest;
 
-            
+
             internal ShakeSymmetric()
                 : base(164)
             {
@@ -108,7 +108,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
                 digest.BlockUpdate(input, 0, input.Length);
                 digest.DoFinal(output, outOffset);
             }
-            
+
             private void Aes128(byte[] output, int offset, int size)
             {
                 byte[] buf = new byte[size + offset];   // TODO: there might be a more efficient way of doing this...
@@ -117,7 +117,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
                     cipher.ProcessBlock(buf, i + offset, output, i + offset);
                 }
             }
-            
+
             internal override void Hash_h(byte[] output, byte[] input, int outOffset)
             {
                 DoDigest(sha256Digest, output, input, outOffset);
@@ -157,7 +157,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             {
                 byte[] buf = new byte[32];
                 DoDigest(sha256Digest, buf, input, 0);
-                Array.Copy(buf, 0, output, 0, output.Length);            
+                Array.Copy(buf, 0, output, 0, output.Length);
             }
         }
 

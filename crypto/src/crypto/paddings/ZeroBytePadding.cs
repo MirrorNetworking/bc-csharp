@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Paddings
+namespace Mirror.BouncyCastle.Crypto.Paddings
 {
     /// <summary> A padder that adds zero byte padding to a block.</summary>
     public class ZeroBytePadding

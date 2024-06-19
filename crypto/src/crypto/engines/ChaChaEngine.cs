@@ -8,10 +8,10 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/// <summary>
 	/// Implementation of Daniel J. Bernstein's ChaCha stream cipher.
@@ -83,7 +83,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 			Debug.Assert(output.Length >= 64);
 
 #if NETCOREAPP3_0_OR_GREATER
-			if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled)
+			if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled)
 			{
 				var x0 = Load128_UInt32(input.AsSpan());
 				var x1 = Load128_UInt32(input.AsSpan(4));
@@ -217,7 +217,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		private static Vector128<uint> Load128_UInt32(ReadOnlySpan<uint> t)
 		{
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
                 return MemoryMarshal.Read<Vector128<uint>>(MemoryMarshal.AsBytes(t));
 
             return Vector128.Create(t[0], t[1], t[2], t[3]);
@@ -226,7 +226,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		private static void Store128_UInt32(Vector128<uint> s, Span<byte> t)
 		{
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 MemoryMarshal.Write(t, ref s);
 				return;

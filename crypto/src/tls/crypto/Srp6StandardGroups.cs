@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     /// <summary>A selection of standard groups for SRP-6.</summary>
     public class Srp6StandardGroups

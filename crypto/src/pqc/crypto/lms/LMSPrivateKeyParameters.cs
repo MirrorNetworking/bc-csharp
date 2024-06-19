@@ -2,11 +2,11 @@ using System;
 using System.Collections.Concurrent;
 using System.IO;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
     public sealed class LmsPrivateKeyParameters
         : LmsKeyParameters, ILmsContextBasedSigner
@@ -146,7 +146,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Lms
 
         internal void IncIndex()
         {
-            lock (this) 
+            lock (this)
                 q++;
         }
 

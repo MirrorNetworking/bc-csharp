@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class DtlsClientProtocol
         : DtlsProtocol
@@ -281,7 +281,7 @@ namespace Org.BouncyCastle.Tls
             }
             else
             {
-                state.keyExchange.ProcessClientCredentials(clientAuthCredentials);                    
+                state.keyExchange.ProcessClientCredentials(clientAuthCredentials);
             }
 
             var clientSupplementalData = client.GetClientSupplementalData();
@@ -815,7 +815,7 @@ namespace Org.BouncyCastle.Tls
             }
 
             /*
-             * 
+             *
              * RFC 3546 2.2 Note that the extended server hello message is only sent in response to an
              * extended client hello message. However, see RFC 5746 exception below. We always include
              * the SCSV, so an Extended Server Hello is always allowed.

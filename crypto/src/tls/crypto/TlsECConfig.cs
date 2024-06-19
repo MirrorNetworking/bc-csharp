@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     /// <summary>Carrier class for Elliptic Curve parameter configuration.</summary>
     public class TlsECConfig

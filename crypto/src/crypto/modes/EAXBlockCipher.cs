@@ -1,22 +1,22 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Modes
+namespace Mirror.BouncyCastle.Crypto.Modes
 {
 	/**
-	* A Two-Pass Authenticated-Encryption Scheme Optimized for Simplicity and 
+	* A Two-Pass Authenticated-Encryption Scheme Optimized for Simplicity and
 	* Efficiency - by M. Bellare, P. Rogaway, D. Wagner.
-	* 
+	*
 	* http://www.cs.ucdavis.edu/~rogaway/papers/eax.pdf
-	* 
-	* EAX is an AEAD scheme based on CTR and OMAC1/CMAC, that uses a single block 
-	* cipher to encrypt and authenticate data. It's on-line (the length of a 
+	*
+	* EAX is an AEAD scheme based on CTR and OMAC1/CMAC, that uses a single block
+	* cipher to encrypt and authenticate data. It's on-line (the length of a
 	* message isn't needed to begin processing it), has good performances, it's
 	* simple and provably secure (provided the underlying block cipher is secure).
-	* 
+	*
 	* Of course, this implementations is NOT thread-safe.
 	*/
 	public class EaxBlockCipher
@@ -183,7 +183,7 @@ namespace Org.BouncyCastle.Crypto.Modes
                 ProcessAadBytes(initialAssociatedText, 0, initialAssociatedText.Length);
             }
         }
-        
+
         public virtual void ProcessAadByte(byte input)
         {
             if (cipherInitialized)

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.Ocsp
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.Ocsp
 {
 	/**
 	* ISIS-MTT PROFILE: The responder may include this extension in a response to

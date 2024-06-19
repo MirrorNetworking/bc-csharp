@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Paddings
+namespace Mirror.BouncyCastle.Crypto.Paddings
 {
     /// <summary>A padder that adds PKCS7/PKCS5 padding to a block.</summary>
     public class Pkcs7Padding

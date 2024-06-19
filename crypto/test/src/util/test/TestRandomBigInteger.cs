@@ -1,8 +1,8 @@
 ﻿using System;
 
-using M = Org.BouncyCastle.Math;
+using M = Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     /**
      * A fixed secure random designed to return data for someone needing to create a single BigInteger.

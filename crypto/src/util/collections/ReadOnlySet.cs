@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Utilities.Collections
+namespace Mirror.BouncyCastle.Utilities.Collections
 {
     internal abstract class ReadOnlySet<T>
 #if NETCOREAPP1_0_OR_GREATER || NET40_OR_GREATER || NETSTANDARD1_0_OR_GREATER

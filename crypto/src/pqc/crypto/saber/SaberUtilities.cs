@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Saber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Saber
 {
     internal class SaberUtilities
     {

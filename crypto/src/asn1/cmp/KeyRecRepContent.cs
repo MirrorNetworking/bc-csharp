@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
 	public class KeyRecRepContent
 		: Asn1Encodable
@@ -67,7 +67,7 @@ namespace Org.BouncyCastle.Asn1.Cmp
 		 *                         keyPairHist         [2] SEQUENCE SIZE (1..MAX) OF
 		 *                                                           CertifiedKeyPair OPTIONAL
 		 *              }
-		 * </pre> 
+		 * </pre>
 		 * @return a basic ASN.1 object representation.
 		 */
 		public override Asn1Object ToAsn1Object()

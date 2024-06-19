@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+﻿namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class PolyVecL
     {
@@ -55,7 +55,7 @@
                 Vec[i].PolyNtt();
             }
         }
-        
+
         public void UniformGamma1(byte[] seed, ushort nonce)
         {
             for (int i = 0; i < L; i++)

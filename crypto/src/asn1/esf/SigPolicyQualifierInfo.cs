@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
 	/// <remarks>
 	/// <code>
@@ -10,7 +10,7 @@ namespace Org.BouncyCastle.Asn1.Esf
     ///		sigPolicyQualifierId  SigPolicyQualifierId,
 	///		sigQualifier          ANY DEFINED BY sigPolicyQualifierId
 	/// }
-	/// 
+	///
 	/// SigPolicyQualifierId ::= OBJECT IDENTIFIER
 	/// </code>
 	/// </remarks>

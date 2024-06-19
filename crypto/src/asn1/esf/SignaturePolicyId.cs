@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
     /// <remarks>
     /// <code>
@@ -10,9 +10,9 @@ namespace Org.BouncyCastle.Asn1.Esf
     /// 	sigPolicyHash			SigPolicyHash,
     /// 	sigPolicyQualifiers		SEQUENCE SIZE (1..MAX) OF SigPolicyQualifierInfo OPTIONAL
     /// }
-    /// 
+    ///
     /// SigPolicyId ::= OBJECT IDENTIFIER
-    /// 
+    ///
     /// SigPolicyHash ::= OtherHashAlgAndValue
     /// </code>
     /// </remarks>

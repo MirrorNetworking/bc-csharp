@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 	public class RsaKeyParameters
 		: AsymmetricKeyParameter
@@ -34,7 +34,7 @@ namespace Org.BouncyCastle.Crypto.Parameters
             if ((modulus.IntValue & 1) == 0)
                 throw new ArgumentException("RSA modulus is even", nameof(modulus));
 
-            int maxBitLength = ImplGetInteger("Org.BouncyCastle.Rsa.MaxSize", 16384);
+            int maxBitLength = ImplGetInteger("Mirror.BouncyCastle.Rsa.MaxSize", 16384);
             if (modulus.BitLength > maxBitLength)
                 throw new ArgumentException("RSA modulus out of range", nameof(modulus));
 

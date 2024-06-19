@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Engines;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	public class BufferedIesCipher
 		: BufferedCipherBase

@@ -1,13 +1,13 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     /// <summary>Builder for CertificateResponse objects (the CertResponse CRMF equivalent).</summary>
     public class CertificateResponseBuilder

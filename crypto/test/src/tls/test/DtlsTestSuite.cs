@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     public class DtlsTestSuite
     {
-        // Make the access to constants less verbose 
+        // Make the access to constants less verbose
         internal class C : TlsTestConfig {}
 
         public DtlsTestSuite()

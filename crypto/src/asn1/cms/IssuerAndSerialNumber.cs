@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class IssuerAndSerialNumber
         : Asn1Encodable

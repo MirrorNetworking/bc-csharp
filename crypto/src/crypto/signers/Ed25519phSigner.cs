@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math.EC.Rfc8032;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math.EC.Rfc8032;
 
-namespace Org.BouncyCastle.Crypto.Signers
+namespace Mirror.BouncyCastle.Crypto.Signers
 {
     public class Ed25519phSigner
         : ISigner

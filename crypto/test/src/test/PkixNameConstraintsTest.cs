@@ -3,12 +3,12 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/// <summary>
 	/// Test class for {@link PkixNameConstraintValidator}.
@@ -232,7 +232,7 @@ namespace Org.BouncyCastle.Tests
 
 		/**
 		 * Tests string based GeneralNames for inclusion or exclusion.
-		 * 
+		 *
 		 * @param nameType The {@link GeneralName} type to test.
 		 * @param testName The name to test.
 		 * @param testNameIsConstraint The names where <code>testName</code> must
@@ -342,7 +342,7 @@ namespace Org.BouncyCastle.Tests
 
 		/**
 		 * Tests byte array based GeneralNames for inclusion or exclusion.
-		 * 
+		 *
 		 * @param nameType The {@link GeneralName} type to test.
 		 * @param testName The name to test.
 		 * @param testNameIsConstraint The names where <code>testName</code> must

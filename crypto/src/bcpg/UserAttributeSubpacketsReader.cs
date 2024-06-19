@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using Org.BouncyCastle.Bcpg.Attr;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Bcpg.Attr;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     /**
     * reader for user attribute sub-packets

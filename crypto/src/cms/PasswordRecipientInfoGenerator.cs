@@ -1,22 +1,22 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	internal class PasswordRecipientInfoGenerator
 		: RecipientInfoGenerator
 	{
 		private AlgorithmIdentifier	keyDerivationAlgorithm;
 		private KeyParameter		keyEncryptionKey;
-		// TODO Can get this from keyEncryptionKey?		
+		// TODO Can get this from keyEncryptionKey?
 		private string				keyEncryptionKeyOID;
 
 		internal PasswordRecipientInfoGenerator()

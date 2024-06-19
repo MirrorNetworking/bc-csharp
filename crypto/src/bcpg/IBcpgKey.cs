@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	// TODO[api] Extend IEncodable
 	/// <remarks>Base interface for a PGP key.</remarks>

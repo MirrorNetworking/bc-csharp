@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Generic compressed data object.</remarks>
     public class CompressedDataPacket

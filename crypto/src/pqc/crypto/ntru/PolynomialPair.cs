@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     internal class PolynomialPair
     {

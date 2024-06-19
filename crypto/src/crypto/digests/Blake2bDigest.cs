@@ -3,20 +3,20 @@
 using System.Runtime.CompilerServices;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     /*  The BLAKE2 cryptographic hash function was designed by Jean-
      Philippe Aumasson, Samuel Neves, Zooko Wilcox-O'Hearn, and Christian
      Winnerlein.
-   
-     Reference Implementation and Description can be found at: https://blake2.net/      
+
+     Reference Implementation and Description can be found at: https://blake2.net/
      Internet Draft: https://tools.ietf.org/html/draft-saarinen-blake2-02
 
-     This implementation does not support the Tree Hashing Mode. 
- 
+     This implementation does not support the Tree Hashing Mode.
+
        For unkeyed hashing, developers adapting BLAKE2 to ASN.1 - based
        message formats SHOULD use the OID tree at x = 1.3.6.1.4.1.1722.12.2.
 

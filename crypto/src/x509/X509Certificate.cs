@@ -4,20 +4,20 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Misc;
-using Org.BouncyCastle.Asn1.Utilities;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Misc;
+using Mirror.BouncyCastle.Asn1.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.X509.Extension;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
     /// <summary>
     /// An Object representing an X509 Certificate.
@@ -218,7 +218,7 @@ namespace Org.BouncyCastle.X509
         }
 
         /// <summary>
-        /// Return a <see cref="Org.BouncyCastle.Math.BigInteger">BigInteger</see> containing the serial number.
+        /// Return a <see cref="Mirror.BouncyCastle.Math.BigInteger">BigInteger</see> containing the serial number.
         /// </summary>
         /// <returns>The Serial number.</returns>
         public virtual BigInteger SerialNumber

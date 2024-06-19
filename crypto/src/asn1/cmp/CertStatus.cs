@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
 	public class CertStatus
 		: Asn1Encodable

@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Cmce
+namespace Mirror.BouncyCastle.Pqc.Crypto.Cmce
 {
     internal class Benes13
         : Benes

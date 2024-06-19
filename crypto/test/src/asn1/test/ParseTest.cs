@@ -3,11 +3,11 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     public class ParseTest

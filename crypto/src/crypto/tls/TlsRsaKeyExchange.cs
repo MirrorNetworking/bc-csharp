@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Tls
+namespace Mirror.BouncyCastle.Crypto.Tls
 {
     public static class TlsRsaKeyExchange
     {
@@ -165,7 +165,7 @@ namespace Org.BouncyCastle.Crypto.Tls
             byte[] resultBytes = BigIntegers.AsUnsignedByteArray(resultSize, offsetResult);
 
             /*
-             * A final modular subtraction is done without timing dependencies on the final result. 
+             * A final modular subtraction is done without timing dependencies on the final result.
              */
             int carry = SubFrom(resultSize, blindedResultBytes, resultBytes);
             CAddTo(resultSize, carry, modulusBytes, resultBytes);

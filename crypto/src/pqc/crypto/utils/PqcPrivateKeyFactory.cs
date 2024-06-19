@@ -1,28 +1,28 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Pqc.Asn1;
-using Org.BouncyCastle.Pqc.Crypto.Bike;
-using Org.BouncyCastle.Pqc.Crypto.Cmce;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Falcon;
-using Org.BouncyCastle.Pqc.Crypto.Frodo;
-using Org.BouncyCastle.Pqc.Crypto.Hqc;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using Org.BouncyCastle.Pqc.Crypto.Picnic;
-using Org.BouncyCastle.Pqc.Crypto.Saber;
-using Org.BouncyCastle.Pqc.Crypto.Sike;
-using Org.BouncyCastle.Pqc.Crypto.SphincsPlus;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Pqc.Asn1;
+using Mirror.BouncyCastle.Pqc.Crypto.Bike;
+using Mirror.BouncyCastle.Pqc.Crypto.Cmce;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Falcon;
+using Mirror.BouncyCastle.Pqc.Crypto.Frodo;
+using Mirror.BouncyCastle.Pqc.Crypto.Hqc;
+using Mirror.BouncyCastle.Pqc.Crypto.Lms;
+using Mirror.BouncyCastle.Pqc.Crypto.Picnic;
+using Mirror.BouncyCastle.Pqc.Crypto.Saber;
+using Mirror.BouncyCastle.Pqc.Crypto.Sike;
+using Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     public static class PqcPrivateKeyFactory
     {
@@ -90,10 +90,10 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
                 Asn1Encodable obj = keyInfo.ParsePrivateKey();
                 SphincsPlusParameters spParams = PqcUtilities.SphincsPlusParamsLookup(algOid);
 
-                if (obj is Asn1Sequence keySeq) 
-                { 
+                if (obj is Asn1Sequence keySeq)
+                {
                     SphincsPlusPrivateKey spKey = SphincsPlusPrivateKey.GetInstance(keySeq);
-                    
+
                     SphincsPlusPublicKey publicKey = spKey.PublicKey;
 
                     return new SphincsPlusPrivateKeyParameters(spParams, spKey.GetSkseed(), spKey.GetSkprf(),
@@ -151,7 +151,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             {
                 Asn1OctetString kyberKey = Asn1OctetString.GetInstance(keyInfo.ParsePrivateKey());
                 KyberParameters kyberParams = PqcUtilities.KyberParamsLookup(algOid);
-     
+
                 return new KyberPrivateKeyParameters(kyberParams, kyberKey.GetOctets());
             }
             if (algOid.Equals(BCObjectIdentifiers.dilithium2) ||

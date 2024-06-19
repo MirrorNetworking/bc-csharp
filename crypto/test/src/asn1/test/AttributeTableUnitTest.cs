@@ -2,10 +2,10 @@ using System;
 
 using NUnit.Framework;
 
-using Asn1Cms = Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Utilities.Test;
+using Asn1Cms = Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     public class AttributeTableUnitTest

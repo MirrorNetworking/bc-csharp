@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
     /**
     * Attribute to indicate admissions to certain professions.
@@ -108,9 +108,9 @@ namespace Org.BouncyCastle.Asn1.IsisMtt.X509
     * are logically connected (e.g. they have been issued under the same admission
     * number).
     *
-    * @see Org.BouncyCastle.Asn1.IsisMtt.X509.Admissions
-    * @see Org.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo
-    * @see Org.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority
+    * @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.Admissions
+    * @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo
+    * @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority
     */
     public class AdmissionSyntax
         : Asn1Encodable

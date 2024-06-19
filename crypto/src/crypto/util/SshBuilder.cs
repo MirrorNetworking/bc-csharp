@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Utilities
+namespace Mirror.BouncyCastle.Crypto.Utilities
 {
     internal class SshBuilder
     {

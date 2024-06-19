@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     internal class FprEngine
     {
@@ -9,7 +9,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             return new FalconFPR(v);
         }
 
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#):
         * ==========================(LICENSE BEGIN)============================

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     public class RecipientInformationStore
 		: IEnumerable<RecipientInformation>

@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /// <remarks>No longer provides any laziness.</remarks>
     [Obsolete("Will be removed")]

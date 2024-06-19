@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     /**
      * A fixed secure random designed to return data for someone needing random bytes.

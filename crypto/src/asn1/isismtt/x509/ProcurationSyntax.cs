@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* Attribute to indicate that the certificate holder may sign in the name of a
@@ -29,16 +29,16 @@ namespace Org.BouncyCastle.Asn1.IsisMtt.X509
 	*               ProcurationSyntax ::= SEQUENCE {
 	*                 country [1] EXPLICIT PrintableString(SIZE(2)) OPTIONAL,
 	*                 typeOfSubstitution [2] EXPLICIT DirectoryString (SIZE(1..128)) OPTIONAL,
-	*                 signingFor [3] EXPLICIT SigningFor 
+	*                 signingFor [3] EXPLICIT SigningFor
 	*               }
-	*               
-	*               SigningFor ::= CHOICE 
-	*               { 
+	*
+	*               SigningFor ::= CHOICE
+	*               {
 	*                 thirdPerson GeneralName,
-	*                 certRef IssuerSerial 
+	*                 certRef IssuerSerial
 	*               }
 	* </pre>
-	* 
+	*
 	*/
 	public class ProcurationSyntax
 		: Asn1Encodable

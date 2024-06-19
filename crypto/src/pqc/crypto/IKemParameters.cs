@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto;
+﻿using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto
+namespace Mirror.BouncyCastle.Pqc.Crypto
 {
     public interface IKemParameters
         : ICipherParameters

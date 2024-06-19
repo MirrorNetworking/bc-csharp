@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class TlsClientProtocol
         : TlsProtocol
@@ -580,7 +580,7 @@ namespace Org.BouncyCastle.Tls
                     }
                     else
                     {
-                        m_keyExchange.ProcessClientCredentials(clientAuthCredentials);                    
+                        m_keyExchange.ProcessClientCredentials(clientAuthCredentials);
                     }
 
                     var clientSupplementalData = m_tlsClient.GetClientSupplementalData();
@@ -593,7 +593,7 @@ namespace Org.BouncyCastle.Tls
                     if (m_certificateRequest != null)
                     {
                         SendCertificateMessage(clientAuthCertificate, null);
-                        this.m_connectionState = CS_CLIENT_CERTIFICATE;                    
+                        this.m_connectionState = CS_CLIENT_CERTIFICATE;
                     }
 
                     SendClientKeyExchange();
@@ -953,7 +953,7 @@ namespace Org.BouncyCastle.Tls
 
             /*
              * TODO[tls13] RFC 8446 4.4.2.1. OCSP Status and SCT Extensions.
-             * 
+             *
              * OCSP information is carried in an extension for a CertificateEntry.
              */
             securityParameters.m_statusRequestVersion =
@@ -1145,7 +1145,7 @@ namespace Org.BouncyCastle.Tls
             /*
              * RFC 3546 2.2 Note that the extended server hello message is only sent in response to an
              * extended client hello message.
-             * 
+             *
              * However, see RFC 5746 exception below. We always include the SCSV, so an Extended Server
              * Hello is always allowed.
              */
@@ -1357,7 +1357,7 @@ namespace Org.BouncyCastle.Tls
             if (postHandshakeAuth)
                 throw new TlsFatalAlert(AlertDescription.internal_error);
 
-            /* 
+            /*
              * RFC 8446 4.3.2. A server which is authenticating with a certificate MAY optionally
              * request a certificate from the client.
              */
@@ -1428,7 +1428,7 @@ namespace Org.BouncyCastle.Tls
             {
                 /*
                  * TODO[tls13] RFC 8446 4.4.2.1. OCSP Status and SCT Extensions.
-                 * 
+                 *
                  * OCSP information is carried in an extension for a CertificateEntry.
                  */
                 securityParameters.m_statusRequestVersion = m_clientExtensions.ContainsKey(ExtensionType.status_request)
@@ -1757,7 +1757,7 @@ namespace Org.BouncyCastle.Tls
             this.m_clientBinders = TlsUtilities.AddPreSharedKeyToClientHello(m_tlsClientContext, m_tlsClient,
                 m_clientExtensions, offeredCipherSuites);
 
-            // TODO[tls13-psk] Perhaps don't add key_share if external PSK(s) offered and 'psk_dhe_ke' not offered  
+            // TODO[tls13-psk] Perhaps don't add key_share if external PSK(s) offered and 'psk_dhe_ke' not offered
             this.m_clientAgreements = TlsUtilities.AddKeyShareToClientHello(m_tlsClientContext, m_tlsClient,
                 m_clientExtensions);
 

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Bsi;
-using Org.BouncyCastle.Asn1.Eac;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Bsi;
+using Mirror.BouncyCastle.Asn1.Eac;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public abstract class TlsUtilities
     {
@@ -1076,13 +1076,13 @@ namespace Org.BouncyCastle.Tls
             /*
              * RFC 5246 7.4.1.4.1. If the client does not send the signature_algorithms extension,
              * the server MUST do the following:
-             * 
+             *
              * - If the negotiated key exchange algorithm is one of (RSA, DHE_RSA, DH_RSA, RSA_PSK,
              * ECDH_RSA, ECDHE_RSA), behave as if client had sent the value {sha1,rsa}.
-             * 
+             *
              * - If the negotiated key exchange algorithm is one of (DHE_DSS, DH_DSS), behave as if
              * the client had sent the value {sha1,dsa}.
-             * 
+             *
              * - If the negotiated key exchange algorithm is one of (ECDH_ECDSA, ECDHE_ECDSA),
              * behave as if the client had sent value {sha1,ecdsa}.
              */
@@ -1546,7 +1546,7 @@ namespace Org.BouncyCastle.Tls
             {
                 TlsHash hash = CreateHash(context.Crypto, hashAlgorithm);
                 if (hash != null)
-                {                
+                {
                     hash.Update(enc, encOff, encLen);
                     return hash.CalculateHash();
                 }
@@ -4538,7 +4538,7 @@ namespace Org.BouncyCastle.Tls
                     short signatureAlgorithm = GetLegacySignatureAlgorithmServerCert(
                         securityParameters.KeyExchangeAlgorithm);
 
-                    valid = (signatureAlgorithm == sigAndHashAlg.Signature); 
+                    valid = (signatureAlgorithm == sigAndHashAlg.Signature);
                 }
                 else
                 {
@@ -5023,7 +5023,7 @@ namespace Org.BouncyCastle.Tls
 
             if (clientAgreements.Count < 1 || clientShares.Count < 1)
             {
-                // NOTE: Probable cause is declaring an unsupported NamedGroup in supported_groups extension 
+                // NOTE: Probable cause is declaring an unsupported NamedGroup in supported_groups extension
                 throw new TlsFatalAlert(AlertDescription.internal_error);
             }
 
@@ -5112,7 +5112,7 @@ namespace Org.BouncyCastle.Tls
                         continue;
 
                     if ((NamedGroup.RefersToAnECDHCurve(group) && !crypto.HasECDHAgreement()) ||
-                        (NamedGroup.RefersToASpecificFiniteField(group) && !crypto.HasDHAgreement())) 
+                        (NamedGroup.RefersToASpecificFiniteField(group) && !crypto.HasDHAgreement()))
                     {
                         continue;
                     }
@@ -5140,7 +5140,7 @@ namespace Org.BouncyCastle.Tls
                         continue;
 
                     if ((NamedGroup.RefersToAnECDHCurve(group) && !crypto.HasECDHAgreement()) ||
-                        (NamedGroup.RefersToASpecificFiniteField(group) && !crypto.HasDHAgreement())) 
+                        (NamedGroup.RefersToASpecificFiniteField(group) && !crypto.HasDHAgreement()))
                     {
                         continue;
                     }

@@ -1,18 +1,18 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Signers;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     /// <summary>Implementation class for a single X.509 certificate based on the BC light-weight API.</summary>
     public class BcTlsRawKeyCertificate
@@ -213,7 +213,7 @@ namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
             //{
             //    ParametersWithID parametersWithID = new ParametersWithID(GetPubKeyEC(),
             //        Strings.ToByteArray("TLSv1.3+GM+Cipher+Suite"));
-    
+
             //    SM2Signer verifier = new SM2Signer();
             //    verifier.Init(false, parametersWithID);
 

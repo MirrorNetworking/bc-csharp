@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Saber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Saber
 {
     internal class Poly
     {

@@ -2,12 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	/**
 	* Salsa20 Test
@@ -108,19 +108,19 @@ namespace Org.BouncyCastle.Crypto.Tests
 
 		// Salsa20/12
 
-		private static readonly string salsa12_set1v0_0 = 
+		private static readonly string salsa12_set1v0_0 =
 			"FC207DBFC76C5E1774961E7A5AAD0906"
 			+ "9B2225AC1CE0FE7A0CE77003E7E5BDF8"
 			+ "B31AF821000813E6C56B8C1771D6EE70"
 			+ "39B2FBD0A68E8AD70A3944B677937897";
 
-		private static readonly string salsa12_set1v0_192 = 
+		private static readonly string salsa12_set1v0_192 =
 			"4B62A4881FA1AF9560586510D5527ED4"
 			+ "8A51ECAFA4DECEEBBDDC10E9918D44AB"
 			+ "26B10C0A31ED242F146C72940C6E9C37"
 			+ "53F641DA84E9F68B4F9E76B6C48CA5AC";
 
-		private static readonly string salsa12_set1v0_256 = 
+		private static readonly string salsa12_set1v0_256 =
 			"F52383D9DEFB20810325F7AEC9EADE34"
 			+ "D9D883FEE37E05F74BF40875B2D0BE79"
 			+ "ED8886E5BFF556CEA8D1D9E86B1F68A9"
@@ -230,7 +230,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 			if (!AreEqual(buf, Hex.Decode(v448)))
 			{
 				mismatch("v448", v448, buf);
-			}       
+			}
 		}
 
 		private void salsa20Test2(

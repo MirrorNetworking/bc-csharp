@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
-    public sealed class HssSigner 
+    public sealed class HssSigner
         : IMessageSigner
     {
         private HssPrivateKeyParameters privKey;

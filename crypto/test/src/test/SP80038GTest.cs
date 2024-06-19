@@ -2,15 +2,15 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Fpe;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Fpe;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     [NonParallelizable] // Environment.SetEnvironmentVariable
@@ -274,7 +274,7 @@ namespace Org.BouncyCastle.Tests
 
     private void testDisable()
     {
-        Environment.SetEnvironmentVariable("org.bouncycastle.fpe.disable", "true");
+        Environment.SetEnvironmentVariable("Mirror.BouncyCastle.fpe.disable", "true");
         try
         {
             testFF1();
@@ -294,9 +294,9 @@ namespace Org.BouncyCastle.Tests
         {
             IsEquals("Fpe disabled", e.Message);
         }
-        Environment.SetEnvironmentVariable("org.bouncycastle.fpe.disable", "false");
+        Environment.SetEnvironmentVariable("Mirror.BouncyCastle.fpe.disable", "false");
 
-        Environment.SetEnvironmentVariable("org.bouncycastle.fpe.disable_ff1", "true");
+        Environment.SetEnvironmentVariable("Mirror.BouncyCastle.fpe.disable_ff1", "true");
         try
         {
             testFF1();
@@ -308,7 +308,7 @@ namespace Org.BouncyCastle.Tests
         }
 
         testFF3_1();
-        Environment.SetEnvironmentVariable("org.bouncycastle.fpe.disable_ff1", "false");
+        Environment.SetEnvironmentVariable("Mirror.BouncyCastle.fpe.disable_ff1", "false");
     }
 
     private void testFF3_1_255()

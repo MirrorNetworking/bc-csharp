@@ -2,18 +2,18 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Encodings;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Encodings;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	[TestFixture]
 	public class RsaTest
@@ -394,7 +394,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 		private void testZeroBlock(ICipherParameters encParameters, ICipherParameters decParameters)
 		{
 			IAsymmetricBlockCipher eng = new Pkcs1Encoding(new RsaEngine());
-		
+
 			eng.Init(true, encParameters);
 
 			if (eng.GetOutputBlockSize() != ((Pkcs1Encoding)eng).UnderlyingCipher.GetOutputBlockSize())

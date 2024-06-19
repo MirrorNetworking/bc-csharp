@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
 	public class X509CertPairParser
 	{

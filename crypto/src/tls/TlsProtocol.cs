@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public abstract class TlsProtocol
         : TlsCloseable
     {
         /*
          * Connection States.
-         * 
+         *
          * NOTE: Redirection of handshake messages to TLS 1.3 handlers assumes CS_START, CS_CLIENT_HELLO
          * are lower than any of the other values.
          */
@@ -618,7 +618,7 @@ namespace Org.BouncyCastle.Tls
                     break;
 
                 /*
-                 * For all others we automatically update the transcript immediately. 
+                 * For all others we automatically update the transcript immediately.
                  */
                 default:
                 {
@@ -637,7 +637,7 @@ namespace Org.BouncyCastle.Tls
         {
             /*
              * There is nothing we need to do here.
-             * 
+             *
              * This function could be used for callbacks when application data arrives in the future.
              */
         }
@@ -953,14 +953,14 @@ namespace Org.BouncyCastle.Tls
                     /*
                      * RFC 5246 6.2.1. Zero-length fragments of Application data MAY be sent as they are
                      * potentially useful as a traffic analysis countermeasure.
-                     * 
+                     *
                      * NOTE: Actually, implementations appear to have settled on 1/n-1 record splitting.
                      */
                     if (m_appDataSplitEnabled)
                     {
                         /*
                          * Protect against known IV attack!
-                         * 
+                         *
                          * DO NOT REMOVE THIS CODE, EXCEPT YOU KNOW EXACTLY WHAT YOU ARE DOING HERE.
                          */
                         switch (m_appDataSplitMode)
@@ -1028,14 +1028,14 @@ namespace Org.BouncyCastle.Tls
                     /*
                      * RFC 5246 6.2.1. Zero-length fragments of Application data MAY be sent as they are
                      * potentially useful as a traffic analysis countermeasure.
-                     * 
+                     *
                      * NOTE: Actually, implementations appear to have settled on 1/n-1 record splitting.
                      */
                     if (m_appDataSplitEnabled)
                     {
                         /*
                          * Protect against known IV attack!
-                         * 
+                         *
                          * DO NOT REMOVE THIS CODE, EXCEPT YOU KNOW EXACTLY WHAT YOU ARE DOING HERE.
                          */
                         switch (m_appDataSplitMode)
@@ -1139,7 +1139,7 @@ namespace Org.BouncyCastle.Tls
                 break;
 
             /*
-             * For all others we automatically update the transcript. 
+             * For all others we automatically update the transcript.
              */
             default:
             {

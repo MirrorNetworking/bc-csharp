@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Utilities;
+﻿using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     public sealed class HqcPublicKeyParameters
         : HqcKeyParameters

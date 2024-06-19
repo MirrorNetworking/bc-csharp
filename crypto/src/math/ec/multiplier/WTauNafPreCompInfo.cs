@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     /**
      * Class holding precomputation data for the WTNAF (Window
@@ -10,7 +10,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
         /**
          * Array holding the precomputed <code>AbstractF2mPoint</code>s used for the
          * WTNAF multiplication in <code>
-         * {@link org.bouncycastle.math.ec.multiplier.WTauNafMultiplier.multiply()
+         * {@link Mirror.BouncyCastle.math.ec.multiplier.WTauNafMultiplier.multiply()
          * WTauNafMultiplier.multiply()}</code>.
          */
         protected AbstractF2mPoint[] m_preComp;

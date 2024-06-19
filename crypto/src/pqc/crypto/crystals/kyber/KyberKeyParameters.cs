@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     public abstract class KyberKeyParameters
         : AsymmetricKeyParameter

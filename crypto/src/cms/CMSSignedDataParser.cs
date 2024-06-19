@@ -2,17 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
 	* Parsing class for an CMS Signed Data object from an input stream.
@@ -230,7 +230,7 @@ namespace Org.BouncyCastle.Cms
 		 *
 		 * @param type type of store to create
 		 * @return a store of attribute certificates
-		 * @exception org.bouncycastle.x509.NoSuchStoreException if the store type isn't available.
+		 * @exception Mirror.BouncyCastle.x509.NoSuchStoreException if the store type isn't available.
 		 * @exception CmsException if a general exception prevents creation of the X509Store
 		 */
 		public IStore<X509V2AttributeCertificate> GetAttributeCertificates()

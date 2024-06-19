@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     public class AttributePkcs
         : Asn1Encodable

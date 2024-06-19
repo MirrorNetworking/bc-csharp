@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class EnvelopedData
         : Asn1Encodable

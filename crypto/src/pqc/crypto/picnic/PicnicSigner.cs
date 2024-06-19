@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
-    public sealed class PicnicSigner 
+    public sealed class PicnicSigner
         : IMessageSigner
     {
         private PicnicPrivateKeyParameters privKey;

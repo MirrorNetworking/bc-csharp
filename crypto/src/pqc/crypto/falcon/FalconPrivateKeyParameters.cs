@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     public sealed class FalconPrivateKeyParameters
         : FalconKeyParameters
@@ -24,7 +24,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
         {
             return Arrays.ConcatenateAll(f, g, F);
         }
-        
+
         public byte[] GetPublicKey()
         {
             return Arrays.Clone(pk);

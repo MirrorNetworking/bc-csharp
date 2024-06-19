@@ -6,9 +6,9 @@ using System.Threading;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     /// <summary>A simple test designed to conduct a TLS handshake with an external TLS client.</summary>
     /// <remarks>

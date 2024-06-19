@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Crypto.Prng.Test
+namespace Mirror.BouncyCastle.Crypto.Prng.Test
 {
     public class X931TestVector
     {

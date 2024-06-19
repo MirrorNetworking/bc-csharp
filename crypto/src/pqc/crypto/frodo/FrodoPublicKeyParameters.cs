@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Frodo
+namespace Mirror.BouncyCastle.Pqc.Crypto.Frodo
 {
     public sealed class FrodoPublicKeyParameters
         : FrodoKeyParameters

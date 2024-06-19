@@ -2,28 +2,28 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Pqc.Asn1;
-using Org.BouncyCastle.Pqc.Crypto.Bike;
-using Org.BouncyCastle.Pqc.Crypto.Cmce;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Falcon;
-using Org.BouncyCastle.Pqc.Crypto.Frodo;
-using Org.BouncyCastle.Pqc.Crypto.Hqc;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using Org.BouncyCastle.Pqc.Crypto.Picnic;
-using Org.BouncyCastle.Pqc.Crypto.Saber;
-using Org.BouncyCastle.Pqc.Crypto.Sike;
-using Org.BouncyCastle.Pqc.Crypto.SphincsPlus;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Pqc.Asn1;
+using Mirror.BouncyCastle.Pqc.Crypto.Bike;
+using Mirror.BouncyCastle.Pqc.Crypto.Cmce;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Falcon;
+using Mirror.BouncyCastle.Pqc.Crypto.Frodo;
+using Mirror.BouncyCastle.Pqc.Crypto.Hqc;
+using Mirror.BouncyCastle.Pqc.Crypto.Lms;
+using Mirror.BouncyCastle.Pqc.Crypto.Picnic;
+using Mirror.BouncyCastle.Pqc.Crypto.Saber;
+using Mirror.BouncyCastle.Pqc.Crypto.Sike;
+using Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     public static class PqcPublicKeyFactory
     {
@@ -72,7 +72,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             Converters[BCObjectIdentifiers.ulightsaberkem90sr3] = SaberConverter;
             Converters[BCObjectIdentifiers.usaberkem90sr3] = SaberConverter;
             Converters[BCObjectIdentifiers.ufiresaberkem90sr3] = SaberConverter;
-            
+
             Converters[BCObjectIdentifiers.picnic] = PicnicConverter;
             Converters[BCObjectIdentifiers.picnicl1fs] = PicnicConverter;
             Converters[BCObjectIdentifiers.picnicl1ur] = PicnicConverter;
@@ -104,10 +104,10 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
             Converters[BCObjectIdentifiers.dilithium2_aes] = DilithiumConverter;
             Converters[BCObjectIdentifiers.dilithium3_aes] = DilithiumConverter;
             Converters[BCObjectIdentifiers.dilithium5_aes] = DilithiumConverter;
-            
+
             Converters[BCObjectIdentifiers.falcon_512] = FalconConverter;
             Converters[BCObjectIdentifiers.falcon_1024] = FalconConverter;
-            
+
             Converters[BCObjectIdentifiers.kyber512] = KyberConverter;
             Converters[BCObjectIdentifiers.kyber512_aes] = KyberConverter;
             Converters[BCObjectIdentifiers.kyber768] = KyberConverter;
@@ -182,7 +182,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
         {
             return CreateKey(SubjectPublicKeyInfo.GetInstance(new Asn1InputStream(inStr).ReadObject()));
         }
-        
+
         /// <summary> Create a public key from the passed in SubjectPublicKeyInfo</summary>
         /// <param name="keyInfo"> the SubjectPublicKeyInfo containing the key data</param>
         /// <returns> the appropriate key parameter</returns>
@@ -191,7 +191,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Utilities
         {
             return CreateKey(keyInfo, null);
         }
-        
+
         /// <summary> Create a public key from the passed in SubjectPublicKeyInfo</summary>
         /// <param name="keyInfo"> the SubjectPublicKeyInfo containing the key data</param>
         /// <param name="defaultParams"> default parameters that might be needed.</param>

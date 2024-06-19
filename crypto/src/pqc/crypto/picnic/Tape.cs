@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal class Tape
     {

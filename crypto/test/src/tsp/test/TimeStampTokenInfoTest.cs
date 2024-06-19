@@ -1,11 +1,11 @@
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Tsp.Tests
+namespace Mirror.BouncyCastle.Tsp.Tests
 {
 	[TestFixture]
 	public class TimeStampTokenInfoUnitTest

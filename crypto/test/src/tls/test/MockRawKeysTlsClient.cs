@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Tls.Crypto.Impl.BC;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto.Impl.BC;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     internal class MockRawKeysTlsClient
         : DefaultTlsClient

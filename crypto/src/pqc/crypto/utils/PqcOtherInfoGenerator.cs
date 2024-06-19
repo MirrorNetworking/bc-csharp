@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Ntru;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Utilities
+namespace Mirror.BouncyCastle.Pqc.Crypto.Utilities
 {
     /**
      * OtherInfo Generator for which can be used for populating the SuppPrivInfo field used to provide shared

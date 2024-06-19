@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.Ocsp
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.Ocsp
 {
 	/**
 	* ISIS-MTT-Optional: The certificate requested by the client by inserting the
@@ -144,7 +144,7 @@ namespace Org.BouncyCastle.Asn1.IsisMtt.Ocsp
 
 			return attributeCert;
 		}
-    
+
 
 		/**
 		* Produce an object suitable for an Asn1OutputStream.

@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     /**
      * a Pkcs#7 signed data object.

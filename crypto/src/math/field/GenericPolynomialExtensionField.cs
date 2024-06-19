@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.Field
+namespace Mirror.BouncyCastle.Math.Field
 {
     internal class GenericPolynomialExtensionField
         : IPolynomialExtensionField

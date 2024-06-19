@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     /**
     * Parsing

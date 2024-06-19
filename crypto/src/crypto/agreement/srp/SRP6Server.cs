@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Srp
+namespace Mirror.BouncyCastle.Crypto.Agreement.Srp
 {
 	/**
 	 * Implements the server side SRP-6a protocol. Note that this class is stateful, and therefore NOT threadsafe.
@@ -88,7 +88,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 
 	    protected virtual BigInteger SelectPrivateValue()
 	    {
-	    	return Srp6Utilities.GeneratePrivateValue(digest, N, g, random);    	
+	    	return Srp6Utilities.GeneratePrivateValue(digest, N, g, random);
 	    }
 
         private BigInteger CalculateS()
@@ -96,12 +96,12 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 			return v.ModPow(u, N).Multiply(A).Mod(N).ModPow(privB, N);
 	    }
 
-        /** 
+        /**
 	     * Authenticates the received client evidence message M1 and saves it only if correct.
 	     * To be called after calculating the secret S.
 	     * @param M1: the client side generated evidence message
 	     * @return A boolean indicating if the client message M1 was the expected one.
-	     * @throws CryptoException 
+	     * @throws CryptoException
 	     */
 	    public virtual bool VerifyClientEvidenceMessage(BigInteger clientM1)
 	    {
@@ -138,7 +138,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.Srp
 		    }
 
             // Compute the server evidence message 'M2'
-		    this.M2 = Srp6Utilities.CalculateM2(digest, N, A, M1, S);  
+		    this.M2 = Srp6Utilities.CalculateM2(digest, N, A, M1, S);
 		    return M2;
 	    }
 

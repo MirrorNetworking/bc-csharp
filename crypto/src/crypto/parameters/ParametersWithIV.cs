@@ -3,7 +3,7 @@ using System;
 using System.Buffers;
 #endif
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class ParametersWithIV
         : ICipherParameters

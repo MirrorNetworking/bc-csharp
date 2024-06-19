@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Frodo
+namespace Mirror.BouncyCastle.Pqc.Crypto.Frodo
 {
     public abstract class FrodoKeyParameters
         : AsymmetricKeyParameter

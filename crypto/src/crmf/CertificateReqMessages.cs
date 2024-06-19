@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Crmf;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class CertificateReqMessages
     {

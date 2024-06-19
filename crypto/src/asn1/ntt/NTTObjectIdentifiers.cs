@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Ntt
+namespace Mirror.BouncyCastle.Asn1.Ntt
 {
     /// <summary>From RFC 3657</summary>
     // TODO[api] Make static

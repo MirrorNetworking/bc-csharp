@@ -5,12 +5,12 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms.Tests
 {
     [TestFixture]
     public class HssTests

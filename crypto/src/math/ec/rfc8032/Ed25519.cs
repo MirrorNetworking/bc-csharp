@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     using F = Rfc7748.X25519Field;
 
@@ -576,7 +576,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032
         {
             /*
              * Because we are using 4 teeth and 8 spacing, each limb of n corresponds to one of the 8 blocks.
-             * Therefore we can efficiently group the bits for each comb position using a (double) shuffle. 
+             * Therefore we can efficiently group the bits for each comb position using a (double) shuffle.
              */
             for (int i = 0; i < n.Length; ++i)
             {
@@ -1654,7 +1654,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032
             sbyte[] ws_p = new sbyte[253];
 #endif
 
-            // NOTE: WnafWidth128 because of the special structure of the order 
+            // NOTE: WnafWidth128 because of the special structure of the order
             Scalar25519.GetOrderWnafVar(WnafWidth128, ws_p);
 
             int count = 1 << (WnafWidth128 - 2);

@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Agreement.JPake
+namespace Mirror.BouncyCastle.Crypto.Agreement.JPake
 {
     /// <summary>
     /// A participant in a Password Authenticated Key Exchange by Juggling (J-PAKE) exchange.
@@ -78,7 +78,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
 
         // Digest to use during calculations.
         private IDigest digest;
-        
+
         // Source of secure random data.
         private readonly SecureRandom random;
 
@@ -114,7 +114,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// a SHA-256 digest, and a default SecureRandom implementation.
         ///
         /// After construction, the State state will be STATE_INITIALIZED.
-        /// 
+        ///
         /// Throws NullReferenceException if any argument is null. Throws
         /// ArgumentException if password is empty.
         /// </summary>
@@ -131,7 +131,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// a SHA-256 digest, and a default SecureRandom implementation.
         ///
         /// After construction, the State state will be STATE_INITIALIZED.
-        /// 
+        ///
         /// Throws NullReferenceException if any argument is null. Throws
         /// ArgumentException if password is empty.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// Constructor for a new JPakeParticipant.
         ///
         /// After construction, the State state will be STATE_INITIALIZED.
-        /// 
+        ///
         /// Throws NullReferenceException if any argument is null. Throws
         /// ArgumentException if password is empty.
         /// </summary>
@@ -177,13 +177,13 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
             this.participantId = participantId;
 
             // Create a defensive copy so as to fully encapsulate the password.
-            // 
+            //
             // This array will contain the password for the lifetime of this
             // participant BEFORE CalculateKeyingMaterial() is called.
-            // 
+            //
             // i.e. When CalculateKeyingMaterial() is called, the array will be cleared
             // in order to remove the password from memory.
-            // 
+            //
             // The caller is responsible for clearing the original password array
             // given as input to this constructor.
             this.password = new char[password.Length];
@@ -238,7 +238,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// Must be called prior to CreateRound2PayloadToSend().
         ///
         /// After execution, the State state will be  STATE_ROUND_1_VALIDATED.
-        /// 
+        ///
         /// Throws CryptoException if validation fails. Throws InvalidOperationException
         /// if called multiple times.
         /// </summary>
@@ -257,7 +257,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
             JPakeUtilities.ValidateParticipantIdsDiffer(participantId, round1PayloadReceived.ParticipantId);
             JPakeUtilities.ValidateGx4(gx4);
             JPakeUtilities.ValidateZeroKnowledgeProof(p, q, g, gx3, knowledgeProofForX3, round1PayloadReceived.ParticipantId, digest);
-            JPakeUtilities.ValidateZeroKnowledgeProof(p, q, g, gx4, knowledgeProofForX4, round1PayloadReceived.ParticipantId, digest); 
+            JPakeUtilities.ValidateZeroKnowledgeProof(p, q, g, gx4, knowledgeProofForX4, round1PayloadReceived.ParticipantId, digest);
             this.state = STATE_ROUND_1_VALIDATED;
         }
 
@@ -337,7 +337,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// The keying material will be in the range <tt>[0, p-1]</tt>.
         ///
         /// ValidateRound2PayloadReceived(JPakeRound2Payload) must be called prior to this method.
-        /// 
+        ///
         /// As a side effect, the internal password array is cleared, since it is no longer needed.
         ///
         /// After execution, the State state will be STATE_KEY_CALCULATED.
@@ -364,7 +364,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
             // Clear the ephemeral private key fields as well.
             // Note that we're relying on the garbage collector to do its job to clean these up.
             // The old objects will hang around in memory until the garbage collector destroys them.
-            // 
+            //
             // If the ephemeral private keys x1 and x2 are leaked,
             // the attacker might be able to brute-force the password.
             this.x1 = null;
@@ -387,7 +387,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// Throws InvalidOperationException if called prior to CalculateKeyingMaterial, or multiple
         /// times.
         /// </summary>
-        /// <param name="keyingMaterial">The keying material as returned from CalculateKeyingMaterial().</param> 
+        /// <param name="keyingMaterial">The keying material as returned from CalculateKeyingMaterial().</param>
         public virtual JPakeRound3Payload CreateRound3PayloadToSend(BigInteger keyingMaterial)
         {
             if (this.state >= STATE_ROUND_3_CREATED)
@@ -416,12 +416,12 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// See JPakeParticipant for more details on round 3.
         ///
         /// After execution, the State state will be STATE_ROUND_3_VALIDATED.
-        /// 
+        ///
         /// Throws CryptoException if validation fails. Throws InvalidOperationException if called prior to
         /// CalculateKeyingMaterial or multiple times
         /// </summary>
-        /// <param name="round3PayloadReceived">The round 3 payload received from the other participant.</param> 
-        /// <param name="keyingMaterial">The keying material as returned from CalculateKeyingMaterial().</param> 
+        /// <param name="round3PayloadReceived">The round 3 payload received from the other participant.</param>
+        /// <param name="keyingMaterial">The keying material as returned from CalculateKeyingMaterial().</param>
         public virtual void ValidateRound3PayloadReceived(JPakeRound3Payload round3PayloadReceived, BigInteger keyingMaterial)
         {
             if (this.state >= STATE_ROUND_3_VALIDATED)

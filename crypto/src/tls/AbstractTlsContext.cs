@@ -2,11 +2,11 @@
 using System.IO;
 using System.Threading;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     internal abstract class AbstractTlsContext
         : TlsContext

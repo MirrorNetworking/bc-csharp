@@ -2,17 +2,17 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Security.Tests
+namespace Mirror.BouncyCastle.Security.Tests
 {
     [TestFixture]
     public class TestEncodings
@@ -186,7 +186,7 @@ namespace Org.BouncyCastle.Security.Tests
                 + "p/diI7Cg8ig4mXg3tsIUf4vBi61b");
 
             PrivateKeyInfo keyInfo = PrivateKeyInfo.GetInstance(data);
-            AsymmetricKeyParameter akp = Org.BouncyCastle.Security.PrivateKeyFactory.CreateKey(keyInfo);
+            AsymmetricKeyParameter akp = Mirror.BouncyCastle.Security.PrivateKeyFactory.CreateKey(keyInfo);
         }
     }
 }

@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC.Rfc8032;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC.Rfc8032;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <remarks>A PGP signature object.</remarks>
     public class PgpSignature
@@ -458,7 +458,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
             }
         }
 
-		private static byte[] GetEncodedPublicKey(PgpPublicKey pubKey) 
+		private static byte[] GetEncodedPublicKey(PgpPublicKey pubKey)
 		{
 			try
 			{

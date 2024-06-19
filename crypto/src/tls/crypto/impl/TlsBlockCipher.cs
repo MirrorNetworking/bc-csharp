@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl
 {
     /// <summary>A generic TLS 1.0-1.2 block cipher. This can be used for AES or 3DES for example.</summary>
     public class TlsBlockCipher
@@ -48,7 +48,7 @@ namespace Org.BouncyCastle.Tls.Crypto.Impl
 
             /*
              * Don't use variable-length padding with truncated MACs.
-             * 
+             *
              * See "Tag Size Does Matter: Attacks and Proofs for the TLS Record Protocol", Paterson,
              * Ristenpart, Shrimpton.
              *

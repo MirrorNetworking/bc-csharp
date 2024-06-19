@@ -3,14 +3,14 @@ using System;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-namespace Org.BouncyCastle.Crypto.Modes.Gcm
+namespace Mirror.BouncyCastle.Crypto.Modes.Gcm
 {
     [Obsolete("Will be removed")]
     public class BasicGcmMultiplier
         : IGcmMultiplier
     {
 #if NETCOREAPP3_0_OR_GREATER
-        internal static bool IsHardwareAccelerated => Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled;
+        internal static bool IsHardwareAccelerated => Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled;
 #else
         internal static bool IsHardwareAccelerated => false;
 #endif

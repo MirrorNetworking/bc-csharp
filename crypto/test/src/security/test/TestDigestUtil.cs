@@ -2,10 +2,10 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
 
-namespace Org.BouncyCastle.Security.Tests
+namespace Mirror.BouncyCastle.Security.Tests
 {
     [TestFixture]
     public class TestDigestUtilities

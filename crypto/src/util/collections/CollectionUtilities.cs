@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Org.BouncyCastle.Utilities.Collections
+namespace Mirror.BouncyCastle.Utilities.Collections
 {
     public abstract class CollectionUtilities
     {

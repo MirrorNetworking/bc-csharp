@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     public class ContentInfo
         : Asn1Encodable

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Asn1.Tsp
+namespace Mirror.BouncyCastle.Asn1.Tsp
 {
     /**
      * Implementation of ArchiveTimeStampSequence type, as defined in RFC4998.

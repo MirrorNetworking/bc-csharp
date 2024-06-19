@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* An Admissions structure.
@@ -18,9 +18,9 @@ namespace Org.BouncyCastle.Asn1.IsisMtt.X509
 	* <p/>
 	* </pre>
 	*
-	* @see Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
-	* @see Org.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo
-	* @see Org.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority
+	* @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
+	* @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo
+	* @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority
 	*/
 	public class Admissions
 		: Asn1Encodable

@@ -2,11 +2,11 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
     public class PkixTest
@@ -42,7 +42,7 @@ namespace Org.BouncyCastle.Tests
 
         /**
          * C.1  Certificate
-         * 
+         *
             * This section contains an annotated hex dump of a 699 byte version 3
             * certificate.  The certificate contains the following information:
             * (a)  the serial number is 23 (17 hex);
@@ -85,7 +85,7 @@ namespace Org.BouncyCastle.Tests
 
         /**
          * C.2  Certificate
-         * 
+         *
             * This section contains an annotated hex dump of a 730 byte version 3
             * certificate.  The certificate contains the following information:
             * (a the serial number is 18 (12 hex);
@@ -131,7 +131,7 @@ namespace Org.BouncyCastle.Tests
 
 		/**
 		* C.3  End Entity Certificate Using RSA
-		* 
+		*
 		* This section contains an annotated hex dump of a 654 byte version 3
 		* certificate.  The certificate contains the following information:
 		* (a)  the serial number is 256;

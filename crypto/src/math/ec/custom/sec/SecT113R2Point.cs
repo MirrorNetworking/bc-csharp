@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecT113R2Point
         : AbstractF2mPoint
@@ -165,7 +165,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
         public override ECPoint Twice()
         {
-            if (this.IsInfinity) 
+            if (this.IsInfinity)
             {
                 return this;
             }
@@ -173,7 +173,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ECCurve curve = this.Curve;
 
             ECFieldElement X1 = this.RawXCoord;
-            if (X1.IsZero) 
+            if (X1.IsZero)
             {
                 // A point with X == 0 is its own additive inverse
                 return curve.Infinity;
@@ -203,7 +203,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
         public override ECPoint TwicePlus(ECPoint b)
         {
-            if (this.IsInfinity) 
+            if (this.IsInfinity)
             {
                 return b;
             }
@@ -215,7 +215,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ECCurve curve = this.Curve;
 
             ECFieldElement X1 = this.RawXCoord;
-            if (X1.IsZero) 
+            if (X1.IsZero)
             {
                 // A point with X == 0 is its own additive inverse
                 return b;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Crypto.Modes
+namespace Mirror.BouncyCastle.Crypto.Modes
 {
     public interface IBlockCipherMode
         : IBlockCipher

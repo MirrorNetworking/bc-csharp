@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Utilities.IO.Pem
+namespace Mirror.BouncyCastle.Utilities.IO.Pem
 {
 	public interface PemObjectGenerator
 	{

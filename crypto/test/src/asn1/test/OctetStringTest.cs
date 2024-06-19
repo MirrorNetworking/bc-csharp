@@ -3,9 +3,9 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Cms;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class OctetStringTest

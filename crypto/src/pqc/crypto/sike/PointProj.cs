@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
     internal sealed class PointProj
     {

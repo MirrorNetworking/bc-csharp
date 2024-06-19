@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Utilities.IO.Pem
+namespace Mirror.BouncyCastle.Utilities.IO.Pem
 {
 	/**
 	* A generic PEM writer, based on RFC 1421

@@ -1,10 +1,10 @@
 ﻿using System.IO;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>
     /// Implements cookie generation/verification for a DTLS server as described in RFC 4347,

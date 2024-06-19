@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public sealed class ProtocolVersion
     {

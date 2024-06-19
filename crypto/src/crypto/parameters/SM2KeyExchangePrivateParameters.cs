@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     /// <summary>Private parameters for an SM2 key exchange.</summary>
     /// <remarks>The ephemeralPrivateKey is used to calculate the random point used in the algorithm.</remarks>
@@ -34,7 +34,7 @@ namespace Org.BouncyCastle.Crypto.Parameters
 
             this.mInitiator = initiator;
             this.mStaticPrivateKey = staticPrivateKey;
-            this.mStaticPublicPoint = m.Multiply(parameters.G, staticPrivateKey.D).Normalize(); 
+            this.mStaticPublicPoint = m.Multiply(parameters.G, staticPrivateKey.D).Normalize();
             this.mEphemeralPrivateKey = ephemeralPrivateKey;
             this.mEphemeralPublicPoint = m.Multiply(parameters.G, ephemeralPrivateKey.D).Normalize();
         }

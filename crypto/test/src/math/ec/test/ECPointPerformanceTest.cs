@@ -4,14 +4,14 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.EC;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.EC;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Math.EC.Tests
+namespace Mirror.BouncyCastle.Math.EC.Tests
 {
     /**
     * Compares the performance of the the window NAF point multiplication against

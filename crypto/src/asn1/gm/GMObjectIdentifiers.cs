@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.GM
+namespace Mirror.BouncyCastle.Asn1.GM
 {
     // TODO[api] Make static
     public abstract class GMObjectIdentifiers

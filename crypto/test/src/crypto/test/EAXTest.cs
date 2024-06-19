@@ -3,13 +3,13 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	[TestFixture]
 	public class EaxTest
@@ -126,7 +126,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 			{
 				eax.Init(false, new AeadParameters(new KeyParameter(K1), 32, N2, A2));
 
-				byte[] enc = new byte[C2.Length]; 
+				byte[] enc = new byte[C2.Length];
 				int len = eax.ProcessBytes(C2, 0, C2.Length, enc, 0);
 
 				len += eax.DoFinal(enc, len);

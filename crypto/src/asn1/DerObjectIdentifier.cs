@@ -3,10 +3,10 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     public class DerObjectIdentifier
         : Asn1Object
@@ -79,7 +79,7 @@ namespace Org.BouncyCastle.Asn1
         {
             /*
              * TODO[api] This block is for backward compatibility, but should be removed.
-             * 
+             *
              * - see https://github.com/bcgit/bc-java/issues/1015
              */
             if (!declaredExplicit && !taggedObject.IsParsed() && taggedObject.HasContextTag())

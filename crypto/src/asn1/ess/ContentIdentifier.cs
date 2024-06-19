@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Ess
+namespace Mirror.BouncyCastle.Asn1.Ess
 {
 	public class ContentIdentifier
 		: Asn1Encodable

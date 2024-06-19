@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 #endif
 
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Macs
+namespace Mirror.BouncyCastle.Crypto.Macs
 {
 
     /// <summary>
@@ -18,7 +18,7 @@ namespace Org.BouncyCastle.Crypto.Macs
     /// Poly1305 computes a 128-bit (16 bytes) authenticator, using a 128 bit nonce and a 256 bit key
     /// consisting of a 128 bit key applied to an underlying cipher, and a 128 bit key (with 106
     /// effective key bits) used in the authenticator.
-    /// 
+    ///
     /// The polynomial calculation in this implementation is adapted from the public domain <a
     /// href="https://github.com/floodyberry/poly1305-donna">poly1305-donna-unrolled</a> C implementation
     /// by Andrew M (@floodyberry).

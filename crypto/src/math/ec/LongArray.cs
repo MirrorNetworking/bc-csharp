@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Text;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC
+namespace Mirror.BouncyCastle.Math.EC
 {
     internal struct LongArray
     {
@@ -1146,7 +1146,7 @@ namespace Org.BouncyCastle.Math.EC
 
             /*
              * Inversion in F2m using the extended Euclidean algorithm
-             * 
+             *
              * Input: A nonzero polynomial a(z) of degree at most m-1
              * Output: a(z)^(-1) mod f(z)
              */

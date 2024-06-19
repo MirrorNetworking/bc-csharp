@@ -1,10 +1,10 @@
 ﻿using System;
 
 #if NETCOREAPP2_1_OR_GREATER || NETSTANDARD2_1_OR_GREATER
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 #endif
 
-namespace Org.BouncyCastle.Pqc.Crypto.SphincsPlus
+namespace Mirror.BouncyCastle.Pqc.Crypto.SphincsPlus
 {
     internal sealed class HarakaSXof
         : HarakaSBase

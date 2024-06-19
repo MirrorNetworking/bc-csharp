@@ -1,13 +1,13 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * Target structure used in target information extension for attribute
 	 * certificates from RFC 3281.
-	 * 
+	 *
 	 * <pre>
 	 *     Target  ::= CHOICE {
 	 *       targetName          [0] GeneralName,
@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.Asn1.X509
 	 *       targetCert          [2] TargetCert
 	 *     }
 	 * </pre>
-	 * 
+	 *
 	 * <p>
 	 * The targetCert field is currently not supported and must not be used
 	 * according to RFC 3281.</p>
@@ -36,7 +36,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		* Creates an instance of a Target from the given object.
 		* <p>
 		* <code>obj</code> can be a Target or a {@link Asn1TaggedObject}</p>
-		* 
+		*
 		* @param obj The object.
 		* @return A Target instance.
 		* @throws ArgumentException if the given object cannot be
@@ -55,7 +55,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
         /**
 		 * Constructor from Asn1TaggedObject.
-		 * 
+		 *
 		 * @param tagObj The tagged object.
 		 * @throws ArgumentException if the encoding is wrong.
 		 */
@@ -109,9 +109,9 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Produce an object suitable for an Asn1OutputStream.
-		 * 
+		 *
 		 * Returns:
-		 * 
+		 *
 		 * <pre>
 		 *     Target  ::= CHOICE {
 		 *       targetName          [0] GeneralName,
@@ -119,7 +119,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 *       targetCert          [2] TargetCert
 		 *     }
 		 * </pre>
-		 * 
+		 *
 		 * @return an Asn1Object
 		 */
 		public override Asn1Object ToAsn1Object()

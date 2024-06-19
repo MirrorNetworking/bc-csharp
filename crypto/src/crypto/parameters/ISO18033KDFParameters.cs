@@ -1,7 +1,7 @@
 using System;
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 	/**
 	* parameters for Key derivation functions for ISO-18033

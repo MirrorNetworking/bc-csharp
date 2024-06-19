@@ -3,17 +3,17 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto.Agreement;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto.Agreement;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     [TestFixture]
     public class SM2KeyExchangeTest
@@ -101,7 +101,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             byte[][] vals2 = exch.CalculateKeyWithConfirmation(128, null, new ParametersWithID(new SM2KeyExchangePublicParameters(aPub, aePub), Strings.ToByteArray("ALICE123@YAHOO.COM")));
 
             IsTrue("key 2 wrong", Arrays.AreEqual(Hex.Decode("55b0ac62a6b927ba23703832c853ded4"), k2));
-      
+
             IsTrue("conf a tag 2 wrong", Arrays.AreEqual(Hex.Decode("284C8F198F141B502E81250F1581C7E9EEB4CA6990F9E02DF388B45471F5BC5C"), vals2[1]));
             IsTrue("conf b tag 2 wrong", Arrays.AreEqual(Hex.Decode("23444DAF8ED7534366CB901C84B3BDBB63504F4065C1116C91A4C00697E6CF7A"), vals2[2]));
 
@@ -128,7 +128,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 
             ECPoint g = curve.CreatePoint(SM2_ECC_GX, SM2_ECC_GY);
             ECDomainParameters domainParams = new ECDomainParameters(curve, g, SM2_ECC_N, SM2_ECC_H);
-        
+
             ECKeyPairGenerator keyPairGenerator = new ECKeyPairGenerator();
 
             ECKeyGenerationParameters aKeyGenParams = new ECKeyGenerationParameters(domainParams, new TestRandomBigInteger("4813903D254F2C20A94BC5704238496954BB5279F861952EF2C5298E84D2CEAA", 16));

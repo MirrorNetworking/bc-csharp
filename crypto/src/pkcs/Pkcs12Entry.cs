@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
     public abstract class Pkcs12Entry
     {

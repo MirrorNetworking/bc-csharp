@@ -2,15 +2,15 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 /**
  * DESede tester
@@ -112,25 +112,25 @@ namespace Org.BouncyCastle.Crypto.Tests
 			keyGen.Init(new KeyGenerationParameters(random, 112));
 
 			byte[] kB = keyGen.GenerateKey();
-	        
+
 			if (kB.Length != 16)
 			{
 				Fail("112 bit key wrong length.");
 			}
-	        
+
 			keyGen.Init(new KeyGenerationParameters(random, 168));
-	        
+
 			kB = keyGen.GenerateKey();
-	        
+
 			if (kB.Length != 24)
 			{
 				Fail("168 bit key wrong length.");
 			}
-	        
+
 			try
 			{
 				keyGen.Init(new KeyGenerationParameters(random, 200));
-	            
+
 				Fail("invalid key length not detected.");
 			}
 			catch (ArgumentException)

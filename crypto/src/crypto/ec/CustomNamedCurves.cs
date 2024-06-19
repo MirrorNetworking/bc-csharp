@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.GM;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Math.EC.Custom.GM;
-using Org.BouncyCastle.Math.EC.Custom.Sec;
-using Org.BouncyCastle.Math.EC.Endo;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.GM;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC.Custom.GM;
+using Mirror.BouncyCastle.Math.EC.Custom.Sec;
+using Mirror.BouncyCastle.Math.EC.Endo;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.EC
+namespace Mirror.BouncyCastle.Crypto.EC
 {
     /// <summary>Elliptic curve registry for various customized curve implementations.</summary>
     public static class CustomNamedCurves
@@ -53,7 +53,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("000E0D4D696E6768756151750CC03A4473D03679");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04161FF7528B899B2D0C28607CA52C5B86CF5AC8395BAFEB13C02DA292DDED7A83"); 
+                    "04161FF7528B899B2D0C28607CA52C5B86CF5AC8395BAFEB13C02DA292DDED7A83");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -88,7 +88,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "043B4C382CE37AA192A4019E763036F4F5DD4D7EBB938CF935318FDCED6BC28286531733C3F03C4FEE"); 
+                    "043B4C382CE37AA192A4019E763036F4F5DD4D7EBB938CF935318FDCED6BC28286531733C3F03C4FEE");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -110,7 +110,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("1053CDE42C14D696E67687561517533BF3F83345");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "044A96B5688EF573284664698968C38BB913CBFC8223A628553168947D59DCC912042351377AC5FB32"); 
+                    "044A96B5688EF573284664698968C38BB913CBFC8223A628553168947D59DCC912042351377AC5FB32");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -132,7 +132,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("B99B99B099B323E02709A4D696E6768756151751");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0452DCB034293A117E1F4FF11B30F7199D3144CE6DFEAFFEF2E331F296E071FA0DF9982CFEA7D43F2E"); 
+                    "0452DCB034293A117E1F4FF11B30F7199D3144CE6DFEAFFEF2E331F296E071FA0DF9982CFEA7D43F2E");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -167,7 +167,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04DB4FF10EC057E9AE26B07D0280B7F4341DA5D1B1EAE06C7D9B2F2F6D9C5628A7844163D015BE86344082AA88D95E2F9D"); 
+                    "04DB4FF10EC057E9AE26B07D0280B7F4341DA5D1B1EAE06C7D9B2F2F6D9C5628A7844163D015BE86344082AA88D95E2F9D");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -189,7 +189,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("3045AE6FC8422F64ED579528D38120EAE12196D5");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04188DA80EB03090F67CBF20EB43A18800F4FF0AFD82FF101207192B95FFC8DA78631011ED6B24CDD573F977A11E794811"); 
+                    "04188DA80EB03090F67CBF20EB43A18800F4FF0AFD82FF101207192B95FFC8DA78631011ED6B24CDD573F977A11E794811");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -224,7 +224,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04A1455B334DF099DF30FC28A169A467E9E47075A90F7E650EB6B7A45C7E089FED7FBA344282CAFBD6F7E319F7C0B0BD59E2CA4BDB556D61A5"); 
+                    "04A1455B334DF099DF30FC28A169A467E9E47075A90F7E650EB6B7A45C7E089FED7FBA344282CAFBD6F7E319F7C0B0BD59E2CA4BDB556D61A5");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -246,7 +246,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("BD71344799D5C7FCDC45B59FA3B9AB8F6A948BC5");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04B70E0CBD6BB4BF7F321390B94A03C1D356C21122343280D6115C1D21BD376388B5F723FB4C22DFE6CD4375A05A07476444D5819985007E34"); 
+                    "04B70E0CBD6BB4BF7F321390B94A03C1D356C21122343280D6115C1D21BD376388B5F723FB4C22DFE6CD4375A05A07476444D5819985007E34");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -281,7 +281,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0479BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8"); 
+                    "0479BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -303,7 +303,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("C49D360886E704936A6678E1139D26B7819F7E90");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "046B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C2964FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5"); 
+                    "046B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C2964FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }
@@ -371,7 +371,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("10E723AB14D696E6768756151756FEBF8FCB49A9");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04009D73616F35F4AB1407D73562C10F00A52830277958EE84D1315ED31886"); 
+                    "04009D73616F35F4AB1407D73562C10F00A52830277958EE84D1315ED31886");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -393,7 +393,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("10C0FB15760860DEF1EEF4D696E676875615175D");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0401A57A6A7B26CA5EF52FCDB816479700B3ADC94ED1FE674C06E695BABA1D"); 
+                    "0401A57A6A7B26CA5EF52FCDB816479700B3ADC94ED1FE674C06E695BABA1D");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -415,7 +415,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("4D696E676875615175985BD3ADBADA21B43A97E2");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "040081BAF91FDF9833C40F9C181343638399078C6E7EA38C001F73C8134B1B4EF9E150"); 
+                    "040081BAF91FDF9833C40F9C181343638399078C6E7EA38C001F73C8134B1B4EF9E150");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -437,7 +437,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("985BD3ADBAD4D696E676875615175A21B43A97E3");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "040356DCD8F2F95031AD652D23951BB366A80648F06D867940A5366D9E265DE9EB240F"); 
+                    "040356DCD8F2F95031AD652D23951BB366A80648F06D867940A5366D9E265DE9EB240F");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -459,7 +459,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0402FE13C0537BBC11ACAA07D793DE4E6D5E5C94EEE80289070FB05D38FF58321F2E800536D538CCDAA3D9"); 
+                    "0402FE13C0537BBC11ACAA07D793DE4E6D5E5C94EEE80289070FB05D38FF58321F2E800536D538CCDAA3D9");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -481,7 +481,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("24B7B137C8A14D696E6768756151756FD0DA2E5C");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "040369979697AB43897789566789567F787A7876A65400435EDB42EFAFB2989D51FEFCE3C80988F41FF883"); 
+                    "040369979697AB43897789566789567F787A7876A65400435EDB42EFAFB2989D51FEFCE3C80988F41FF883");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -503,7 +503,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("85E25BFE5C86226CDB12016F7553F9D0E693A268");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0403F0EBA16286A2D57EA0991168D4994637E8343E3600D51FBC6C71A0094FA2CDD545B11C5C0C797324F1"); 
+                    "0403F0EBA16286A2D57EA0991168D4994637E8343E3600D51FBC6C71A0094FA2CDD545B11C5C0C797324F1");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -525,7 +525,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("103FAEC74D696E676875615175777FC5B191EF30");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0401F481BC5F0FF84A74AD6CDF6FDEF4BF6179625372D8C0C5E10025E399F2903712CCF3EA9E3A1AD17FB0B3201B6AF7CE1B05"); 
+                    "0401F481BC5F0FF84A74AD6CDF6FDEF4BF6179625372D8C0C5E10025E399F2903712CCF3EA9E3A1AD17FB0B3201B6AF7CE1B05");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -547,7 +547,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("10B7B4D696E676875615175137C8A16FD0DA2211");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0400D9B67D192E0367C803F39E1A7E82CA14A651350AAE617E8F01CE94335607C304AC29E7DEFBD9CA01F596F927224CDECF6C"); 
+                    "0400D9B67D192E0367C803F39E1A7E82CA14A651350AAE617E8F01CE94335607C304AC29E7DEFBD9CA01F596F927224CDECF6C");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -569,7 +569,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "04017232BA853A7E731AF129F22FF4149563A419C26BF50A4C9D6EEFAD612601DB537DECE819B7F70F555A67C427A8CD9BF18AEB9B56E0C11056FAE6A3"); 
+                    "04017232BA853A7E731AF129F22FF4149563A419C26BF50A4C9D6EEFAD612601DB537DECE819B7F70F555A67C427A8CD9BF18AEB9B56E0C11056FAE6A3");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -591,7 +591,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = Hex.DecodeStrict("74D59FF07F6B413D0EA14B344B20A2DB049B50C3");
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0400FAC9DFCBAC8313BB2139F1BB755FEF65BC391F8B36F8F8EB7371FD558B01006A08A41903350678E58528BEBF8A0BEFF867A7CA36716F7E01F81052"); 
+                    "0400FAC9DFCBAC8313BB2139F1BB755FEF65BC391F8B36F8F8EB7371FD558B01006A08A41903350678E58528BEBF8A0BEFF867A7CA36716F7E01F81052");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -613,7 +613,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0429A0B6A887A983E9730988A68727A8B2D126C44CC2CC7B2A6555193035DC76310804F12E549BDB011C103089E73510ACB275FC312A5DC6B76553F0CA"); 
+                    "0429A0B6A887A983E9730988A68727A8B2D126C44CC2CC7B2A6555193035DC76310804F12E549BDB011C103089E73510ACB275FC312A5DC6B76553F0CA");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         };
@@ -773,7 +773,7 @@ namespace Org.BouncyCastle.Crypto.EC
                 byte[] S = null;
                 ECCurve curve = Curve;
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0432C4AE2C1F1981195F9904466A39C9948FE30BBFF2660BE1715A4589334C74C7BC3736A2F4F6779C59BDCEE36B692153D0A9877CC62A474002DF32E52139F0A0"); 
+                    "0432C4AE2C1F1981195F9904466A39C9948FE30BBFF2660BE1715A4589334C74C7BC3736A2F4F6779C59BDCEE36B692153D0A9877CC62A474002DF32E52139F0A0");
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }
         }

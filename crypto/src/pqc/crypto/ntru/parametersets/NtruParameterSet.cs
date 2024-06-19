@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
+﻿using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets
 {
     internal abstract class NtruParameterSet
     {

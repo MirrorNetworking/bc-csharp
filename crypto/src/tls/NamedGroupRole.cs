@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <remarks>
     /// Note that the values here are implementation-specific and arbitrary. It is recommended not to depend on the

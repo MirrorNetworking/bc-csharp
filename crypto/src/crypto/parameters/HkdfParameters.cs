@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     /**
      * Parameter class for the HkdfBytesGenerator class.

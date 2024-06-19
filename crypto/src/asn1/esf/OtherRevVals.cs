@@ -1,11 +1,11 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
     /// <remarks>
     /// RFC 3126: 4.3.2 Revocation Values Attribute Definition
     /// <code>
-    /// OtherRevVals ::= SEQUENCE 
+    /// OtherRevVals ::= SEQUENCE
     /// {
     ///		otherRevValType      OtherRevValType,
     ///		otherRevVals         ANY DEFINED BY otherRevValType

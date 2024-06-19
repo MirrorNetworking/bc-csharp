@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
     internal abstract class Internal
     {
@@ -62,7 +62,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         // Binary Pohlig-Hellman reduced to smaller logs of order ell^W
         protected internal uint W_2;
         protected internal uint W_3;
-        // ell^w    
+        // ell^w
         protected internal uint ELL2_W;
         protected internal uint ELL3_W;
         // ell^(e mod w)

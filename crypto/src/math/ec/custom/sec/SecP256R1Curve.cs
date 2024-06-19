@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP256R1Curve
         : AbstractFpCurve
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
         private const int SECP256R1_DEFAULT_COORDS = COORD_JACOBIAN;
         private const int SECP256R1_FE_INTS = 8;
-        private static readonly ECFieldElement[] SECP256R1_AFFINE_ZS = new ECFieldElement[] { new SecP256R1FieldElement(BigInteger.One) }; 
+        private static readonly ECFieldElement[] SECP256R1_AFFINE_ZS = new ECFieldElement[] { new SecP256R1FieldElement(BigInteger.One) };
 
         protected readonly SecP256R1Point m_infinity;
 

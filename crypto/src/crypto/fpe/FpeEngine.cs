@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Fpe
+namespace Mirror.BouncyCastle.Crypto.Fpe
 {
     /// <summary>Base class for format-preserving encryption.</summary>
     public abstract class FpeEngine
@@ -22,11 +22,11 @@ namespace Org.BouncyCastle.Crypto.Fpe
         /// Process length bytes from inBuf, writing the output to outBuf.
         /// </summary>
         /// <returns>number of bytes output.</returns>
-        /// <param name="inBuf">input data.</param>  
-        /// <param name="inOff">offset in input data to start at.</param>  
-        /// <param name="length">number of bytes to process.</param>  
-        /// <param name="outBuf">destination buffer.</param>  
-        /// <param name="outOff">offset to start writing at in destination buffer.</param>  
+        /// <param name="inBuf">input data.</param>
+        /// <param name="inOff">offset in input data to start at.</param>
+        /// <param name="length">number of bytes to process.</param>
+        /// <param name="outBuf">destination buffer.</param>
+        /// <param name="outOff">offset to start writing at in destination buffer.</param>
         public virtual int ProcessBlock(byte[] inBuf, int inOff, int length, byte[] outBuf, int outOff)
         {
             if (fpeParameters == null)
@@ -62,8 +62,8 @@ namespace Org.BouncyCastle.Crypto.Fpe
         /// Initialize the FPE engine for encryption/decryption.
         /// </summary>
         /// <returns>number of bytes output.</returns>
-        /// <param name="forEncryption">true if initialising for encryption, false otherwise.</param>  
-        /// <param name="parameters ">the key and other parameters to use to set the engine up.</param>  
+        /// <param name="forEncryption">true if initialising for encryption, false otherwise.</param>
+        /// <param name="parameters ">the key and other parameters to use to set the engine up.</param>
         public abstract void Init(bool forEncryption, ICipherParameters parameters);
 
         protected abstract int EncryptBlock(byte[] inBuf, int inOff, int length, byte[] outBuf, int outOff);

@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
     /**
     * Implementation of Bob Jenkin's ISAAC (Indirection Shift Accumulate Add and Count).
@@ -18,7 +18,7 @@ namespace Org.BouncyCastle.Crypto.Engines
                                     stateArraySize = sizeL<<5; // 256
 
         // Cipher's internal state
-        private uint[]   engineState   = null, // mm                
+        private uint[]   engineState   = null, // mm
                         results       = null; // randrsl
         private uint     a = 0, b = 0, c = 0;
 
@@ -37,7 +37,7 @@ namespace Org.BouncyCastle.Crypto.Engines
         * inappropriate.
         */
         public virtual void Init(
-            bool				forEncryption, 
+            bool				forEncryption,
             ICipherParameters	parameters)
         {
             if (!(parameters is KeyParameter))
@@ -45,9 +45,9 @@ namespace Org.BouncyCastle.Crypto.Engines
                     "invalid parameter passed to ISAAC Init - " + Platform.GetTypeName(parameters),
                     "parameters");
 
-            /* 
+            /*
             * ISAAC encryption and decryption is completely
-            * symmetrical, so the 'forEncryption' is 
+            * symmetrical, so the 'forEncryption' is
             * irrelevant.
             */
             KeyParameter p = (KeyParameter) parameters;
@@ -57,7 +57,7 @@ namespace Org.BouncyCastle.Crypto.Engines
         public virtual byte ReturnByte(
             byte input)
         {
-            if (index == 0) 
+            if (index == 0)
             {
                 isaac();
                 keyStream = Pack.UInt32_To_BE(results);
@@ -70,10 +70,10 @@ namespace Org.BouncyCastle.Crypto.Engines
         }
 
         public virtual void ProcessBytes(
-            byte[]	input, 
-            int		inOff, 
-            int		len, 
-            byte[]	output, 
+            byte[]	input,
+            int		inOff,
+            int		len,
+            byte[]	output,
             int		outOff)
         {
             if (!initialised)
@@ -84,7 +84,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 
             for (int i = 0; i < len; i++)
             {
-                if (index == 0) 
+                if (index == 0)
                 {
                     isaac();
                     keyStream = Pack.UInt32_To_BE(results);
@@ -195,7 +195,7 @@ namespace Org.BouncyCastle.Crypto.Engines
             isaac();
 
             initialised = true;
-        }    
+        }
 
         private void isaac()
         {

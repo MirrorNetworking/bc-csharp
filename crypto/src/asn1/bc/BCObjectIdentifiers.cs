@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.BC
+namespace Mirror.BouncyCastle.Asn1.BC
 {
     // TODO[api] Make static
     public abstract class BCObjectIdentifiers

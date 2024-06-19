@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Saber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Saber
 {
     public abstract class SaberKeyParameters
         : AsymmetricKeyParameter

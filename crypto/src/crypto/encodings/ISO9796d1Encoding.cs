@@ -1,9 +1,9 @@
 using System;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Encodings
+namespace Mirror.BouncyCastle.Crypto.Encodings
 {
 	/**
 	* ISO 9796-1 padding. Note in the light of recent results you should

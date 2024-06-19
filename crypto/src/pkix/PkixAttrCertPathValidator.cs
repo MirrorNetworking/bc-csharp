@@ -1,21 +1,21 @@
 using System;
 
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/**
 	* CertPathValidatorSpi implementation for X.509 Attribute Certificates la RFC 3281.
-	* 
-	* @see org.bouncycastle.x509.ExtendedPkixParameters
+	*
+	* @see Mirror.BouncyCastle.x509.ExtendedPkixParameters
 	*/
 	public class PkixAttrCertPathValidator
 	//    extends CertPathValidatorSpi
 	{
 		/**
 		* Validates an attribute certificate with the given certificate path.
-		* 
+		*
 		* <p>
 		* <code>params</code> must be an instance of
 		* <code>ExtendedPkixParameters</code>.

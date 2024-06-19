@@ -1,9 +1,9 @@
 using System;
 using System.Runtime.Serialization;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
     [Serializable]
     public class PkixCertPathBuilderException

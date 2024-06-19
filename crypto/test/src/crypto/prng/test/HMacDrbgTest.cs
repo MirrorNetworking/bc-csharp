@@ -2,13 +2,13 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Prng.Drbg;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Prng.Drbg;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Prng.Test
+namespace Mirror.BouncyCastle.Crypto.Prng.Test
 {
     /**
      * HMAC SP800-90 DRBG

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     internal class FastFourierTransform
     {

@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO.Pem;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO.Pem;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.OpenSsl
+namespace Mirror.BouncyCastle.OpenSsl
 {
     /**
-    * Class for reading OpenSSL PEM encoded streams containing 
+    * Class for reading OpenSSL PEM encoded streams containing
     * X509 certificates, PKCS8 encoded keys and PKCS7 objects.
     * <p>
     * In the case of PKCS7 objects the reader will return a CMS ContentInfo object. Keys and
@@ -127,7 +127,7 @@ namespace Org.BouncyCastle.OpenSsl
 
             return new RsaKeyParameters(
                 false, // not private
-                rsaPubStructure.Modulus, 
+                rsaPubStructure.Modulus,
                 rsaPubStructure.PublicExponent);
         }
 

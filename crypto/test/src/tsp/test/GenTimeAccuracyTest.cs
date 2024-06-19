@@ -2,10 +2,10 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Tsp;
 
-namespace Org.BouncyCastle.Tsp.Tests
+namespace Mirror.BouncyCastle.Tsp.Tests
 {
 	[TestFixture]
 	public class GenTimeAccuracyUnitTest

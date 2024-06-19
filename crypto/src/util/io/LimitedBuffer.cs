@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Utilities.IO
+namespace Mirror.BouncyCastle.Utilities.IO
 {
     public sealed class LimitedBuffer
         : BaseOutputStream

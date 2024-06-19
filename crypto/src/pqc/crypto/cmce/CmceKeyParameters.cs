@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Cmce
+namespace Mirror.BouncyCastle.Pqc.Crypto.Cmce
 {
     public abstract class CmceKeyParameters
         : AsymmetricKeyParameter

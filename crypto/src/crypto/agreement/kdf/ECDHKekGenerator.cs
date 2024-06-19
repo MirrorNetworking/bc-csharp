@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Kdf
+namespace Mirror.BouncyCastle.Crypto.Agreement.Kdf
 {
     /**
     * X9.63 based key derivation function for ECDH CMS.

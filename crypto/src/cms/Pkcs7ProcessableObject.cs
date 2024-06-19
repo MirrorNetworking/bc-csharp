@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Cms;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
   public class Pkcs7ProcessableObject : CmsProcessable
   {

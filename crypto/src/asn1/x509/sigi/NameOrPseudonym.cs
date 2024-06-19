@@ -1,25 +1,25 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509.SigI
+namespace Mirror.BouncyCastle.Asn1.X509.SigI
 {
 	/**
 	* Structure for a name or pseudonym.
-	* 
+	*
 	* <pre>
 	*       NameOrPseudonym ::= CHOICE {
 	*     	   surAndGivenName SEQUENCE {
 	*     	     surName DirectoryString,
-	*     	     givenName SEQUENCE OF DirectoryString 
+	*     	     givenName SEQUENCE OF DirectoryString
 	*         },
-	*     	   pseudonym DirectoryString 
+	*     	   pseudonym DirectoryString
 	*       }
 	* </pre>
-	* 
-	* @see org.bouncycastle.asn1.x509.sigi.PersonalData
-	* 
+	*
+	* @see Mirror.BouncyCastle.asn1.x509.sigi.PersonalData
+	*
 	*/
 	public class NameOrPseudonym
 		: Asn1Encodable, IAsn1Choice

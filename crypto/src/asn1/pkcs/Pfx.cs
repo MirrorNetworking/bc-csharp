@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     /**
      * the infamous Pfx from Pkcs12

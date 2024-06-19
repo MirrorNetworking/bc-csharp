@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
 	/**
 	 * Exception thrown if a TSP request or response fails to validate.

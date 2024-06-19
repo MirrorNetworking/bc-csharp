@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Security.Certificates
+namespace Mirror.BouncyCastle.Security.Certificates
 {
     [Serializable]
     public class CertificateParsingException

@@ -26,9 +26,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Utilities.Bzip2
+namespace Mirror.BouncyCastle.Utilities.Bzip2
 {
 	/**
     * An input stream that decompresses from the BZip2 format (with the file
@@ -40,7 +40,7 @@ namespace Org.BouncyCastle.Utilities.Bzip2
     * start of the BZIP2 stream to make it compatible with other PGP programs.
     */
     public class CBZip2InputStream
-        : BaseInputStream 
+        : BaseInputStream
 	{
         /*
         index of the last char in the block, so

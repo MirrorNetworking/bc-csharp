@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     internal class DHParametersHelper
     {
@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 
         /*
          * Finds a pair of prime BigInteger's {p, q: p = 2q + 1}
-         * 
+         *
          * (see: Handbook of Applied Cryptography 4.86)
          */
         internal static BigInteger[] GenerateSafePrimes(int size, int certainty, SecureRandom random)
@@ -94,7 +94,7 @@ namespace Org.BouncyCastle.Crypto.Generators
                     /*
                      * Require a minimum weight of the NAF representation, since low-weight primes may be
                      * weak against a version of the number-field-sieve for the discrete-logarithm-problem.
-                     * 
+                     *
                      * See "The number field sieve for integers of low weight", Oliver Schirokauer.
                      */
                     if (WNafUtilities.GetNafWeight(p) < minWeight)
@@ -109,7 +109,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 
         /*
          * Select a high order element of the multiplicative group Zp*
-         * 
+         *
          * p and q must be s.t. p = 2*q + 1, where p and q are prime (see generateSafePrimes)
          */
         internal static BigInteger SelectGenerator(BigInteger p, BigInteger q, SecureRandom random)

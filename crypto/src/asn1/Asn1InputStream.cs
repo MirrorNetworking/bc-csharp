@@ -4,10 +4,10 @@ using System.Buffers.Binary;
 #endif
 using System.IO;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /**
      * a general purpose ASN.1 decoder - note: this class differs from the
@@ -311,7 +311,7 @@ namespace Org.BouncyCastle.Asn1
             int length = s.ReadByte();
             if (0U == ((uint)length >> 7))
             {
-                // definite-length short form 
+                // definite-length short form
                 return length;
             }
             if (0x80 == length)

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>An implementation of <see cref="TlsSrpIdentityManager"/> that simulates the existence of "unknown"
     /// identities to obscure the fact that there is no verifier for them.</summary>

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     /**
      * a Diffie-Hellman key pair generator.

@@ -1,31 +1,31 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
 	 * Targets structure used in target information extension for attribute
 	 * certificates from RFC 3281.
-	 * 
+	 *
 	 * <pre>
 	 *            Targets ::= SEQUENCE OF Target
-	 *           
+	 *
 	 *            Target  ::= CHOICE {
 	 *              targetName          [0] GeneralName,
 	 *              targetGroup         [1] GeneralName,
 	 *              targetCert          [2] TargetCert
 	 *            }
-	 *           
+	 *
 	 *            TargetCert  ::= SEQUENCE {
 	 *              targetCertificate    IssuerSerial,
 	 *              targetName           GeneralName OPTIONAL,
 	 *              certDigestInfo       ObjectDigestInfo OPTIONAL
 	 *            }
 	 * </pre>
-	 * 
-	 * @see org.bouncycastle.asn1.x509.Target
-	 * @see org.bouncycastle.asn1.x509.TargetInformation
+	 *
+	 * @see Mirror.BouncyCastle.asn1.x509.Target
+	 * @see Mirror.BouncyCastle.asn1.x509.TargetInformation
 	 */
 	public class Targets
 		: Asn1Encodable
@@ -36,7 +36,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 * Creates an instance of a Targets from the given object.
 		 * <p>
 		 * <code>obj</code> can be a Targets or a {@link Asn1Sequence}</p>
-		 * 
+		 *
 		 * @param obj The object.
 		 * @return A Targets instance.
 		 * @throws ArgumentException if the given object cannot be interpreted as Target.
@@ -59,7 +59,7 @@ namespace Org.BouncyCastle.Asn1.X509
 
 		/**
 		 * Constructor from Asn1Sequence.
-		 * 
+		 *
 		 * @param targets The ASN.1 SEQUENCE.
 		 * @throws ArgumentException if the contents of the sequence are
 		 *             invalid.
@@ -74,7 +74,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 * Constructor from given targets.
 		 * <p>
 		 * The ArrayList is copied.</p>
-		 * 
+		 *
 		 * @param targets An <code>ArrayList</code> of {@link Target}s.
 		 * @see Target
 		 * @throws ArgumentException if the ArrayList contains not only Targets.
@@ -89,7 +89,7 @@ namespace Org.BouncyCastle.Asn1.X509
 		 * Returns the targets in an <code>ArrayList</code>.
 		 * <p>
 		 * The ArrayList is cloned before it is returned.</p>
-		 * 
+		 *
 		 * @return Returns the targets.
 		 */
         public virtual Target[] GetTargets()
@@ -99,13 +99,13 @@ namespace Org.BouncyCastle.Asn1.X509
 
         /**
 		 * Produce an object suitable for an Asn1OutputStream.
-		 * 
+		 *
 		 * Returns:
-		 * 
+		 *
 		 * <pre>
 		 *            Targets ::= SEQUENCE OF Target
 		 * </pre>
-		 * 
+		 *
 		 * @return an Asn1Object
 		 */
         public override Asn1Object ToAsn1Object()

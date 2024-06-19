@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Utilities.Date
+namespace Mirror.BouncyCastle.Utilities.Date
 {
 	public static class DateTimeUtilities
 	{

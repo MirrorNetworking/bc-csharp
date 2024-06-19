@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal class Msg
     {
@@ -8,7 +8,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
 
         internal Msg(PicnicEngine engine)
         {
-            msgs = new byte[engine.numMPCParties][]; // engine.andSizeBytes 
+            msgs = new byte[engine.numMPCParties][]; // engine.andSizeBytes
             for (int i = 0; i < engine.numMPCParties; i++)
             {
                 msgs[i] = new byte[engine.andSizeBytes];

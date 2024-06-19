@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using System.IO;
 
 using NUnit.Framework;
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.BC;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
-using Org.BouncyCastle.Pqc.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.BC;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium;
+using Mirror.BouncyCastle.Pqc.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class CrystalsDilithiumTest
@@ -120,11 +120,11 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             DilithiumSigner verifier = new DilithiumSigner();
             DilithiumPublicKeyParameters pkparam = pubParams;
             verifier.Init(false, pkparam);
-                
+
             bool vrfyrespass = verifier.VerifySignature(msg, sigGenerated);
             sigGenerated[3]++; // changing the signature by 1 byte should cause it to fail
             bool vrfyresfail = verifier.VerifySignature(msg, sigGenerated);
-            
+
             Assert.True(Arrays.AreEqual(attachedSig, sm), name + " " + count + " signature");
             //verify
             Assert.True(vrfyrespass, name + " " + count + " verify failed when should pass");

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Tsp;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
 	public class Evidence
 		: Asn1Encodable, IAsn1Choice

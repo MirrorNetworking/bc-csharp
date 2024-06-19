@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     public static class Objects
     {

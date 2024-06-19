@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Bcpg.Sig
+namespace Mirror.BouncyCastle.Bcpg.Sig
 {
     /**
     * packet giving whether or not is revocable.

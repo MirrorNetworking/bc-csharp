@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto
+namespace Mirror.BouncyCastle.Pqc.Crypto
 {
     /// <summary>Base interface for a PQC signature algorithm.</summary>
     public interface IMessageSigner

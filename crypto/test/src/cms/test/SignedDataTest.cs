@@ -4,19 +4,19 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
     [TestFixture]
 	public class SignedDataTest
@@ -967,7 +967,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			gen.AddCertificates(x509Certs);
 
 			CmsSignedData s = gen.Generate(CmsSignedDataGenerator.Data, msg, false);
-		
+
 			// compute expected content digest
 			byte[] expectedDigest = DigestUtilities.CalculateDigest(digestName, msgBytes);
 
@@ -1466,7 +1466,7 @@ namespace Org.BouncyCastle.Cms.Tests
 				"bGT3XK+2UlfIO0N05yYZAaHu7jCIdHIhi1wwtq9dsHwpcEJhLlJ8LyifAxDw==");
 
             CmsSignedData signedData = new CmsSignedData(sigBlock);
-            
+
 			VerifySignatures(signedData);
         }
 

@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X9
+namespace Mirror.BouncyCastle.Asn1.X9
 {
 	public abstract class X9ECParametersHolder
 	{

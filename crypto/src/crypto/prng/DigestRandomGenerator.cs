@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Prng
+namespace Mirror.BouncyCastle.Crypto.Prng
 {
 	/**
 	 * Random generation based on the digest with counter. Calling AddSeedMaterial will

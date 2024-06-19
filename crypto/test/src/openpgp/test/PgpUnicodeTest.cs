@@ -4,10 +4,10 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp.Tests
 {
     [TestFixture]
     public class PgpUnicodeTest
@@ -55,7 +55,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
  //             byte[] password = new byte[passwordFile.available()];
  //             passwordFile.read(password);
  //             passwordFile.close();
- //             string passphrase = new string(password);            
+ //             string passphrase = new string(password);
 
                 DoTestKey(keyId, passphrase, true);
 

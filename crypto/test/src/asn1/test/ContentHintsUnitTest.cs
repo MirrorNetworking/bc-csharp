@@ -2,9 +2,9 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Ess;
+using Mirror.BouncyCastle.Asn1.Ess;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class ContentHintsUnitTest

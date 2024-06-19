@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
     /**
      * <pre>GenMsgContent ::= SEQUENCE OF InfoTypeAndValue</pre>

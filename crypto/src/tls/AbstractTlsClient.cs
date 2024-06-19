@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Base class for a TLS client.</summary>
     public abstract class AbstractTlsClient

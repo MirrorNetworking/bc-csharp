@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     /**
      * A very minimal and stupid class to aggregate DTLS handshake messages.  Only sufficient for unit tests.

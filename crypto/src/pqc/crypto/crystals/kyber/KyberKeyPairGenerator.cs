@@ -1,20 +1,20 @@
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     public class KyberKeyPairGenerator
         : IAsymmetricCipherKeyPairGenerator
     {
         private KyberParameters KyberParams;
-        
+
         private SecureRandom random;
 
         private void Initialize(
             KeyGenerationParameters param)
         {
             this.KyberParams = ((KyberKeyGenerationParameters)param).Parameters;;
-            this.random = param.Random; 
+            this.random = param.Random;
         }
 
         private AsymmetricCipherKeyPair GenKeyPair()

@@ -2,10 +2,10 @@
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.X500.Style
+namespace Mirror.BouncyCastle.Asn1.X500.Style
 {
     // TODO[api] static
     public abstract class IetfUtilities

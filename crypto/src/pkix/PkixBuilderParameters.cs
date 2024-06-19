@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/// <summary>
     /// Summary description for PkixBuilderParameters.
@@ -101,9 +101,9 @@ namespace Org.BouncyCastle.Pkix
 		/**
 		* Can alse handle <code>ExtendedPKIXBuilderParameters</code> and
 		* <code>PKIXBuilderParameters</code>.
-		* 
+		*
 		* @param params Parameters to set.
-		* @see org.bouncycastle.x509.ExtendedPKIXParameters#setParams(java.security.cert.PKIXParameters)
+		* @see Mirror.BouncyCastle.x509.ExtendedPKIXParameters#setParams(java.security.cert.PKIXParameters)
 		*/
 		protected override void SetParams(PkixParameters parameters)
 		{

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     internal class KyberIndCpa
     {
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             m_engine = mEngine;
             m_symmetric = mEngine.Symmetric;
         }
-        
+
         private int GenerateMatrixNBlocks => ((12 * KyberEngine.N / 8 * (1 << 12) / KyberEngine.Q + m_symmetric.XofBlockBytes) / m_symmetric.XofBlockBytes);
 
         private void GenerateMatrix(PolyVec[] a, byte[] seed, bool transposed)
@@ -86,7 +86,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 
             byte[] d = new byte[32];
             m_engine.RandomBytes(d, 32);
-            
+
             m_symmetric.Hash_g(buf, d);
 
             byte[] PublicSeed = Arrays.CopyOfRange(buf, 0, KyberEngine.SymBytes);
@@ -99,7 +99,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 
             GenerateMatrix(Matrix, PublicSeed, false);
 
-            for (int i = 0; i < K; i++) 
+            for (int i = 0; i < K; i++)
             {
                 skpv.m_vec[i].GetNoiseEta1(NoiseSeed, nonce++);
             }
@@ -108,16 +108,16 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             {
                 e.m_vec[i].GetNoiseEta1(NoiseSeed, nonce++);
             }
-            
+
             skpv.Ntt();
             e.Ntt();
-            
+
             for (int i = 0; i < K; i++)
             {
                 PolyVec.PointwiseAccountMontgomery(pkpv.m_vec[i], Matrix[i], skpv, m_engine);
                 pkpv.m_vec[i].ToMont();
             }
-            
+
             pkpv.Add(e);
             pkpv.Reduce();
 

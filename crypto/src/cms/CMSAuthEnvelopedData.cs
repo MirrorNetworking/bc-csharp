@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	/**
 	* containing class for an CMS AuthEnveloped Data object
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.Cms
 		private Asn1Set             authAttrs;
 		private byte[]              mac;
 		private Asn1Set             unauthAttrs;
-	
+
 		public CmsAuthEnvelopedData(
 			byte[] authEnvData)
 			: this(CmsUtilities.ReadContentInfo(authEnvData))
@@ -93,19 +93,19 @@ namespace Org.BouncyCastle.Cms
 
 //				RFC 5084 ASN.1 Module
 //				-- Parameters for AlgorithmIdentifier
-//				
+//
 //				CCMParameters ::= SEQUENCE {
 //				  aes-nonce         OCTET STRING (SIZE(7..13)),
 //				  aes-ICVlen        AES-CCM-ICVlen DEFAULT 12 }
-//				
+//
 //				AES-CCM-ICVlen ::= INTEGER (4 | 6 | 8 | 10 | 12 | 14 | 16)
-//				
+//
 //				GCMParameters ::= SEQUENCE {
 //				  aes-nonce        OCTET STRING, -- recommended size is 12 octets
 //				  aes-ICVlen       AES-GCM-ICVlen DEFAULT 12 }
-//				
+//
 //				AES-GCM-ICVlen ::= INTEGER (12 | 13 | 14 | 15 | 16)
-			}            
+			}
 		}
 	}
 }

@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Math.EC.Endo;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC.Endo;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.Sec
+namespace Mirror.BouncyCastle.Asn1.Sec
 {
     /// <summary>Elliptic curve registry for the SEC standard.</summary>
     public static class SecNamedCurves
@@ -61,7 +61,7 @@ namespace Org.BouncyCastle.Asn1.Sec
                 ECCurve curve = Curve;
 
                 X9ECPoint G = ConfigureBasepoint(curve,
-                    "0409487239995A5EE76B55F9C2F098A89CE5AF8724C0A23E0E0FF77500"); 
+                    "0409487239995A5EE76B55F9C2F098A89CE5AF8724C0A23E0E0FF77500");
 
                 return new X9ECParameters(curve, G, curve.Order, curve.Cofactor, S);
             }

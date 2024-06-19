@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.OpenSsl
+namespace Mirror.BouncyCastle.OpenSsl
 {
     [Serializable]
     public class PemException

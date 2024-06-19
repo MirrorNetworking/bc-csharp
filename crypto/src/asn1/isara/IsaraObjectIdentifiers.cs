@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Asn1.Isara
+namespace Mirror.BouncyCastle.Asn1.Isara
 {
     public static class IsaraObjectIdentifiers
     {

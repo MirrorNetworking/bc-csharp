@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Fpe
+namespace Mirror.BouncyCastle.Crypto.Fpe
 {
     public class FpeFf1Engine
         : FpeEngine

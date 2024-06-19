@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.X509.Qualified
+namespace Mirror.BouncyCastle.Asn1.X509.Qualified
 {
     /**
     * The SemanticsInformation object.
@@ -87,7 +87,7 @@ namespace Org.BouncyCastle.Asn1.X509.Qualified
             this.nameRegistrationAuthorities = generalNames;
         }
 
-		public DerObjectIdentifier SemanticsIdentifier 
+		public DerObjectIdentifier SemanticsIdentifier
         {
             get { return semanticsIdentifier; }
         }

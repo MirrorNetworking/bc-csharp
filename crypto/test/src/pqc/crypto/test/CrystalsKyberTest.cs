@@ -3,18 +3,18 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
-using Org.BouncyCastle.Pqc.Crypto.Utilities;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber;
+using Mirror.BouncyCastle.Pqc.Crypto.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class CrystalsKyberTest
@@ -175,7 +175,7 @@ ss = C9786ED936508E178D55A1208C590A10F25CFBFEB50BE4207395A8B2F8AA192E
 
             KyberKeyPairGenerator kpGen = new KyberKeyPairGenerator();
             KyberKeyGenerationParameters genParam = new KyberKeyGenerationParameters(new TestRandomData(coins), kyberparameters);
-            
+
             //
             // Generate keys and test.
             //

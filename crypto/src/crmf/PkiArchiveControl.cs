@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Cms;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class PkiArchiveControl
         : IControl
@@ -34,7 +34,7 @@ namespace Org.BouncyCastle.Crmf
         /// <summary>
         /// Return the underlying ASN.1 object.
         /// </summary>
-        /// <returns>a PKIArchiveOptions structure.</returns>    
+        /// <returns>a PKIArchiveOptions structure.</returns>
         public Asn1Encodable Value => m_pkiArchiveOptions;
 
         /// <summary>

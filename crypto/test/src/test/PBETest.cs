@@ -2,17 +2,17 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/**
 	* test out the various PBE modes, making sure the JCE implementations
@@ -160,13 +160,13 @@ namespace Org.BouncyCastle.Tests
 				if (baseAlgorithm.Equals("RC4"))
 				{
 					c = CipherUtilities.GetCipher(baseAlgorithm);
-	                
+
 					c.Init(true, encKey);
 				}
 				else
 				{
 					c = CipherUtilities.GetCipher(baseAlgorithm + "/CBC/PKCS7Padding");
-	                
+
 					c.Init(true, parameters);
 				}
 
@@ -203,7 +203,7 @@ namespace Org.BouncyCastle.Tests
 //				{
 //					Fail("" + algorithm + "failed salt test");
 //				}
-//	            
+//
 //				if (iCount != spec.getIterationCount())
 //				{
 //					Fail("" + algorithm + "failed count test");
@@ -214,11 +214,11 @@ namespace Org.BouncyCastle.Tests
 //				// try using parameters
 //				//
 //				keySpec = new PBEKeySpec(password);
-//	            
+//
 //				c.Init(false, fact.generateSecret(keySpec), param);
-//	            
+//
 //				dec = c.DoFinal(enc);
-//	            
+//
 //				if (!AreEqual(salt, dec))
 //				{
 //					Fail("" + algorithm + "failed encryption/decryption test");
@@ -237,7 +237,7 @@ namespace Org.BouncyCastle.Tests
 			new Pkcs12Test("AES",    "PBEWithSHA1And192BitAES-CBC-BC",   new Sha1Digest(),   192, 128),
 			new Pkcs12Test("AES",    "PBEWithSHA1And256BitAES-CBC-BC",   new Sha1Digest(),   256, 128),
 			new Pkcs12Test("AES",    "PBEWithSHA256And128BitAES-CBC-BC", new Sha256Digest(), 128, 128),
-			new Pkcs12Test("AES",    "PBEWithSHA256And192BitAES-CBC-BC", new Sha256Digest(), 192, 128),   
+			new Pkcs12Test("AES",    "PBEWithSHA256And192BitAES-CBC-BC", new Sha256Digest(), 192, 128),
 			new Pkcs12Test("AES",    "PBEWithSHA256And256BitAES-CBC-BC", new Sha256Digest(), 256, 128)
 		};
 
@@ -268,7 +268,7 @@ namespace Org.BouncyCastle.Tests
 				algorithm, salt, iterationCount);
 			ICipherParameters cipherParams = PbeUtilities.GenerateCipherParameters(
 				algorithm, password, algParams);
-			
+
 			IBufferedCipher cipher = CipherUtilities.GetCipher(algorithm);
 
 //			cipher.Init(forEncryption, keyFact.generateSecret(pbeSpec), defParams);
@@ -292,7 +292,7 @@ namespace Org.BouncyCastle.Tests
 				algorithm, salt, iterationCount);
 			ICipherParameters cipherParams = PbeUtilities.GenerateCipherParameters(
 				algorithm, password, algParams);
-			
+
 			IBufferedCipher cipher = CipherUtilities.GetCipher(algorithm);
 
 //			cipher.Init(forEncryption, keyFact.generateSecret(pbeSpec));
@@ -485,7 +485,7 @@ namespace Org.BouncyCastle.Tests
 				2048);
 
 			inBytes = cDec.DoFinal(outBytes);
-	        
+
 			if (!AreEqual(input, inBytes))
 			{
 				Fail("RC4 failed without param");

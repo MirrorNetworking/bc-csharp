@@ -2,12 +2,12 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * ChaCha Test
@@ -122,7 +122,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             + "A9BC08B4F76B413A4837324AEDF8BC2A"
             + "67D53C9AB9E1C5BC5F379D48DF9AF730";
 
-        private static readonly string chacha12_set1v0_256 = 
+        private static readonly string chacha12_set1v0_256 =
             "BAA28ED593690FD760ADA07C95E3B888"
             + "4B4B64E488CA7A2D9BDC262243AB9251"
             + "394C5037E255F8BCCDCD31306C508FFB"
@@ -231,7 +231,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             if (!AreEqual(buf, Hex.Decode(v448)))
             {
                 mismatch("v448", v448, buf);
-            }       
+            }
         }
 
         private void chachaTest2(

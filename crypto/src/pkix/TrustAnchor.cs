@@ -2,17 +2,17 @@ using System;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/// <summary>
 	/// A trust anchor or most-trusted Certification Authority (CA).
-	/// 
+	///
 	/// This class represents a "most-trusted CA", which is used as a trust anchor
 	/// for validating X.509 certification paths. A most-trusted CA includes the
 	/// public key of the CA, the CA's name, and any constraints upon the set of
@@ -37,19 +37,19 @@ namespace Org.BouncyCastle.Pkix
 	    ///	should contain the DER encoded form of the name constraints, as they
 	    ///	would appear in the NameConstraints structure defined in RFC 2459 and
 	    ///	X.509. The ASN.1 definition of this structure appears below.
-	    ///	
+	    ///
 	    ///	<pre>
 	    ///	NameConstraints ::= SEQUENCE {
 	    ///		permittedSubtrees       [0]     GeneralSubtrees OPTIONAL,
 	    ///		excludedSubtrees        [1]     GeneralSubtrees OPTIONAL }
-	    ///	   
+	    ///
         /// GeneralSubtrees ::= SEQUENCE SIZE (1..MAX) OF GeneralSubtree
-        /// 
+        ///
         ///		GeneralSubtree ::= SEQUENCE {
         ///		base                    GeneralName,
         ///		minimum         [0]     BaseDistance DEFAULT 0,
         ///		maximum         [1]     BaseDistance OPTIONAL }
-        ///		
+        ///
         ///		BaseDistance ::= INTEGER (0..MAX)
 		///
 		///		GeneralName ::= CHOICE {
@@ -63,7 +63,7 @@ namespace Org.BouncyCastle.Pkix
 		///		iPAddress                       [7]     OCTET STRING,
 		///		registeredID                    [8]     OBJECT IDENTIFIER}
 		///	</pre>
-		///	
+		///
 		///	Note that the name constraints byte array supplied is cloned to protect
 		///	against subsequent modifications.
 		/// </summary>
@@ -120,7 +120,7 @@ namespace Org.BouncyCastle.Pkix
 		public TrustAnchor(
 			X509Name				caPrincipal,
 			AsymmetricKeyParameter	pubKey,
-			byte[]					nameConstraints) 
+			byte[]					nameConstraints)
 		{
 			if (caPrincipal == null)
 				throw new ArgumentNullException("caPrincipal");
@@ -149,8 +149,8 @@ namespace Org.BouncyCastle.Pkix
 		/// <param name="pubKey">the public key of the most-trusted CA</param>
 		/// <param name="nameConstraints">a byte array containing the ASN.1 DER encoding of a
 		/// NameConstraints extension to be used for checking name
-		/// constraints. Only the value of the extension is included, not 
-		/// the OID or criticality flag. Specify null to omit the 
+		/// constraints. Only the value of the extension is included, not
+		/// the OID or criticality flag. Specify null to omit the
 		/// parameter.</param>
 		/// throws NullPointerException, IllegalArgumentException
 		public TrustAnchor(
@@ -208,14 +208,14 @@ namespace Org.BouncyCastle.Pkix
 		/// Decode the name constraints and clone them if not null.
 		/// </summary>
 		private void setNameConstraints(
-			byte[] bytes) 
+			byte[] bytes)
 		{
-			if (bytes == null) 
+			if (bytes == null)
 			{
 				ncBytes = null;
 				nc = null;
-			} 
-			else 
+			}
+			else
 			{
 				ncBytes = (byte[]) bytes.Clone();
 				// validate DER encoding

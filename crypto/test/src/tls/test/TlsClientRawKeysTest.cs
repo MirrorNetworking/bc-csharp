@@ -5,17 +5,17 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     /// <summary>A simple test designed to conduct a TLS handshake with an external TLS server.</summary>
     /// <remarks>
     /// <code>
     /// openssl genpkey -out ed25519.priv -algorithm ed25519
     /// openssl pkey -in ed25519.priv -pubout -out ed25519.pub
-    /// 
+    ///
     /// gnutls-serv --http --debug 10 --priority NORMAL:+CTYPE-CLI-RAWPK:+CTYPE-SRV-RAWPK --rawpkkeyfile ed25519.priv --rawpkfile ed25519.pub
     /// </code>
     /// </remarks>

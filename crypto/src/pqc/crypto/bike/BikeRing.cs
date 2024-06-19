@@ -9,12 +9,12 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Bike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Bike
 {
     internal sealed class BikeRing
     {
@@ -213,7 +213,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Bike
             var zzBounds = zz[SizeExt - 1];
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
             {
                 int i = 0;
 

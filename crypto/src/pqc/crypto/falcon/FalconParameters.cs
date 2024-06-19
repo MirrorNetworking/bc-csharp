@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
-    public sealed class FalconParameters 
+    public sealed class FalconParameters
         : ICipherParameters
     {
         public static readonly FalconParameters falcon_512 = new FalconParameters("falcon512", 9, 40);

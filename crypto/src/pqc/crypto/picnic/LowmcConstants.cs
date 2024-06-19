@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal abstract class LowmcConstants
     {

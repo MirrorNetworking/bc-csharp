@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+﻿namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class PolyVecK
     {
@@ -54,7 +54,7 @@
                 Vec[i].InverseNttToMont();
             }
         }
-        
+
         public void AddPolyVecK(PolyVecK b)
         {
             for (int i = 0; i < K; ++i)

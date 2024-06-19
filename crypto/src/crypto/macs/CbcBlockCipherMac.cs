@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Paddings;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Paddings;
 
-namespace Org.BouncyCastle.Crypto.Macs
+namespace Mirror.BouncyCastle.Crypto.Macs
 {
     /**
     * standard CBC Block Cipher MAC - if no padding is specified the default of

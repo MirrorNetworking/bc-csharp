@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace Org.BouncyCastle.Crypto.Prng
+namespace Mirror.BouncyCastle.Crypto.Prng
 {
     /// <summary>
     /// Uses RandomNumberGenerator.Create() to get randomness generator
@@ -56,11 +56,11 @@ namespace Org.BouncyCastle.Crypto.Prng
             if (start > bytes.Length - len)
                 throw new ArgumentException("Byte array too small for requested offset and length");
 
-            if (bytes.Length == len && start == 0) 
+            if (bytes.Length == len && start == 0)
             {
                 NextBytes(bytes);
             }
-            else 
+            else
             {
                 byte[] tmp = new byte[len];
                 NextBytes(tmp);

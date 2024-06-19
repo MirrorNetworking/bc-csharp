@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Base class for a DSA secret key.</remarks>
 	public class DsaSecretBcpgKey

@@ -3,12 +3,12 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Utilities.IO.Pem;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Utilities.IO.Pem;
 
-namespace Org.BouncyCastle.Crypto.IO.Tests
+namespace Mirror.BouncyCastle.Crypto.IO.Tests
 {
     [TestFixture]
     public class PemReaderTest
@@ -120,7 +120,7 @@ namespace Org.BouncyCastle.Crypto.IO.Tests
             Assert.AreEqual("CN=estExampleCA", cert.Issuer.ToString());
 
             int t = 0;
-            foreach(string[] items in new string[][] { 
+            foreach(string[] items in new string[][] {
                 new string[] { "Proc-Type", "4,CRL" },
                 new string[] { "CRL", "CRL Header" },
                 new string[] { "Originator-Certificate", "originator certificate" },
@@ -139,7 +139,7 @@ namespace Org.BouncyCastle.Crypto.IO.Tests
         [Test]
         public void TestNoWhiteSpace()
         {
-            string test = "-----BEGIN CERTIFICATE-----" + 
+            string test = "-----BEGIN CERTIFICATE-----" +
                 "MIIBezCCASOgAwIBAgICA2EwCQYHKoZIzj0EATAXMRUwEwYDVQQDEwxlc3RFeGFt" +
                 "cGxlQ0EwHhcNMTQwOTI5MTI0MTMxWhcNMjIxMjE2MTI0MTMxWjAWMRQwEgYDVQQD" +
                 "DAsqLmNpc2NvLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtwjmGPIy" +

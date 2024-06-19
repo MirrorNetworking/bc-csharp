@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecT283K1Curve
         : AbstractF2mCurve

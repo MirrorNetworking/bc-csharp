@@ -12,9 +12,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Rfc7748
+namespace Mirror.BouncyCastle.Math.EC.Rfc7748
 {
     public static class X25519Field
     {
@@ -35,8 +35,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
         public static void Add(int[] x, int[] y, int[] z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));
@@ -55,8 +55,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));
@@ -107,8 +107,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
         public static void Apm(int[] x, int[] y, int[] zp, int[] zm)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));
@@ -135,8 +135,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));
@@ -300,8 +300,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
             {
                 int ai = a[i], bi = b[i];
                 int dummy = mask & (ai ^ bi);
-                a[i] = ai ^ dummy; 
-                b[i] = bi ^ dummy; 
+                a[i] = ai ^ dummy;
+                b[i] = bi ^ dummy;
             }
         }
 
@@ -961,7 +961,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
             int u2_2 = u2 * 2;
             int u3_2 = u3 * 2;
             int u4_2 = u4 * 2;
-        
+
             long b0  = (long)u0 * u0;
             long b1  = (long)u0 * u1_2;
             long b2  = (long)u0 * u2_2
@@ -1105,8 +1105,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
         public static void Sub(int[] x, int[] y, int[] z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));
@@ -1125,8 +1125,8 @@ namespace Org.BouncyCastle.Math.EC.Rfc7748
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X = MemoryMarshal.AsBytes(x.AsSpan(0, 8));
                 var Y = MemoryMarshal.AsBytes(y.AsSpan(0, 8));

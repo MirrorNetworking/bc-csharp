@@ -1,11 +1,11 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
     /// <remarks>
     /// RFC 3126: 4.2.2 Complete Revocation Refs Attribute Definition
     /// <code>
-    /// OtherRevRefs ::= SEQUENCE 
+    /// OtherRevRefs ::= SEQUENCE
     /// {
     ///		otherRevRefType      OtherRevRefType,
     ///		otherRevRefs         ANY DEFINED BY otherRevRefType

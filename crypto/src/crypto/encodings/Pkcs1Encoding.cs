@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Encodings
+namespace Mirror.BouncyCastle.Crypto.Encodings
 {
     /**
     * this does your basic Pkcs 1 v1.5 padding - whether or not you should be using this
@@ -16,9 +16,9 @@ namespace Org.BouncyCastle.Crypto.Encodings
     {
         /**
          * some providers fail to include the leading zero in PKCS1 encoded blocks. If you need to
-         * work with one of these set the system property Org.BouncyCastle.Pkcs1.Strict to false.
+         * work with one of these set the system property Mirror.BouncyCastle.Pkcs1.Strict to false.
          */
-        public const string StrictLengthEnabledProperty = "Org.BouncyCastle.Pkcs1.Strict";
+        public const string StrictLengthEnabledProperty = "Mirror.BouncyCastle.Pkcs1.Strict";
 
         private const int HeaderLength = 10;
 
@@ -68,7 +68,7 @@ namespace Org.BouncyCastle.Crypto.Encodings
 
         /**
          * Constructor for decryption with a fixed plaintext length.
-         * 
+         *
          * @param cipher The cipher to use for cryptographic operation.
          * @param pLen Length of the expected plaintext.
          */
@@ -82,7 +82,7 @@ namespace Org.BouncyCastle.Crypto.Encodings
         /**
          * Constructor for decryption with a fixed plaintext length and a fallback
          * value that is returned, if the padding is incorrect.
-         * 
+         *
          * @param cipher
          *            The cipher to use for cryptographic operation.
          * @param fallback
@@ -269,7 +269,7 @@ namespace Org.BouncyCastle.Crypto.Encodings
 
         /**
          * Decode PKCS#1.5 encoding, and return a random value if the padding is not correct.
-         * 
+         *
          * @param in The encrypted block.
          * @param inOff Offset in the encrypted block.
          * @param inLen Length of the encrypted block.
@@ -309,7 +309,7 @@ namespace Org.BouncyCastle.Crypto.Encodings
              * Now, to a constant time constant memory copy of the decrypted value
              * or the random value, depending on the validity of the padding.
              */
-            int dataOff = data.Length - plaintextLength; 
+            int dataOff = data.Length - plaintextLength;
             byte[] result = new byte[plaintextLength];
             for (int i = 0; i < plaintextLength; ++i)
             {

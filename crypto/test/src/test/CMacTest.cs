@@ -2,13 +2,13 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/**
 	 * CMAC tester - <a href="http://www.nuee.nagoya-u.ac.jp/labs/tiwata/omac/tv/omac1-tv.txt">AES Official Test Vectors</a>.
@@ -24,7 +24,7 @@ namespace Org.BouncyCastle.Tests
 		private static readonly byte[] keyBytes256 = Hex.Decode(
 			  "603deb1015ca71be2b73aef0857d7781"
 			+ "1f352c073b6108d72d9810a30914dff4");
-		
+
 		private static readonly byte[] input0 = Hex.Decode("");
 		private static readonly byte[] input16 = Hex.Decode("6bc1bee22e409f96e93d7e117393172a");
 		private static readonly byte[] input40 = Hex.Decode(
@@ -56,7 +56,7 @@ namespace Org.BouncyCastle.Tests
 		public CMacTest()
 		{
 		}
-		
+
 		public override void PerformTest()
 		{
 //			Mac mac = Mac.getInstance("AESCMAC", "BC");
@@ -237,7 +237,7 @@ namespace Org.BouncyCastle.Tests
 			mac = MacUtilities.GetMac("DESedeCMAC");
 
 			//DESede
-			
+
 //			key = new SecretKeySpec(keyBytes128, "DESede");
 			key = new KeyParameter(keyBytes128);
 

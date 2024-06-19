@@ -4,7 +4,7 @@ using System.IO;
 
 using NUnit.Framework;
 
-namespace Org.BouncyCastle.Utilities.IO.Pem.Tests
+namespace Mirror.BouncyCastle.Utilities.IO.Pem.Tests
 {
 	[TestFixture]
 	public class AllTests

@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     /**
     * Basic type for a user ID packet.

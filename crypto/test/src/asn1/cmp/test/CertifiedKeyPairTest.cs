@@ -3,12 +3,12 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Cmp.Tests
+namespace Mirror.BouncyCastle.Asn1.Cmp.Tests
 {
     [TestFixture]
     public class CertifiedKeyPairTest

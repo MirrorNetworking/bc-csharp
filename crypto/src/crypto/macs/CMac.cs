@@ -1,27 +1,27 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Paddings;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Paddings;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Macs
+namespace Mirror.BouncyCastle.Crypto.Macs
 {
     /**
     * CMAC - as specified at www.nuee.nagoya-u.ac.jp/labs/tiwata/omac/omac.html
     * <p>
     * CMAC is analogous to OMAC1 - see also en.wikipedia.org/wiki/CMAC
     * </p><p>
-    * CMAC is a NIST recomendation - see 
+    * CMAC is a NIST recomendation - see
     * csrc.nist.gov/CryptoToolkit/modes/800-38_Series_Publications/SP800-38B.pdf
     * </p><p>
     * CMAC/OMAC1 is a blockcipher-based message authentication code designed and
     * analyzed by Tetsu Iwata and Kaoru Kurosawa.
     * </p><p>
-    * CMAC/OMAC1 is a simple variant of the CBC MAC (Cipher Block Chaining Message 
+    * CMAC/OMAC1 is a simple variant of the CBC MAC (Cipher Block Chaining Message
     * Authentication Code). OMAC stands for One-Key CBC MAC.
     * </p><p>
     * It supports 128- or 64-bits block ciphers, with any key size, and returns
-    * a MAC with dimension less or equal to the block size of the underlying 
+    * a MAC with dimension less or equal to the block size of the underlying
     * cipher.
     * </p>
     */

@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.GM
+namespace Mirror.BouncyCastle.Math.EC.Custom.GM
 {
     internal class SM2P256V1Curve
         : AbstractFpCurve
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.GM
 
         private const int SM2P256V1_DEFAULT_COORDS = COORD_JACOBIAN;
         private const int SM2P256V1_FE_INTS = 8;
-        private static readonly ECFieldElement[] SM2P256V1_AFFINE_ZS = new ECFieldElement[] { new SM2P256V1FieldElement(BigInteger.One) }; 
+        private static readonly ECFieldElement[] SM2P256V1_AFFINE_ZS = new ECFieldElement[] { new SM2P256V1FieldElement(BigInteger.One) };
 
         protected readonly SM2P256V1Point m_infinity;
 

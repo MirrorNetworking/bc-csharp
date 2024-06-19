@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class X509StoreTest

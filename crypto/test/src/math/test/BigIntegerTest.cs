@@ -4,10 +4,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.Tests
+namespace Mirror.BouncyCastle.Math.Tests
 {
     [TestFixture]
     public class BigIntegerTest

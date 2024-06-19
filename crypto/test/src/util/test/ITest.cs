@@ -5,7 +5,7 @@ using NUnit.Framework;
 /*
  Basic test interface
  */
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
     public interface ITest
     {

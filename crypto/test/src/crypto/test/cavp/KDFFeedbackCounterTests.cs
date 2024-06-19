@@ -2,12 +2,12 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests.Cavp
+namespace Mirror.BouncyCastle.Crypto.Tests.Cavp
 {
     [TestFixture]
     public class KdfFeedbackCounterTests : SimpleTest

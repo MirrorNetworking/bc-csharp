@@ -1,24 +1,24 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
-    [Obsolete("Use 'Org.BouncyCastle.Operators.Utilities.DefaultSignatureAlgorithmFinder' instead")]
+    [Obsolete("Use 'Mirror.BouncyCastle.Operators.Utilities.DefaultSignatureAlgorithmFinder' instead")]
     public class DefaultSignatureAlgorithmIdentifierFinder
         : Operators.Utilities.ISignatureAlgorithmFinder
     {
@@ -27,7 +27,7 @@ namespace Org.BouncyCastle.Cms
             Operators.Utilities.DefaultSignatureAlgorithmFinder.Instance.Find(sigAlgName);
     }
 
-    [Obsolete("Use 'Org.BouncyCastle.Operators.Utilities.DefaultDigestAlgorithmFinder' instead")]
+    [Obsolete("Use 'Mirror.BouncyCastle.Operators.Utilities.DefaultDigestAlgorithmFinder' instead")]
     public class DefaultDigestAlgorithmIdentifierFinder
         : Operators.Utilities.IDigestAlgorithmFinder
     {

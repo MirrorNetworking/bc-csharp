@@ -1,7 +1,7 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Utilities;
 
 // ASN.1 Encoding for a
 // Classic McEliece private key for fully populated:
@@ -17,7 +17,7 @@ using Org.BouncyCastle.Utilities;
 //                               -- see next section
 //    }
 // </pre>
-namespace Org.BouncyCastle.Pqc.Asn1
+namespace Mirror.BouncyCastle.Pqc.Asn1
 {
     // TODO[api] Should only be Asn1Encodable
     public class CmcePrivateKey
@@ -44,7 +44,7 @@ namespace Org.BouncyCastle.Pqc.Asn1
         private byte[] alpha;
         private byte[] s;
         private CmcePublicKey publicKey;
-        
+
         public CmcePrivateKey(int version, byte[] delta, byte[] c, byte[] g, byte[] alpha, byte[] s, CmcePublicKey pubKey = null)
         {
             if (version != 0)

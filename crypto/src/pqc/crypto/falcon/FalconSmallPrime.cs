@@ -1,10 +1,10 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     class FalconSmallPrime
     {
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#, this file corresponds to the small_prime type defined
         * in keygen.c):

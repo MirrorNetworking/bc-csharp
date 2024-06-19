@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Asn1.Tsp
+namespace Mirror.BouncyCastle.Asn1.Tsp
 {
     /**
      * Implementation of PartialHashtree, as defined in RFC 4998.

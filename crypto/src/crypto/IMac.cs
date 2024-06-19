@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     /// <summary>The base interface for implementations of message authentication codes (MACs).</summary>
     public interface IMac

@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP160R2FieldElement
         : AbstractFpFieldElement
@@ -129,10 +129,10 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         {
             /*
              * Raise this element to the exponent 2^158 - 2^30 - 2^12 - 2^10 - 2^7 - 2^6 - 2^5 - 2^1 - 2^0
-             * 
+             *
              * Breaking up the exponent's binary representation into "repunits", we get: { 127 1s } { 1
              * 0s } { 17 1s } { 1 0s } { 1 1s } { 1 0s } { 2 1s } { 3 0s } { 3 1s } { 1 0s } { 1 1s }
-             * 
+             *
              * Therefore we need an Addition chain containing 1, 2, 3, 17, 127 (the lengths of the repunits)
              * We use: [1], [2], [3], 4, 7, 14, [17], 31, 62, 124, [127]
              */
@@ -189,7 +189,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             uint[] t2 = x2;
             SecP160R2Field.Square(t1, t2);
 
-            return Nat160.Eq(x1, t2) ? new SecP160R2FieldElement(t1) : null;        
+            return Nat160.Eq(x1, t2) ? new SecP160R2FieldElement(t1) : null;
         }
 
         public override bool Equals(object obj)

@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Crypto.Modes.Gcm
+namespace Mirror.BouncyCastle.Crypto.Modes.Gcm
 {
     [Obsolete("Will be removed")]
     public class BasicGcmExponentiator

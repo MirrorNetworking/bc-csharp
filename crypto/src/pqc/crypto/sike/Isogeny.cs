@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
 internal sealed class Isogeny
 {
@@ -9,9 +9,9 @@ internal sealed class Isogeny
         this.engine = engine;
     }
 
-    // Doubling of a Montgomery point in projective coordinates (X:Z) over affine curve coefficient A. 
+    // Doubling of a Montgomery point in projective coordinates (X:Z) over affine curve coefficient A.
     // Input: projective Montgomery x-coordinates P = (X1:Z1), where x1=X1/Z1 and Montgomery curve constants (A+2)/4.
-    // Output: projective Montgomery x-coordinates Q = 2*P = (X2:Z2). 
+    // Output: projective Montgomery x-coordinates Q = 2*P = (X2:Z2).
     internal void Double(PointProj P, PointProj Q, ulong[][] A24, uint k)
     {
         ulong[][] temp = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
@@ -51,7 +51,7 @@ internal sealed class Isogeny
 
 
             engine.fpx.fpcopy(engine.param.Montgomery_one,0, one[0]);
-        
+
         if (!Fpx.subarrayEquals(P.Z[0], zero[0], engine.param.NWORDS_FIELD) || !Fpx.subarrayEquals(P.Z[1], zero[1], engine.param.NWORDS_FIELD))
         {
             engine.fpx.fp2mul_mont(P.X, P.Z, xz);       // xz = x*z;
@@ -86,13 +86,13 @@ internal sealed class Isogeny
         ulong[][] A24 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
         ulong mask;
         int j, swap, prevbit = 0;
-        
-        
+
+
         engine.fpx.fpcopy(engine.param.Montgomery_one, 0, A24[0]);
         engine.fpx.fpaddPRIME(A24[0], A24[0], A24[0]);
         engine.fpx.fp2add(A, A24, A24);
         engine.fpx.fp2div2(A24, A24);
-        engine.fpx.fp2div2(A24, A24);  // A24 = (A+2)/4          
+        engine.fpx.fp2div2(A24, A24);  // A24 = (A+2)/4
 
         j = (int)order_bits - 1;
         uint bit = (uint) ((m[j >> (int)Internal.LOG2RADIX] >> (int)(j & (Internal.RADIX-1))) & 1);
@@ -108,7 +108,7 @@ internal sealed class Isogeny
         XDblE(P, R1, A24, 1);
 
         // Main loop
-        for (int i = (int)j - 1;  i >= 0; i--) 
+        for (int i = (int)j - 1;  i >= 0; i--)
         {
             bit = (uint)((m[i >> (int)Internal.LOG2RADIX] >> (int)(i & (Internal.RADIX-1))) & 1);
             swap = (int) (bit ^ prevbit);
@@ -483,7 +483,7 @@ internal sealed class Isogeny
     {
         ulong[][] t0 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
             t1 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
-        
+
         engine.fpx.fp2sqr_mont(A, jinv);                   // jinv = A^2
         engine.fpx.fp2sqr_mont(C, t1);                     // t1 = C^2
         engine.fpx.fp2add(t1, t1, t0);                     // t0 = t1+t1
@@ -587,7 +587,7 @@ internal sealed class Isogeny
 
     // Evaluates the isogeny at the point (X:Z) in the domain of the isogeny, given a 2-isogeny phi.
     // Inputs: the projective point P = (X:Z) and the 2-isogeny kernel projetive point Q = (X2:Z2).
-    // Output: the projective point P = phi(P) = (X:Z) in the codomain. 
+    // Output: the projective point P = phi(P) = (X:Z) in the codomain.
     internal void Eval2Isog(PointProj P, PointProj Q)
     {
         ulong[][] t0 = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),

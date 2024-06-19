@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     internal class FalconNist
     {
@@ -134,13 +134,13 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
                     g = new sbyte[n],
                     F = new sbyte[n],
                     G = new sbyte[n];
-            
+
             short[] sig = new short[n];
             ushort[] hm = new ushort[n];
-            
+
             byte[] seed = new byte[48],
                     nonce = new byte[this.noncelen];
-            
+
             byte[] esig = new byte[this.CRYPTO_BYTES - 2 - this.noncelen];
             SHAKE256 sc = new SHAKE256();
             FalconSign signer = new FalconSign(this.common);
@@ -168,16 +168,16 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             u += v;
             v = this.codec.trim_i8_decode(F, 0, this.logn, this.codec.max_FG_bits[this.logn],
                 sksrc, sk + u, CRYPTO_SECRETKEYBYTES - u);
-            if (v == 0) 
+            if (v == 0)
             {
                 throw new InvalidOperationException("F decode failed");
             }
             u += v;
-            if (u != CRYPTO_SECRETKEYBYTES - 1) 
+            if (u != CRYPTO_SECRETKEYBYTES - 1)
             {
                 throw new InvalidOperationException("full Key not used");
             }
-            if (this.vrfy.complete_private(G, 0, f, 0, g, 0, F, 0, this.logn, new ushort[2 * n],0) == 0) 
+            if (this.vrfy.complete_private(G, 0, f, 0, g, 0, F, 0, this.logn, new ushort[2 * n],0) == 0)
             {
                 throw new InvalidOperationException("complete private failed");
             }
@@ -306,7 +306,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
                     return -1;
                 }
             }
-        
+
 
             /*
             * Hash nonce + message into a vector.

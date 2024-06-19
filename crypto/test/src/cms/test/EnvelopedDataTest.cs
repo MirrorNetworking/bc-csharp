@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Text;
 
 using NUnit.Framework;
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.Kisa;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Ntt;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.Kisa;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Ntt;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	[TestFixture]
 	public class EnvelopedDataTest
@@ -496,7 +496,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
-			edGen.AddRecipientInfoGenerator(new KeyTransRecipientInfoGenerator(ReciCert, 
+			edGen.AddRecipientInfoGenerator(new KeyTransRecipientInfoGenerator(ReciCert,
 				new Asn1KeyWrapper("RSA/None/OAEPwithSHA256andMGF1withSHA1Padding", ReciCert)));
 
 			CmsEnvelopedData ed = edGen.Generate(

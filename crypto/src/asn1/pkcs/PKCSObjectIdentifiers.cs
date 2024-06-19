@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Pkcs
+namespace Mirror.BouncyCastle.Asn1.Pkcs
 {
     // TODO[api] Make static
     public abstract class PkcsObjectIdentifiers
@@ -174,7 +174,7 @@ pkcs9(9) 52 }  */
          */
         public static readonly DerObjectIdentifier IdAlgAeadChaCha20Poly1305 = IdAlg.Branch("18");
 
-        
+
         /**
      * id-alg-hss-lms-hashsig OBJECT IDENTIFIER ::= { iso(1)
      *     member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs9(9)

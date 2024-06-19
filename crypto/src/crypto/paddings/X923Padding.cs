@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Paddings
+namespace Mirror.BouncyCastle.Crypto.Paddings
 {
     /// <summary>
     /// A padder that adds X9.23 padding to a block - if a SecureRandom is passed in random padding is assumed,

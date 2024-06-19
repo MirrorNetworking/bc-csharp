@@ -4,20 +4,20 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class ElGamalTest
@@ -296,7 +296,7 @@ namespace Org.BouncyCastle.Tests
 			ElGamalParameters p = a.GenerateParameters();
 
 //			byte[] encodeParams = parameters.GetEncoded();
-			byte[] encodeParams = new ElGamalParameter(p.P, p.G).GetDerEncoded(); 
+			byte[] encodeParams = new ElGamalParameter(p.P, p.G).GetDerEncoded();
 
 //			AlgorithmParameters a2 = AlgorithmParameters.getInstance("ElGamal");
 //			a2.init(encodeParams);
@@ -305,7 +305,7 @@ namespace Org.BouncyCastle.Tests
 
 			// a and a2 should be equivalent!
 //			byte[] encodeParams_2 = a2.GetEncoded();
-			byte[] encodeParams_2 = new ElGamalParameter(p2.P, p2.G).GetDerEncoded(); 
+			byte[] encodeParams_2 = new ElGamalParameter(p2.P, p2.G).GetDerEncoded();
 
 			if (!AreEqual(encodeParams, encodeParams_2))
 			{

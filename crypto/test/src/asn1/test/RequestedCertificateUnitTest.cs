@@ -2,11 +2,11 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.IsisMtt.Ocsp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Asn1.IsisMtt.Ocsp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
 	[TestFixture]
 	public class RequestedCertificateUnitTest

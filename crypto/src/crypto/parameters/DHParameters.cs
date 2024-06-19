@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class DHParameters
 		: ICipherParameters
@@ -90,7 +90,7 @@ namespace Org.BouncyCastle.Crypto.Parameters
 			if (m >= p.BitLength)
 				throw new ArgumentException("m value must be < bitlength of p", "m");
 			if (l != 0)
-			{ 
+			{
                 // TODO Check this against the Java version, which has 'l > p.BitLength' here
 	            if (l >= p.BitLength)
                 	throw new ArgumentException("when l value specified, it must be less than bitlength(p)", "l");

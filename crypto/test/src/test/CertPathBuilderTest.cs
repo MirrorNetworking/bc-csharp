@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class CertPathBuilderTest
@@ -123,7 +123,7 @@ namespace Org.BouncyCastle.Tests
             baseTest();
             v0Test();
         }
-        
+
         public override string Name
         {
             get { return "CertPathBuilder"; }

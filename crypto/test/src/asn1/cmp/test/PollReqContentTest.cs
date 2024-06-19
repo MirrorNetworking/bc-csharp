@@ -2,10 +2,10 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Cmp.Tests
+namespace Mirror.BouncyCastle.Asn1.Cmp.Tests
 {
     [TestFixture]
     public class PollReqContentTest

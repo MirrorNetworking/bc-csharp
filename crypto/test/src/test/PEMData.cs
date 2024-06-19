@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	class PemData
 	{

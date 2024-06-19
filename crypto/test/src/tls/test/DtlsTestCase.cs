@@ -3,9 +3,9 @@ using System.Threading;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     [TestFixture]
     public class DtlsTestCase

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Bcpg.Sig
+namespace Mirror.BouncyCastle.Bcpg.Sig
 {
     /**
      * RFC 4880, Section 5.2.3.25 - Signature Target subpacket.

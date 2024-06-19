@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     // TODO[tls-port] Would rather this be sealed
     /// <summary>Carrier class for context-related parameters needed for creating secrets and ciphers.</summary>

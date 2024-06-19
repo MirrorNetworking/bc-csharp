@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto
+namespace Mirror.BouncyCastle.Tls.Crypto
 {
     /// <summary>The cipher for TLS_NULL_WITH_NULL_NULL.</summary>
     public sealed class TlsNullNullCipher

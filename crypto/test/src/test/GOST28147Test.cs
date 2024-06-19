@@ -3,15 +3,15 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.IO;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	/// <remarks>Basic test class for the GOST28147 cipher</remarks>
 	[TestFixture]
@@ -182,7 +182,7 @@ namespace Org.BouncyCastle.Tests
 				byte[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
 //				IvParameterSpec ivSpec = new IvParameterSpec(new byte[8]);
 				byte[] iv = new byte[8];
-			    
+
 				for (int i = 0; i != oids.Length; i++)
 				{
 					IBufferedCipher c1 = CipherUtilities.GetCipher(oids[i]);
@@ -210,7 +210,7 @@ namespace Org.BouncyCastle.Tests
 			}
 		}
 
-		public override void PerformTest() 
+		public override void PerformTest()
 		{
 			for (int i = 0; i != cipherTests.Length; i += 8)
 			{

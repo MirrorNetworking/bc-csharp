@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     internal class DtlsReliableHandshake
     {

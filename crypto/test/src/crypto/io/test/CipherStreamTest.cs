@@ -3,10 +3,10 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.IO.Tests
+namespace Mirror.BouncyCastle.Crypto.IO.Tests
 {
 	[TestFixture]
 	public class CipherStreamTest

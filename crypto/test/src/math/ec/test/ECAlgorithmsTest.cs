@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.EC;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.EC;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Math.EC.Tests
+namespace Mirror.BouncyCastle.Math.EC.Tests
 {
     [TestFixture]
     public class ECAlgorithmsTest

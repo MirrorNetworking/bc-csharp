@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Implementation of the RFC 3546 3.3. CertChainType.</summary>
     public abstract class CertChainType

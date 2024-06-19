@@ -10,12 +10,12 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
     /// <summary>Sparkle v1.2, based on the current round 3 submission, https://sparkle-lwc.github.io/ .</summary>
     /// <remarks>
@@ -1140,7 +1140,7 @@ namespace Org.BouncyCastle.Crypto.Engines
             Debug.Assert((steps & 1) == 0);
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled)
             {
                 var s0246 = Vector128.Create(state[0], state[2], state[4], state[6]);
                 var s1357 = Vector128.Create(state[1], state[3], state[5], state[7]);
@@ -1348,7 +1348,7 @@ namespace Org.BouncyCastle.Crypto.Engines
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static Vector128<uint> Load128(ReadOnlySpan<uint> t)
         {
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
                 return MemoryMarshal.Read<Vector128<uint>>(MemoryMarshal.AsBytes(t));
 
             return Vector128.Create(t[0], t[1], t[2], t[3]);
@@ -1358,7 +1358,7 @@ namespace Org.BouncyCastle.Crypto.Engines
         private static void Store128(Vector128<uint> s, Span<uint> t)
         {
             var b = MemoryMarshal.AsBytes(t);
-            if (Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 MemoryMarshal.Write(b, ref s);
                 return;

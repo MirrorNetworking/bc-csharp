@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.X9
+namespace Mirror.BouncyCastle.Asn1.X9
 {
     /**
      * ANS.1 def for Diffie-Hellman key exchange OtherInfo structure. See

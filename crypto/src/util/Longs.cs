@@ -7,9 +7,9 @@ using System.Numerics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     public static class Longs
     {

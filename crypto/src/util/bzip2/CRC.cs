@@ -24,7 +24,7 @@
 
 using System.Diagnostics;
 
-namespace Org.BouncyCastle.Utilities.Bzip2
+namespace Mirror.BouncyCastle.Utilities.Bzip2
 {
     /**
     * A simple class the hold and calculate the CRC for sanity checking

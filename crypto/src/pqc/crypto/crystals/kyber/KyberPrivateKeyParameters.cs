@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Kyber
 {
     public sealed class KyberPrivateKeyParameters
         : KyberKeyParameters
@@ -32,7 +32,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Kyber
             m_t = Arrays.CopyOfRange(encoding, index, index + eng.IndCpaPublicKeyBytes - KyberEngine.SymBytes); index += eng.IndCpaPublicKeyBytes - KyberEngine.SymBytes;
             m_rho = Arrays.CopyOfRange(encoding, index, index + 32); index += 32;
             m_hpk = Arrays.CopyOfRange(encoding, index, index + 32); index += 32;
-            m_nonce = Arrays.CopyOfRange(encoding, index, index + KyberEngine.SymBytes);       
+            m_nonce = Arrays.CopyOfRange(encoding, index, index + KyberEngine.SymBytes);
         }
 
         public byte[] GetEncoded() => Arrays.ConcatenateAll(m_s, m_t, m_rho, m_hpk, m_nonce);

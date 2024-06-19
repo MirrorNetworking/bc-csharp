@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math
+namespace Mirror.BouncyCastle.Math
 {
     /// <summary>Utility methods for generating primes and testing for primality.</summary>
     public static class Primes
@@ -445,7 +445,7 @@ namespace Org.BouncyCastle.Math
                     /*
                      * This is an optimization of the original algorithm, using trial division to screen out
                      * many non-primes quickly.
-                     * 
+                     *
                      * NOTE: 'primeSeed' is still incremented as if we performed the full check!
                      */
                     if (ImplHasAnySmallFactors(c))

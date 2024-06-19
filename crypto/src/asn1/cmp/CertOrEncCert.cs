@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Crmf;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
 	public class CertOrEncCert
 		: Asn1Encodable, IAsn1Choice

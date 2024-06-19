@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto.Encodings;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto.Encodings;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Crypto.Operators
+namespace Mirror.BouncyCastle.Crypto.Operators
 {
     public class Asn1KeyWrapper
         : IKeyWrapper
@@ -167,7 +167,7 @@ namespace Org.BouncyCastle.Crypto.Operators
     internal class KeyWrapperUtil
     {
         //
-        // Provider 
+        // Provider
         //
         private static readonly Dictionary<string, WrapperProvider> m_providerMap =
             new Dictionary<string, WrapperProvider>(StringComparer.OrdinalIgnoreCase);

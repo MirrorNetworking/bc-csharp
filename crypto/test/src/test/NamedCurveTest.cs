@@ -2,21 +2,21 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Anssi;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.GM;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.TeleTrust;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Anssi;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.GM;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.TeleTrust;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class NamedCurveTest
@@ -60,7 +60,7 @@ namespace Org.BouncyCastle.Tests
             IAsymmetricCipherKeyPairGenerator g = GeneratorUtilities.GetKeyPairGenerator("ECDH");
 
 //			g.initialize(ecSpec, new SecureRandom());
-            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom())); 
+            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom()));
 
             //
             // a side
@@ -160,7 +160,7 @@ namespace Org.BouncyCastle.Tests
             IAsymmetricCipherKeyPairGenerator g = GeneratorUtilities.GetKeyPairGenerator("ECDSA");
 
 //			g.initialize(ecSpec, new SecureRandom());
-            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom())); 
+            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom()));
 
             ISigner sgr = SignerUtilities.GetSigner("ECDSA");
             AsymmetricCipherKeyPair pair = g.GenerateKeyPair();
@@ -268,7 +268,7 @@ namespace Org.BouncyCastle.Tests
             ECDomainParameters ecSpec = GetCurveParameters(name);
 
             IAsymmetricCipherKeyPairGenerator g = GeneratorUtilities.GetKeyPairGenerator(keyAlgorithm);
-            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom())); 
+            g.Init(new ECKeyGenerationParameters(ecSpec, new SecureRandom()));
 
             AsymmetricCipherKeyPair pair = g.GenerateKeyPair();
             AsymmetricKeyParameter sKey = pair.Private;
@@ -350,7 +350,7 @@ namespace Org.BouncyCastle.Tests
         {
             get { return "NamedCurve"; }
         }
-        
+
         public override void PerformTest()
         {
             doTestCurve("prime192v1"); // X9.62

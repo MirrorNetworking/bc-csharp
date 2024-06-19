@@ -3,16 +3,16 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.OpenSsl.Tests
+namespace Mirror.BouncyCastle.OpenSsl.Tests
 {
     /**
     * basic class for reading test.pem - the password is "secret"
@@ -102,25 +102,25 @@ namespace Org.BouncyCastle.OpenSsl.Tests
                 // ECKey
                 //
                 pemRd = OpenPemResource("eckey.pem", null);
-    
+
                 // TODO Resolve return type issue with EC keys and fix PemReader to return parameters
 //				ECNamedCurveParameterSpec spec = (ECNamedCurveParameterSpec)pemRd.ReadObject();
-    
+
                 pair = (AsymmetricCipherKeyPair)pemRd.ReadObject();
                 ISigner sgr = SignerUtilities.GetSigner("ECDSA");
-    
+
                 sgr.Init(true, pair.Private);
-    
+
                 byte[] message = new byte[] { (byte)'a', (byte)'b', (byte)'c' };
-    
+
                 sgr.BlockUpdate(message, 0, message.Length);
-    
+
                 byte[] sigBytes = sgr.GenerateSignature();
-    
+
                 sgr.Init(false, pair.Public);
-    
+
                 sgr.BlockUpdate(message, 0, message.Length);
-    
+
                 if (!sgr.VerifySignature(sigBytes))
                 {
                     Fail("EC verification failed");
@@ -131,7 +131,7 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 //				{
 //					Fail("wrong algorithm name on public got: " + ((ECPublicKeyParameters) pair.Public).AlgorithmName);
 //				}
-//	
+//
 //				if (!((ECPrivateKeyParameters) pair.Private).AlgorithmName.Equals("ECDSA"))
 //				{
 //					Fail("wrong algorithm name on private got: " + ((ECPrivateKeyParameters) pair.Private).AlgorithmName);
@@ -254,7 +254,7 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 
         private void keyPairTest(
             string					name,
-            AsymmetricCipherKeyPair	pair) 
+            AsymmetricCipherKeyPair	pair)
         {
             MemoryStream bOut = new MemoryStream();
             using (var pWrt = new PemWriter(new StreamWriter(bOut)))

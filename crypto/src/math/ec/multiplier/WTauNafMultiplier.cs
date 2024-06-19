@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Math.EC.Abc;
+using Mirror.BouncyCastle.Math.EC.Abc;
 
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     /**
     * Class implementing the WTNAF (Window
@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
         internal static readonly string PRECOMP_NAME = "bc_wtnaf";
 
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by <code>k</code> using the reduced <code>&#964;</code>-adic NAF (RTNAF)
         * method.
         * @param p The AbstractF2mPoint to multiply.
@@ -37,7 +37,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
         }
 
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by an element <code>&#955;</code> of <code><b>Z</b>[&#964;]</code> using
         * the <code>&#964;</code>-adic NAF (TNAF) method.
         * @param p The AbstractF2mPoint to multiply.
@@ -56,9 +56,9 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
 
             return MultiplyFromWTnaf(p, u);
         }
-        
+
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by an element <code>&#955;</code> of <code><b>Z</b>[&#964;]</code>
         * using the window <code>&#964;</code>-adic NAF (TNAF) method, given the
         * WTNAF of <code>&#955;</code>.
@@ -82,7 +82,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
                 puNeg[i] = (AbstractF2mPoint)pu[i].Negate();
             }
 
-            
+
             // q = infinity
             AbstractF2mPoint q = (AbstractF2mPoint) p.Curve.Infinity;
 

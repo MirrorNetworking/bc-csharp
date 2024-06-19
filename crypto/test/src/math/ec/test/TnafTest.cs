@@ -3,12 +3,12 @@
 //
 //using NUnit.Framework;
 //
-//using Org.BouncyCastle.Asn1.Sec;
-//using Org.BouncyCastle.Asn1.X9;
-//using Org.BouncyCastle.Math.EC.Multiplier;
-//using Org.BouncyCastle.Utilities.Date;
+//using Mirror.BouncyCastle.Asn1.Sec;
+//using Mirror.BouncyCastle.Asn1.X9;
+//using Mirror.BouncyCastle.Math.EC.Multiplier;
+//using Mirror.BouncyCastle.Utilities.Date;
 //
-//namespace Org.BouncyCastle.Math.EC.Tests
+//namespace Mirror.BouncyCastle.Math.EC.Tests
 //{
 //	[TestFixture]
 //	public class TnafTest
@@ -16,7 +16,7 @@
 //		private Random m_rand = new Random();
 //
 //		private string ecPointToString(
-//			ECPoint p) 
+//			ECPoint p)
 //		{
 //			StringBuilder sb = new StringBuilder("x = ");
 //			sb.Append(p.X.ToBigInteger().ToString());
@@ -36,7 +36,7 @@
 //			return result;
 //		}
 //
-//		private void ImplTestMultiplyTnaf(string curveName) 
+//		private void ImplTestMultiplyTnaf(string curveName)
 //		{
 //			X9ECParameters x9ECParameters = SecNamedCurves.GetByName(curveName);
 //
@@ -80,7 +80,7 @@
 //		}
 //
 //		[Test, Ignore]
-//		public void TestMultiplyTnaf() 
+//		public void TestMultiplyTnaf()
 //		{
 //			Console.WriteLine("\n\n\n*****  Start test multiplications on F2m (Koblitz) *****");
 //			ImplTestMultiplyTnaf("sect163k1");
@@ -91,7 +91,7 @@
 //			ImplTestMultiplyTnaf("sect571k1");
 //		}
 //
-//		private void ImplTestMultiplyWnaf(string curveName) 
+//		private void ImplTestMultiplyWnaf(string curveName)
 //		{
 //			X9ECParameters x9ECParameters = SecNamedCurves.GetByName(curveName);
 //
@@ -128,7 +128,7 @@
 //		}
 //
 //		[Test, Ignore]
-//		public void TestMultiplyWnaf() 
+//		public void TestMultiplyWnaf()
 //		{
 //			Console.WriteLine("\n\n\n*****  Start test multiplications on F2m *****");
 //			ImplTestMultiplyWnaf("sect113r1");

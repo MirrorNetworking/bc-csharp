@@ -4,9 +4,9 @@ using System.Buffers;
 #endif
 using System.IO;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /**
      * Der BMPString object.

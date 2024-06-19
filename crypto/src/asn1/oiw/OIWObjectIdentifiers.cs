@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Oiw
+namespace Mirror.BouncyCastle.Asn1.Oiw
 {
     // TODO[api] Make static
     public abstract class OiwObjectIdentifiers

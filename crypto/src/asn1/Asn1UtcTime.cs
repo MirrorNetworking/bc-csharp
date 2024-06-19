@@ -3,10 +3,10 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /// <summary>UTCTime ASN.1 type</summary>
     public class Asn1UtcTime

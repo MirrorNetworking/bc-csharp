@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Utilities.IO.Pem
+namespace Mirror.BouncyCastle.Utilities.IO.Pem
 {
 	public class PemReader
 		: IDisposable
@@ -42,7 +42,7 @@ namespace Org.BouncyCastle.Utilities.IO.Pem
 
         #endregion
 
-        public TextReader Reader 
+        public TextReader Reader
 		{
 			get { return m_reader; }
 		}
@@ -51,7 +51,7 @@ namespace Org.BouncyCastle.Utilities.IO.Pem
 		/// <returns>
 		/// A <see cref="PemObject"/>
 		/// </returns>
-		/// <exception cref="IOException"></exception>	
+		/// <exception cref="IOException"></exception>
 		public PemObject ReadPemObject()
         {
 			//
@@ -62,7 +62,7 @@ namespace Org.BouncyCastle.Utilities.IO.Pem
 			{
 				// Seek a leading dash, ignore anything up to that point.
 				if (!SeekDash())
-					return null; 
+					return null;
 
 				// consume dash [-----]BEGIN ...
 				if (!ConsumeDash())
@@ -275,7 +275,7 @@ namespace Org.BouncyCastle.Utilities.IO.Pem
         {
 			int c;
 			while ((c = Read()) >= 0)
-			{	
+			{
 				if (skipWhiteSpace && c <= ' ')
 					continue;
 

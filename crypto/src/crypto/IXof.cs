@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     /// <remarks>
     /// With FIPS PUB 202 a new kind of message digest was announced which supported extendable output, or variable digest sizes.

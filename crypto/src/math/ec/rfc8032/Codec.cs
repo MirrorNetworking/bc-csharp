@@ -3,7 +3,7 @@
 using System.Buffers.Binary;
 #endif
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     internal static class Codec
     {

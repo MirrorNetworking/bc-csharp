@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
 	public class OriginatorInformation
 	{

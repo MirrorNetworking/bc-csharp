@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     internal static class Wnaf
     {

@@ -3,10 +3,10 @@
 #if NET6_0_OR_GREATER
 using System.IO.Compression;
 #else
-using Org.BouncyCastle.Utilities.Zlib;
+using Mirror.BouncyCastle.Utilities.Zlib;
 #endif
 
-namespace Org.BouncyCastle.Utilities.IO.Compression
+namespace Mirror.BouncyCastle.Utilities.IO.Compression
 {
     internal static class Zip
     {

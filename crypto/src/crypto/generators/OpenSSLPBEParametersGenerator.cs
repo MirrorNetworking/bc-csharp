@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
 	/// <description>
 	/// Generator for PBE derived keys and IVs as usd by OpenSSL. Originally this scheme was a simple extension of
@@ -47,7 +47,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 
 		/**
 		 * Initialise - note the iteration count for this algorithm is fixed at 1.
-		 * 
+		 *
 		 * @param password password to use.
 		 * @param salt salt to use.
 		 */
@@ -80,7 +80,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 			byte[] buf = new byte[digest.GetDigestSize()];
 			byte[] key = new byte[bytesNeeded];
 			int offset = 0;
-        
+
 			for (;;)
 			{
 				digest.BlockUpdate(mPassword, 0, mPassword.Length);

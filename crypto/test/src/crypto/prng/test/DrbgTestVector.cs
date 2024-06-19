@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Prng.Test
+namespace Mirror.BouncyCastle.Crypto.Prng.Test
 {
     public class DrbgTestVector
     {

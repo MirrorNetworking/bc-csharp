@@ -3,16 +3,16 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	[TestFixture]
 	public class AuthenticatedDataTest
@@ -68,66 +68,66 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			get { return reciECCert == null ? (reciECCert = CmsTestUtil.MakeCertificate(ReciECKP, ReciDN, SignKP, SignDN)) : reciECCert; }
 		}
-		
+
 //		private static string          _signDN;
 //		private static KeyPair _signKP;
 //		private static X509Certificate _signCert;
-//	
+//
 //		private static string          _origDN;
 //		private static KeyPair         _origKP;
 //		private static X509Certificate _origCert;
-//	
+//
 //		private static string          _reciDN;
 //		private static KeyPair         _reciKP;
 //		private static X509Certificate _reciCert;
-//	
+//
 //		private static KeyPair         _origEcKP;
 //		private static KeyPair         _reciEcKP;
 //		private static X509Certificate _reciEcCert;
-//	
+//
 //		private static bool         _initialised = false;
-//	
+//
 //		public bool DEBUG = true;
-//	
+//
 //		private static void init()
 //		{
 //			if (!_initialised)
 //			{
 //			_initialised = true;
-//			
+//
 //			_signDN   = "O=Bouncy Castle, C=AU";
 //			_signKP   = CmsTestUtil.makeKeyPair();
 //			_signCert = CmsTestUtil.makeCertificate(_signKP, _signDN, _signKP, _signDN);
-//			
+//
 //			_origDN   = "CN=Bob, OU=Sales, O=Bouncy Castle, C=AU";
 //			_origKP   = CmsTestUtil.makeKeyPair();
 //			_origCert = CmsTestUtil.makeCertificate(_origKP, _origDN, _signKP, _signDN);
-//			
+//
 //			_reciDN   = "CN=Doug, OU=Sales, O=Bouncy Castle, C=AU";
 //			_reciKP   = CmsTestUtil.makeKeyPair();
 //			_reciCert = CmsTestUtil.makeCertificate(_reciKP, _reciDN, _signKP, _signDN);
-//			
+//
 //			_origEcKP = CmsTestUtil.makeEcDsaKeyPair();
 //			_reciEcKP = CmsTestUtil.makeEcDsaKeyPair();
 //			_reciEcCert = CmsTestUtil.makeCertificate(_reciEcKP, _reciDN, _signKP, _signDN);
 //			}
 //		}
-//	
+//
 //		public void setUp()
 //		{
 //			init();
 //		}
-//		
+//
 //		public AuthenticatedDataTest(string name)
 //		{
 //		super(name);
 //		}
-//		
+//
 //		public static Test suite()
 //		throws Exception
 //		{
 //		init();
-//		
+//
 //		return new CMSTestSetup(new TestSuite(AuthenticatedDataTest.class));
 //		}
 
@@ -137,19 +137,19 @@ namespace Org.BouncyCastle.Cms.Tests
 			tryKeyTrans(CmsAuthenticatedDataGenerator.DesEde3Cbc);
 			tryKeyTransWithOaepOverride(CmsAuthenticatedDataGenerator.DesEde3Cbc);
 		}
-		
+
 		[Test]
 		public void TestKEKDESede()
 		{
 			tryKekAlgorithm(CmsTestUtil.MakeDesEde192Key(), new DerObjectIdentifier("1.2.840.113549.1.9.16.3.6"));
 		}
-		
+
 		[Test]
 		public void TestPasswordAES256()
 		{
 			passwordTest(CmsAuthenticatedDataGenerator.Aes256Cbc);
 		}
-		
+
 		[Test]
 		public void TestECKeyAgree()
 		{
@@ -181,7 +181,7 @@ namespace Org.BouncyCastle.Cms.Tests
 				Assert.IsTrue(Arrays.AreEqual(ad.GetMac(), recipient.GetMac()));
 			}
 		}
-		
+
 		[Test]
 		public void TestEncoding()
 		{
@@ -318,7 +318,7 @@ namespace Org.BouncyCastle.Cms.Tests
 				Assert.IsTrue(Arrays.AreEqual(ad.GetMac(), recipient.GetMac()));
 			}
 		}
-		
+
 		private void passwordTest(string algorithm)
 		{
 			byte[] data = Hex.Decode("504b492d4320434d5320456e76656c6f706564446174612053616d706c65");
@@ -326,7 +326,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			CmsAuthenticatedDataGenerator adGen = new CmsAuthenticatedDataGenerator();
 
 			adGen.AddPasswordRecipient(new Pkcs5Scheme2PbeKey("password".ToCharArray(), new byte[20], 5), algorithm);
-		
+
 			CmsAuthenticatedData ad = adGen.Generate(
 				new CmsProcessableByteArray(data),
 				CmsAuthenticatedDataGenerator.DesEde3Cbc);

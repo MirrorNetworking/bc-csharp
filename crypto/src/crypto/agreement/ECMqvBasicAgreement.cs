@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
 
-namespace Org.BouncyCastle.Crypto.Agreement
+namespace Mirror.BouncyCastle.Crypto.Agreement
 {
     // TODO[api] sealed
     public class ECMqvBasicAgreement

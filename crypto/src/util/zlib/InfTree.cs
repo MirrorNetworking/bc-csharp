@@ -10,8 +10,8 @@ modification, are permitted provided that the following conditions are met:
   1. Redistributions of source code must retain the above copyright notice,
      this list of conditions and the following disclaimer.
 
-  2. Redistributions in binary form must reproduce the above copyright 
-     notice, this list of conditions and the following disclaimer in 
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
      the documentation and/or other materials provided with the distribution.
 
   3. The names of the authors may not be used to endorse or promote products
@@ -34,7 +34,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * and contributors of zlib.
  */
 
-namespace Org.BouncyCastle.Utilities.Zlib {
+namespace Mirror.BouncyCastle.Utilities.Zlib {
 
     internal sealed class InfTree{
 
@@ -222,14 +222,14 @@ namespace Org.BouncyCastle.Utilities.Zlib {
         const int BMAX=15;         // maximum bit length of any code
 
         int[] hn = null;  // hufts used in space
-        int[] v = null;   // work area for huft_build 
+        int[] v = null;   // work area for huft_build
         int[] c = null;   // bit length count table
         int[] r = null;   // table entry for structure assignment
         int[] u = null;   // table stack
         int[] x = null;   // bit offsets, then code stack
 
         private int huft_build(int[] b, // code lengths in bits (all assumed <= BMAX)
-            int bindex, 
+            int bindex,
             int n,   // number of codes (assumed <= 288)
             int s,   // number of simple-valued codes (0..s-1)
             int[] d, // list of base values for non-simple codes
@@ -364,7 +364,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
                         }
                         u[h] = q = /*hp+*/ hn[0];   // DEBUG
                         hn[0] += z;
- 
+
                         // connect to last table, if there is one
                         if(h!=0){
                             x[h]=i;           // save pattern for backing up
@@ -443,7 +443,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
             int nd,   // number of distance codes
             int[] c,  // that many (total) code lengths
             int[] bl, // literal desired/actual bit depth
-            int[] bd, // distance desired/actual bit depth 
+            int[] bd, // distance desired/actual bit depth
             int[] tl, // literal/length tree result
             int[] td, // distance tree result
             int[] hp, // space for trees
@@ -491,7 +491,7 @@ namespace Org.BouncyCastle.Utilities.Zlib {
         internal static int inflate_trees_fixed(int[] bl,  //literal desired/actual bit depth
             int[] bd,  //distance desired/actual bit depth
             int[][] tl,//literal/length tree result
-            int[][] td,//distance tree result 
+            int[][] td,//distance tree result
             ZStream z  //for memory allocation
             ){
             bl[0]=fixed_bl;

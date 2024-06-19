@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.X9
+namespace Mirror.BouncyCastle.Asn1.X9
 {
     /// <summary>Elliptic curve registry for the curves defined in X.962 EC-DSA.</summary>
     public static class X962NamedCurves
@@ -270,7 +270,7 @@ namespace Org.BouncyCastle.Asn1.X9
             {
                 byte[] S = Hex.DecodeStrict("D2C0FB15760860DEF1EEF4D696E6768756151754");
                 ECCurve curve = Curve;
-    
+
                 X9ECPoint G = ConfigureBasepoint(curve,
                     "0307AF69989546103D79329FCC3D74880F33BBE803CB");
 

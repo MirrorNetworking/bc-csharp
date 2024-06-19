@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     /** This is a [Transport] wrapper which causes the first retransmission of the second flight of a server
      * handshake to be dropped. */

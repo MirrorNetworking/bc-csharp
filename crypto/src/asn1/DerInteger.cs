@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     public class DerInteger
         : Asn1Object
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.Asn1
             }
         }
 
-        public const string AllowUnsafeProperty = "Org.BouncyCastle.Asn1.AllowUnsafeInteger";
+        public const string AllowUnsafeProperty = "Mirror.BouncyCastle.Asn1.AllowUnsafeInteger";
 
         internal static bool AllowUnsafe()
         {

@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class ECGost3410Parameters
         : ECNamedDomainParameters

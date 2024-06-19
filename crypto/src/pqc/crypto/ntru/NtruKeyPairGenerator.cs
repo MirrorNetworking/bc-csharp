@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     public class NtruKeyPairGenerator : IAsymmetricCipherKeyPairGenerator
     {

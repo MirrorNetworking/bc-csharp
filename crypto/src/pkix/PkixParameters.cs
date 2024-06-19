@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/// <summary>
 	/// Summary description for PkixParameters.

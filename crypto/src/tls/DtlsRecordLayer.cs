@@ -3,11 +3,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     internal class DtlsRecordLayer
         : DatagramTransport
@@ -49,7 +49,7 @@ namespace Org.BouncyCastle.Tls
             if (HandshakeType.client_hello != msgType)
                 return -1;
 
-            // NOTE: We ignore/drop any data after the first record 
+            // NOTE: We ignore/drop any data after the first record
             return length;
         }
 
@@ -323,7 +323,7 @@ namespace Org.BouncyCastle.Tls
                 waitMillis = Timeout.ConstrainWaitMillis(waitMillis, m_heartbeatTimeout, currentTimeMillis);
                 waitMillis = Timeout.ConstrainWaitMillis(waitMillis, m_heartbeatResendTimeout, currentTimeMillis);
 
-                // NOTE: Guard against bad logic giving a negative value 
+                // NOTE: Guard against bad logic giving a negative value
                 if (waitMillis < 0)
                 {
                     waitMillis = 1;
@@ -422,7 +422,7 @@ namespace Org.BouncyCastle.Tls
                 waitMillis = Timeout.ConstrainWaitMillis(waitMillis, m_heartbeatTimeout, currentTimeMillis);
                 waitMillis = Timeout.ConstrainWaitMillis(waitMillis, m_heartbeatResendTimeout, currentTimeMillis);
 
-                // NOTE: Guard against bad logic giving a negative value 
+                // NOTE: Guard against bad logic giving a negative value
                 if (waitMillis < 0)
                 {
                     waitMillis = 1;
@@ -760,7 +760,7 @@ namespace Org.BouncyCastle.Tls
             {
                 /*
                  * Special-case handling for retransmitted ClientHello records.
-                 * 
+                 *
                  * TODO Revisit how 'readVersion' works, since this is quite awkward.
                  */
                 bool isClientHelloFragment =

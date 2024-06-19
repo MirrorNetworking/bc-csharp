@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
+namespace Mirror.BouncyCastle.Pqc.Crypto.NtruPrime
 {
     public class NtruLPRimeKemExtractor : IEncapsulatedSecretExtractor
     {

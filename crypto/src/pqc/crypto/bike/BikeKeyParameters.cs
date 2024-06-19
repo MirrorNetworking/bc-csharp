@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto;
+﻿using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Bike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Bike
 {
     public abstract class BikeKeyParameters
         : AsymmetricKeyParameter

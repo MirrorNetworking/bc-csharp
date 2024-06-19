@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Math.EC;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     /// <summary>Public parameters for an SM2 key exchange.</summary>
     /// <remarks>In this case the ephemeralPublicKey provides the random point used in the algorithm.</remarks>

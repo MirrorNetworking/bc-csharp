@@ -2,13 +2,13 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Agreement.JPake;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Agreement.JPake;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Agreement.Tests
+namespace Mirror.BouncyCastle.Crypto.Agreement.Tests
 {
     [TestFixture]
     public class JPakeUtilitiesTest

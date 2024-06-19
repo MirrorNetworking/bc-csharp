@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Frodo
+namespace Mirror.BouncyCastle.Pqc.Crypto.Frodo
 {
     public sealed class FrodoParameters
         : ICipherParameters
@@ -86,4 +86,4 @@ namespace Org.BouncyCastle.Pqc.Crypto.Frodo
         [Obsolete("Will be removed")]
         public FrodoMatrixGenerator MGen => mGen;
     }
-} 
+}

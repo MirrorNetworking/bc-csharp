@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
+namespace Mirror.BouncyCastle.Pqc.Crypto.NtruPrime
 {
     public sealed class NtruLPRimePublicKeyParameters
         : NtruLPRimeKeyParameters

@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.Asn1.Nist
+namespace Mirror.BouncyCastle.Asn1.Nist
 {
     /// <summary>Elliptic curve registry for NIST curves.</summary>
     public static class NistNamedCurves

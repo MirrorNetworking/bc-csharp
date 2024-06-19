@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
     internal sealed class Fpx
     {
@@ -241,7 +241,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         // Partial Montgomery inversion via the binary GCD algorithm.
         private uint fpinv_mont_bingcd_partial(ulong[] a, ulong[] x1)
         {
-            // TODO Use faster (and optionally constant-time) inversion in Org.BouncyCastle.Math.Raw.Mod
+            // TODO Use faster (and optionally constant-time) inversion in Mirror.BouncyCastle.Math.Raw.Mod
 
             ulong[] u = new ulong[engine.param.NWORDS_FIELD],
                    v = new ulong[engine.param.NWORDS_FIELD],
@@ -949,7 +949,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         // Algorithm 3: Explicit Quadratic Modular inverse modulo 2^m from Dumas'12: http://arxiv.org/pdf/1209.6626.pdf
         // If the input is invalid (even), the function outputs c = a.
         internal void inv_mod_orderA(ulong[] a, ulong[] c)
-        { 
+        {
             uint i, f, s = 0;
             ulong[] am1 = new ulong[engine.param.NWORDS_ORDER],
                     tmp1 = new ulong[engine.param.NWORDS_ORDER],
@@ -1112,7 +1112,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
                    v = new ulong[engine.param.NWORDS_ORDER],
                    x2 = new ulong[engine.param.NWORDS_ORDER];
             uint cwords;  // number of words necessary for x1, x2
-        
+
             copy_words(a, u, engine.param.NWORDS_ORDER);
             copy_words(order, v, engine.param.NWORDS_ORDER);
             copy_words(x2, x1, engine.param.NWORDS_ORDER);
@@ -1276,7 +1276,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         }
 
         internal byte cmp_f2elm(ulong[][] x, ulong[][] y)
-        { // Comparison of two GF(p^2) elements in constant time. 
+        { // Comparison of two GF(p^2) elements in constant time.
             // Is x != y? return -1 if condition is true, 0 otherwise.
             ulong[][] a = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD),
                 b = SikeUtilities.InitArray(2, engine.param.NWORDS_FIELD);
@@ -1589,7 +1589,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         internal ulong mp_sub(ulong[] a, ulong[] b, ulong[] c, uint nwords)
         {
             ulong i, borrow = 0;
-        
+
             for (i = 0; i < nwords; i++)
             {
                 //SUBC
@@ -1622,11 +1622,11 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         }
 
 
-        // Multiprecision subtraction followed by addition with p*2^MAXBITS_FIELD, c = a-b+(p*2^MAXBITS_FIELD) if a-b < 0, otherwise c=a-b. 
+        // Multiprecision subtraction followed by addition with p*2^MAXBITS_FIELD, c = a-b+(p*2^MAXBITS_FIELD) if a-b < 0, otherwise c=a-b.
         private void mp_subaddfast(ulong[] a, ulong[] b, ulong[] c)
         {
             ulong[] t1 = new ulong[engine.param.NWORDS_FIELD];
-        
+
             ulong mask = 0 - (ulong) mp_sub(a, b, c, 2*engine.param.NWORDS_FIELD);
             for (uint i = 0; i < engine.param.NWORDS_FIELD; i++)
             {
@@ -1988,8 +1988,8 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             }
 
             if (engine.param.NBITS_FIELD == 610)
-            {   
-                ulong[][] t = SikeUtilities.InitArray(31, engine.param.NWORDS_FIELD); 
+            {
+                ulong[][] t = SikeUtilities.InitArray(31, engine.param.NWORDS_FIELD);
                 ulong[] tt = new ulong[engine.param.NWORDS_FIELD];
 
                 // Precomputed table

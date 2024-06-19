@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Tsp
+namespace Mirror.BouncyCastle.Asn1.Tsp
 {
     /**
      * Implementation of the Archive Timestamp type defined in RFC4998.

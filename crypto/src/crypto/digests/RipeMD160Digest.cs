@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     /**
     * implementation of RipeMD see,
@@ -441,7 +441,7 @@ namespace Org.BouncyCastle.Crypto.Digests
                 X[i] = 0;
             }
         }
-		
+
 		public override IMemoable Copy()
 		{
 			return new RipeMD160Digest(this);

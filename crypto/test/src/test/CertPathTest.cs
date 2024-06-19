@@ -4,15 +4,15 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class CertPathTest

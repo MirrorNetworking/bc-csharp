@@ -4,12 +4,12 @@ using System.Threading;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Tls.Crypto.Impl.BC;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto.Impl.BC;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     [TestFixture]
     public class DtlsProtocolTest

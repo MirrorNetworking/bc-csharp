@@ -2,11 +2,11 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Esf;
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Esf;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     public class SignerLocationUnitTest

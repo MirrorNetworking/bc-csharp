@@ -4,10 +4,10 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp.Tests
 {
 	/**
 	* GPG compatability test vectors

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class CertPathValidatorTest
@@ -176,7 +176,7 @@ namespace Org.BouncyCastle.Tests
             {
                 Fail("checker not evaluated for each certificate");
             }
-            
+
             if (!subjectPublicKey.Equals(finalCert.GetPublicKey()))
             {
                 Fail("wrong public key returned");
@@ -248,7 +248,7 @@ namespace Org.BouncyCastle.Tests
             }
             catch (Exception e)
             {
-                if (e is PkixCertPathValidatorException 
+                if (e is PkixCertPathValidatorException
                     && e.Message.StartsWith("Could not validate certificate signature."))
                 {
                     return;

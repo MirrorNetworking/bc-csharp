@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Mozilla
+namespace Mirror.BouncyCastle.Asn1.Mozilla
 {
     /// <summary>
     /// For parsing the SignedPublicKeyAndChallenge created by the KEYGEN tag included by Mozilla based browsers.

@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.EC.Rfc7748;
+using Mirror.BouncyCastle.Math.EC.Rfc7748;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     /// <summary>Support class for X448 using the BC light-weight library.</summary>
     public class BcX448

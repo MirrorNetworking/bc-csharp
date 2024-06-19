@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	/// <summary>This exception is thrown if a buffer that is meant to have output copied into it turns out to be too
 	/// short, or if we've been given insufficient input.</summary>

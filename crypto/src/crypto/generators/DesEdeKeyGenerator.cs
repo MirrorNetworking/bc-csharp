@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     public class DesEdeKeyGenerator
 		: DesKeyGenerator
@@ -10,7 +10,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 		public DesEdeKeyGenerator()
 		{
 		}
-            
+
 		internal DesEdeKeyGenerator(
 			int defaultStrength)
 			: base(defaultStrength)

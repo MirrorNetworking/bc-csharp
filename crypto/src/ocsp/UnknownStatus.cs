@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Ocsp
+namespace Mirror.BouncyCastle.Ocsp
 {
 	/**
 	 * wrapper for the UnknownInfo object

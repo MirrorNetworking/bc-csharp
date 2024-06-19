@@ -6,7 +6,7 @@
     <SignAssembly>false</SignAssembly>
     <EnableDefaultItems>false</EnableDefaultItems>
     <NoWarn>618;1591</NoWarn>
-    <RootNamespace>Org.BouncyCastle</RootNamespace>
+    <RootNamespace>Mirror.BouncyCastle</RootNamespace>
     <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
     <Configurations>Debug;Release;Publish</Configurations>
   </PropertyGroup>

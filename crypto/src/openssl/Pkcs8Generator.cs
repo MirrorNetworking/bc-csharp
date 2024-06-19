@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.IO.Pem;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.IO.Pem;
 
-namespace Org.BouncyCastle.OpenSsl
+namespace Mirror.BouncyCastle.OpenSsl
 {
 	public class Pkcs8Generator
 		: PemObjectGenerator
@@ -90,7 +90,7 @@ namespace Org.BouncyCastle.OpenSsl
 			{
 				EncryptedPrivateKeyInfo epki = EncryptedPrivateKeyInfoFactory.CreateEncryptedPrivateKeyInfo(
 					algorithm, password, salt, iterationCount, privKey);
-	
+
 				return new PemObject("ENCRYPTED PRIVATE KEY", epki.GetEncoded());
 			}
 			catch (Exception e)

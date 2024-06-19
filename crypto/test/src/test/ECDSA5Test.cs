@@ -2,16 +2,16 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class ECDsa5Test
@@ -142,7 +142,7 @@ namespace Org.BouncyCastle.Tests
         {
             BigInteger r = new BigInteger("21596333210419611985018340039034612628818151486841789642455876922391552");
             BigInteger s = new BigInteger("197030374000731686738334997654997227052849804072198819102649413465737174");
-        
+
             byte[] kData = new BigInteger("171278725565216523967285789236956265265265235675811949404040041670216363").ToByteArrayUnsigned();
 
             SecureRandom k = FixedSecureRandom.From(kData);

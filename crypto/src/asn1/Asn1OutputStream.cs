@@ -6,9 +6,9 @@ using System.Buffers.Binary;
 using System.Numerics;
 #endif
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     public class Asn1OutputStream
         : FilterStream

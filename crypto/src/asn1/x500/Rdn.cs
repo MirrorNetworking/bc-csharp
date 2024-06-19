@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Asn1.X500
+namespace Mirror.BouncyCastle.Asn1.X500
 {
     /// <summary>Holding class for a single Relative Distinguished Name (RDN).</summary>
     public class Rdn

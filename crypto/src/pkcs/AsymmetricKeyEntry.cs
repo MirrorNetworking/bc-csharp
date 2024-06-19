@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
     public class AsymmetricKeyEntry
         : Pkcs12Entry

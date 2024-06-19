@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     /// <summary>Builder for a CertificateRepMessage.</summary>
     public class CertificateRepMessageBuilder

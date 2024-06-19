@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.X509.Extension
+namespace Mirror.BouncyCastle.X509.Extension
 {
 	public class X509ExtensionUtilities
 	{
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.X509.Extension
 		public static Asn1Object FromExtensionValue(IX509Extension extensions, DerObjectIdentifier oid)
 		{
 			Asn1OctetString extensionValue = extensions.GetExtensionValue(oid);
-			return extensionValue == null ? null : FromExtensionValue(extensionValue);	
+			return extensionValue == null ? null : FromExtensionValue(extensionValue);
 		}
 	}
 }

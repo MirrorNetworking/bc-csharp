@@ -1,13 +1,13 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal sealed class PicnicEngine
     {
@@ -95,7 +95,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
         {
             _lowmcConstants = lowmcConstants;
             parameters = picnicParams;
-            
+
             switch (parameters)
             {
             case 1:
@@ -359,7 +359,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
                     AS[i][j] = new byte[digestSizeBytes];
                 }
             }
-            
+
             byte[][][] gs = new byte[numMPCRounds][][];// numMPCRounds, 3, UnruhGWithInputBytes
             for (int i = 0; i < numMPCRounds; i++)
             {
@@ -369,7 +369,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
                     gs[i][j] = new byte[UnruhGWithInputBytes];
                 }
             }
-            
+
             uint[][][] viewOutputs = new uint[numMPCRounds][][];// numMPCRounds, 3, stateSizeBytes
             for (int i = 0; i < numMPCRounds; i++)
             {
@@ -440,7 +440,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
             return status;
         }
 
-        private bool VerifyProof(Signature.Proof proof, View view1, View view2, int challenge, byte[] salt, 
+        private bool VerifyProof(Signature.Proof proof, View view1, View view2, int challenge, byte[] salt,
             uint roundNumber, byte[] tmp, uint[] plaintext, Tape tape)
         {
             Array.Copy(proof.communicatedBits, 0, view2.communicatedBits, 0, andSizeBytes);
@@ -780,7 +780,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
                     C[i][j] = new byte[digestSizeBytes];
                 }
             }
-            
+
             byte[][] Ch = new byte[numMPCRounds][];    // [numMPCRounds][digestSizeBytes]
             for (int i = 0; i < numMPCRounds; i++)
             {
@@ -791,7 +791,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
             {
                 Cv[i] = new byte[digestSizeBytes];
             }
-            
+
             Msg[] msgs = new Msg[numMPCRounds];
 
             Tree treeCv = new Tree(this, (uint)numMPCRounds, digestSizeBytes);
@@ -905,7 +905,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
                         // sig.proofs[t].aux is only set when P_t != N
                         tapes[t].SetAuxBits(sig.proofs[t].aux);
                     }
-                    
+
                     Array.Copy(sig.proofs[t].msgs, 0, msgs[t].msgs[unopened], 0, andSizeBytes);
 
                     Arrays.Fill(tapes[t].tapes[unopened], (byte) 0);
@@ -1815,7 +1815,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
             {
                 inputs[i] = new byte[stateSizeWords * 4];
             }
-            
+
             byte[] auxBits = new byte[MAX_AUX_BYTES];
             for (int t = 0; t < numMPCRounds; t++)
             {
@@ -1869,7 +1869,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
             {
                 Ch[i] = new byte[digestSizeBytes];
             }
-            
+
             byte[][] Cv = new byte[numMPCRounds][];//[digestSizeBytes];
             for (int i = 0; i < numMPCRounds; i++)
             {

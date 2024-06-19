@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Polynomials;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     /// <summary>
     /// Encapsulate a secret using NTRU. Returns an <see cref="NtruEncapsulation"/> as encapsulation.

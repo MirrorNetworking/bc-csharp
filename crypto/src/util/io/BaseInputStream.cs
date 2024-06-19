@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 #endif
 
-namespace Org.BouncyCastle.Utilities.IO
+namespace Mirror.BouncyCastle.Utilities.IO
 {
     public abstract class BaseInputStream
         : Stream

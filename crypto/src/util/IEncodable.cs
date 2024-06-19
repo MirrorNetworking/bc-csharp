@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     public interface IEncodable
     {

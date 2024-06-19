@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Utilities.Net
+namespace Mirror.BouncyCastle.Utilities.Net
 {
     // TODO[api] Make static
     public class IPAddress
@@ -29,7 +29,7 @@ namespace Org.BouncyCastle.Utilities.Net
 
 		/**
 		 * Validate the given IPv4 address.
-		 * 
+		 *
 		 * @param address the IP address as a string.
 		 *
 		 * @return true if a valid IPv4 address, false otherwise
@@ -163,7 +163,7 @@ namespace Org.BouncyCastle.Utilities.Net
             if (length < 1 | length > maxLength)
                 return false;
 
-            bool checkLeadingZero = length > 1 & !allowLeadingZero; 
+            bool checkLeadingZero = length > 1 & !allowLeadingZero;
             if (checkLeadingZero && s[pos] == '0')
                 return false;
 

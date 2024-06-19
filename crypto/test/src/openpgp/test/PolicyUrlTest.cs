@@ -2,10 +2,10 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Bcpg.Sig;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Bcpg.Sig;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp.Tests
 {
     [TestFixture]
     public class PolicyUrlTest

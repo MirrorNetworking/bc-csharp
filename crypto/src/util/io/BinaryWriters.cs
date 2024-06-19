@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Utilities.IO
+namespace Mirror.BouncyCastle.Utilities.IO
 {
     public static class BinaryWriters
     {

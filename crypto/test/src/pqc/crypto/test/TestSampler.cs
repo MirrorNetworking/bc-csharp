@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     internal class TestSampler
     {

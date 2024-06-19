@@ -1,12 +1,12 @@
 using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
-using Org.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.Owcpa;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru.ParameterSets;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     /// <summary>
     /// NTRU secret encapsulation extractor.

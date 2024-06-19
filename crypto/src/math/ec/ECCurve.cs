@@ -2,13 +2,13 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Math.EC.Endo;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Math.Field;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.EC.Endo;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.Field;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC
+namespace Mirror.BouncyCastle.Math.EC
 {
     /// <remarks>Base class for an elliptic curve.</remarks>
     public abstract class ECCurve
@@ -202,7 +202,7 @@ namespace Org.BouncyCastle.Math.EC
          * Compute a <code>PreCompInfo</code> for a point on this curve, under a given name. Used by
          * <code>ECMultiplier</code>s to save the precomputation for this <code>ECPoint</code> for use
          * by subsequent multiplication.
-         * 
+         *
          * @param point
          *            The <code>ECPoint</code> to store precomputations for.
          * @param name
@@ -260,7 +260,7 @@ namespace Org.BouncyCastle.Math.EC
          * coordinates reflect those of the equivalent point in an affine coordinate system. Where more
          * than one point is to be normalized, this method will generally be more efficient than
          * normalizing each point separately.
-         * 
+         *
          * @param points
          *            An array of points that will be updated in place with their normalized versions,
          *            where necessary
@@ -277,7 +277,7 @@ namespace Org.BouncyCastle.Math.EC
          * normalizing each point separately. An (optional) z-scaling factor can be applied; effectively
          * each z coordinate is scaled by this value prior to normalization (but only one
          * actual multiplication is needed).
-         * 
+         *
          * @param points
          *            An array of points that will be updated in place with their normalized versions,
          *            where necessary
@@ -421,7 +421,7 @@ namespace Org.BouncyCastle.Math.EC
                 && B.ToBigInteger().Equals(other.B.ToBigInteger());
         }
 
-        public override bool Equals(object obj) 
+        public override bool Equals(object obj)
         {
             return Equals(obj as ECCurve);
         }
@@ -757,7 +757,7 @@ namespace Org.BouncyCastle.Math.EC
 
         private static void ImplCheckQ(BigInteger q)
         {
-            int maxBitLength = ImplGetInteger("Org.BouncyCastle.EC.Fp_MaxSize", 1042); // 2 * 521
+            int maxBitLength = ImplGetInteger("Mirror.BouncyCastle.EC.Fp_MaxSize", 1042); // 2 * 521
             if (q.BitLength > maxBitLength)
                 throw new ArgumentException("Fp q value out of range");
 
@@ -802,7 +802,7 @@ namespace Org.BouncyCastle.Math.EC
             if (Primes.HasAnySmallFactors(q))
                 return false;
 
-            int certainty = ImplGetInteger("Org.BouncyCastle.EC.Fp_Certainty", 100);
+            int certainty = ImplGetInteger("Mirror.BouncyCastle.EC.Fp_Certainty", 100);
             int iterations = ImplGetIterations(q.BitLength, certainty);
 
             return Primes.IsMRProbablePrime(q, SecureRandom.ArbitraryRandom, iterations);
@@ -967,7 +967,7 @@ namespace Org.BouncyCastle.Math.EC
 
         private static IFiniteField BuildField(int m, int k1, int k2, int k3)
         {
-            int maxM = ImplGetInteger("Org.BouncyCastle.EC.F2m_MaxSize", 1142); // 2 * 571
+            int maxM = ImplGetInteger("Mirror.BouncyCastle.EC.F2m_MaxSize", 1142); // 2 * 571
             if (m > maxM)
                 throw new ArgumentException("F2m m value out of range");
 
@@ -1097,7 +1097,7 @@ namespace Org.BouncyCastle.Math.EC
 
             int m = FieldSize;
 
-            // For odd m, use the half-trace 
+            // For odd m, use the half-trace
             if (0 != (m & 1))
             {
                 ECFieldElement r = betaF2m.HalfTrace();
@@ -1245,9 +1245,9 @@ namespace Org.BouncyCastle.Math.EC
          * <code>#E<sub>a</sub>(F<sub>2<sup>m</sup></sub>) = h * n</code>.
          */
         public F2mCurve(
-            int			m, 
-            int			k, 
-            BigInteger	a, 
+            int			m,
+            int			k,
+            BigInteger	a,
             BigInteger	b,
             BigInteger	order,
             BigInteger	cofactor)
@@ -1513,7 +1513,7 @@ namespace Org.BouncyCastle.Math.EC
                 int m = m_outer.m;
                 int[] ks = m_outer.IsTrinomial()
                     ? new int[]{ m_outer.k1 }
-                    : new int[]{ m_outer.k1, m_outer.k2, m_outer.k3 }; 
+                    : new int[]{ m_outer.k1, m_outer.k2, m_outer.k3 };
 
                 ECFieldElement X = new F2mFieldElement(m, ks, new LongArray(x));
                 ECFieldElement Y = new F2mFieldElement(m, ks, new LongArray(y));

@@ -2,23 +2,23 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.EC;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Agreement;
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.EC;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Agreement;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Signers;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * ECDSA tests are taken from X9.62.
@@ -333,7 +333,7 @@ namespace Org.BouncyCastle.Crypto.Tests
                 new BigInteger("6081831502424510080126737029209236539191290354021104541805484120491"), // d
                 parameters);
             SecureRandom k = FixedSecureRandom.From(BigIntegers.AsUnsignedByteArray(new BigInteger("15456715103636396133226117016818339719732885723579037388121116732601")));
-        
+
             byte[] M = Hex.Decode("8797A3C693CC292441039A4E6BAB7387F3B4F2A63D00ED384B378C79");
 
             ECDsaSigner dsa = new ECDsaSigner();
@@ -344,7 +344,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 
             BigInteger r = new BigInteger("26477406756127720855365980332052585411804331993436302005017227573742");
             BigInteger s = new BigInteger("17694958233103667059888193972742186995283044672015112738919822429978");
-        
+
             if (!r.Equals(sig[0]))
             {
                 Fail("r component wrong." + SimpleTest.NewLine
@@ -380,7 +380,7 @@ namespace Org.BouncyCastle.Crypto.Tests
                 new BigInteger("BE6F6E91FE96840A6518B56F3FE21689903A64FA729057AB872A9F51", 16), // d
                 parameters);
             SecureRandom k = FixedSecureRandom.From(Hex.Decode("00c39beac93db21c3266084429eb9b846b787c094f23a4de66447efbb3"));
-       
+
             byte[] M = Hex.Decode("E5D5A7ADF73C5476FAEE93A2C76CE94DC0557DB04CDC189504779117920B896D");
 
             ECDsaSigner dsa = new ECDsaSigner();

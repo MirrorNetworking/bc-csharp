@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     internal class FalconKeygen
     {
@@ -28,7 +28,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             this.vrfy = vrfy;
         }
 
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#):
         * ==========================(LICENSE BEGIN)============================
@@ -2055,7 +2055,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             uint logn, uint depth, int out_ntt)
         {
             int n, u;
-            int ft, gt; 
+            int ft, gt;
             uint p0;
             uint d;
             FalconSmallPrime[] primes;
@@ -2101,9 +2101,9 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             sbyte[] fsrc, int f, sbyte[] gsrc, int g, uint[] tmpsrc, int tmp)
         {
             int len;
-            int Fp, Gp; 
-            int fp, gp; 
-            int t1; 
+            int Fp, Gp;
+            int fp, gp;
+            int t1;
             uint q;
             FalconSmallPrime[] primes;
 
@@ -2176,7 +2176,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             int Fd, Gd;
             int Ft, Gt;
             int ft, gt, t1;
-            FalconFPR[] rt1; FalconFPR[] rt2; 
+            FalconFPR[] rt1; FalconFPR[] rt2;
             FalconFPR[] rt3; FalconFPR[] rt4; FalconFPR[] rt5;
             int scale_fg, minbl_fg, maxbl_fg, maxbl_FG, scale_k;
             int x, y;
@@ -2729,7 +2729,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             int n_top, n, hn, slen, dlen, llen, u;
             int Fd, Gd, Ft, Gt;
             int ft, gt, t1;
-            FalconFPR[] rt1; FalconFPR[] rt2; FalconFPR[] rt3; 
+            FalconFPR[] rt1; FalconFPR[] rt2; FalconFPR[] rt3;
             FalconFPR[] rt4; FalconFPR[] rt5; FalconFPR[] rt6;
             int x, y;
 
@@ -3092,7 +3092,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
         {
             int n, hn, u;
             uint p, p0i, R2;
-            int Fp, Gp; 
+            int Fp, Gp;
             int t1, t2, t3, t4, t5;
             int gm, igm, ft, gt;
             int rt2,  rt3;

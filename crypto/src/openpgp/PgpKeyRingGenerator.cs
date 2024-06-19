@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	/// <remarks>
 	/// Generator for a PGP master and subkey ring.
@@ -285,7 +285,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
         /// <param name="hashedPackets">Hashed packet values to be included in certification.</param>
         /// <param name="unhashedPackets">Unhashed packets values to be included in certification.</param>
         /// <param name="hashAlgorithm">The hash algorithm.</param>
-        /// <exception cref="Org.BouncyCastle.Bcpg.OpenPgp.PgpException">exception adding subkey: </exception>
+        /// <exception cref="Mirror.BouncyCastle.Bcpg.OpenPgp.PgpException">exception adding subkey: </exception>
         /// <exception cref="PgpException"></exception>
         public void AddSubKey(
             PgpKeyPair keyPair,
@@ -330,7 +330,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
         /// <param name="unhashedPackets">Unhashed packets values to be included in certification.</param>
         /// <param name="hashAlgorithm">The hash algorithm.</param>
         /// <param name="primaryKeyBindingHashAlgorithm">The primary-key binding hash algorithm.</param>
-        /// <exception cref="Org.BouncyCastle.Bcpg.OpenPgp.PgpException">exception adding subkey: </exception>
+        /// <exception cref="Mirror.BouncyCastle.Bcpg.OpenPgp.PgpException">exception adding subkey: </exception>
         /// <exception cref="PgpException"></exception>
         public void AddSubKey(
             PgpKeyPair keyPair,
@@ -357,7 +357,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 
                 spGen.AddEmbeddedSignature(false,
                         pGen.GenerateCertification(masterKey.PublicKey, keyPair.PublicKey));
-                
+
                 sGen.SetHashedSubpackets(spGen.Generate());
                 sGen.SetUnhashedSubpackets(unhashedPackets);
 

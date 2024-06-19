@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Asn1.X509;
+﻿using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Crmf
+namespace Mirror.BouncyCastle.Asn1.Crmf
 {
     public class PopoSigningKey
         : Asn1Encodable

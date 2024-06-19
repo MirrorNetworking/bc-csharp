@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Utilities.Encoders
+namespace Mirror.BouncyCastle.Utilities.Encoders
 {
     public class Base64Encoder
         : IEncoder
@@ -147,7 +147,7 @@ namespace Org.BouncyCastle.Utilities.Encoders
         *
         * @return the number of bytes produced.
         */
-        public int Encode(byte[] buf, int off, int len, Stream outStream) 
+        public int Encode(byte[] buf, int off, int len, Stream outStream)
         {
 #if NETCOREAPP2_1_OR_GREATER || NETSTANDARD2_1_OR_GREATER
             return Encode(buf.AsSpan(off, len), outStream);

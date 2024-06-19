@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     // TODO[asn1] Should be renamed/replaced with DLSetParser
 	public class DerSetParser

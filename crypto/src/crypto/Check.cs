@@ -3,7 +3,7 @@
 using System.Diagnostics.CodeAnalysis;
 #endif
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     internal static class Check
     {

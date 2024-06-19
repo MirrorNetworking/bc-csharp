@@ -4,21 +4,21 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Tls.Crypto.Impl.BC;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO.Pem;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto.Impl.BC;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO.Pem;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     public class TlsTestUtilities
     {
@@ -294,7 +294,7 @@ namespace Org.BouncyCastle.Tls.Tests
                 {
                     TlsCertificate certificate = LoadCertificateResource(crypto, resources[i]);
 
-                    // TODO[tls13] Add possibility of specifying e.g. CertificateStatus 
+                    // TODO[tls13] Add possibility of specifying e.g. CertificateStatus
                     IDictionary<int, byte[]> extensions = null;
 
                     certificateEntryList[i] = new CertificateEntry(certificate, extensions);

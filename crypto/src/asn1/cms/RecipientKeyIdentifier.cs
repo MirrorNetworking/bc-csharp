@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class RecipientKeyIdentifier
         : Asn1Encodable
@@ -38,7 +38,7 @@ namespace Org.BouncyCastle.Asn1.Cms
             this.date = date;
             this.other = other;
         }
-		
+
 		public RecipientKeyIdentifier(
 			byte[] subjectKeyIdentifier)
 			: this(subjectKeyIdentifier, null, null)

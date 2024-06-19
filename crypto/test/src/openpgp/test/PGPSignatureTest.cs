@@ -4,13 +4,13 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Bcpg.Sig;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Bcpg.Sig;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp.Tests
 {
     [TestFixture]
     public class PgpSignatureTest
@@ -357,7 +357,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             PgpPublicKeyRing pgpPub = (PgpPublicKeyRing)pgpFact.NextPgpObject();
 
             foreach (PgpSignature sig in pgpPub.GetPublicKey().GetSignatures())
-            { 
+            {
                 if (sig.SignatureType == PgpSignature.PositiveCertification)
                 {
                     PgpPublicKey.RemoveCertification(pgpPub.GetPublicKey(), sig);

@@ -3,7 +3,7 @@
 using System.Buffers.Binary;
 #endif
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     public static class Shorts
     {

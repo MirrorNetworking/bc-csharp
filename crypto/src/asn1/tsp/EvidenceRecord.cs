@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Tsp
+namespace Mirror.BouncyCastle.Asn1.Tsp
 {
     /**
      * <a href="https://tools.ietf.org/html/rfc4998">RFC 4998</a>:
@@ -105,7 +105,7 @@ namespace Org.BouncyCastle.Asn1.Tsp
         /**
          * Build a basic evidence record from an initial
          * ArchiveTimeStamp.
-         * 
+         *
          * @param cryptoInfos
          * @param encryptionInfo
          * @param archiveTimeStamp

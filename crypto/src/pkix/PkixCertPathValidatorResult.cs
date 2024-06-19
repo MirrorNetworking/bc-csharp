@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	public class PkixCertPathValidatorResult
 		//: ICertPathValidatorResult
@@ -40,7 +40,7 @@ namespace Org.BouncyCastle.Pkix
 			return new PkixCertPathValidatorResult(this.TrustAnchor, this.PolicyTree, this.SubjectPublicKey);
 		}
 
-		public override string ToString() 
+		public override string ToString()
 		{
 			StringBuilder sb = new StringBuilder();
 			sb.AppendLine("PKIXCertPathValidatorResult: [");

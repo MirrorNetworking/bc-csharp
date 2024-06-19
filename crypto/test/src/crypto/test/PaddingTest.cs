@@ -2,14 +2,14 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Paddings;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Paddings;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	/**
 	* General Padding tests.
@@ -124,7 +124,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 				{
 					Fail("wrong exception for corrupt padding: " + e);
 				}
-			} 
+			}
 
 			doTestPadding(new ISO10126d2Padding(), rand,
 				null,

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl
 {
     /// <summary>Base class for a TlsCrypto implementation that provides some needed methods from elsewhere in the impl
     /// package.</summary>

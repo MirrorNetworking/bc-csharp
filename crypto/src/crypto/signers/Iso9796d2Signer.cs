@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Signers
+namespace Mirror.BouncyCastle.Crypto.Signers
 {
     /// <summary> ISO9796-2 - mechanism using a hash function with recovery (scheme 1)</summary>
     public class Iso9796d2Signer : ISignerWithRecovery
@@ -442,7 +442,7 @@ namespace Org.BouncyCastle.Crypto.Signers
                 digest.DoFinal(hash, 0);
 
                 bool isOkay = true;
-                
+
                 for (int i = 0; i != hash.Length; i++)
                 {
                     block[off + i] ^= hash[i];

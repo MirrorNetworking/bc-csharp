@@ -3,13 +3,13 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Ntru;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Pqc.Crypto.Ntru;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class NtruVectorTest
@@ -21,7 +21,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             { "PQCkemKAT_1590.rsp", NtruParameters.NtruHps4096821 },
             { "PQCkemKAT_1450.rsp", NtruParameters.NtruHrss701 },
         };
-        
+
         [Test]
         public void TestParameters()
         {

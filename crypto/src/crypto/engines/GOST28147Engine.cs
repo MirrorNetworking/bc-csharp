@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/**
 	* implementation of GOST 28147-89
@@ -135,7 +135,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 
 		private static void AddSBox(string sBoxName, byte[] sBox)
 		{
-			m_sBoxes.Add(sBoxName, sBox);        
+			m_sBoxes.Add(sBoxName, sBox);
 		}
 
 		/**

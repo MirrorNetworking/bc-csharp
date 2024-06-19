@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
 	public interface IX509Extension
 	{

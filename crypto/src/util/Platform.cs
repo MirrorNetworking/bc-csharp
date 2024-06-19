@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Org.BouncyCastle.Utilities
+namespace Mirror.BouncyCastle.Utilities
 {
     internal static class Platform
     {

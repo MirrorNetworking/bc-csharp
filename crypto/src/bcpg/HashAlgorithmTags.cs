@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
 	/// <remarks>Basic tags for hash algorithms.</remarks>
 	public enum HashAlgorithmTag

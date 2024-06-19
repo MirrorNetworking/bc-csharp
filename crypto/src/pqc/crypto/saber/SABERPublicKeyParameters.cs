@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Saber
+namespace Mirror.BouncyCastle.Pqc.Crypto.Saber
 {
     public sealed class SaberPublicKeyParameters
         : SaberKeyParameters

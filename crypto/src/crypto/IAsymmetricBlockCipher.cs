@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	/// <remarks>Base interface for a public/private key block cipher.</remarks>
 	public interface IAsymmetricBlockCipher

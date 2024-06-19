@@ -8,11 +8,11 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Modes.Gcm
+namespace Mirror.BouncyCastle.Crypto.Modes.Gcm
 {
     internal static class GcmUtilities
     {
@@ -78,7 +78,7 @@ namespace Org.BouncyCastle.Crypto.Modes.Gcm
             ulong z0, z1, z2;
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
             {
                 var X = Vector128.Create(x.n1, x.n0);
                 var Y = Vector128.Create(y.n1, y.n0);
@@ -114,7 +114,7 @@ namespace Org.BouncyCastle.Crypto.Modes.Gcm
                  * "Three-way recursion" as described in "Batch binary Edwards", Daniel J. Bernstein.
                  *
                  * Without access to the high part of a 64x64 product x * y, we use a bit reversal to calculate it:
-                 *     rev(x) * rev(y) == rev((x * y) << 1) 
+                 *     rev(x) * rev(y) == rev((x * y) << 1)
                  */
 
                 ulong x0 = x.n0, x1 = x.n1;
@@ -168,7 +168,7 @@ namespace Org.BouncyCastle.Crypto.Modes.Gcm
         internal static void MultiplyExt(Vector128<ulong> X, Vector128<ulong> Y, out Vector128<ulong> Z0,
             out Vector128<ulong> Z1, out Vector128<ulong> Z2)
         {
-            if (!Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
+            if (!Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
                 throw new PlatformNotSupportedException(nameof(GcmUtilities.MultiplyExt));
 
             Z0 =          Pclmulqdq.CarrylessMultiply(X, Y, 0x00);
@@ -241,7 +241,7 @@ namespace Org.BouncyCastle.Crypto.Modes.Gcm
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static void SquareExt(Vector128<ulong> X, out Vector128<ulong> Z0, out Vector128<ulong> Z2)
         {
-            if (!Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
+            if (!Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
                 throw new PlatformNotSupportedException(nameof(GcmUtilities.SquareExt));
 
             Z0 = Pclmulqdq.CarrylessMultiply(X, X, 0x00);

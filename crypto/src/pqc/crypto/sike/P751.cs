@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Pqc.Crypto.Sike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Sike
 {
     internal class P751
     : Internal
@@ -207,7 +207,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x00000034, 0x00000035, 0x00000036, 0x00000037, 0x00000038, 0x00000039, 0x0000003A, 0x0000003B,
         0x0000003B, 0x0000003B, 0x0000003B, 0x0000003B, 0x0000003B, 0x0000003B,
     };
-    
+
     private static readonly uint[] s_ph3_path = new uint[81]
     {
         0x00000000, 0x00000000, 0x00000001, 0x00000002, 0x00000003, 0x00000003, 0x00000004, 0x00000004,
@@ -222,7 +222,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x0000002C, 0x0000002D, 0x0000002E, 0x0000002F, 0x00000030, 0x00000031, 0x00000032, 0x00000033,
         0x00000034,
     };
-    
+
     private static readonly ulong[] s_A_gen = new ulong[72]
     {
         0x2584350E0C33C304, 0x51E9C29E234DC61E, 0xC6E65A7BF90ACC05, 0xB1333E2E19B3A930,
@@ -244,7 +244,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x542928AD1F445359, 0xA311B83D79E73FF6, 0x850B7F5926826B22, 0x2D46731863BDB99D,
         0x467A80CD8320B69D, 0xC046B12F05BFD513, 0x35D9B2FF794BDB40, 0x0000633276495B85,
     };
-    
+
     private static readonly ulong[] s_B_gen = new ulong[60]
     {
         0x110F4508C6634CCB, 0x31910BC05E296F4C, 0xED17AB0D6C029EA6, 0x9C863AB6172B9974,
@@ -263,7 +263,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x2339E590896E0095, 0xFC753508AD83E33E, 0x73A274E4A6908387, 0x88D1B207BBE8E2DC,
         0x0A6D0583233DC71F, 0xCF7F2ECC609DE5BE, 0xB8AF0669FBD1CF01, 0x00001F3EF25DD512,
     };
-    
+
     private static readonly ulong[] s_XQB3 = new ulong[24]
     {
         0x96DCB5BD39AA8288, 0x81E7BA9AA19C1C53, 0x7021384077E4FEB6, 0xA1490C7A753E8E74,
@@ -273,7 +273,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x083BC8A148E0FBB2, 0x1065373142BD8B81, 0xD7C4A7221ED3E403, 0x1071E13BCEB89A2A,
         0x54A18AEA86CD9D51, 0x39BF04224B598D62, 0xD4B89FF2AA465908, 0x00005A0F792EB1A3,
     };
-    
+
     private static readonly ulong[] s_A_basis_zero = new ulong[96]
     {
         0x2584350E0C38565F, 0x51E9C29E234DC61E, 0xC6E65A7BF90ACC05, 0xB1333E2E19B3A930,
@@ -301,7 +301,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x4BB54DEE559E01E3, 0x03195B2E094E0D92, 0x01F40204597E534A, 0x7F9B8D473586B966,
         0x38281C1E6F54E744, 0x215C5889B91D5D63, 0x9CEA26343AD2B060, 0x000022374E0C0255,
     };
-    
+
     private static readonly ulong[] s_B_basis_zero = new ulong[96]
     {
         0xF1A8C9ED7B96C4AB, 0x299429DA5178486E, 0xEF4926F20CD5C2F4, 0x683B2E2858B4716A,
@@ -329,7 +329,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0xF99EBD204D501496, 0x0C18348F9B629361, 0xC29E9A16BEDE6F96, 0x3B39F30163DAD41D,
         0x807D3D1ECF2AC04E, 0xE088443F222A4988, 0x61B49A7524F1EA12, 0x000041BF31133104,
     };
-    
+
     private static readonly ulong[] s_B_gen_3_tors = new ulong[192]
     {
         0x7BB7A4A07B0788DC, 0xDC36A3F6607B21B0, 0x4750E18EE74CF2F0, 0x464E319D0B7AB806,
@@ -381,47 +381,47 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0xC5CEE9FD3A3B088D, 0x086B2876D6520F51, 0xD31476314E3DAD08, 0x517E8096137AFBC9,
         0xE52ADD7D2B85BB6C, 0x43A92AC98B1E5F2B, 0x4F32E4103B80C703, 0x000068BCEB2391D2,
     };
-    
+
     private static readonly ulong[] s_g_R_S_im = new ulong[12]
     {
         0xCB6E5ADE9CD78AF1, 0x40F3DD4D50CE0E29, 0x38109C203BF27F5B, 0x50A4863D3A9F473A,
         0x518C38F09EC0418E, 0xC2429D6AC98DE417, 0x1A2DC3684817A3CB, 0xF7E83EC334E40005,
         0xC560B1CA4C837125, 0xCECA2F86BEB1A124, 0x563DDE23E947A71E, 0x000034BDF9FF47AA,
     };
-    
+
     private static readonly ulong[] s_Montgomery_R2 = new ulong[12]
     {
         0x233046449DAD4058, 0xDB010161A696452A, 0x5E36941472E3FD8E, 0xF40BFE2082A2E706,
         0x4932CCA8904F8751, 0x1F735F1F1EE7FC81, 0xA24F4D80C1048E18, 0xB56C383CCDB607C5,
         0x441DD47B735F9C90, 0x5673ED2C6A6AC82A, 0x06C905261132294B, 0x000041AD830F1F35,
     };
-    
+
     private static readonly ulong[] s_Montgomery_RB1 = new ulong[6]
     {
         0x1A55482318541298, 0x070A6370DFA12A03, 0xCB1658E0E3823A40, 0xB3B7384EB5DEF3F9,
         0xCBCA952F7006EA33, 0x00569EF8EC94864C,
     };
-    
+
     private static readonly ulong[] s_Montgomery_RB2 = new ulong[6]
     {
         0x48062A91D3AB563D, 0x6CE572751303C2F5, 0x5D1319F3F160EC9D, 0xE35554E8C2D5623A,
         0xCA29300232BC79A5, 0x8AAD843D646D78C5,
     };
-    
+
     private static readonly ulong[] s_Montgomery_one = new ulong[12]
     {
         0x00000000000249AD, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000,
         0x0000000000000000, 0x8310000000000000, 0x5527B1E4375C6C66, 0x697797BF3F4F24D0,
         0xC89DB7B2AC5C4E2E, 0x4CA4B439D2076956, 0x10F7926C7512C7E9, 0x00002D5B24BCE5E2,
     };
-    
+
     private static readonly ulong[] s_threeinv = new ulong[12]
     {
         0x555555555556188F, 0x5555555555555555, 0x5555555555555555, 0x5555555555555555,
         0x5555555555555555, 0x8105555555555555, 0x1C6290A167C97977, 0xCDD287EA6A6FB6F0,
         0x42DF3D3B8EC96F64, 0x198C3C1346027872, 0xB0528624270642A3, 0x00000F1E61944CA0,
     };
-    
+
     private static readonly ulong[] s_u_entang = new ulong[24]
     {
         0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000,
@@ -431,7 +431,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x0000000000000000, 0x0620000000000000, 0xAA4F63C86EB8D8CD, 0xD2EF2F7E7E9E49A0,
         0x913B6F6558B89C5C, 0x99496873A40ED2AD, 0x21EF24D8EA258FD2, 0x00005AB64979CBC4,
     };
-    
+
     private static readonly ulong[] s_u0_entang = new ulong[24]
     {
         0x00000000000249AD, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000,
@@ -441,7 +441,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x0000000000000000, 0x8310000000000000, 0x5527B1E4375C6C66, 0x697797BF3F4F24D0,
         0xC89DB7B2AC5C4E2E, 0x4CA4B439D2076956, 0x10F7926C7512C7E9, 0x00002D5B24BCE5E2,
     };
-    
+
     private static readonly ulong[][] s_table_r_qr = new ulong[17][]
     {
         new ulong[12]
@@ -547,7 +547,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             0xD5906BC9C8852A40, 0xDF83EFED87D0B356, 0x3D62CB346BAE7999, 0x000069A28B5897BF,
         },
     };
-    
+
     private static readonly ulong[][] s_table_r_qnr = new ulong[17][]
     {
         new ulong[12]
@@ -653,7 +653,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             0xC1E17F727C144806, 0x7BC371E4774A0A43, 0x9DCCAE862A6C0F33, 0x0000423F80F4D041,
         },
     };
-    
+
     private static readonly ulong[][] s_table_v_qr = new ulong[34][]
     {
         new ulong[12]
@@ -861,7 +861,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             0x187E4E847EDF9ACC, 0x92E55D9773F0AB6E, 0x2FB79EE22F3B6FA7, 0x000059F9721DDC1B,
         },
     };
-    
+
     private static readonly ulong[][] s_table_v_qnr = new ulong[34][]
     {
         new ulong[12]
@@ -1069,7 +1069,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             0x5BA46393DEEC08B5, 0x9AC8A0B793849197, 0xA8F7FEDA5FA4EA5A, 0x00003A742CC9DEB9,
         },
     };
-    
+
     private static readonly ulong[][][] s_v_3_torsion = new ulong[20][][]
     {
         new ulong[2][]
@@ -1373,7 +1373,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
             },
         },
     };
-    
+
     private static readonly ulong[] s_T_tate3 = new ulong[17184]
     {
         0x27DD15B8A940103C, 0x698445579C6FC8AF, 0xEF0662EE3F8DA506, 0x93D4F81B06781F60,
@@ -5673,7 +5673,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0xC25AA44C04F758FF, 0x392E8521A46E0A68, 0xFC4E76B63EFF37DF, 0x1F3566D892E67DD8,
         0xF8D2EB0F73295E65, 0x457B13EBC470BCCB, 0xFDA1CC9EFEF5BE33, 0x00005DBF3D92CC02,
     };
-    
+
     private static readonly ulong[] s_T_tate2_firststep_P = new ulong[48]
     {
         0xD25C46609D011910, 0x135AF5A98C28ADCB, 0x1FBBAA32F245FF2F, 0xAFD791F380D906A5,
@@ -5689,7 +5689,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x22553D769BF6FA4C, 0x1A02C98F8E9FF24C, 0xA1F4FF3CB5A2879A, 0x786B1F479BB26317,
         0x6C788B0D7262433E, 0x5C08F513D0B359E6, 0x0DF77EE49CF2DDDB, 0x00002BE7A0285CE3,
     };
-    
+
     private static readonly ulong[] s_T_tate2_P = new ulong[13320]
     {
         0x5CBA3D258C4DB901, 0xC93BEDE745B295DE, 0xBACDF727F64CA987, 0x83ECDF3588EB0EEF,
@@ -9023,7 +9023,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x6FD6E59F9A9B7A3E, 0x9D051EDFDAF36367, 0x64D34667DA122A73, 0x56AA4F7AD9E72FF8,
         0x782B768DAE2A0A38, 0x09D47C529A5AE770, 0x1A5048049D1FA98E, 0x0000111FFD261D4F,
     };
-    
+
     private static readonly ulong[] s_T_tate2_firststep_Q = new ulong[48]
     {
         0xAC2B2D74F888733E, 0xDA9B5D82CAA27D78, 0xF8656EBC40D57F4C, 0x5E1CD5BDBF041897,
@@ -9039,7 +9039,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x2FEA96B083869ADA, 0x60347DA847067588, 0xBC88696946B32293, 0x17B2DF2CBFD97F3C,
         0x9B56940153EFAA92, 0xB10099C181CFD23D, 0xD3DD0D847F870C47, 0x000021D326FF0152,
     };
-    
+
     private static readonly ulong[] s_T_tate2_Q = new ulong[13320]
     {
         0x41FEAA3F231C32B5, 0x97F8BC8686891429, 0x56686BC64B25B1FF, 0x2CC4DECC8CA1D20E,
@@ -12373,7 +12373,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0x07A79E2B34091B54, 0xA05809DCB42F1792, 0xB8D6FA0B2FB9739F, 0xB92947307436AD45,
         0xA478488AA072D9C3, 0x76EF5DE652478B48, 0x21B5B2D9A016385E, 0x000036FB1719882D,
     };
-    
+
     private static readonly ulong[] s_ph2_T = new ulong[17844]
     {
         0x3156AAF9F437A3FC, 0x36ADB2EFCCDC4BAA, 0x5618FDD1B2675B29, 0x7BA8B8749BAB61A9,
@@ -16838,7 +16838,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0xFFFFFFFFFFFFFFFF, 0x6B9FFFFFFFFFFFFF, 0x8EC4E4A1129C0C42, 0x711E035AD4A8A7A6,
         0x3FB0E0B52A8F9A48, 0x38BE00CA8AAAEDF1, 0xFD1AFE3322A8147D, 0x0000428AB0851139,
     };
-    
+
     private static readonly ulong[] s_ph3_T1 = new ulong[24960]
     {
         0x61F2C46235355981, 0xB14A772CB29B82A6, 0xD42C0B8FC04184DF, 0xFCA910510D39E137,
@@ -23082,7 +23082,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Sike
         0xF11525BE2DD69C84, 0x4975857487EBED86, 0x4D0DA89081219C01, 0x248614C144731463,
         0x886893143055FE52, 0x99BB2FB5BAD243BE, 0x0DD254950F8CC252, 0x00006BD4D8F4A877,
     };
-    
+
     private static readonly ulong[] s_ph3_T2 = new ulong[24960]
     {
         0x61F2C46235355981, 0xB14A772CB29B82A6, 0xD42C0B8FC04184DF, 0xFCA910510D39E137,

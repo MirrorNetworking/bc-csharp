@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Base interface for interfaces/classes carrying TLS credentials.</summary>
     public interface TlsCredentials

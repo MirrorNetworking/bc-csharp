@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Org.BouncyCastle.Utilities.IO.Pem
+namespace Mirror.BouncyCastle.Utilities.IO.Pem
 {
 	public interface PemObjectParser
 	{

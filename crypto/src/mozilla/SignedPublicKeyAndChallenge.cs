@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Mozilla
+namespace Mirror.BouncyCastle.Mozilla
 {
     public sealed class SignedPublicKeyAndChallenge
     {

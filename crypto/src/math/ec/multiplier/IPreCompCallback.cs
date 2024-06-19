@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     public interface IPreCompCallback
     {

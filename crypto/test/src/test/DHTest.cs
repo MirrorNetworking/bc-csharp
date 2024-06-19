@@ -2,19 +2,19 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class DHTest
@@ -575,7 +575,7 @@ namespace Org.BouncyCastle.Tests
         public void TestEnc()
         {
 //			KeyFactory kFact = KeyFactory.getInstance("DH", "BC");
-//			
+//
 //			Key k = kFact.generatePrivate(new PKCS8EncodedKeySpec(samplePrivEnc));
             AsymmetricKeyParameter k = PrivateKeyFactory.CreateKey(samplePrivEnc);
             byte[] encoded = PrivateKeyInfoFactory.CreatePrivateKeyInfo(k).GetEncoded();

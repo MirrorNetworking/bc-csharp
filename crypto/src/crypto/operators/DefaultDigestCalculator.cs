@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-using Org.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.IO;
 
-namespace Org.BouncyCastle.Crypto.Operators
+namespace Mirror.BouncyCastle.Crypto.Operators
 {
     public sealed class DefaultDigestCalculator
         : IStreamCalculator<IBlockResult>

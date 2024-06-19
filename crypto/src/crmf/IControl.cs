@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     /// <summary>
     /// Generic interface for a CertificateRequestMessage control value.

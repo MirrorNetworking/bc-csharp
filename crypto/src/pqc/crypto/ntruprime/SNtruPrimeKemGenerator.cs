@@ -1,14 +1,14 @@
 using System;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
+namespace Mirror.BouncyCastle.Pqc.Crypto.NtruPrime
 {
     public class SNtruPrimeKemGenerator : IEncapsulatedSecretGenerator
     {
         private SecureRandom sr;
-        
+
         public SNtruPrimeKemGenerator(SecureRandom sr)
         {
             this.sr = sr;
@@ -28,10 +28,10 @@ namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
         public class SecretWithEncapsulationImpl : ISecretWithEncapsulation
         {
             private volatile bool hasBeenDestroyed = false;
-            
+
             private byte[] sessionKey;
             private byte[] cipherText;
-            
+
             public SecretWithEncapsulationImpl(byte[] sessionKey, byte[] cipherText)
             {
                 this.sessionKey = sessionKey;
@@ -72,7 +72,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
             {
                 return hasBeenDestroyed;
             }
-            
+
             void CheckDestroyed()
             {
                 if (IsDestroyed())
@@ -80,8 +80,8 @@ namespace Org.BouncyCastle.Pqc.Crypto.NtruPrime
                     throw new Exception("data has been destroyed");
                 }
             }
-            
+
         }
-        
+
     }
 }

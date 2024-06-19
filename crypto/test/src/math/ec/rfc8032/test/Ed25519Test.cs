@@ -3,12 +3,12 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032.Tests
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032.Tests
 {
     [TestFixture]
     public class Ed25519Test
@@ -216,7 +216,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032.Tests
                 + "d25bf5f0595bbe24655141438e7a100b"),
                 "Ed25519 Vector #1");
         }
-      
+
 		[Test]
         public void TestEd25519Vector2()
         {
@@ -232,7 +232,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032.Tests
                 + "387b2eaeb4302aeeb00d291612bb0c00"),
                 "Ed25519 Vector #2");
         }
-      
+
 		[Test]
         public void TestEd25519Vector3()
         {
@@ -724,7 +724,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032.Tests
             byte[] pkGen = new byte[Ed25519.PublicKeySize];
             Ed25519.GeneratePublicKey(sk, 0, pkGen, 0);
             Assert.IsTrue(Arrays.AreEqual(pk, pkGen), text);
-         
+
 			byte[] m = Hex.Decode(sM);
             byte[] sig = Hex.Decode(sSig);
 

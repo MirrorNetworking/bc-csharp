@@ -1,18 +1,18 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cms;
-using Asn1Pkcs = Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cms;
+using Asn1Pkcs = Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Crypto.Operators;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     /**
     * the KeyTransRecipientInformation class for a recipient who has been sent a secret
@@ -66,7 +66,7 @@ namespace Org.BouncyCastle.Cms
 				return "RSA//PKCS1Padding";
 			} else if (Asn1Pkcs.PkcsObjectIdentifiers.IdRsaesOaep.Equals(oid))
             {
-                 Asn1Pkcs.RsaesOaepParameters rsaParams = Asn1Pkcs.RsaesOaepParameters.GetInstance(algo.Parameters);                       
+                 Asn1Pkcs.RsaesOaepParameters rsaParams = Asn1Pkcs.RsaesOaepParameters.GetInstance(algo.Parameters);
                 return "RSA//OAEPWITH"+DigestUtilities.GetAlgorithmName(rsaParams.HashAlgorithm.Algorithm)+"ANDMGF1Padding";
             }
 
@@ -76,7 +76,7 @@ namespace Org.BouncyCastle.Cms
 		internal KeyParameter UnwrapKey(ICipherParameters key)
 		{
 			byte[] encryptedKey = info.EncryptedKey.GetOctets();
-            
+
 
 			try
 			{
@@ -117,7 +117,7 @@ namespace Org.BouncyCastle.Cms
 				throw new CmsException("bad padding in message.", e);
 			}
 		}
-		
+
 		/**
         * decrypt the content and return it as a byte array.
         */

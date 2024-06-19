@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Tls.Crypto;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     public class DefaultTlsDHGroupVerifier
         : TlsDHGroupVerifier

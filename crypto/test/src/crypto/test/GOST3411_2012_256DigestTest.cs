@@ -2,13 +2,13 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     [TestFixture]
     public class GOST3411_2012_256DigestTest
@@ -92,7 +92,7 @@ namespace Org.BouncyCastle.Crypto.Tests
         public void GOST3422_2012_256_TestFunction()
         {
             string resultText = Perform().ToString();
-  
+
             Assert.AreEqual(Name + ": Okay", resultText);
         }
     }

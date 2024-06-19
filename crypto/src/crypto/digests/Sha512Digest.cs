@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     /**
      * Draft FIPS 180-2 implementation of SHA-512. <b>Note:</b> As this is
@@ -107,7 +107,7 @@ namespace Org.BouncyCastle.Crypto.Digests
             H7 = 0x1f83d9abfb41bd6b;
             H8 = 0x5be0cd19137e2179;
         }
-		
+
 		public override IMemoable Copy()
 		{
 			return new Sha512Digest(this);

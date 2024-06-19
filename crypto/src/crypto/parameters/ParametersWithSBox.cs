@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
 	public class ParametersWithSBox
 		: ICipherParameters

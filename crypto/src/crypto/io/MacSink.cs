@@ -4,9 +4,9 @@ using System.Threading;
 using System.Threading.Tasks;
 #endif
 
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Crypto.IO
+namespace Mirror.BouncyCastle.Crypto.IO
 {
     public sealed class MacSink
         : BaseOutputStream

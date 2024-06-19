@@ -3,13 +3,13 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Cms.Tests
+namespace Mirror.BouncyCastle.Cms.Tests
 {
 	[TestFixture]
 	public class CompressedDataTest

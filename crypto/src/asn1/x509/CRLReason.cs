@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
     /**
      * The CRLReason enumeration.
@@ -55,6 +55,6 @@ namespace Org.BouncyCastle.Asn1.X509
 			int reason = IntValueExact;
 			string str = (reason < 0 || reason > 10) ? "Invalid" : ReasonString[reason];
 			return "CrlReason: " + str;
-		}    
+		}
 	}
 }

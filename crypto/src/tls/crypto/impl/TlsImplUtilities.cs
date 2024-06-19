@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl
 {
     /// <summary>Useful utility methods.</summary>
     public abstract class TlsImplUtilities

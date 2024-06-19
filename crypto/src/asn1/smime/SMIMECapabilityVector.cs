@@ -1,6 +1,6 @@
-using Org.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1;
 
-namespace Org.BouncyCastle.Asn1.Smime
+namespace Mirror.BouncyCastle.Asn1.Smime
 {
     /**
      * Handler for creating a vector S/MIME Capabilities

@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509.Extension;
 
-namespace Org.BouncyCastle.X509.Store
+namespace Mirror.BouncyCastle.X509.Store
 {
 	/**
 	* This class is an <code>Selector</code> like implementation to select
 	* attribute certificates from a given set of criteria.
 	*
-	* @see org.bouncycastle.x509.X509AttributeCertificate
-	* @see org.bouncycastle.x509.X509Store
+	* @see Mirror.BouncyCastle.x509.X509AttributeCertificate
+	* @see Mirror.BouncyCastle.x509.X509Store
 	*/
 	public class X509AttrCertStoreSelector
 		: ISelector<X509V2AttributeCertificate>
@@ -231,7 +231,7 @@ namespace Org.BouncyCastle.X509.Store
 		* The collection consists of either GeneralName objects or byte[] arrays representing
 		* DER encoded GeneralName structures.
 		* </p>
-		* 
+		*
 		* @param names A collection of target names.
 		* @throws IOException if a parsing error occurs.
 		* @see #AddTargetName(byte[])
@@ -247,7 +247,7 @@ namespace Org.BouncyCastle.X509.Store
 		* made up of an <code>Integer</code> in the first entry and a DER encoded
 		* byte array or a <code>String</code> in the second entry.
 		* <p>The returned collection is immutable.</p>
-		* 
+		*
 		* @return The collection of target names
 		* @see #setTargetNames(Collection)
 		*/

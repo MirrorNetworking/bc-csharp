@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
     public class VmpcEngine
         : IStreamCipher
@@ -18,7 +18,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 
         /**
         * initialise a VMPC cipher.
-        * 
+        *
         * @param forEncryption
         *    whether or not we are for encryption.
         * @param params

@@ -1,9 +1,9 @@
 using System.IO;
 
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Utilities.IO;
 
-namespace Org.BouncyCastle.Cms
+namespace Mirror.BouncyCastle.Cms
 {
     public class CmsTypedStream
 	{

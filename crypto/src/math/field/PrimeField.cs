@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Math.Field
+namespace Mirror.BouncyCastle.Math.Field
 {
     internal class PrimeField
         : IFiniteField

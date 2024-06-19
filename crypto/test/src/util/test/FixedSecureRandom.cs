@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-using M = Org.BouncyCastle.Math;
+using M = Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Utilities.Test
+namespace Mirror.BouncyCastle.Utilities.Test
 {
 	public class FixedSecureRandom
 		: SecureRandom

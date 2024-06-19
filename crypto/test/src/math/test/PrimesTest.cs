@@ -2,12 +2,12 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.Tests
+namespace Mirror.BouncyCastle.Math.Tests
 {
     [TestFixture]
     public class PrimesTest
@@ -111,7 +111,7 @@ namespace Org.BouncyCastle.Math.Tests
                     {
                         byte[] inputSeed = new byte[16];
                         R.NextBytes(inputSeed);
-    
+
                         Primes.STOutput st = Primes.GenerateSTRandomPrime(digest, PRIME_BITS, inputSeed);
                         Assert.True(IsPrime(st.Prime));
 

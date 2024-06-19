@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     public class FixedPointCombMultiplier
         : AbstractECMultiplier

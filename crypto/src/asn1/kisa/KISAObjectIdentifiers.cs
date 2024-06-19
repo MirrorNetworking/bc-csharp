@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Kisa
+namespace Mirror.BouncyCastle.Asn1.Kisa
 {
     // TODO[api] Make static
     public abstract class KisaObjectIdentifiers

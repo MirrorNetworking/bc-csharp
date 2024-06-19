@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Bike
+namespace Mirror.BouncyCastle.Pqc.Crypto.Bike
 {
     internal class BikeUtilities
     {

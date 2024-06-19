@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Runtime.Intrinsics.X86
+﻿namespace Mirror.BouncyCastle.Runtime.Intrinsics.X86
 {
     internal static class Bmi2
     {

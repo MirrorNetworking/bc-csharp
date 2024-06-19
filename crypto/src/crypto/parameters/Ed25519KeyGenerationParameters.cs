@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Parameters
+namespace Mirror.BouncyCastle.Crypto.Parameters
 {
     public class Ed25519KeyGenerationParameters
         : KeyGenerationParameters

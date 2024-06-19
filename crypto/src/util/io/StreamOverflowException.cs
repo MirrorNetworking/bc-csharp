@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Utilities.IO
+namespace Mirror.BouncyCastle.Utilities.IO
 {
     [Serializable]
     public class StreamOverflowException

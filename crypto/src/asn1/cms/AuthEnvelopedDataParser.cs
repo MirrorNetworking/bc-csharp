@@ -1,10 +1,10 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
 	/**
 	 * Produce an object suitable for an Asn1OutputStream.
-	 * 
+	 *
 	 * <pre>
 	 * AuthEnvelopedData ::= SEQUENCE {
 	 *   version CMSVersion,
@@ -79,7 +79,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 			return recipientInfos;
 		}
 
-		public EncryptedContentInfoParser GetAuthEncryptedContentInfo() 
+		public EncryptedContentInfoParser GetAuthEncryptedContentInfo()
 		{
 			if (nextObject == null)
 			{
@@ -97,7 +97,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 
 			return null;
 		}
-		
+
 		public Asn1SetParser GetAuthAttrs()
 		{
 			if (nextObject == null)
@@ -117,7 +117,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 
 			return null;
 		}
-		
+
 		public Asn1OctetString GetMac()
 		{
 			if (nextObject == null)
@@ -130,7 +130,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 
 			return Asn1OctetString.GetInstance(o.ToAsn1Object());
 		}
-		
+
 		public Asn1SetParser GetUnauthAttrs()
 		{
 			if (nextObject == null)

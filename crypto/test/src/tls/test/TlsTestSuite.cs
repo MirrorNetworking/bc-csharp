@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Tls.Crypto;
-using Org.BouncyCastle.Tls.Crypto.Impl.BC;
+using Mirror.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto.Impl.BC;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     public class TlsTestSuite
     {
@@ -22,7 +22,7 @@ namespace Org.BouncyCastle.Tls.Tests
             }
         }
 
-        // Make the access to constants less verbose 
+        // Make the access to constants less verbose
         internal abstract class C : TlsTestConfig {}
 
         public TlsTestSuite()

@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Cmce
+namespace Mirror.BouncyCastle.Pqc.Crypto.Cmce
 {
     internal static class Utils
     {

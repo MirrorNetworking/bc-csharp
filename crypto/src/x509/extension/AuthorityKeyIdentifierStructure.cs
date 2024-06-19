@@ -1,12 +1,12 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Security.Certificates;
 
-namespace Org.BouncyCastle.X509.Extension
+namespace Mirror.BouncyCastle.X509.Extension
 {
 	/// <remarks>A high level authority key identifier.</remarks>
 	public class AuthorityKeyIdentifierStructure

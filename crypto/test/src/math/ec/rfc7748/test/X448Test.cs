@@ -2,11 +2,11 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Rfc7748.Tests
+namespace Mirror.BouncyCastle.Math.EC.Rfc7748.Tests
 {
     [TestFixture]
     public class X448Test

@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.Gnu
+namespace Mirror.BouncyCastle.Asn1.Gnu
 {
     // TODO[api] Make static
     public abstract class GnuObjectIdentifiers

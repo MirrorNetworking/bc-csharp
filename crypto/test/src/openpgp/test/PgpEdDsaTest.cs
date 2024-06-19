@@ -4,14 +4,14 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Generators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Generators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp.Tests
 {
     [TestFixture]
     public class PgpEdDsaTest
@@ -255,7 +255,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 
             PgpPublicKey pubKey = rng.GetPublicKey(5145070902336167606L);
             PgpPrivateKey privKey = secRing.GetSecretKey(5145070902336167606L).ExtractPrivateKey(null);
-        
+
             PgpLiteralDataGenerator lData = new PgpLiteralDataGenerator();
             MemoryStream ldOut = new MemoryStream();
             Stream pOut = lData.Open(ldOut, PgpLiteralDataGenerator.Utf8, PgpLiteralData.Console, text.Length, DateTime.UtcNow);

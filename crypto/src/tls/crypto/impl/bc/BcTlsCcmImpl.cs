@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Modes;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     internal class BcTlsCcmImpl
         : BcTlsAeadCipherImpl

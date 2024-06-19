@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Iana
+namespace Mirror.BouncyCastle.Asn1.Iana
 {
     // TODO[api] Make static
     public abstract class IanaObjectIdentifiers

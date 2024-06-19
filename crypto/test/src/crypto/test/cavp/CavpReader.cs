@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests.Cavp
+namespace Mirror.BouncyCastle.Crypto.Tests.Cavp
 {
     internal class Vector : Dictionary<string, object>
     {

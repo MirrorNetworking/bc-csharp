@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Asn1.Cms;
+﻿using Mirror.BouncyCastle.Asn1.Cms;
 
-namespace Org.BouncyCastle.Asn1.Crmf
+namespace Mirror.BouncyCastle.Asn1.Crmf
 {
     public class EncryptedKey
         : Asn1Encodable, IAsn1Choice

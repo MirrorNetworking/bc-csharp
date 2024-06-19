@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     internal class PipedStream
         : Stream

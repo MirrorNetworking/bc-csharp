@@ -2,10 +2,10 @@
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Modes
+namespace Mirror.BouncyCastle.Crypto.Modes
 {
     public class KCcmBlockCipher
         : IAeadBlockCipher
@@ -37,7 +37,7 @@ namespace Org.BouncyCastle.Crypto.Modes
         private readonly MemoryStream data = new MemoryStream();
 
         /*
-        *  
+        *
         *
         */
         private int Nb_ = 4;
@@ -64,7 +64,7 @@ namespace Org.BouncyCastle.Crypto.Modes
 
         /// <summary>
         /// Constructor allowing Nb configuration.
-        /// 
+        ///
         /// Nb is a parameter specified in CCM mode of DSTU7624 standard.
         /// This parameter specifies maximum possible length of input.It should
         /// be calculated as follows: Nb = 1 / 8 * (-3 + log[2]Nmax) + 1,

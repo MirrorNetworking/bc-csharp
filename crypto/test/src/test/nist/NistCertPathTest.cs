@@ -4,16 +4,16 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Pkix;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Extension;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Pkix;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Tests.Nist
+namespace Mirror.BouncyCastle.Tests.Nist
 {
 	[TestFixture]
 	public class NistCertPathTest
@@ -81,7 +81,7 @@ namespace Org.BouncyCastle.Tests.Nist
 				0,
 				"Could not validate certificate signature.");
 		}
-        
+
 		[Test]
 		public void TestValidDSASignaturesTest4()
 		{
@@ -118,7 +118,7 @@ namespace Org.BouncyCastle.Tests.Nist
 				1,
 				"Could not validate certificate: certificate not valid until 20470101120100Z");
 		}
-        
+
 		[Test]
 		public void TestInvalidEENotBeforeDateTest2()
 		{
@@ -409,7 +409,7 @@ namespace Org.BouncyCastle.Tests.Nist
 				"Path processing failed on policy.");
 		}
 
-		[Test] 
+		[Test]
 		public void TestUserNoticeQualifierTest17()
 		{
 			string[] certList = new string[] { GOOD_CA_CERT, "UserNoticeQualifierTest17EE" };
@@ -749,7 +749,7 @@ namespace Org.BouncyCastle.Tests.Nist
 				return (PkixCertPathBuilderResult) builder.Build(builderParams);
 			}
 			catch (PkixCertPathBuilderException e)
-			{               
+			{
 				throw e.InnerException;
 			}
 		}

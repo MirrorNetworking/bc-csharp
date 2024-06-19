@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
 	public abstract class PgpObject
 	{

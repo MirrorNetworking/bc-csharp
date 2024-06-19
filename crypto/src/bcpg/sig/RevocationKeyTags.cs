@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     public enum RevocationKeyTag
 		: byte

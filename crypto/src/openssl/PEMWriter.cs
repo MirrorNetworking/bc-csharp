@@ -1,9 +1,9 @@
 using System.IO;
 
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.IO.Pem;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.IO.Pem;
 
-namespace Org.BouncyCastle.OpenSsl
+namespace Mirror.BouncyCastle.OpenSsl
 {
 	/// <remarks>General purpose writer for OpenSSL PEM objects.</remarks>
 	public class PemWriter
@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.OpenSsl
 		{
 		}
 
-		public void WriteObject(object obj) 
+		public void WriteObject(object obj)
 		{
 			WriteObject(obj, null, null, null);
 		}

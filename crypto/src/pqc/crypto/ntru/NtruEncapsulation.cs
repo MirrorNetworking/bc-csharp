@@ -1,7 +1,7 @@
 using System;
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     /// <summary>
     /// Encapsulated secret encapsulated by NTRU.

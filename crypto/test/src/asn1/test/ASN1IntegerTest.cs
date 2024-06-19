@@ -2,11 +2,11 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Tests
+namespace Mirror.BouncyCastle.Asn1.Tests
 {
     [TestFixture]
     [NonParallelizable] // Environment.SetEnvironmentVariable
@@ -62,11 +62,11 @@ namespace Org.BouncyCastle.Asn1.Tests
             }
 
             // No support for thread-local override in C# version
-            //IsTrue(!Properties.SetThreadOverride("org.bouncycastle.asn1.allow_unsafe_integer", true));
+            //IsTrue(!Properties.SetThreadOverride("Mirror.BouncyCastle.asn1.allow_unsafe_integer", true));
 
             //new DerInteger(Hex.Decode("ffda47bfc776bcd269da4832626ac332adfca6dd835e8ecd83cd1ebe7d709b"));
 
-            //IsTrue(Properties.RemoveThreadOverride("org.bouncycastle.asn1.allow_unsafe_integer"));
+            //IsTrue(Properties.RemoveThreadOverride("Mirror.BouncyCastle.asn1.allow_unsafe_integer"));
 
             try
             {

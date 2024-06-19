@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Modes;
+using Mirror.BouncyCastle.Crypto.Modes;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
 	/**
 	 * a wrapper for block ciphers with a single byte block size, so that they

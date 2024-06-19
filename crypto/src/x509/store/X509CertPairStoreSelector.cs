@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Collections;
 
-namespace Org.BouncyCastle.X509.Store
+namespace Mirror.BouncyCastle.X509.Store
 {
 	/// <remarks>
 	/// This class is an <code>IX509Selector</code> implementation to select

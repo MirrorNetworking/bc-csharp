@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Tls.Crypto;
+using Mirror.BouncyCastle.Tls.Crypto;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Interface for verifying explicit Diffie-Hellman group parameters.</summary>
     public interface TlsDHGroupVerifier

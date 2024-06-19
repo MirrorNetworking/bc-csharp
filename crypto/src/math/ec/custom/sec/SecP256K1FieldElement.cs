@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP256K1FieldElement
         : AbstractFpFieldElement
@@ -128,10 +128,10 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         {
             /*
              * Raise this element to the exponent 2^254 - 2^30 - 2^7 - 2^6 - 2^5 - 2^4 - 2^2
-             * 
+             *
              * Breaking up the exponent's binary representation into "repunits", we get:
              * { 223 1s } { 1 0s } { 22 1s } { 4 0s } { 2 1s } { 2 0s}
-             * 
+             *
              * Therefore we need an addition chain containing 2, 22, 223 (the lengths of the repunits)
              * We use: 1, [2], 3, 6, 9, 11, [22], 44, 88, 176, 220, [223]
              */

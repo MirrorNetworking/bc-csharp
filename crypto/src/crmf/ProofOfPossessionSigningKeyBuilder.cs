@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class ProofOfPossessionSigningKeyBuilder
     {

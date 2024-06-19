@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace Org.BouncyCastle.Bcpg
+namespace Mirror.BouncyCastle.Bcpg
 {
     /// <summary>
     /// Represents revocation key OpenPGP signature sub packet.
@@ -9,8 +9,8 @@ namespace Org.BouncyCastle.Bcpg
     public class RevocationKey
 		: SignatureSubpacket
     {
-		// 1 octet of class, 
-		// 1 octet of public-key algorithm ID, 
+		// 1 octet of class,
+		// 1 octet of public-key algorithm ID,
 		// 20 octets of fingerprint
 		public RevocationKey(bool isCritical, bool isLongLength, byte[] data)
 			: base(SignatureSubpacketTag.RevocationKey, isCritical, isLongLength, data)

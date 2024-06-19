@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>This exception will be thrown (only) when the connection is closed by the peer without sending a
     /// <see cref="AlertDescription.close_notify">close_notify</see> warning alert.</summary>

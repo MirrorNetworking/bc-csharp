@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
     public class PkiHeader
         : Asn1Encodable
@@ -133,27 +133,27 @@ namespace Org.BouncyCastle.Asn1.Cmp
         }
 
         public virtual Asn1OctetString SenderKID
-        {   
+        {
             get { return senderKID; }
         }
 
         public virtual Asn1OctetString RecipKID
-        {   
+        {
             get { return recipKID; }
         }
 
         public virtual Asn1OctetString TransactionID
-        {   
+        {
             get { return transactionID; }
         }
 
         public virtual Asn1OctetString SenderNonce
-        {   
+        {
             get { return senderNonce; }
         }
 
         public virtual Asn1OctetString RecipNonce
-        {   
+        {
             get { return recipNonce; }
         }
 

@@ -2,23 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Misc;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Misc;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Pkcs
+namespace Mirror.BouncyCastle.Pkcs
 {
     public class Pkcs12Store
     {
-        public const string IgnoreUselessPasswordProperty = "Org.BouncyCastle.Pkcs12.IgnoreUselessPassword";
+        public const string IgnoreUselessPasswordProperty = "Mirror.BouncyCastle.Pkcs12.IgnoreUselessPassword";
 
         private readonly Dictionary<string, AsymmetricKeyEntry> m_keys =
             new Dictionary<string, AsymmetricKeyEntry>(StringComparer.OrdinalIgnoreCase);
@@ -840,7 +840,7 @@ namespace Org.BouncyCastle.Pkcs
                 if (cert[MiscObjectIdentifiers.id_oracle_pkcs12_trusted_key_usage] == null)
                 {
                     Asn1OctetString ext = cert.Certificate.GetExtensionValue(X509Extensions.ExtendedKeyUsage);
-          
+
                     if (ext != null)
                     {
                         ExtendedKeyUsage usage = ExtendedKeyUsage.GetInstance(ext.GetOctets());
@@ -850,7 +850,7 @@ namespace Org.BouncyCastle.Pkcs
                         {
                             v.Add(usages[i]);
                         }
-                       
+
                         fName.Add(
                             new DerSequence(
                                 MiscObjectIdentifiers.id_oracle_pkcs12_trusted_key_usage,

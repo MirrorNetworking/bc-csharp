@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Asn1.Utilities
+namespace Mirror.BouncyCastle.Asn1.Utilities
 {
     public static class Asn1Dump
     {
@@ -319,7 +319,7 @@ namespace Org.BouncyCastle.Asn1.Utilities
         {
             for (int i = off; i != off + len; i++)
             {
-                char c = (char)bytes[i]; 
+                char c = (char)bytes[i];
                 if (c >= ' ' && c <= '~')
                 {
                     buf.Append(c);

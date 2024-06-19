@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Pkcs;
 
-namespace Org.BouncyCastle.Asn1.Cmp
+namespace Mirror.BouncyCastle.Asn1.Cmp
 {
     /**
      * PKIBody ::= CHOICE {       -- message-specific body elements

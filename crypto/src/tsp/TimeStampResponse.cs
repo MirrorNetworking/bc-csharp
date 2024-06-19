@@ -2,13 +2,13 @@ using System;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Tsp;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
     /**
 	 * Base class for an RFC 3161 Time Stamp Response object.
@@ -158,7 +158,7 @@ namespace Org.BouncyCastle.Tsp
 				{
 					/*
 					 * RFC 5035 5.4. If both attributes exist in a single message,
-					 * they are independently evaluated. 
+					 * they are independently evaluated.
 					 */
 				}
 

@@ -7,9 +7,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal static class SecT131Field
     {
@@ -324,8 +324,8 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         private static void ImplMultiply(ReadOnlySpan<ulong> x, ReadOnlySpan<ulong> y, Span<ulong> zz)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
             {
                 var X01 = Vector128.Create(x[0], x[1]);
                 var X2_ = Vector128.CreateScalar(x[2]);
@@ -401,7 +401,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong u0 = H[0];
             ulong u1 = H[1] ^ H[0] ^ H[4];
             ulong u2 =        H[1] ^ H[5];
-        
+
             // Calculate W
             ulong w0 = u0 ^ v0 ^ (H[2] << 4) ^ (H[2] << 1);
             ulong w1 = u1 ^ v1 ^ (H[3] << 4) ^ (H[3] << 1);
@@ -448,12 +448,12 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
             Debug.Assert(w2 >> 42 == 0);
 
-            zz[0] = u0; 
-            zz[1] = u1 ^ w0      ^ H[2]; 
-            zz[2] = u2 ^ w1 ^ w0 ^ H[3]; 
-            zz[3] =      w2 ^ w1; 
-            zz[4] =           w2 ^ H[2]; 
-            zz[5] =                H[3]; 
+            zz[0] = u0;
+            zz[1] = u1 ^ w0      ^ H[2];
+            zz[2] = u2 ^ w1 ^ w0 ^ H[3];
+            zz[3] =      w2 ^ w1;
+            zz[4] =           w2 ^ H[2];
+            zz[5] =                H[3];
 
             ImplCompactExt(zz);
         }
@@ -484,7 +484,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong t1 = g0 ^ g1 ^ g2;
 
             ImplMulw(u, t0, t1, H, 4);              // H(1)       44/43 bits
-        
+
             ulong t2 = (f1 << 1) ^ (f2 << 2);
             ulong t3 = (g1 << 1) ^ (g2 << 2);
 
@@ -505,7 +505,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             ulong u0 = H[0];
             ulong u1 = H[1] ^ H[0] ^ H[4];
             ulong u2 =        H[1] ^ H[5];
-        
+
             // Calculate W
             ulong w0 = u0 ^ v0 ^ (H[2] << 4) ^ (H[2] << 1);
             ulong w1 = u1 ^ v1 ^ (H[3] << 4) ^ (H[3] << 1);
@@ -552,12 +552,12 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
 
             Debug.Assert(w2 >> 42 == 0);
 
-            zz[0] = u0; 
-            zz[1] = u1 ^ w0      ^ H[2]; 
-            zz[2] = u2 ^ w1 ^ w0 ^ H[3]; 
-            zz[3] =      w2 ^ w1; 
-            zz[4] =           w2 ^ H[2]; 
-            zz[5] =                H[3]; 
+            zz[0] = u0;
+            zz[1] = u1 ^ w0      ^ H[2];
+            zz[2] = u2 ^ w1 ^ w0 ^ H[3];
+            zz[3] =      w2 ^ w1;
+            zz[4] =           w2 ^ H[2];
+            zz[5] =                H[3];
 
             ImplCompactExt(zz);
         }
@@ -621,7 +621,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             zz[4] = Interleave.Expand8to16((byte)x[2]);
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
             {
                 zz[3] = Bmi2.X64.ParallelBitDeposit(x[1] >> 32, 0x5555555555555555UL);
                 zz[2] = Bmi2.X64.ParallelBitDeposit(x[1]      , 0x5555555555555555UL);

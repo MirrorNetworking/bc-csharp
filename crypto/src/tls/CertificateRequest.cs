@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>Parsing and encoding of a <i>CertificateRequest</i> struct from RFC 4346.</summary>
     /// <remarks>
@@ -61,7 +61,7 @@ namespace Org.BouncyCastle.Tls
         {
         }
 
-        // TODO[tls13] Prefer to manage the certificateRequestContext internally only? 
+        // TODO[tls13] Prefer to manage the certificateRequestContext internally only?
         /// <exception cref="IOException"/>
         public CertificateRequest(byte[] certificateRequestContext,
             IList<SignatureAndHashAlgorithm> supportedSignatureAlgorithms,

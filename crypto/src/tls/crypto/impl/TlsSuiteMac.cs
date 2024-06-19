@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl
 {
     /// <summary>Base interface for a generic TLS MAC implementation for use with a bulk cipher.</summary>
     public interface TlsSuiteMac

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
     /**
      * PKIX RFC-2459

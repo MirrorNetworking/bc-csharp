@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.GM
+namespace Mirror.BouncyCastle.Math.EC.Custom.GM
 {
     internal class SM2P256V1FieldElement
         : AbstractFpFieldElement
@@ -132,7 +132,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.GM
              * Breaking up the exponent's binary representation into "repunits", we get:
              * { 31 1s } { 1 0s } { 128 1s } { 31 0s } { 1 1s } { 62 0s }
              *
-             * We use an addition chain for the beginning: [1], 2, 3, 6, 12, [24], 30, [31] 
+             * We use an addition chain for the beginning: [1], 2, 3, 6, 12, [24], 30, [31]
              */
 
             uint[] x1 = this.x;

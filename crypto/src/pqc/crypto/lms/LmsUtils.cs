@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Lms
+namespace Mirror.BouncyCastle.Pqc.Crypto.Lms
 {
     // TODO[api] Make internal
     public static class LmsUtilities
@@ -105,7 +105,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Lms
             }
 
 #if NETCOREAPP2_1_OR_GREATER || NETSTANDARD2_1_OR_GREATER
-            public int DoFinal(Span<byte> output) 
+            public int DoFinal(Span<byte> output)
             {
                 int digestSize = m_digest.GetDigestSize();
                 Span<byte> buf = digestSize <= 128

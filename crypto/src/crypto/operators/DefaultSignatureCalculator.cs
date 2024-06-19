@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-using Org.BouncyCastle.Crypto.IO;
+using Mirror.BouncyCastle.Crypto.IO;
 
-namespace Org.BouncyCastle.Crypto.Operators
+namespace Mirror.BouncyCastle.Crypto.Operators
 {
     // TODO[api] sealed
     public class DefaultSignatureCalculator

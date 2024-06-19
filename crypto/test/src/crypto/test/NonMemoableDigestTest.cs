@@ -3,14 +3,14 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * SHA1 HMac Test, test vectors from RFC 2202
@@ -50,7 +50,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             "Test Using Larger Than Block-Size Key - Hash Key First",
             "Test Using Larger Than Block-Size Key and Larger Than One Block-Size Data"
         };
-        
+
         public override string Name
         {
             get { return "NonMemoableDigest"; }

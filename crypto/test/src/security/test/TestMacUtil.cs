@@ -4,9 +4,9 @@ using System.Threading;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Security.Tests
+namespace Mirror.BouncyCastle.Security.Tests
 {
     [TestFixture]
     public class TestMacUtilities

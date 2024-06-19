@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto;
+﻿using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Hqc
+namespace Mirror.BouncyCastle.Pqc.Crypto.Hqc
 {
     public sealed class HqcParameters
         : ICipherParameters

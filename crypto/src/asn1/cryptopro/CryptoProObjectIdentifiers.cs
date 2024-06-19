@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1.CryptoPro
+namespace Mirror.BouncyCastle.Asn1.CryptoPro
 {
     // TODO[api] Make static
     public abstract class CryptoProObjectIdentifiers

@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Modes.Gcm
+namespace Mirror.BouncyCastle.Crypto.Modes.Gcm
 {
     [Obsolete("Will be removed")]
     public class Tables4kGcmMultiplier

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     /// <summary>RFC 5764 DTLS Extension to Establish Keys for SRTP.</summary>
     public abstract class TlsSrtpUtilities

@@ -2,14 +2,14 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 
 	[TestFixture]
@@ -66,7 +66,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 		}
 
 		// Test cases from skein_golden_kat.txt in Skein 1.3 NIST CD
-		// Excludes empty '(none)' key 'random+MAC' tests, which are in effect digest 
+		// Excludes empty '(none)' key 'random+MAC' tests, which are in effect digest
 		private static readonly Case[] TEST_CASES = {
 			new Case(256, 256, "", "cb41f1706cde09651203c2d0efbaddf8", "886e4efefc15f06aa298963971d7a25398fffe5681c84db39bd00851f64ae29d"),
 			new Case(256, 256, "d3", "cb41f1706cde09651203c2d0efbaddf847a0d315cb2e53ff8bac41da0002672e920244c66e02d5f0dad3e94c42bb65f0d14157decf4105ef5609d5b0984457c193", "979422a94e3afaa46664124d4e5e8b9422b1d8baf11c6ae6725992ac72a112ca"),

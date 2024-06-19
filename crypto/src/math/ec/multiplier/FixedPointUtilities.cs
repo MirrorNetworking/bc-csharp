@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Math.EC.Multiplier
+namespace Mirror.BouncyCastle.Math.EC.Multiplier
 {
     public class FixedPointUtilities
     {
@@ -53,7 +53,7 @@ namespace Org.BouncyCastle.Math.EC.Multiplier
                     pow2Table[i] = pow2Table[i - 1].TimesPow2(d);
                 }
 
-                // This will be the 'offset' value 
+                // This will be the 'offset' value
                 pow2Table[minWidth] = pow2Table[0].Subtract(pow2Table[1]);
 
                 c.NormalizeAll(pow2Table);

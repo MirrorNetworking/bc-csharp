@@ -4,16 +4,16 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Pqc.Crypto.Falcon;
-using Org.BouncyCastle.Pqc.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Pqc.Crypto.Falcon;
+using Mirror.BouncyCastle.Pqc.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     [TestFixture]
     public class FalconTest
@@ -78,7 +78,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
 
             AsymmetricKeyParameter pubDec = PqcPublicKeyFactory.CreateKey(PqcSubjectPublicKeyInfoFactory.CreateSubjectPublicKeyInfo(pub));
             AsymmetricKeyParameter privDec = PqcPrivateKeyFactory.CreateKey(PqcPrivateKeyInfoFactory.CreatePrivateKeyInfo(priv));
-  
+
             Assert.AreEqual(((FalconPublicKeyParameters)pub).GetEncoded(), ((FalconPublicKeyParameters)pubDec).GetEncoded());
             Assert.AreEqual(((FalconPrivateKeyParameters)priv).GetEncoded(), ((FalconPrivateKeyParameters)privDec).GetEncoded());
         }
@@ -133,7 +133,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             Array.Copy(msg, 0, ressm, 2 + 40, msg.Length);
             ressm[2 + 40 + msg.Length] = (byte)(0x20 + kparam.Parameters.LogN);
             Array.Copy(sig, 40 + 1, ressm, 3 + 40 + msg.Length, sig.Length - 40 - 1);
-         
+
             // verify
             FalconSigner verifier = new FalconSigner();
             FalconPublicKeyParameters pkparam = (FalconPublicKeyParameters)kp.Public;
@@ -141,7 +141,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
             bool vrfyrespass = verifier.VerifySignature(msg, sig);
             sig[42]++; // changing the signature by 1 byte should cause it to fail
             bool vrfyresfail = verifier.VerifySignature(msg, sig);
-           
+
             //sign
             Assert.True(Arrays.AreEqual(ressm, sm), name + " " + count + " signature");
             //verify

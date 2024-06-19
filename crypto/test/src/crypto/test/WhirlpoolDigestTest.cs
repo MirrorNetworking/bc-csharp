@@ -3,21 +3,21 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Encodings;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Encodings;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 
 	/**
 	 * ISO vector test for Whirlpool
-	 *  
+	 *
 	 */
 	[TestFixture]
 	public class WhirlpoolDigestTest
@@ -61,20 +61,20 @@ namespace Org.BouncyCastle.Crypto.Tests
 			base.PerformTest();
 
 			byte[] thirtyOneZeros = new byte[31];
-			performStandardVectorTest("31 zeroes test", 
+			performStandardVectorTest("31 zeroes test",
 			                          thirtyOneZeros, _thirtyOneZeros);
 
 			byte[] millionAInByteArray = new byte[1000000];
 			Arrays.Fill(millionAInByteArray, (byte)'a');
 
-			performStandardVectorTest("Million 'a' test", 
+			performStandardVectorTest("Million 'a' test",
 			                          millionAInByteArray, _millionAResultVector);
 		}
 
 		private void performStandardVectorTest(string testTitle, byte[] inputBytes,
 		                                       string resultsAsHex)
 		{
-			doPerformTest(testTitle, inputBytes, resultsAsHex);        
+			doPerformTest(testTitle, inputBytes, resultsAsHex);
 		}
 
 		private void doPerformTest(string testTitle, byte[] inputBytes, string resultsAsHex)

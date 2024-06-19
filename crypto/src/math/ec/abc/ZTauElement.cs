@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Math.EC.Abc
+namespace Mirror.BouncyCastle.Math.EC.Abc
 {
 	/**
 	* Class representing an element of <code><b>Z</b>[&#964;]</code>. Let
@@ -8,7 +8,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
 	* are no accessor methods.
 	* Immutable class.
 	*/
-	internal class ZTauElement 
+	internal class ZTauElement
 	{
 		/**
 		* The &quot;real&quot; part of <code>&#955;</code>.

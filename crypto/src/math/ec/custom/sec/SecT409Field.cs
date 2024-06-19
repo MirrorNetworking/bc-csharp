@@ -5,9 +5,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal static class SecT409Field
     {
@@ -52,7 +52,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         {
             for (int i = 0; i < 13; ++i)
             {
-                zz[i] = xx[i] ^ yy[i]; 
+                zz[i] = xx[i] ^ yy[i];
             }
         }
 
@@ -271,7 +271,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         public static void Reduce39(ulong[] z, int zOff)
         {
             ulong z6 = z[zOff + 6], t = z6 >> 25;
-            z[zOff    ] ^= t; 
+            z[zOff    ] ^= t;
             z[zOff + 1] ^= (t << 23);
             z[zOff + 6]  = z6 & M25;
         }
@@ -551,7 +551,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             Debug.Assert(y >> 59 == 0);
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Pclmulqdq.IsEnabled)
             {
                 var X = Vector128.CreateScalar(x);
                 var Y = Vector128.CreateScalar(y);
@@ -607,7 +607,7 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
             zz[12] = Interleave.Expand32to64((uint)x[6]);
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Bmi2.X64.IsEnabled)
             {
                 zz[11] = Bmi2.X64.ParallelBitDeposit(x[5] >> 32, 0x5555555555555555UL);
                 zz[10] = Bmi2.X64.ParallelBitDeposit(x[5]      , 0x5555555555555555UL);

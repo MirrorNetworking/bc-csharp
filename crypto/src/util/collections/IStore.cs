@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Utilities.Collections
+namespace Mirror.BouncyCastle.Utilities.Collections
 {
     /// <summary>A generic interface describing a simple store of objects.</summary>
     /// <typeparam name="T">The covariant type of stored objects.</typeparam>

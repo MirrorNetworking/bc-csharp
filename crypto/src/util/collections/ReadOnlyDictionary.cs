@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Org.BouncyCastle.Utilities.Collections
+namespace Mirror.BouncyCastle.Utilities.Collections
 {
     internal abstract class ReadOnlyDictionary<K, V>
         : IDictionary<K, V>

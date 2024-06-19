@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Math.EC
+namespace Mirror.BouncyCastle.Math.EC
 {
     /**
      * base class for points on elliptic curves.
@@ -101,7 +101,7 @@ namespace Org.BouncyCastle.Math.EC
 
         /**
          * Returns the affine x-coordinate after checking that this point is normalized.
-         * 
+         *
          * @return The affine x-coordinate of this point
          * @throws IllegalStateException if the point is not normalized
          */
@@ -116,7 +116,7 @@ namespace Org.BouncyCastle.Math.EC
 
         /**
          * Returns the affine y-coordinate after checking that this point is normalized
-         * 
+         *
          * @return The affine y-coordinate of this point
          * @throws IllegalStateException if the point is not normalized
          */
@@ -131,11 +131,11 @@ namespace Org.BouncyCastle.Math.EC
 
         /**
          * Returns the x-coordinate.
-         * 
+         *
          * Caution: depending on the curve's coordinate system, this may not be the same value as in an
          * affine coordinate system; use Normalize() to get a point where the coordinates have their
          * affine values, or use AffineXCoord if you expect the point to already have been normalized.
-         * 
+         *
          * @return the x-coordinate of this point
          */
         public virtual ECFieldElement XCoord
@@ -145,11 +145,11 @@ namespace Org.BouncyCastle.Math.EC
 
         /**
          * Returns the y-coordinate.
-         * 
+         *
          * Caution: depending on the curve's coordinate system, this may not be the same value as in an
          * affine coordinate system; use Normalize() to get a point where the coordinates have their
          * affine values, or use AffineYCoord if you expect the point to already have been normalized.
-         * 
+         *
          * @return the y-coordinate of this point
          */
         public virtual ECFieldElement YCoord
@@ -208,7 +208,7 @@ namespace Org.BouncyCastle.Math.EC
         /**
          * Normalization ensures that any projective coordinate is 1, and therefore that the x, y
          * coordinates reflect those of the equivalent point in an affine coordinate system.
-         * 
+         *
          * @return a new ECPoint instance representing the same point, but with normalized coordinates
          */
         public virtual ECPoint Normalize()
@@ -965,7 +965,7 @@ namespace Org.BouncyCastle.Math.EC
             ECCurve curve = this.Curve;
 
             ECFieldElement Y1 = this.RawYCoord;
-            if (Y1.IsZero) 
+            if (Y1.IsZero)
                 return curve.Infinity;
 
             int coord = curve.CoordinateSystem;
@@ -1216,7 +1216,7 @@ namespace Org.BouncyCastle.Math.EC
             ECCurve curve = this.Curve;
 
             ECFieldElement Y1 = this.RawYCoord;
-            if (Y1.IsZero) 
+            if (Y1.IsZero)
                 return curve.Infinity;
 
             int coord = curve.CoordinateSystem;
@@ -1246,7 +1246,7 @@ namespace Org.BouncyCastle.Math.EC
 
             for (int i = 0; i < e; ++i)
             {
-                if (Y1.IsZero) 
+                if (Y1.IsZero)
                     return curve.Infinity;
 
                 ECFieldElement X1Squared = X1.Square();
@@ -1388,7 +1388,7 @@ namespace Org.BouncyCastle.Math.EC
         }
     }
 
-    public abstract class AbstractF2mPoint 
+    public abstract class AbstractF2mPoint
         : ECPointBase
     {
         protected AbstractF2mPoint(ECCurve curve, ECFieldElement x, ECFieldElement y)
@@ -1415,7 +1415,7 @@ namespace Org.BouncyCastle.Math.EC
 
                 if (X.IsZero)
                 {
-                    // NOTE: For x == 0, we expect the affine-y instead of the lambda-y 
+                    // NOTE: For x == 0, we expect the affine-y instead of the lambda-y
                     lhs = Y.Square();
                     rhs = B;
                     if (!ZIsOne)
@@ -1481,7 +1481,7 @@ namespace Org.BouncyCastle.Math.EC
                 /*
                  * Check that 0 == Tr(X + A); then there exists a solution to L^2 + L = X + A, and
                  * so a halving is possible, so this point is the double of another.
-                 * 
+                 *
                  * Note: Tr(A) == 1 for cofactor 2 curves.
                  */
                 ECPoint N = this.Normalize();
@@ -1492,7 +1492,7 @@ namespace Org.BouncyCastle.Math.EC
             {
                 /*
                  * Solve L^2 + L = X + A to find the half of this point, if it exists (fail if not).
-                 * 
+                 *
                  * Note: Tr(A) == 0 for cofactor 4 curves.
                  */
                 ECPoint N = this.Normalize();
@@ -1510,7 +1510,7 @@ namespace Org.BouncyCastle.Math.EC
                 /*
                  * Either T or (T + X) is the square of a half-point's x coordinate (hx). In either
                  * case, the half-point can be halved again when 0 == Tr(hx + A).
-                 * 
+                 *
                  * Note: Tr(hx + A) == Tr(hx) == Tr(hx^2) == Tr(T) == Tr(T + X)
                  *
                  * Check that 0 == Tr(T); then there exists a solution to L^2 + L = hx + A, and so a
@@ -1953,7 +1953,7 @@ namespace Org.BouncyCastle.Math.EC
         }
 
         /* (non-Javadoc)
-         * @see Org.BouncyCastle.Math.EC.ECPoint#twice()
+         * @see Mirror.BouncyCastle.Math.EC.ECPoint#twice()
          */
         public override ECPoint Twice()
         {

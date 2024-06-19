@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
 	/**
 	 * BER TaggedObject - in ASN.1 notation this is any object preceded by

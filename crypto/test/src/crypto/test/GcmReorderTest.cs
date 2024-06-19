@@ -2,18 +2,18 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Modes.Gcm;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Modes.Gcm;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
 	[TestFixture]
 	public class GcmReorderTest
 	{
 		private static readonly byte[] H;
-		private static readonly SecureRandom random = new SecureRandom(); 
+		private static readonly SecureRandom random = new SecureRandom();
 		private static readonly IGcmMultiplier mul = new Tables4kGcmMultiplier();
 		private static readonly IGcmExponentiator exp = new Tables1kGcmExponentiator();
 		private static readonly byte[] Empty = new byte[0];
@@ -152,12 +152,12 @@ namespace Org.BouncyCastle.Crypto.Tests
 				mul.MultiplyH(expected);
 				Assert.IsTrue(Arrays.AreEqual(expected, multiply(a, H)));
 				Assert.IsTrue(Arrays.AreEqual(expected, multiply(H, a)));
-				
+
 				expected = Arrays.Clone(b);
 				mul.MultiplyH(expected);
 				Assert.IsTrue(Arrays.AreEqual(expected, multiply(b, H)));
 				Assert.IsTrue(Arrays.AreEqual(expected, multiply(H, b)));
-				
+
 				Assert.IsTrue(Arrays.AreEqual(multiply(a, b), multiply(b, a)));
 			}
 		}
@@ -224,7 +224,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 		private byte[] concatCrypt_GHASH(byte[] ghashP, long bitlenP, byte[] ghashA, long bitlenA)
 		{
 			// Note: bitlenP must be aligned to the block size
-			
+
 			long a = (bitlenA + 127) >> 7;
 
 			byte[] tmp1 = lengthBlock(0, bitlenP);

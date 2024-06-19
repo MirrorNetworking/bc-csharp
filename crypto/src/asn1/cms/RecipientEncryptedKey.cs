@@ -1,4 +1,4 @@
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class RecipientEncryptedKey
 		: Asn1Encodable
@@ -45,7 +45,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 			get { return encryptedKey; }
 		}
 
-		/** 
+		/**
 		 * Produce an object suitable for an Asn1OutputStream.
 		 * <pre>
 		 * RecipientEncryptedKey ::= SEQUENCE {

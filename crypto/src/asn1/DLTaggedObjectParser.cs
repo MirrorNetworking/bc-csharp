@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
     /**
      * Parser for definite-length tagged objects.

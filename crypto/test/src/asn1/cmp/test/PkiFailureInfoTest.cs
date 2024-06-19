@@ -3,10 +3,10 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Asn1.Cmp.Tests
+namespace Mirror.BouncyCastle.Asn1.Cmp.Tests
 {
     /**
      * PKIFailureInfoTest
@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.Asn1.Cmp.Tests
     public class PkiFailureInfoTest
         : SimpleTest
     {
-        // A correct hex encoded BAD_DATA_FORMAT PKIFailureInfo 
+        // A correct hex encoded BAD_DATA_FORMAT PKIFailureInfo
         private static readonly byte[] CorrectFailureInfo = Base64.Decode("AwIANQ==");
 
         public override string Name => "PkiFailureInfo";

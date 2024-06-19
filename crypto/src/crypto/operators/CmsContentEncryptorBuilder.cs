@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Asn1.Ntt;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Asn1.Ntt;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
 
-namespace Org.BouncyCastle.Operators
+namespace Mirror.BouncyCastle.Operators
 {
     public class CmsContentEncryptorBuilder
     {

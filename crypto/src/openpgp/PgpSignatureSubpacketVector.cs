@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Bcpg.Sig;
+using Mirror.BouncyCastle.Bcpg.Sig;
 
-namespace Org.BouncyCastle.Bcpg.OpenPgp
+namespace Mirror.BouncyCastle.Bcpg.OpenPgp
 {
     /// <remarks>Container for a list of signature subpackets.</remarks>
     public class PgpSignatureSubpacketVector
@@ -356,7 +356,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
             RevocationKey[] revocationKeys = new RevocationKey[subpackets.Length];
             for (int i = 0; i < revocationKeys.Length; i++)
             {
-                SignatureSubpacket p = subpackets[i]; 
+                SignatureSubpacket p = subpackets[i];
                 revocationKeys[i] = new RevocationKey(p.IsCritical(), p.IsLongLength(), p.GetData());
             }
             return revocationKeys;

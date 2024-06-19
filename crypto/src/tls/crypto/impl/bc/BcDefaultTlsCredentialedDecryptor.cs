@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
 
-namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
+namespace Mirror.BouncyCastle.Tls.Crypto.Impl.BC
 {
     /// <summary>Credentialed class decrypting RSA encrypted secrets sent from a peer for our end of the TLS connection
     /// using the BC light-weight API.</summary>
@@ -58,7 +58,7 @@ namespace Org.BouncyCastle.Tls.Crypto.Impl.BC
         {
             ProtocolVersion expectedVersion = cryptoParams.RsaPreMasterSecretVersion;
 
-            byte[] preMasterSecret = Org.BouncyCastle.Crypto.Tls.TlsRsaKeyExchange.DecryptPreMasterSecret(
+            byte[] preMasterSecret = Mirror.BouncyCastle.Crypto.Tls.TlsRsaKeyExchange.DecryptPreMasterSecret(
                 encryptedPreMasterSecret, 0, encryptedPreMasterSecret.Length, rsaServerPrivateKey,
                 expectedVersion.FullVersion, m_crypto.SecureRandom);
 

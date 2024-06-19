@@ -7,14 +7,14 @@ using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Asn1.Nist;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.Nist;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Cmce
+namespace Mirror.BouncyCastle.Pqc.Crypto.Cmce
 {
     internal interface ICmceEngine
     {
@@ -607,7 +607,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Cmce
             m -= 1;
             m >>= 8;
             m &= 0xff;
-            
+
             /*
             2.3.3 Decapsulation
             2. Set b ←1.
@@ -1016,7 +1016,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Cmce
         private static int Ctz(ulong input)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Bmi1.X64.IsEnabled)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Bmi1.X64.IsEnabled)
             {
                 return (int)Bmi1.X64.TrailingZeroCount(input);
             }

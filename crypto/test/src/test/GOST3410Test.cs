@@ -3,19 +3,19 @@ using System.IO;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
     [TestFixture]
     public class Gost3410Test
@@ -249,12 +249,12 @@ namespace Org.BouncyCastle.Tests
 //			ks.Load(null, null);
             Pkcs12StoreBuilder ksBuilder = new Pkcs12StoreBuilder();
             Pkcs12Store ks = ksBuilder.Build();
-    
+
             //
             // create the certificate - version 3
             //
             X509V3CertificateGenerator certGen = new X509V3CertificateGenerator();
-    
+
             certGen.SetSerialNumber(BigInteger.One);
             certGen.SetIssuerDN(new X509Name("CN=Test"));
             certGen.SetNotBefore(DateTime.UtcNow.AddSeconds(-50));
@@ -270,7 +270,7 @@ namespace Org.BouncyCastle.Tests
             MemoryStream bOut = new MemoryStream();
 
             ks.Save(bOut, "gost".ToCharArray(), new SecureRandom());
-    
+
 //	        ks = KeyStore.getInstance("JKS");
             ks = ksBuilder.Build();
 
@@ -280,7 +280,7 @@ namespace Org.BouncyCastle.Tests
 //	        AsymmetricKeyEntry gKeyEntry = (AsymmetricKeyEntry)
                 ks.GetKey("gost");
         }
-        
+
         private void parametersTest()
         {
 //	        AlgorithmParameterGenerator a = AlgorithmParameterGenerator.getInstance("GOST3410");

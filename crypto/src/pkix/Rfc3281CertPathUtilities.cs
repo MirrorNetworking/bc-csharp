@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security.Certificates;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security.Certificates;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	internal static class Rfc3281CertPathUtilities
 	{
@@ -55,7 +55,7 @@ namespace Org.BouncyCastle.Pkix
 
 		/**
 		* Checks if an attribute certificate is revoked.
-		* 
+		*
 		* @param attrCert Attribute certificate to check if it is revoked.
 		* @param paramsPKIX PKIX parameters.
 		* @param issuerCert The issuer certificate of the attribute certificate
@@ -64,7 +64,7 @@ namespace Org.BouncyCastle.Pkix
 		*            be checked.
 		* @param certPathCerts The certificates of the certification path to be
 		*            checked.
-		* 
+		*
 		* @throws CertPathValidatorException if the certificate is revoked or the
 		*             status cannot be checked or some error occurs.
 		*/
@@ -308,7 +308,7 @@ namespace Org.BouncyCastle.Pkix
 		/**
 		* Searches for a holder public key certificate and verifies its
 		* certification path.
-		* 
+		*
 		* @param attrCert the attribute certificate.
 		* @param pkixParams The PKIX parameters.
 		* @return The certificate path of the holder certificate.
@@ -415,10 +415,10 @@ namespace Org.BouncyCastle.Pkix
 		}
 
 		/**
-		* 
+		*
 		* Checks a distribution point for revocation information for the
 		* certificate <code>attrCert</code>.
-		* 
+		*
 		* @param dp The distribution point to consider.
 		* @param attrCert The attribute certificate which should be checked.
 		* @param paramsPKIX PKIX parameters.
@@ -443,7 +443,7 @@ namespace Org.BouncyCastle.Pkix
 		{
 			/*
 			* 4.3.6 No Revocation Available
-			* 
+			*
 			* The noRevAvail extension, defined in [X.509-2000], allows an AC
 			* issuer to indicate that no revocation information will be made
 			* available for this AC.

@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.X509;
 
-namespace Org.BouncyCastle.Asn1.Esf
+namespace Mirror.BouncyCastle.Asn1.Esf
 {
     /// <remarks>
     /// <code>
@@ -11,7 +11,7 @@ namespace Org.BouncyCastle.Asn1.Esf
     ///		sha1Hash	OtherHashValue, -- This contains a SHA-1 hash
     /// 	otherHash	OtherHashAlgAndValue
     ///	}
-    ///	
+    ///
     ///	OtherHashValue ::= OCTET STRING
     /// </code>
     /// </remarks>

@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Abc
+namespace Mirror.BouncyCastle.Math.EC.Abc
 {
     /**
     * Class holding methods for point multiplication based on the window
@@ -123,7 +123,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         * Computes the norm of an element <code>&#955;</code> of
         * <code><b>R</b>[&#964;]</code>, where <code>&#955; = u + v&#964;</code>
         * and <code>u</code> and <code>u</code> are real numbers (elements of
-        * <code><b>R</b></code>). 
+        * <code><b>R</b></code>).
         * @param mu The parameter <code>&#956;</code> of the elliptic curve.
         * @param u The real part of the element <code>&#955;</code> of
         * <code><b>R</b>[&#964;]</code>.
@@ -318,12 +318,12 @@ namespace Org.BouncyCastle.Math.EC.Abc
         */
         public static sbyte[] TauAdicNaf(sbyte mu, ZTauElement lambda)
         {
-            if (!((mu == 1) || (mu == -1))) 
+            if (!((mu == 1) || (mu == -1)))
                 throw new ArgumentException("mu must be 1 or -1");
 
             BigInteger norm = Norm(mu, lambda);
 
-            // Ceiling of log2 of the norm 
+            // Ceiling of log2 of the norm
             int log2Norm = norm.BitLength;
 
             // If length(TNAF) > 30, then length(TNAF) < log2Norm + 3.52
@@ -342,7 +342,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
             while(!((r0.Equals(BigInteger.Zero)) && (r1.Equals(BigInteger.Zero))))
             {
                 // If r0 is odd
-                if (r0.TestBit(0)) 
+                if (r0.TestBit(0))
                 {
                     u[i] = (sbyte) BigInteger.Two.Subtract((r0.Subtract(r1.ShiftLeft(1))).Mod(Four)).IntValue;
 
@@ -365,7 +365,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
 
                 BigInteger t = r0;
                 BigInteger s = r0.ShiftRight(1);
-                if (mu == 1) 
+                if (mu == 1)
                 {
                     r0 = r1.Add(s);
                 }
@@ -389,7 +389,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
 
         /**
         * Applies the operation <code>&#964;()</code> to an
-        * <code>AbstractF2mPoint</code>. 
+        * <code>AbstractF2mPoint</code>.
         * @param p The AbstractF2mPoint to which <code>&#964;()</code> is applied.
         * @return <code>&#964;(p)</code>
         */
@@ -403,7 +403,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         * @param curve The elliptic curve from which to obtain <code>&#956;</code>.
         * The curve must be a Koblitz curve, i.e. <code>a</code> Equals
         * <code>0</code> or <code>1</code> and <code>b</code> Equals
-        * <code>1</code>. 
+        * <code>1</code>.
         * @return <code>&#956;</code> of the elliptic curve.
         * @throws ArgumentException if the given ECCurve is not a Koblitz
         * curve.
@@ -489,12 +489,12 @@ namespace Org.BouncyCastle.Math.EC.Abc
         /**
         * Computes the auxiliary value <code>t<sub>w</sub></code>. If the width is
         * 4, then for <code>mu = 1</code>, <code>t<sub>w</sub> = 6</code> and for
-        * <code>mu = -1</code>, <code>t<sub>w</sub> = 10</code> 
+        * <code>mu = -1</code>, <code>t<sub>w</sub> = 10</code>
         * @param mu The parameter <code>&#956;</code> of the elliptic curve.
         * @param w The window width of the WTNAF.
         * @return the auxiliary value <code>t<sub>w</sub></code>
         */
-        public static BigInteger GetTw(sbyte mu, int w) 
+        public static BigInteger GetTw(sbyte mu, int w)
         {
             if (w == 4)
             {
@@ -518,7 +518,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
 
         /**
         * Computes the auxiliary values <code>s<sub>0</sub></code> and
-        * <code>s<sub>1</sub></code> used for partial modular reduction. 
+        * <code>s<sub>1</sub></code> used for partial modular reduction.
         * @param curve The elliptic curve for which to compute
         * <code>s<sub>0</sub></code> and <code>s<sub>1</sub></code>.
         * @throws ArgumentException if <code>curve</code> is not a
@@ -614,7 +614,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         }
 
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by a <code>BigInteger</code> using the reduced <code>&#964;</code>-adic
         * NAF (RTNAF) method.
         * @param p The AbstractF2mPoint to Multiply.
@@ -633,7 +633,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         }
 
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by an element <code>&#955;</code> of <code><b>Z</b>[&#964;]</code>
         * using the <code>&#964;</code>-adic NAF (TNAF) method.
         * @param p The AbstractF2mPoint to Multiply.
@@ -652,7 +652,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         }
 
         /**
-        * Multiplies a {@link org.bouncycastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
+        * Multiplies a {@link Mirror.BouncyCastle.math.ec.AbstractF2mPoint AbstractF2mPoint}
         * by an element <code>&#955;</code> of <code><b>Z</b>[&#964;]</code>
         * using the <code>&#964;</code>-adic NAF (TNAF) method, given the TNAF
         * of <code>&#955;</code>.
@@ -706,7 +706,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
 
             BigInteger norm = Norm(mu, lambda);
 
-            // Ceiling of log2 of the norm 
+            // Ceiling of log2 of the norm
             int log2Norm = norm.BitLength;
 
             // If length(TNAF) > 30, then length(TNAF) < log2Norm + 3.52
@@ -799,7 +799,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
             // while lambda <> (0, 0)
             while (R0.BitLength > 62 || R1.BitLength > 62)
             {
-                if (R0.TestBit(0)) 
+                if (R0.TestBit(0))
                 {
                     int uVal = R0.IntValue + (R1.IntValue * tw);
                     int alphaPos = uVal & pow2Mask;
@@ -861,7 +861,7 @@ namespace Org.BouncyCastle.Math.EC.Abc
         * Does the precomputation for WTNAF multiplication.
         * @param p The <code>ECPoint</code> for which to do the precomputation.
         * @param a The parameter <code>a</code> of the elliptic curve.
-        * @return The precomputation array for <code>p</code>. 
+        * @return The precomputation array for <code>p</code>.
         */
         public static AbstractF2mPoint[] GetPreComp(AbstractF2mPoint p, sbyte a)
         {

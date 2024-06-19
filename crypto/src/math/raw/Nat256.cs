@@ -7,9 +7,9 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
 
-namespace Org.BouncyCastle.Math.Raw
+namespace Mirror.BouncyCastle.Math.Raw
 {
     internal static class Nat256
     {
@@ -1865,8 +1865,8 @@ namespace Org.BouncyCastle.Math.Raw
         public static void Xor(ReadOnlySpan<uint> x, ReadOnlySpan<uint> y, Span<uint> z)
         {
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Avx2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Y = MemoryMarshal.AsBytes(y[..8]);
@@ -1881,8 +1881,8 @@ namespace Org.BouncyCastle.Math.Raw
                 return;
             }
 
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse2.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPacked)
             {
                 var X = MemoryMarshal.AsBytes(x[..8]);
                 var Y = MemoryMarshal.AsBytes(y[..8]);

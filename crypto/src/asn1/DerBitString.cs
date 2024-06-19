@@ -3,10 +3,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1
+namespace Mirror.BouncyCastle.Asn1
 {
 	public class DerBitString
 		: DerStringBase, Asn1BitStringParser

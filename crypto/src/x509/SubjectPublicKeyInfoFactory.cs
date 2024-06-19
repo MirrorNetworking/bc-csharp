@@ -1,20 +1,20 @@
 using System;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.CryptoPro;
-using Org.BouncyCastle.Asn1.EdEC;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Rosstandart;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.CryptoPro;
+using Mirror.BouncyCastle.Asn1.EdEC;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Rosstandart;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.X509
+namespace Mirror.BouncyCastle.X509
 {
     /// <summary>
     /// A factory to produce Public Key Info Objects.
@@ -88,8 +88,8 @@ namespace Org.BouncyCastle.X509
             } // End of RSA.
 
             if (publicKey is ECPublicKeyParameters)
-            {            
-               
+            {
+
                 ECPublicKeyParameters _key = (ECPublicKeyParameters) publicKey;
 
 
@@ -123,12 +123,12 @@ namespace Org.BouncyCastle.X509
                     }
 
                     byte[] encKey = new byte[encKeySize];
-               
+
                     ExtractBytes(encKey, encKeySize / 2, 0, bX);
                     ExtractBytes(encKey, encKeySize / 2, offset, bY);
-                  
+
                     return new SubjectPublicKeyInfo(new AlgorithmIdentifier(algIdentifier, parameters), new DerOctetString(encKey));
-                   
+
 
                 } // End of ECGOST3410_2012
 

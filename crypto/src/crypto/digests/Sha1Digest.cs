@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
 
     /**
@@ -294,7 +294,7 @@ namespace Org.BouncyCastle.Crypto.Digests
             xOff = 0;
             Array.Clear(X, 0, 16);
         }
-		
+
 		public override IMemoable Copy()
 		{
 			return new Sha1Digest(this);

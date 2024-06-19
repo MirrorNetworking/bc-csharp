@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.Cms
+namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class KeyAgreeRecipientIdentifier
 		: Asn1Encodable, IAsn1Choice
@@ -60,7 +60,7 @@ namespace Org.BouncyCastle.Asn1.Cms
 			get { return rKeyID; }
 		}
 
-		/** 
+		/**
 		 * Produce an object suitable for an Asn1OutputStream.
 		 * <pre>
 		 * KeyAgreeRecipientIdentifier ::= CHOICE {

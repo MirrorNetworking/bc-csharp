@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Agreement.JPake
+namespace Mirror.BouncyCastle.Crypto.Agreement.JPake
 {
     /// <summary>
     /// A pre-computed prime order group for use during a J-PAKE exchange.
@@ -42,7 +42,7 @@ namespace Org.BouncyCastle.Crypto.Agreement.JPake
         /// However, due to the small uncertainties if p and q are not prime,
         /// advanced attacks are not prevented.
         /// Use it at your own risk.
-        /// 
+        ///
         /// Throws NullReferenceException if any argument is null. Throws
         /// InvalidOperationException is any of the above validations fail.
         /// </summary>

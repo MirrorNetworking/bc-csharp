@@ -1,8 +1,8 @@
 using System;
 
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Asn1.Oiw
+namespace Mirror.BouncyCastle.Asn1.Oiw
 {
     public class ElGamalParameter
         : Asn1Encodable

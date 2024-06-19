@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     /**
 	 * Key generation parameters for NaccacheStern cipher. For details on this cipher, please see
@@ -31,7 +31,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 		/*
 		 * (non-Javadoc)
 		 *
-		 * @see org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator#init(org.bouncycastle.crypto.KeyGenerationParameters)
+		 * @see Mirror.BouncyCastle.crypto.AsymmetricCipherKeyPairGenerator#init(Mirror.BouncyCastle.crypto.KeyGenerationParameters)
 		 */
 		public void Init(KeyGenerationParameters parameters)
 		{
@@ -41,7 +41,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 		/*
 		 * (non-Javadoc)
 		 *
-		 * @see org.bouncycastle.crypto.AsymmetricCipherKeyPairGenerator#generateKeyPair()
+		 * @see Mirror.BouncyCastle.crypto.AsymmetricCipherKeyPairGenerator#generateKeyPair()
 		 */
 		public AsymmetricCipherKeyPair GenerateKeyPair()
 		{

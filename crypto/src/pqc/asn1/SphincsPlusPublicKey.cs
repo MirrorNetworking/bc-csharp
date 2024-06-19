@@ -1,7 +1,7 @@
-﻿using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Utilities;
+﻿using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Asn1
+namespace Mirror.BouncyCastle.Pqc.Asn1
 {
     /**
      * See https://datatracker.ietf.org/doc/draft-uni-qsckeys-sphincsplus/00/ for details.

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec
 {
     internal class SecP192K1FieldElement
         : AbstractFpFieldElement
@@ -129,10 +129,10 @@ namespace Org.BouncyCastle.Math.EC.Custom.Sec
         {
             /*
              * Raise this element to the exponent 2^190 - 2^30 - 2^10 - 2^6 - 2^5 - 2^4 - 2^1
-             * 
+             *
              * Breaking up the exponent's binary representation into "repunits", we get:
              * { 159 1s } { 1 0s } { 19 1s } { 1 0s } { 3 1s } { 3 0s } { 3 1s } { 1 0s }
-             * 
+             *
              * Therefore we need an addition chain containing 3, 19, 159 (the lengths of the repunits)
              * We use: 1, 2, [3], 6, 8, 16, [19], 35, 70, 140, [159]
              */

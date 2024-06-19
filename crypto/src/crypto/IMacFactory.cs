@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     // TODO[api] Add 'out A' type parameter for AlgorithmDetails return type
     public interface IMacFactory

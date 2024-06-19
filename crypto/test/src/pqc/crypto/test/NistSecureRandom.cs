@@ -1,15 +1,15 @@
 using System;
 
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Tests
+namespace Mirror.BouncyCastle.Pqc.Crypto.Tests
 {
     public class NistSecureRandom
         : SecureRandom
     {
-        
+
         private byte[] seed;
         private byte[] personalization;
         private byte[] key;
@@ -22,7 +22,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Tests
         /// <param name="seed"> original CMCE seed</param>
         /// <param name="strength"> bit-strength of the RNG required.</param>
         /// <returns> a FixedSecureRandom containing the correct amount of seed material for use with Java.</returns>
-        /// 
+        ///
         public static FixedSecureRandom GetFixed(byte[] seed, int strength)
         {
             return GetFixed(seed,null, strength, strength / 8, strength / 8);

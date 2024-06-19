@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 
-using Org.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	public class PkixCertPathBuilderResult
 		: PkixCertPathValidatorResult//, ICertPathBuilderResult
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Pkix
         public PkixCertPathBuilderResult(PkixCertPath certPath, TrustAnchor trustAnchor, PkixPolicyNode policyTree,
             AsymmetricKeyParameter subjectPublicKey)
             : base(trustAnchor, policyTree, subjectPublicKey)
-		{			
+		{
 			this.certPath = certPath ?? throw new ArgumentNullException(nameof(certPath));
         }
 

@@ -1,24 +1,24 @@
 using System;
 
-using Org.BouncyCastle.Asn1.X500;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Asn1.X500;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Asn1.IsisMtt.X509
+namespace Mirror.BouncyCastle.Asn1.IsisMtt.X509
 {
 	/**
 	* Names of authorities which are responsible for the administration of title
 	* registers.
-	* 
+	*
 	* <pre>
-	*             NamingAuthority ::= SEQUENCE 
+	*             NamingAuthority ::= SEQUENCE
 	*             {
 	*               namingAuthorityID OBJECT IDENTIFIER OPTIONAL,
 	*               namingAuthorityUrl IA5String OPTIONAL,
 	*               namingAuthorityText DirectoryString(SIZE(1..128)) OPTIONAL
 	*             }
 	* </pre>
-	* @see Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
-	* 
+	* @see Mirror.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
+	*
 	*/
 	public class NamingAuthority
 		: Asn1Encodable

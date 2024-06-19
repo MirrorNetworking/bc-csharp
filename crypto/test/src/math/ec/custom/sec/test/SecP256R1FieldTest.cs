@@ -2,12 +2,12 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1.Sec;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto.EC;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Asn1.Sec;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto.EC;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Math.EC.Custom.Sec.Tests
+namespace Mirror.BouncyCastle.Math.EC.Custom.Sec.Tests
 {
     [TestFixture]
     public class SecP256R1FieldTest

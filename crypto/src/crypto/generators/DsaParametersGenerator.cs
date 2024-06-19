@@ -1,13 +1,13 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     /**
      * Generate suitable parameters for DSA, in line with FIPS 186-2, or FIPS 186-3.
@@ -185,7 +185,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 // 1. Check that the (L, N) pair is in the list of acceptable (L, N pairs) (see Section 4.2). If
 //    the pair is not in the list, then return INVALID.
             // Note: checked at initialisation
-            
+
 // 2. If (seedlen < N), then return INVALID.
             // FIXME This should be configurable (must be >= N)
             int seedlen = N;
@@ -306,7 +306,7 @@ namespace Org.BouncyCastle.Crypto.Generators
             byte[] U = new byte[seed.Length + ggen.Length + 1 + 2];
             Array.Copy(seed, 0, U, 0, seed.Length);
             Array.Copy(ggen, 0, U, seed.Length, ggen.Length);
-            U[U.Length - 3] = (byte)index; 
+            U[U.Length - 3] = (byte)index;
 
             byte[] w = new byte[d.GetDigestSize()];
             for (int count = 1; count < (1 << 16); ++count)
@@ -322,7 +322,7 @@ namespace Org.BouncyCastle.Crypto.Generators
 
             return null;
         }
-        
+
         private static bool IsValidDsaStrength(
             int strength)
         {

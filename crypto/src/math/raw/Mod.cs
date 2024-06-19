@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.Raw
+namespace Mirror.BouncyCastle.Math.Raw
 {
     /// <summary>
     /// Modular inversion as implemented in this class is based on the paper "Fast constant-time gcd computation and
@@ -13,7 +13,7 @@ namespace Org.BouncyCastle.Math.Raw
     /// </summary>
     /// <remarks>
     /// In some cases (when it is faster) we use the "half delta" variant of safegcd based on
-    /// <a href="https://github.com/sipa/safegcd-bounds">hddivsteps</a>. 
+    /// <a href="https://github.com/sipa/safegcd-bounds">hddivsteps</a>.
     /// </remarks>
     internal static class Mod
     {

@@ -1,11 +1,11 @@
 using System;
 
-using Org.BouncyCastle.Math.EC.Endo;
-using Org.BouncyCastle.Math.EC.Multiplier;
-using Org.BouncyCastle.Math.Field;
-using Org.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Math.EC.Endo;
+using Mirror.BouncyCastle.Math.EC.Multiplier;
+using Mirror.BouncyCastle.Math.Field;
+using Mirror.BouncyCastle.Math.Raw;
 
-namespace Org.BouncyCastle.Math.EC
+namespace Mirror.BouncyCastle.Math.EC
 {
     public class ECAlgorithms
     {
@@ -88,7 +88,7 @@ namespace Org.BouncyCastle.Math.EC
         * "Shamir's Trick", originally due to E. G. Straus
         * (Addition chains of vectors. American Mathematical Monthly,
         * 71(7):806-808, Aug./Sept. 1964)
-        *  
+        *
         * Input: The points P, Q, scalar k = (km?, ... , k1, k0)
         * and scalar l = (lm?, ... , l1, l0).
         * Output: R = k * P + l * Q.
@@ -166,7 +166,7 @@ namespace Org.BouncyCastle.Math.EC
          * Simple shift-and-add multiplication. Serves as reference implementation to verify (possibly
          * faster) implementations, and for very small scalars. CAUTION: This implementation is NOT
          * constant-time in any way. It is only intended to be used for diagnostics.
-         * 
+         *
          * @param p
          *            The point to multiply.
          * @param k
@@ -401,7 +401,7 @@ namespace Org.BouncyCastle.Math.EC
 
                 int width = System.Math.Min(8, info.Width);
 
-                infos[i] = info; 
+                infos[i] = info;
                 wnafs[i] = WNafUtilities.GenerateWindowNaf(width, ki);
             }
 
@@ -431,7 +431,7 @@ namespace Org.BouncyCastle.Math.EC
             for (int i = 0, j = 0; i < len; ++i)
             {
                 ECPoint p = ps[i];
-                ECPoint q = EndoUtilities.MapPoint(glvEndomorphism, p); 
+                ECPoint q = EndoUtilities.MapPoint(glvEndomorphism, p);
                 pqs[j++] = p;
                 pqs[j++] = q;
             }

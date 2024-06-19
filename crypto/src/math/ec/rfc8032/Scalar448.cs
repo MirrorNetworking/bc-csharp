@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 #endif
 
-using Org.BouncyCastle.Math.Raw;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Math.Raw;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Math.EC.Rfc8032
+namespace Mirror.BouncyCastle.Math.EC.Rfc8032
 {
     internal static class Scalar448
     {
@@ -1118,7 +1118,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032
         {
             /*
              * Split scalar k into two half-size scalars z0 and z1, such that z1 * k == z0 mod L.
-             * 
+             *
              * See https://ia.cr/2020/454 (Pornin).
              */
 
@@ -1180,7 +1180,7 @@ namespace Org.BouncyCastle.Math.EC.Rfc8032
         {
             /*
              * Split scalar k into two half-size scalars z0 and z1, such that z1 * k == z0 mod L.
-             * 
+             *
              * See https://ia.cr/2020/454 (Pornin).
              */
 

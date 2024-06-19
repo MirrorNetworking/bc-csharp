@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     /**
      * Password hashing scheme BCrypt,
@@ -244,9 +244,9 @@ namespace Org.BouncyCastle.Crypto.Generators
         /*
          * decodes the bcrypt base 64 encoded SaltString
          *
-         * @param 		a 22 character Bcrypt base 64 encoded String 
+         * @param 		a 22 character Bcrypt base 64 encoded String
          * @return 		the 16 byte salt
-         * @exception 	DataLengthException if the length 
+         * @exception 	DataLengthException if the length
          * 				of parameter is not 22
          * @exception 	InvalidArgumentException if the parameter
          * 				contains a value other than from Bcrypts base 64 encoding table

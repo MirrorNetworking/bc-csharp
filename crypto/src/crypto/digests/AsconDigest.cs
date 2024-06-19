@@ -3,10 +3,10 @@
 using System.Runtime.CompilerServices;
 #endif
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Digests
+namespace Mirror.BouncyCastle.Crypto.Digests
 {
     /// <summary>ASCON v1.2 Hash, https://ascon.iaik.tugraz.at/ .</summary>
     /// <remarks>

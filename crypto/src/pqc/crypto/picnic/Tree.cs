@@ -1,9 +1,9 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Picnic
+namespace Mirror.BouncyCastle.Pqc.Crypto.Picnic
 {
     internal sealed class Tree
     {
@@ -221,13 +221,13 @@ namespace Org.BouncyCastle.Pqc.Crypto.Picnic
                     uint sibling = GetSibling(pathSets[d][i]);
                     if (!Contains(pathSets[d], hideListSize, sibling))
                     {
-                        // Determine the seed to reveal 
+                        // Determine the seed to reveal
                         while (!HasRightChild(sibling) && !IsLeafNode(sibling))
                         {
                             sibling = 2 * sibling + 1; // sibling = leftChild(sibling)
                         }
 
-                        // Only reveal if we haven't already 
+                        // Only reveal if we haven't already
                         if (!Contains(revealed, revealedPos, sibling))
                         {
                             revealed[revealedPos] = sibling;

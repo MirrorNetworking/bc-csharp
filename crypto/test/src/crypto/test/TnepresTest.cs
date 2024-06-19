@@ -2,13 +2,13 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.Crypto.Engines;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /**
      * Test vectors based on Floppy 4 of the Serpent AES submission.
@@ -17,7 +17,7 @@ namespace Org.BouncyCastle.Crypto.Tests
     public class TnepresTest
         :   CipherTest
     {
-        static SimpleTest[] tests = 
+        static SimpleTest[] tests =
         {
             new BlockCipherVectorTest(0, new TnepresEngine(),
                 new KeyParameter(Hex.Decode("0000000000000000000000000000000000000000000000000000000000000000")),

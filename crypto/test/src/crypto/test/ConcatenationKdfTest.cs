@@ -2,13 +2,13 @@
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Crypto.Agreement.Kdf;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Crypto.Agreement.Kdf;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Encoders;
 
-namespace Org.BouncyCastle.Crypto.Tests
+namespace Mirror.BouncyCastle.Crypto.Tests
 {
     /// <remarks>
     /// Test vectors were copied from
@@ -60,7 +60,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             for (int count = 0; count <= expectedBytes.Length; ++count)
             {
                 Arrays.Fill(output, 0);
-                int outputPos = random.Next(16); 
+                int outputPos = random.Next(16);
 
                 kdf.Init(new KdfParameters(sharedSecretBytes, otherInfoBytes));
                 kdf.GenerateBytes(output, outputPos, count);

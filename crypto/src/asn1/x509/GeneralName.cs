@@ -2,11 +2,11 @@ using System;
 using System.Globalization;
 using System.Text;
 
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-using NetUtils = Org.BouncyCastle.Utilities.Net;
+using NetUtils = Mirror.BouncyCastle.Utilities.Net;
 
-namespace Org.BouncyCastle.Asn1.X509
+namespace Mirror.BouncyCastle.Asn1.X509
 {
 	/**
      * The GeneralName object.

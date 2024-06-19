@@ -2,20 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.IsisMtt;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.X509;
-using Org.BouncyCastle.X509.Extension;
-using Org.BouncyCastle.X509.Store;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.IsisMtt;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.X509;
+using Mirror.BouncyCastle.X509.Extension;
+using Mirror.BouncyCastle.X509.Store;
 
-namespace Org.BouncyCastle.Pkix
+namespace Mirror.BouncyCastle.Pkix
 {
 	/// <summary>
 	/// Summary description for PkixCertPathValidatorUtilities.
@@ -765,7 +765,7 @@ namespace Org.BouncyCastle.Pkix
 		 *
 		 * @param dp The distribution point for which the complete CRL
 		 * @param cert The <code>X509Certificate</code> or
-		 *            {@link org.bouncycastle.x509.X509AttributeCertificate} for
+		 *            {@link Mirror.BouncyCastle.x509.X509AttributeCertificate} for
 		 *            which the CRL should be searched.
 		 * @param currentDate The date for which the delta CRLs must be valid.
 		 * @param paramsPKIX The extended PKIX parameters.

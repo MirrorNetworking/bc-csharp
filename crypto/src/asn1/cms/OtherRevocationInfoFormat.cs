@@ -1,4 +1,4 @@
-﻿namespace Org.BouncyCastle.Asn1.Cms
+﻿namespace Mirror.BouncyCastle.Asn1.Cms
 {
     public class OtherRevocationInfoFormat
         : Asn1Encodable
@@ -44,7 +44,7 @@
             get { return otherRevInfo; }
         }
 
-        /** 
+        /**
          * Produce an object suitable for an ASN1OutputStream.
          * <pre>
          * OtherRevocationInfoFormat ::= SEQUENCE {

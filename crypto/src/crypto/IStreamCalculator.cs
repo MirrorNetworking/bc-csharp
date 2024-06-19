@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Org.BouncyCastle.Crypto
+namespace Mirror.BouncyCastle.Crypto
 {
     /// <summary>
     /// Base interface for cryptographic operations such as Hashes, MACs, and Signatures which reduce a stream of data

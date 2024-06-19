@@ -5,10 +5,10 @@ using System.Text;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls.Tests
+namespace Mirror.BouncyCastle.Tls.Tests
 {
     /// <summary>A simple test designed to conduct a TLS handshake with an external TLS server.</summary>
     /// <remarks>

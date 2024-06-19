@@ -1,7 +1,7 @@
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Tsp;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
 	public class GenTimeAccuracy
 	{

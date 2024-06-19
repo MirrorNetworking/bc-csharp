@@ -2,21 +2,21 @@ using System;
 
 using NUnit.Framework;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Math.EC;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities.Encoders;
-using Org.BouncyCastle.Utilities.Test;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Asn1.X9;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Math.EC;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities.Encoders;
+using Mirror.BouncyCastle.Utilities.Test;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tests
+namespace Mirror.BouncyCastle.Tests
 {
 	[TestFixture]
 	public class ECEncodingTest
@@ -50,11 +50,11 @@ namespace Org.BouncyCastle.Tests
 
 		/** Base point G (with point compression) */
 		private byte[] enc = {0x02, 0x19, 0x7B, 0x07, (byte)0x84, 0x5E, (byte)0x9B, (byte)0xE2, (byte)0xD9, 0x6A, (byte)0xDB, 0x0F
-				, 0x5F, 0x3C, 0x7F, 0x2C, (byte)0xFF, (byte)0xBD, 0x7A, 0x3E, (byte)0xB8, (byte)0xB6, (byte)0xFE, 
+				, 0x5F, 0x3C, 0x7F, 0x2C, (byte)0xFF, (byte)0xBD, 0x7A, 0x3E, (byte)0xB8, (byte)0xB6, (byte)0xFE,
 				(byte)0xC3, 0x5C, 0x7F, (byte)0xD6, 0x7F, 0x26, (byte)0xDD, (byte)0xF6
 				, 0x28, 0x5A, 0x64, 0x4F, 0x74, 0x0A, 0x26, 0x14};
 
-		private void doTestPointCompression() 
+		private void doTestPointCompression()
 		{
 			ECCurve curve = new F2mCurve(m, k1, k2, k3, a, b);
 			curve.DecodePoint(enc);
@@ -64,7 +64,7 @@ namespace Org.BouncyCastle.Tests
 			ks[1] = k2;
 			ks[2] = k1;
 		}
-	    
+
 		public override void PerformTest()
 		{
 			byte[] ecParams = Hex.Decode("3081C8020101302806072A8648CE3D0101021D00D7C134AA264366862A18302575D1D787B09F075797DA89F57EC8C0FF303C041C68A5E62CA9CE6C1C299803A6C1530B514E182AD8B0042A59CAD29F43041C2580F63CCFE44138870713B1A92369E33E2135D266DBB372386C400B0439040D9029AD2C7E5CF4340823B2A87DC68C9E4CE3174C1E6EFDEE12C07D58AA56F772C0726F24C6B89E4ECDAC24354B9E99CAA3F6D3761402CD021D00D7C134AA264366862A18302575D0FB98D116BC4B6DDEBCA3A5A7939F020101");
@@ -179,7 +179,7 @@ namespace Org.BouncyCastle.Tests
 
 		/**
 		* Create a self signed cert for our software emulation
-		* 
+		*
 		* @param kp
 		*            is the keypair for our certificate
 		* @return a self signed cert for our software emulation

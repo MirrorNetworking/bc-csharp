@@ -1,10 +1,10 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Macs;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Math;
+using Mirror.BouncyCastle.Crypto.Macs;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Math;
 
-namespace Org.BouncyCastle.Crypto.Generators
+namespace Mirror.BouncyCastle.Crypto.Generators
 {
     public sealed class KdfDoublePipelineIterationBytesGenerator
         : IMacDerivationFunction
@@ -12,7 +12,7 @@ namespace Org.BouncyCastle.Crypto.Generators
         // please refer to the standard for the meaning of the variable names
         // all field lengths are in bytes, not in bits as specified by the standard
 
-        // fields set by the constructor       
+        // fields set by the constructor
         private readonly IMac prf;
         private readonly int h;
 

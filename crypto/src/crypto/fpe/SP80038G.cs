@@ -1,10 +1,10 @@
 using System;
 
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Fpe
+namespace Mirror.BouncyCastle.Crypto.Fpe
 {
     /*
 	 * SP800-38G Format-Preserving Encryption
@@ -17,8 +17,8 @@ namespace Org.BouncyCastle.Crypto.Fpe
 	 */
     internal static class SP80038G
     {
-        internal static readonly string FPE_DISABLED = "Org.BouncyCastle.Fpe.Disable";
-        internal static readonly string FF1_DISABLED = "Org.BouncyCastle.Fpe.Disable_Ff1";
+        internal static readonly string FPE_DISABLED = "Mirror.BouncyCastle.Fpe.Disable";
+        internal static readonly string FF1_DISABLED = "Mirror.BouncyCastle.Fpe.Disable_Ff1";
 
         private static readonly int BLOCK_SIZE = 16;
         private static readonly double LOG2 = System.Math.Log(2.0);

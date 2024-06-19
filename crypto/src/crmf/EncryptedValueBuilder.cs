@@ -1,18 +1,18 @@
 ﻿using System;
 using System.IO;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Crmf;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Pkcs;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.IO;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Crmf;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Pkcs;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.IO;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Crmf
+namespace Mirror.BouncyCastle.Crmf
 {
     public class EncryptedValueBuilder
     {
@@ -49,7 +49,7 @@ namespace Org.BouncyCastle.Crmf
         /// Build an EncryptedValue structure containing the passed in pass phrase.
         ///
         /// <param name="revocationPassphrase">a revocation pass phrase.</param>
-        ///<returns>an EncryptedValue containing the encrypted pass phrase.</returns>       
+        ///<returns>an EncryptedValue containing the encrypted pass phrase.</returns>
         ///
         public EncryptedValue Build(char[] revocationPassphrase)
         {

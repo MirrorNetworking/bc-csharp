@@ -8,11 +8,11 @@ using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 #endif
 
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Utilities;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Parameters;
+using Mirror.BouncyCastle.Crypto.Utilities;
+using Mirror.BouncyCastle.Utilities;
 
-namespace Org.BouncyCastle.Crypto.Engines
+namespace Mirror.BouncyCastle.Crypto.Engines
 {
 	/// <summary>
 	/// Implementation of Daniel J. Bernstein's Salsa20 stream cipher, Snuffle 2005
@@ -76,12 +76,12 @@ namespace Org.BouncyCastle.Crypto.Engines
 		}
 
         public virtual void Init(
-			bool				forEncryption, 
+			bool				forEncryption,
 			ICipherParameters	parameters)
 		{
-			/* 
+			/*
 			 * Salsa20 encryption and decryption is completely
-			 * symmetrical, so the 'forEncryption' is 
+			 * symmetrical, so the 'forEncryption' is
 			 * irrelevant. (Like 90% of stream ciphers)
 			 */
 
@@ -122,7 +122,7 @@ namespace Org.BouncyCastle.Crypto.Engines
 		public virtual string AlgorithmName
 		{
 			get
-            { 
+            {
 				string name = "Salsa20";
 				if (rounds != DEFAULT_ROUNDS)
 				{
@@ -161,10 +161,10 @@ namespace Org.BouncyCastle.Crypto.Engines
 		}
 
         public virtual void ProcessBytes(
-			byte[]	inBytes, 
-			int		inOff, 
-			int		len, 
-			byte[]	outBytes, 
+			byte[]	inBytes,
+			int		inOff,
+			int		len,
+			byte[]	outBytes,
 			int		outOff)
 		{
 			if (!initialised)
@@ -263,8 +263,8 @@ namespace Org.BouncyCastle.Crypto.Engines
 				throw new ArgumentException("Number of rounds must be even");
 
 #if NETCOREAPP3_0_OR_GREATER
-            if (Org.BouncyCastle.Runtime.Intrinsics.X86.Sse41.IsEnabled &&
-                Org.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
+            if (Mirror.BouncyCastle.Runtime.Intrinsics.X86.Sse41.IsEnabled &&
+                Mirror.BouncyCastle.Runtime.Intrinsics.Vector.IsPackedLittleEndian)
 			{
 				Vector128<uint> b0, b1, b2, b3;
 				{

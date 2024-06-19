@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-using Org.BouncyCastle.Asn1;
-using Org.BouncyCastle.Asn1.Cmp;
-using Org.BouncyCastle.Asn1.Ess;
-using Org.BouncyCastle.Asn1.Oiw;
-using Org.BouncyCastle.Asn1.Pkcs;
-using Org.BouncyCastle.Asn1.Tsp;
-using Org.BouncyCastle.Asn1.X509;
-using Org.BouncyCastle.Cms;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Operators;
-using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
-using Org.BouncyCastle.Utilities.Date;
-using Org.BouncyCastle.X509;
+using Mirror.BouncyCastle.Asn1;
+using Mirror.BouncyCastle.Asn1.Cmp;
+using Mirror.BouncyCastle.Asn1.Ess;
+using Mirror.BouncyCastle.Asn1.Oiw;
+using Mirror.BouncyCastle.Asn1.Pkcs;
+using Mirror.BouncyCastle.Asn1.Tsp;
+using Mirror.BouncyCastle.Asn1.X509;
+using Mirror.BouncyCastle.Cms;
+using Mirror.BouncyCastle.Crypto;
+using Mirror.BouncyCastle.Crypto.Operators;
+using Mirror.BouncyCastle.Math;
+using Mirror.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Utilities.Collections;
+using Mirror.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.X509;
 
-namespace Org.BouncyCastle.Tsp
+namespace Mirror.BouncyCastle.Tsp
 {
     public enum Resolution
     {
@@ -34,7 +34,7 @@ namespace Org.BouncyCastle.Tsp
         private bool ordering = false;
         private GeneralName tsa = null;
         private DerObjectIdentifier tsaPolicyOID;
-    
+
         private IStore<X509Certificate> x509Certs;
         private IStore<X509Crl> x509Crls;
         private IStore<X509V2AttributeCertificate> x509AttrCerts;
@@ -44,7 +44,7 @@ namespace Org.BouncyCastle.Tsp
         IDigestFactory digestCalculator;
 
         private Resolution resolution = Resolution.R_SECONDS;
-      
+
         public Resolution Resolution
         {
             get { return resolution; }
@@ -304,7 +304,7 @@ namespace Org.BouncyCastle.Tsp
             {
                 nonce = new DerInteger(request.Nonce);
             }
- 
+
             DerObjectIdentifier tsaPolicy = tsaPolicyOID;
             if (request.ReqPolicy != null)
             {
@@ -312,7 +312,7 @@ namespace Org.BouncyCastle.Tsp
             }
 
             if (tsaPolicy == null)
-            { 
+            {
                 throw new TspValidationException("request contains no policy", PkiFailureInfo.UnacceptedPolicy);
             }
 
@@ -322,12 +322,12 @@ namespace Org.BouncyCastle.Tsp
                 X509ExtensionsGenerator extGen = new X509ExtensionsGenerator();
 
                 if (respExtensions != null)
-                {                    
+                {
                     foreach(object oid in respExtensions.ExtensionOids)
                     {
                         DerObjectIdentifier id = DerObjectIdentifier.GetInstance(oid);
                         extGen.AddExtension(id, respExtensions.GetExtension(DerObjectIdentifier.GetInstance(id)));
-                    }                   
+                    }
                 }
 
                 foreach (object oid in additionalExtensions.ExtensionOids)
@@ -336,7 +336,7 @@ namespace Org.BouncyCastle.Tsp
                     extGen.AddExtension(id, additionalExtensions.GetExtension(DerObjectIdentifier.GetInstance(id)));
 
                 }
-           
+
                 respExtensions = extGen.Generate();
             }
 

@@ -1,6 +1,6 @@
 using System;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Falcon
+namespace Mirror.BouncyCastle.Pqc.Crypto.Falcon
 {
     class FalconFFT
     {
@@ -12,7 +12,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             this.fpre = fprengine;
         }
 
-        /* 
+        /*
         * License from the reference C code (the code was copied then modified
         * to function in C#):
         * ==========================(LICENSE BEGIN)============================
@@ -61,7 +61,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             FalconFPR fpct_re, fpct_im;
             fpct_re = this.fpre.fpr_sub(a_re, b_re);
             fpct_im = this.fpre.fpr_sub(a_im, b_im);
-            return new FalconFPR[] { fpct_re, fpct_im }; 
+            return new FalconFPR[] { fpct_re, fpct_im };
         }
 
         /*
@@ -72,30 +72,30 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             FalconFPR fpct_a_re, fpct_a_im;
             FalconFPR fpct_b_re, fpct_b_im;
             FalconFPR fpct_d_re, fpct_d_im;
-            fpct_a_re = a_re; 
-            fpct_a_im = a_im; 
-            fpct_b_re = b_re; 
-            fpct_b_im = b_im; 
-            fpct_d_re = this.fpre.fpr_sub( 
-                this.fpre.fpr_mul(fpct_a_re, fpct_b_re), 
-                this.fpre.fpr_mul(fpct_a_im, fpct_b_im)); 
-            fpct_d_im = this.fpre.fpr_add( 
-                this.fpre.fpr_mul(fpct_a_re, fpct_b_im), 
-                this.fpre.fpr_mul(fpct_a_im, fpct_b_re)); 
+            fpct_a_re = a_re;
+            fpct_a_im = a_im;
+            fpct_b_re = b_re;
+            fpct_b_im = b_im;
+            fpct_d_re = this.fpre.fpr_sub(
+                this.fpre.fpr_mul(fpct_a_re, fpct_b_re),
+                this.fpre.fpr_mul(fpct_a_im, fpct_b_im));
+            fpct_d_im = this.fpre.fpr_add(
+                this.fpre.fpr_mul(fpct_a_re, fpct_b_im),
+                this.fpre.fpr_mul(fpct_a_im, fpct_b_re));
             return new FalconFPR[] {fpct_d_re, fpct_d_im};
         }
 
         /*
         * Squaring of a complex number (d = a * a).
         */
-        internal FalconFPR[] FPC_SQR(FalconFPR d_re, FalconFPR d_im, 
+        internal FalconFPR[] FPC_SQR(FalconFPR d_re, FalconFPR d_im,
                         FalconFPR a_re, FalconFPR a_im) {
-            FalconFPR fpct_a_re, fpct_a_im; 
-            FalconFPR fpct_d_re, fpct_d_im; 
-            fpct_a_re = a_re; 
-            fpct_a_im = a_im; 
-            fpct_d_re = this.fpre.fpr_sub(this.fpre.fpr_sqr(fpct_a_re), this.fpre.fpr_sqr(fpct_a_im)); 
-            fpct_d_im = this.fpre.fpr_double(this.fpre.fpr_mul(fpct_a_re, fpct_a_im)); 
+            FalconFPR fpct_a_re, fpct_a_im;
+            FalconFPR fpct_d_re, fpct_d_im;
+            fpct_a_re = a_re;
+            fpct_a_im = a_im;
+            fpct_d_re = this.fpre.fpr_sub(this.fpre.fpr_sqr(fpct_a_re), this.fpre.fpr_sqr(fpct_a_im));
+            fpct_d_im = this.fpre.fpr_double(this.fpre.fpr_mul(fpct_a_re, fpct_a_im));
             return new FalconFPR[] {fpct_d_re, fpct_d_im};
         }
 
@@ -103,14 +103,14 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
         * Inversion of a complex number (d = 1 / a).
         */
         internal FalconFPR[] FPC_INV(FalconFPR a_re, FalconFPR a_im) {
-            FalconFPR fpct_a_re, fpct_a_im; 
-            FalconFPR fpct_d_re, fpct_d_im; 
-            FalconFPR fpct_m; 
-            fpct_a_re = a_re; 
-            fpct_a_im = a_im; 
-            fpct_m = this.fpre.fpr_add(this.fpre.fpr_sqr(fpct_a_re), this.fpre.fpr_sqr(fpct_a_im)); 
-            fpct_m = this.fpre.fpr_inv(fpct_m); 
-            fpct_d_re = this.fpre.fpr_mul(fpct_a_re, fpct_m); 
+            FalconFPR fpct_a_re, fpct_a_im;
+            FalconFPR fpct_d_re, fpct_d_im;
+            FalconFPR fpct_m;
+            fpct_a_re = a_re;
+            fpct_a_im = a_im;
+            fpct_m = this.fpre.fpr_add(this.fpre.fpr_sqr(fpct_a_re), this.fpre.fpr_sqr(fpct_a_im));
+            fpct_m = this.fpre.fpr_inv(fpct_m);
+            fpct_d_re = this.fpre.fpr_mul(fpct_a_re, fpct_m);
             fpct_d_im = this.fpre.fpr_mul(this.fpre.fpr_neg(fpct_a_im), fpct_m);
             return new FalconFPR[] { fpct_d_re, fpct_d_im };
         }
@@ -119,23 +119,23 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
         */
         internal FalconFPR[] FPC_DIV(FalconFPR a_re, FalconFPR a_im,
                         FalconFPR b_re, FalconFPR b_im) {
-            FalconFPR fpct_a_re, fpct_a_im; 
-            FalconFPR fpct_b_re, fpct_b_im; 
-            FalconFPR fpct_d_re, fpct_d_im; 
-            FalconFPR fpct_m; 
-            fpct_a_re = (a_re); 
-            fpct_a_im = (a_im); 
-            fpct_b_re = (b_re); 
-            fpct_b_im = (b_im); 
-            fpct_m = this.fpre.fpr_add(this.fpre.fpr_sqr(fpct_b_re), this.fpre.fpr_sqr(fpct_b_im)); 
-            fpct_m = this.fpre.fpr_inv(fpct_m); 
-            fpct_b_re = this.fpre.fpr_mul(fpct_b_re, fpct_m); 
-            fpct_b_im = this.fpre.fpr_mul(this.fpre.fpr_neg(fpct_b_im), fpct_m); 
-            fpct_d_re = this.fpre.fpr_sub( 
-                this.fpre.fpr_mul(fpct_a_re, fpct_b_re), 
-                this.fpre.fpr_mul(fpct_a_im, fpct_b_im)); 
-            fpct_d_im = this.fpre.fpr_add( 
-                this.fpre.fpr_mul(fpct_a_re, fpct_b_im), 
+            FalconFPR fpct_a_re, fpct_a_im;
+            FalconFPR fpct_b_re, fpct_b_im;
+            FalconFPR fpct_d_re, fpct_d_im;
+            FalconFPR fpct_m;
+            fpct_a_re = (a_re);
+            fpct_a_im = (a_im);
+            fpct_b_re = (b_re);
+            fpct_b_im = (b_im);
+            fpct_m = this.fpre.fpr_add(this.fpre.fpr_sqr(fpct_b_re), this.fpre.fpr_sqr(fpct_b_im));
+            fpct_m = this.fpre.fpr_inv(fpct_m);
+            fpct_b_re = this.fpre.fpr_mul(fpct_b_re, fpct_m);
+            fpct_b_im = this.fpre.fpr_mul(this.fpre.fpr_neg(fpct_b_im), fpct_m);
+            fpct_d_re = this.fpre.fpr_sub(
+                this.fpre.fpr_mul(fpct_a_re, fpct_b_re),
+                this.fpre.fpr_mul(fpct_a_im, fpct_b_im));
+            fpct_d_im = this.fpre.fpr_add(
+                this.fpre.fpr_mul(fpct_a_re, fpct_b_im),
                 this.fpre.fpr_mul(fpct_a_im, fpct_b_re));
             return new FalconFPR[] { fpct_d_re, fpct_d_im };
         }
@@ -318,7 +318,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
                         y_im = fsrc[f + j + t + hn];
                         res = FPC_ADD(x_re, x_im, y_re, y_im);
                         fsrc[f + j] = res[0]; fsrc[f + j + hn] = res[1];
-                            
+
                         res = FPC_SUB(x_re, x_im, y_re, y_im);
                         x_re = res[0]; x_im = res[1];
                         res = FPC_MUL(x_re, x_im, s_re, s_im);
@@ -686,7 +686,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Falcon
             fsrc[f + hn] = f1src[f1 + 0];
 
             for (u = 0; u < qn; u ++) {
-                FalconFPR a_re, a_im, 
+                FalconFPR a_re, a_im,
                           b_re, b_im;
                 FalconFPR t_re, t_im;
                 FalconFPR[] res;

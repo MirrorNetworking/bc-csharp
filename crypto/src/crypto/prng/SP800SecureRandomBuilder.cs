@@ -1,9 +1,9 @@
 ﻿using System;
 
-using Org.BouncyCastle.Crypto.Prng.Drbg;
-using Org.BouncyCastle.Security;
+using Mirror.BouncyCastle.Crypto.Prng.Drbg;
+using Mirror.BouncyCastle.Security;
 
-namespace Org.BouncyCastle.Crypto.Prng
+namespace Mirror.BouncyCastle.Crypto.Prng
 {
     /**
      * Builder class for making SecureRandom objects based on SP 800-90A Deterministic Random Bit Generators (DRBG).

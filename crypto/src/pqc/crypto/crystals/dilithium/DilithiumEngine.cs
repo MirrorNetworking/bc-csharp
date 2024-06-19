@@ -1,10 +1,10 @@
 ﻿using System;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Utilities;
+using Mirror.BouncyCastle.Crypto.Digests;
+using Mirror.BouncyCastle.Security;
+using Mirror.BouncyCastle.Utilities;
 
 
-namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
+namespace Mirror.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
 {
     internal class DilithiumEngine
     {
@@ -40,13 +40,13 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
         public int PolyZPackedBytes { get; private set; }
         public int PolyW1PackedBytes { get; private set; }
         public int PolyEtaPackedBytes { get; private set; }
-        
+
         public int CryptoPublicKeyBytes { get; private set; }
         public int CryptoSecretKeyBytes { get; private set; }
         public int CryptoBytes { get; private set; }
         public int PolyUniformGamma1NBytes { get; private set; }
         public Symmetric Symmetric { get; private set; }
-        
+
         public DilithiumEngine(int mode, SecureRandom random, bool usingAes)
         {
             Mode = mode;
@@ -125,7 +125,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
                 throw new ArgumentException("Wrong Dilithium Gamma1!");
             }
         }
-        
+
         public void GenerateKeyPair(out byte[] rho, out byte[] key, out byte[] tr, out byte[] s1_, out byte[] s2_, out byte[] t0_, out byte[] encT1)
         {
             byte[] SeedBuf = new byte[SeedBytes];
@@ -144,7 +144,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             PolyVecK s2 = new PolyVecK(this), t1 = new PolyVecK(this), t0 = new PolyVecK(this);
 
             _random.NextBytes(SeedBuf);
-            
+
             ShakeDigest Shake256Digest = new ShakeDigest(256);
             Shake256Digest.BlockUpdate(SeedBuf, 0, SeedBytes);
             Shake256Digest.OutputFinal(buf, 0, 2 * SeedBytes + CrhBytes);
@@ -213,7 +213,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             ShakeDigest256.OutputFinal(rhoPrime, 0, CrhBytes);
 
             Matrix.ExpandMatrix(rho);
-            
+
             s1.Ntt();
             s2.Ntt();
             t0.Ntt();
@@ -224,13 +224,13 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             z.Ntt();
 
             Matrix.PointwiseMontgomery(w1, z);
-            
+
             w1.Reduce();
             w1.InverseNttToMont();
 
             w1.ConditionalAddQ();
             w1.Decompose(w0);
-            
+
             w1.PackW1(sig);
 
             ShakeDigest256.BlockUpdate(mu, 0, CrhBytes);
@@ -249,7 +249,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             {
                 goto rej;
             }
-            
+
             h.PointwisePolyMontgomery(cp, s2);
             h.InverseNttToMont();
 
@@ -311,7 +311,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             {
                 return false;
             }
-            
+
             ShakeDigest Shake256Digest = new ShakeDigest(256);
             Shake256Digest.BlockUpdate(rho, 0, rho.Length);
             Shake256Digest.BlockUpdate(encT1, 0, encT1.Length);
@@ -356,7 +356,7 @@ namespace Org.BouncyCastle.Pqc.Crypto.Crystals.Dilithium
             }
             return true;
         }
-        
+
         public bool SignOpen(byte[] msg, byte[] sig, int siglen, byte[] rho, byte[] t1)
         {
             return SignVerify(sig, siglen, msg, msg.Length, rho, t1);

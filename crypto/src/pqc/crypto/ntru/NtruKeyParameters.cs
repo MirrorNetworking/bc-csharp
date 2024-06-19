@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto;
+﻿using Mirror.BouncyCastle.Crypto;
 
-namespace Org.BouncyCastle.Pqc.Crypto.Ntru
+namespace Mirror.BouncyCastle.Pqc.Crypto.Ntru
 {
     public abstract class NtruKeyParameters
         : AsymmetricKeyParameter

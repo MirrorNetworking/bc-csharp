@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Org.BouncyCastle.Utilities.Date;
+using Mirror.BouncyCastle.Utilities.Date;
 
-namespace Org.BouncyCastle.Tls
+namespace Mirror.BouncyCastle.Tls
 {
     internal class Timeout
     {
@@ -29,7 +29,7 @@ namespace Org.BouncyCastle.Tls
         {
             lock (this)
             {
-                // If clock jumped backwards, reset start time 
+                // If clock jumped backwards, reset start time
                 if (startMillis > currentTimeMillis)
                 {
                     startMillis = currentTimeMillis;
